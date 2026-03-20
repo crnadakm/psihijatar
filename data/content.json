@@ -1,0 +1,277 @@
+{
+    "site": {
+        "title": "D.O.B.A.R. - zdravstvena ustanova",
+        "phone": "+387 66 945 702",
+        "email": "dobar@psihijatar.info",
+        "address": "Ulica Vojvode Pere Krece 2, Banja Luka, 78 000",
+        "whatsapp": "+38766945702",
+        "viber": "38766945702",
+        "facebook": "https://www.facebook.com/dobarpsihijatar",
+        "copyright": "Copyright © 2021 Dobar - ustanova za mentalno zdravlje. Sva prava zadržana"
+    },
+    "slider": [
+        {
+            "heading": "<span class=\"h2lower\">dr</span> Dragan Tešanović",
+            "subheading": "psihijatar",
+            "active": true
+        },
+        {
+            "heading": "preventivne i konsultativne aktivnosti",
+            "subheading": "u oblasti podrške mentalnom zdravlju",
+            "active": true
+        },
+        {
+            "heading": "dijagnostički i terapijski protokoli",
+            "subheading": "u okviru ambulantne vanbolničke prakse",
+            "active": true
+        }
+    ],
+    "services": [
+        {
+            "title": "Šta je psihijatrija?",
+            "text": "Najvažniji aspekt rada psihijatra je povjerljiv, obziran i detaljan razgovor s pacijentom a budući da su ljekari, psihijatri mogu naručiti ili obaviti čitav niz medicinskih, laboratorijskih i psiholoških testova koji, pomažu u stvaranju jasne slike psihičkog i tjelesnog stanja pacijenta.",
+            "link": "psihijatrija.php",
+            "active": true
+        },
+        {
+            "title": "O psihoterapiji",
+            "text": "Psihoterapija je skup metoda, procedura i tehnika kojima je cilj liječenje psihičkih tegoba razgovorom. Razgovor se vodi između terapeuta i jednog ili više sagovornika/klijenata. Namjena ovakvog razgovora je olakšavanje psihičkih tegoba, sagledavanje mogućih rješenja problema ili razvijanje ličnosti čime se poboljšava kvalitet života osobe.",
+            "link": "psihoterapija.php",
+            "active": true
+        },
+        {
+            "title": "EMDR - psihoterapijska metoda",
+            "text": "Metoda koristi prirodni proces pokretanja očiju (EM - eye movemant) kako bi se uspješno liječio stresni poremećaj poslije traumatskog doživljaja (PTSP).",
+            "link": "emdr.php",
+            "active": true
+        },
+        {
+            "title": "Ko je ko u brizi o mentalnom zdravlju",
+            "text": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog različitih pojmova koje možete čuti ili pročitati. Psihijatar? Psiholog? Psihoterapeut? Vjerujemo da je smisleno da pojasnimo",
+            "link": "kojeko.php",
+            "active": true
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Svaki čovjek već posjeduje ono što je potrebno da napravi unutrašnju promjenu. Ono što možemo da uradimo jeste da podstaknemo druge da pronađu izvor u sebi i podržimo ih na njihovom putu ka rastu i napretku.",
+            "author": "Milton Erikson",
+            "active": true
+        },
+        {
+            "text": "Samo zato što te neko ne voli onako kako želiš, ne znači da nisi voljen cijelim njegovim bićem.",
+            "author": "Gabriel Garcia Markez",
+            "active": true
+        },
+        {
+            "text": "Nesretnog življenja je onaj ko mora da ponižava druge da bi održao vlastito samopouzdanje.",
+            "author": "Harry Stack Sullivan",
+            "active": true
+        },
+        {
+            "text": "Najveće u ljudima je ono što ih čini ravnopravnim sa svima ostalima. Sve ono čime nastojimo da odstupimo iznad ili ispod onog zajedničkog svim ljudima čini nas manjim.",
+            "author": "Bert Hellinger",
+            "active": true
+        }
+    ],
+    "testimonials": [
+        {
+            "text": "Pomoć psihoterapeuta potražila sam za brata a ubrzo shvatila da je pomoć potrebna MENI. Preuzimajući obaveze i rješavajući probleme uže i šire porodice, usput negdje sam zaboravila sebe. Terapeut i inspirativni članovi terapijske grupe pomogli su da upoznajem sebe, svoje potrebe, da glasno kažem šta osjećam, šta želim a šta ne želim! Zahvalna sam za posvećenost i nesebičnost koje su me povele u povezanost i dragocjeno životno iskustvo!",
+            "author": "D., Prosvjetni radnik u penziji 69 god.",
+            "active": true
+        },
+        {
+            "text": "Na terapiji sam se konačno počela od srca smijati i plakati. Mnogo mi je pomoglo što me niko nije kritikovao za ono što osjećam i mislim. Dobro je u životu poznavati nekoga ko u pravo vrijeme umije postaviti prava pitanja.",
+            "author": "M., pravnica, 35 god.",
+            "active": true
+        },
+        {
+            "text": "Odlazak na prvi susret sa terapeutom/doktorom je bio teška odluka za mene. Trajalo je četiri godine a rezultat je da ponovo živim. Živim sa sličnim problemima i strahovima koje prepoznajem i prihvatam ali ŽIVIM. Zahvaljujući terapeutu i grupi gledam naprijed.",
+            "author": "P. (radnik) 53 godine.",
+            "active": true
+        },
+        {
+            "text": "Dozvolila sam da budem u šaci ličnih tragedija i ružnih dešavanja iz prošlosti. Ja sam ta koja odlučuje kako će se osjećati. Kada sam to shvatila, osjetila sam slobodu i zagrlila život. Neopisivo lijepo je naći sreću u sebi.",
+            "author": "S., 48 god, administrativni referent.",
+            "active": true
+        },
+        {
+            "text": "U mojoj porodici slabost je bila sramota, a briga o drugima je bila veoma bitna uloga. Prijateljica mi je pokazala put, preporučila mi je psihoterapeuta, koji mi je pomogao da sama otresem prašinu i ispravim se. Od tad, život je lepši, kad boli plačem i nije me sramota, kad sam ljuta kažem zašto, kad volim grlim i ljubim, kad sam srećna pevam i plešem.",
+            "author": "D., 50 godina, HR menadžer",
+            "active": true
+        }
+    ],
+    "team": [
+        {
+            "id": "dragan",
+            "name": "Dragan Tešanović",
+            "image": "images/team/dragan.jpg",
+            "description": "doktor medicine, specijalista psihijatrije, dodatna obuka iz porodične medicine, edukacija iz psihoterapijskih oblasti TA (transakciona analiza) i EMDR (terapija reprocesiranja), facilitator sistemskih konstelacija, iskustvo intenzivnog ambulantnog psihijatrijskog rada sa više hiljada osoba, stalna psihoterapijska praksa sa pojedincima, grupama kao i radionički rad sa klijentima.",
+            "role": "lead",
+            "active": true
+        },
+        {
+            "id": "zeljka",
+            "name": "Željka Štrbac",
+            "image": "images/team/zeljka.jpg",
+            "description": "doktor medicine, specijalista psihijatrije sa višegodišnjom iskustvom bolničkog i ambulantnog rada u tretmanu osoba sa mentalnim smetnjama uz upotrebu psihofarmakološkog, bazičnog psihoterapijskog i psihosocijalnog tretmana",
+            "role": "member",
+            "active": true
+        },
+        {
+            "id": "tatjana",
+            "name": "Tatjana Maglov",
+            "image": "images/team/tatjana.jpg",
+            "description": "doktor medicine, specijalista psihijatrije, uža djelatnost u oblasti tretmana zavisnosti, psihoterapeut sa edukacijom iz transakcione analize",
+            "role": "member",
+            "active": true
+        },
+        {
+            "id": "maric",
+            "name": "Tatjana Marić",
+            "image": "images/team/maric.jpg",
+            "description": "dr sci., pedagog, psihoterapeut pod supervizijom, praktičar transakcione analize, iskustvo u radu sa djecom, mladima na problemima odrastanja, samopouzdanja, stresa te sa odraslim osobama sa problemima anksioznosti i depresivnosti",
+            "role": "member",
+            "active": true
+        },
+        {
+            "id": "andrea",
+            "name": "Andrea Dursun",
+            "image": "images/team/andrea.jpg",
+            "description": "porodični, sistemski psihoterapeut pod supervizijom, uz dodatnu edukaciju iz tjelesno orijentisane psihoterapije. Studij socijalnog rada završila u Geteborgu, kao master iz oblasti Child and Youth Studies.",
+            "role": "member",
+            "active": true
+        },
+        {
+            "id": "suncica",
+            "name": "Sunčica Jugović",
+            "image": "images/team/suncica.jpg",
+            "description": "master psiholog, psihoterapeut pod supervizijom kognitivno-bihejvioralnog usmjerenja (ACT - Acceptance and Commitment Therapy; CFT-a - Compassion focused therapy), praktičar mindfulness tehnika",
+            "role": "member",
+            "active": true
+        },
+        {
+            "id": "sasa",
+            "name": "Saša Stanivuković",
+            "image": "images/team/sasa.jpg",
+            "description": "diplomirani medicinar zdravstvene njege, master zdravstvene njege",
+            "role": "member",
+            "active": true
+        }
+    ],
+    "cta": {
+        "heading": "Ako imate pitanje slobodno napišite",
+        "email": "dobar@psihijatar.info",
+        "button_text": "Ovdje",
+        "subtext": "Rado ćemo odgovoriti"
+    },
+    "footer": {
+        "tagline": "preventivne, dijagnostičke i terapijske aktivnosti u oblasti mentalnog zdravlja",
+        "booking_title": "Linkovi za rezervaciju termina"
+    },
+    "ideja": {
+        "page_title": "Otkud DOBAR dolazi i kud je naumio?",
+        "items": [
+            {
+                "title": "IDEJA",
+                "text": "Koncept ili ideja koja se nalazi iza akronima D.O.B.A.R. ili samo riječi DOBAR pojašnjava način na koji bismo da pristupimo našem zadatku. U htijenju smo da poštujemo Dostojanstvo svakog ko nam se obrati, pristupimo Odgovorno onom što nas očekuje, da se Brižno odnosimo prema svakoj osobi, nastupajući Angažovano u širem okviru brige o mentalnom zdravlju zajednice i Rado obavljajući naš izbor. Sjedinjavajući pomenute namjere pokrenuli smo medicinsko psihijatrijsku, psihoterapijsku i psihološku praksu za brigu o mentalnom zdravlju pod imenom Z.U. DOBAR.",
+                "active": true
+            },
+            {
+                "title": "ORDINACIJA",
+                "text": "Specijalistička psihijatrijska ordinacija DOBAR je registrovana oktobra 2021. kao mjesto gdje se briga o liječenju pojedinaca može provoditi u mirnim i zaštićenim okolnostima. U stalnoj smo saradnji sa profesionalcima za mentalno zdravlje različitih profila i iz različitih okruženja kao i medicinskim radnicima drugih profesionalnih usmjerenja",
+                "active": true
+            },
+            {
+                "title": "ISKUSTVO",
+                "text": "Iskustvo profesionalaca koji podržavaju koncept DOBAR nakupljano je decenijama u sklopu drugih zdravstvenih ustanova gdje su provodili i dalje provode radni vijek. Svako od nas je nastojao održati odnos prema pacijentu koji zadržava potrebe čovjeka na najvišem mjestu. Psihofarmakološka znanja koja koristimo su u skladu sa aktuelnim standardima dobre farmakološke prakse i u svim situacaijama koje to zahtjevaju u skladu sa konzilijarno formiranim zaključcima.",
+                "active": true
+            },
+            {
+                "title": "PSIHOTERAPIJA",
+                "text": "Psihoterapijska praksa kao trajan izbor u podršci mentalnom zdravlju i brizi o liječenju bazira se na uspostavi otovorenog i podržavajućeg odnosa izmedju terapeuta i klijenata. Više različiitih psihoterapijskih modaliteta (transakciona analiza, kognitivno bihevioralna terapija, EMDR, sistemska bračna i porodična psihoterapija) su prisutni u svakodnevnom terapijskom kontaktu sa onima koji nam se obrate sa takvim zahtjevima.",
+                "active": true
+            },
+            {
+                "title": "TESTIRANJA",
+                "text": "Psihološka testiranja se sprovode po provjerenim metodama uz puno poštovanje sklonosti i mogućnosti klijenta. U skladu sa potrebama onih koji nam se obrate istražujemo i nove metode za uspostavu jasnih dijagnostičkih putokaza ka uspješnijem liječenju.",
+                "active": true
+            }
+        ],
+        "gallery": [
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_01.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_01-thumb.jpg", "title": "Ordinacija 1"},
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_05.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_05-thumb.jpg", "title": "Ordinacija 2"},
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_06.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_06-thumb.jpg", "title": "Ordinacija 3"},
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_08.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_08-thumb.jpg", "title": "Ordinacija 4"},
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_11.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_11-thumb.jpg", "title": "Ordinacija 5"},
+            {"image": "images/gallery/ordinacija/dobar_ordinacija_12.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_12-thumb.jpg", "title": "Ordinacija 6"}
+        ]
+    },
+    "znanja": {
+        "page_title": "O NAŠIM ZNANJIMA",
+        "subtitle": "ovdje možete doznati više",
+        "services": [
+            {"title": "Mentalno zdravlje po SZO", "text": "Mentalno zdravlje je integralan i bitan sastavni dio zdravlja. U Statutu Svjetske zdravstvene organizacije stoji: „Zdravlje je stanje potpune fizičke, mentalne i socijalne dobrobiti, a ne samo odsutnost bolesti ili nesigurnosti\u201d. Važna implikacija ove definicije je da je mentalno zdravlje više od odsustva mentalnih poremećaja ili hendikepa.", "link": "mentalnozdravlje.php", "active": true},
+            {"title": "Šta je psihijatrija?", "text": "Najvažniji aspekt rada psihijatra je povjerljiv, obziran i detaljan razgovor s pacijentom a budući da su ljekari, psihijatri mogu naručiti ili obaviti čitav niz medicinskih, laboratorijskih i psiholoških testova koji, pomažu u stvaranju slike tjelesnog i psihičkog stanja pacijenta.", "link": "psihijatrija.php", "active": true},
+            {"title": "O psihoterapiji", "text": "Psihoterapija je skup metoda, procedura i tehnika kojima je cilj liječenje psihičkih tegoba razgovorom.Razgovor se vodi između terapeuta i jednog ili više sagovornika/klijenata. Namjena ovakvog razgovora je olakšavanje psihičkih tegoba, sagledavanje mogućih rješenja problema ili razvijanje ličnosti čime se poboljšava kvalitet života osobe.", "link": "psihoterapija.php", "active": true},
+            {"title": "Ko je ko u brizi o mentalnom zdravlju", "text": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog različitih pojmova koje možete čuti ili pročitati.", "link": "kojeko.php", "active": true},
+            {"title": "Grupna psihoterapija", "text": "Grupna terapija ima dugu, dokazanu istoriju kao veoma delotvoran i koristan oblik psihoterapije. Pomaže isto, a ponekad i više od individualne terapije, posebno kad su važni ciljevi lečenja socijalna podrška i učenje o interpersonalnim odnosima", "link": "grupna.php", "active": true},
+            {"title": "Sistemske konstelacije", "text": "Sistemske (porodične) konstelacije su pomoćna psihoterapijska metoda koja se oslanja na procesiranje negovornog iskustva u trenutku koji se događa.", "link": "konstelacije.php", "active": true},
+            {"title": "EMDR - psihoterapijska metoda", "text": "Metoda koristi prirodni proces pokretanja očiju (EM – eye movemant) kako bi se uspješno liječio stresni poremećaj poslije traumatskog doživljaja (PTSP).", "link": "emdr.php", "active": true},
+            {"title": "Sistemska porodična psihoterapija", "text": "Porodica kao sistem je skup povezanih dijelova (članovi porodice) koji su u međusobnoj interakciji. Svaki sistem ima svoja pravila koja određuju kako se dijelovi odnose jedan prema drugom i kako, sa svoje strane, utiču na sistem u celini.", "link": "sistemskaterapija.php", "active": true},
+            {"title": "Transakciona analiza", "text": "Transakciona analiza (TA) je teorija ličnosti i sistemska psihoterapija čiji je cilj lični razvoj i promjena. Može se koristiti u svakoj oblasti u kojoj postoji potreba za razmijevanjem pojedinaca, njihovih odnosa i komunikacije.", "link": "ta.php", "active": true},
+            {"title": "Porodični ciklusi", "text": "Život porodice se tokom vremena odvija kroz specifične faze razvoja koje se zovu životni ciklusi porodice. Svaka faza razvoja ima svoje zadatke i izazove koje porodica treba da riješi i zadovolji kako bi funkcionalno prešla u narednu fazu životnog ciklusa.", "link": "porodicniciklusi.php", "active": true},
+            {"title": "Psihološka terapija bola", "text": "Između bola i psihičkog stanja oboljelog postoji značajna uzročno-posljedična veza.  Iako dugotrajan hronični bol može dovesti do depresivnosti, isto tako jedna od manifestacija depresivnosti može biti upravo somatizacija, tj doživljaj bola (za koji ne postoji somatski uzročnik).", "link": "terapijabola.php", "active": true},
+            {"title": "Bračna/partnerska terapija", "text": "Bračna/partnerska terapija predstavlja psihološki tretman parova koji su u vezi ili braku. Osnovni cilj jeste pružiti pomoć parovima da unaprede svoj odnos, u smislu višeg stepena poverenja, intimnosti, zadovoljstva i bolje komunikacije.", "link": "partnerskaterapija.php", "active": true},
+            {"title": "Kognitivno-bihejvioralna terapija", "text": "Cilj kognitivno-bihejvioralne psihoterapije, kao psihoterapijskog pristupa vođenog naučnim istraživanjima, je da izmjenom disfunkcionalnih misli, sprečavanjem patološkog ponašanja ili učenjem novog, adaptibilnog ponašanja redukujemo patološke sadržaje i poboljšamo kvalitet života klijenta.", "link": "kbt.php", "active": true},
+            {"title": "Neurološki pregled", "text": "Kada se osoba nađe u zdravstvenom problemu pa je neophodan neurološki pregled i mišljenje, potrebno je pažljivo izabrati kome se ukazuje povjerenje. Neurološki problemi su zahtjevni pa je posvećenost i stručnost profesionalca posebno važna kako bi se dobila najbolja moguća dijagnoza i liječenje.", "link": "neuroloskipregled.php", "active": true}
+        ],
+        "quotes_1": [
+            {"text": "Stvarna vrijednost u životu je vrijeme a ne novac. Vremena svako od nas ima u ograničenim zalihama.", "author": "Robert Harris"},
+            {"text": "Kada nešto zaista zaželiš, cijeli svemir stvara zavjeru da ti pomogne to postići.", "author": "Paulo Coelho"},
+            {"text": "Pojedinac se uvijek mora truditi da ga ne preplavi pleme. Ako to probaš, često ćeš biti usamljen i ponekad  preplašen ali nijedna cijena nije previsoka za zadovoljstvo da ostaneš svoj.", "author": "Rudyard Kipling"},
+            {"text": "Pust život je gori nego ništa, a ljudi se opet drže te pustoši, ne vjerujući kako ima išta drugo. Ništa ne bi izgubili kad bi pustili ono što imaju, a boje se da ne bi dobili, zato šute i čekaju.", "author": "M.Selimović"}
+        ],
+        "quotes_2": [
+            {"text": "Očekivati da te svijet tretira pravedno jer si dobra osoba podjednako je besmisleno kao i očekivati da te bik ne napadne jer si vegetarijanac.", "author": "Fritz Perls"},
+            {"text": "Toliko je bilo u životu stvari kojih smo se bojali. A nije trebalo. Trebalo je živeti.", "author": "Ivo Andrić"},
+            {"text": "Ono si što činiš a ne ono što kažeš da ćeš učiniti.", "author": "C. G. Jung"},
+            {"text": "Djeca razumiju ljudsko ponašanje mnogo bolje nego odrasli koji su studirali ljudsko ponašanje.", "author": "Eric Berne"}
+        ],
+        "gallery": [
+            {"image": "images/team/03detalj.jpg", "thumb": "images/team/03detalj_thumb.jpg", "title": "Detalj"},
+            {"image": "images/team/08figurey.jpg", "thumb": "images/team/08figurey_thumb.jpg", "title": "Figure"},
+            {"image": "images/team/10grupaz.jpg", "thumb": "images/team/10grupaz_thumb.jpg", "title": "Grupa"},
+            {"image": "images/team/11mjestoklijent.jpg", "thumb": "images/team/11mjestoklijent_thumb.jpg", "title": "Mjesto klijent"},
+            {"image": "images/team/12zelenasoba.jpg", "thumb": "images/team/12zelenasoba_thumb.jpg", "title": "Zelena soba"},
+            {"image": "images/team/13polica.jpg", "thumb": "images/team/13polica_thumb.jpg", "title": "Polica"}
+        ]
+    },
+    "citanka": {
+        "page_title": "Čitanka",
+        "subtitle": "Tekstovi pred vama mogu pomoći da učite jezik mentalnog zdravlja kako bi postao sastavni dio vašeg životnog znanja",
+        "upcoming_text": "U pripremi: PsihoStomakika, Čemu rialiti?, Hoću li na izbore?",
+        "items": [
+            {"title": "Asertivna prava", "text": "Svaka osoba ima mogućnost da ih koristi i zauzme se za sebe, njihova primjena je važna za očuvanje samopoštovanja i poštovanja drugih. Asertivna prava proizlaze iz samog postojanja čovjeka i nezavisna su od pola, roda, nacionalnosti, boje kože i religijskih uvjerenja.", "link": "asertivnaprava.php", "image": "images/gallery/1.jpg", "bg_color": "#229C8C", "active": true},
+            {"title": "Četiri sporazuma", "text": "Prvi sporazum glasi: koristiću svoje riječi tačno. Drugi sporazum glasi: prestajem događaje shvatati lično. Treći sporazum glasi: prestajem da pretpostavljam. Četvrti sporazum glasi: učiniću ono što mogu.", "link": "cetirisporazuma.php", "image": "images/gallery/8.jpg", "bg_color": "#2c3e50", "active": true},
+            {"title": "Praštanje", "text": "Praštanje je naš vlastiti intimni čin kojim se opraštamo od naših očekivanja od neke osobe, a ne opraštanje već učinjenih postupaka te osobe.", "link": "prastanje.php", "image": "images/gallery/6.jpg", "bg_color": "#8e44ad", "active": true},
+            {"title": "Burnout ili izgaranje", "text": "\"Burnout\" smanjuje produktivnost i troši energiju, gubi se zainteresovanost i motivaciju zbog kojih je uopšte započeta određena aktivnosti a osoba se postaje beznadna, cinična i ogorčena, sebe smatra nesposobnom udovoljiti konstantnim zahtjevima okoline i nastavlja do krajnjeg doživljaja da nema više ništa dati.", "link": "burnout.php", "image": "images/gallery/4.jpg", "bg_color": "#e67e22", "active": true},
+            {"title": "Simptom, moj prijatelj", "text": "Gradeći novu unutrašnju strukturu tokom postupnog, cjelovitog psihoterapijskog tretmana otvaramo mogućnost stvarnog liječenja simptoma koji tako postaju zastarjeli i nepotrebni…", "link": "simptommojprijatelj.php", "image": "images/gallery/2.jpg", "bg_color": "#27ae60", "active": true},
+            {"title": "Plavi sat", "text": "Plavi Sat može se dogoditi bilo kad i bilo gdje. To je trenutak kad si istinski živ u svijetu koji te okružuje. Može da bude trenutak ljubavi ili trenutak straha. Tek ćeš u sjećanju znati da li je bio jedno ili drugo.", "link": "plavisat.php", "image": "images/gallery/9.jpg", "bg_color": "#2980b9", "active": true},
+            {"title": "A šta ću ako \"poludim\"?", "text": "Strah od ludila ili psihičke bolesti poznat je i kao dementofobija (od grčkih riječi dementos, što znači \u201Eizgubiti razum\u201D i phobos, što znači \u201Estrah\u201D).", "link": "dementofobija.php", "image": "images/gallery/10.jpg", "bg_color": "#c0392b", "active": true},
+            {"title": "??? Depresija ???", "text": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Često se uspostavlja kao psihijatrijska dijagnoza, i tvrdi se da pogađa 280 miliona ljudi širom svijeta, iako je za vjerovati da ima daleko više osoba koje pate ali se nisu nikada obratile za pomoć ili nisu prepoznate kao depresivne.", "link": "depresija.php", "image": "images/gallery/3.jpg", "bg_color": "#34495e", "active": true},
+            {"title": "\"Anksiolitik je car\" ili \"Car Je go\"", "text": "Lijekovi za smirenje svojim djelovanjem na nervni sistem umanjuju doživljaj stresa, ublažavaju tjeskobu, zabrinutost, uznemirenost, napetost i nesanicu, a u višim dozama uspavljuju, ali da li je to uvijek tako?", "link": "anksiolitici.php", "image": "images/gallery/5.jpg", "bg_color": "#16a085", "active": true},
+            {"title": "Da li želim biti \"normalan\"?", "text": "Neki ljudi prožive cijeli život želeći da sebe dožive kao \"normalnu\" osobu i čini im se nedostižnom ta (prividna) sposobnost drugih ljudi da žive svoje živote bez napora...", "link": "dalizelimbitinormalan.php", "image": "images/gallery/7.jpg", "bg_color": "#d35400", "active": true},
+            {"title": "U zamci duge veze", "text": "Izraz \"relationship burnout\" (sagorijevanje u vezi) se odnosi na osobe u značajnom ljubavnom ili drugom  odnosu koje postepeno razvijaju doživljaj iscrpljenosti, dosade, bezvoljnosti i pesimizma prema onom drugom ili odnosu koji postoji između njih.", "link": "dugeveze.php", "image": "images/gallery/1.jpg", "bg_color": "#e74c3c", "active": true},
+            {"title": "Stres", "text": "Kao da su zaboravili da je priroda stresu, odnosno reakcijama u organizmu koje se tom prilikom odigravaju, dodijelila veoma važnu ulogu koja je neophodna za preživljavanje.", "link": "stres.php", "image": "images/gallery/8.jpg", "bg_color": "#f39c12", "active": true},
+            {"title": "DEBLJINA - psihoterapijski zadatak", "text": "Prejedanje i debljanje su rezultat riješenosti da preživimo!!!", "link": "debljina.php", "image": "images/gallery/2.jpg", "bg_color": "#1abc9c", "active": true}
+        ]
+    },
+    "slusanka": {
+        "page_title": "Slušanka",
+        "subtitle": "je ono što bi se drugačije moglo reći podcast",
+        "description": "a naša namjera je da vam je ponudimo kao razvojni sadržaj tokom naredne godine",
+        "placeholder_image": "images/work.jpg",
+        "items": []
+    }
+}

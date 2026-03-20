@@ -1,0 +1,138 @@
+<?php
+require_once 'auth.php';
+requireLogin();
+
+header('Content-Type: application/json');
+
+$dataDir = __DIR__ . '/../data/';
+
+$action = $_POST['action'] ?? $_GET['action'] ?? '';
+
+switch ($action) {
+    case 'load_content':
+        echo file_get_contents($dataDir . 'content.json');
+        break;
+
+    case 'save_content':
+        $data = $_POST['data'] ?? '';
+        $json = json_decode($data, true);
+        if ($json === null) {
+            echo json_encode(['status' => 'error', 'message' => 'Neispravan JSON format']);
+            break;
+        }
+        // Backup
+        $backup = $dataDir . 'content_backup_' . date('Y-m-d_H-i-s') . '.json';
+        copy($dataDir . 'content.json', $backup);
+        file_put_contents($dataDir . 'content.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        echo json_encode(['status' => 'ok', 'message' => 'Sadržaj sačuvan']);
+        break;
+
+    case 'load_seo':
+        echo file_get_contents($dataDir . 'seo.json');
+        break;
+
+    case 'save_seo':
+        $data = $_POST['data'] ?? '';
+        $json = json_decode($data, true);
+        if ($json === null) {
+            echo json_encode(['status' => 'error', 'message' => 'Neispravan JSON format']);
+            break;
+        }
+        $backup = $dataDir . 'seo_backup_' . date('Y-m-d_H-i-s') . '.json';
+        copy($dataDir . 'seo.json', $backup);
+        file_put_contents($dataDir . 'seo.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        echo json_encode(['status' => 'ok', 'message' => 'SEO podaci sačuvani']);
+        break;
+
+    case 'generate_sitemap':
+        $seo = json_decode(file_get_contents($dataDir . 'seo.json'), true);
+        $baseUrl = $seo['global']['base_url'] ?? 'https://dobar.psihijatar.info';
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+        foreach ($seo['pages'] as $page => $data) {
+            $robots = $data['robots'] ?? 'index, follow';
+            if (strpos($robots, 'noindex') !== false) continue;
+            $xml .= "  <url>\n";
+            $xml .= "    <loc>{$baseUrl}/{$page}</loc>\n";
+            $xml .= "    <lastmod>" . date('Y-m-d') . "</lastmod>\n";
+            $priority = ($page === 'index.php') ? '1.0' : '0.8';
+            $xml .= "    <priority>{$priority}</priority>\n";
+            $xml .= "  </url>\n";
+        }
+        $xml .= '</urlset>';
+        file_put_contents(__DIR__ . '/../sitemap.xml', $xml);
+        echo json_encode(['status' => 'ok', 'message' => 'Sitemap generisan', 'pages' => count($seo['pages'])]);
+        break;
+
+    case 'save_robots':
+        $content = $_POST['content'] ?? '';
+        file_put_contents(__DIR__ . '/../robots.txt', $content);
+        echo json_encode(['status' => 'ok', 'message' => 'robots.txt sačuvan']);
+        break;
+
+    case 'change_password':
+        $newPass = $_POST['new_password'] ?? '';
+        $confirmPass = $_POST['confirm_password'] ?? '';
+        if (strlen($newPass) < 6) {
+            echo json_encode(['status' => 'error', 'message' => 'Lozinka mora imati najmanje 6 karaktera']);
+            break;
+        }
+        if ($newPass !== $confirmPass) {
+            echo json_encode(['status' => 'error', 'message' => 'Lozinke se ne poklapaju']);
+            break;
+        }
+        changePassword($newPass);
+        echo json_encode(['status' => 'ok', 'message' => 'Lozinka promijenjena']);
+        break;
+
+    case 'cleanup_backups':
+        $files = glob($dataDir . '*_backup_*.json');
+        // Keep last 5 backups of each type
+        $contentBackups = array_filter($files, fn($f) => strpos($f, 'content_backup') !== false);
+        $seoBackups = array_filter($files, fn($f) => strpos($f, 'seo_backup') !== false);
+        rsort($contentBackups);
+        rsort($seoBackups);
+        $deleted = 0;
+        foreach (array_slice($contentBackups, 5) as $f) { unlink($f); $deleted++; }
+        foreach (array_slice($seoBackups, 5) as $f) { unlink($f); $deleted++; }
+        echo json_encode(['status' => 'ok', 'message' => "Obrisano {$deleted} starih backup-a"]);
+        break;
+
+    case 'upload_og_image':
+        $uploadDir = __DIR__ . '/../images/og/';
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+        if (!isset($_FILES['og_image']) || $_FILES['og_image']['error'] !== UPLOAD_ERR_OK) {
+            echo json_encode(['status' => 'error', 'message' => 'Greška pri uploadu fajla']);
+            break;
+        }
+        $file = $_FILES['og_image'];
+        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+        $allowed = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+        if (!in_array($ext, $allowed)) {
+            echo json_encode(['status' => 'error', 'message' => 'Dozvoljeni formati: ' . implode(', ', $allowed)]);
+            break;
+        }
+        if ($file['size'] > 5 * 1024 * 1024) {
+            echo json_encode(['status' => 'error', 'message' => 'Maksimalna veličina: 5MB']);
+            break;
+        }
+        $filename = 'og_' . time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $file['name']);
+        $destPath = $uploadDir . $filename;
+        if (move_uploaded_file($file['tmp_name'], $destPath)) {
+            $seo = json_decode(file_get_contents($dataDir . 'seo.json'), true);
+            $baseUrl = $seo['global']['base_url'] ?? 'https://dobar.psihijatar.info';
+            $imageUrl = $baseUrl . '/images/og/' . $filename;
+            echo json_encode(['status' => 'ok', 'message' => 'Slika uploadovana', 'url' => $imageUrl, 'path' => 'images/og/' . $filename]);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Greška pri čuvanju fajla na server']);
+        }
+        break;
+
+    case 'protect_data':
+        file_put_contents($dataDir . '.htaccess', "Deny from all\n");
+        echo json_encode(['status' => 'ok', 'message' => '.htaccess kreiran']);
+        break;
+
+    default:
+        echo json_encode(['status' => 'error', 'message' => 'Nepoznata akcija']);
+}

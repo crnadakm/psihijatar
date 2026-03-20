@@ -1,0 +1,10 @@
+# Backup files
+data/*_backup_*.json
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

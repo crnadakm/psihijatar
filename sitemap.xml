@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>https://dobar.psihijatar.info</loc>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>1</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://dobar.psihijatar.info/onama.php</loc>
+
+   </url>
+
+   <url>
+
+      <loc>https://dobar.psihijatar.info/znanja.php</loc>
+
+   </url>  
+
+   <url>
+
+      <loc>https://dobar.psihijatar.info/aktivnosti.php</loc>
+
+   </url>  
+
+      <url>
+
+      <loc>https://dobar.psihijatar.info/dokumenti.php</loc>
+
+   </url>  
+
+      <url>
+
+      <loc>https://dobar.psihijatar.info/slusanka.php</loc>
+
+   </url>  
+
+    <url>
+
+      <loc>https://dobar.psihijatar.info/knjige.php</loc>
+
+   </url>  
+
+    <url>
+
+      <loc>https://dobar.psihijatar.info/video.php</loc>
+
+   </url>
+
+    <url>
+
+      <loc>https://dobar.psihijatar.info/kontakt.php</loc>
+
+   </url>
+     
+</urlset>
