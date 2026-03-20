@@ -31,6 +31,7 @@ if (isLoggedIn()) {
         .login-card { background: #16213e; border-radius: 16px; padding: 40px; max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
         .login-card h2 { color: #229C8C; text-align: center; margin-bottom: 30px; letter-spacing: 8px; font-weight: 700; }
         .form-control { background: #0f3460; border: 1px solid #1a1a4e; color: #fff; padding: 12px 16px; }
+        .form-control::placeholder { color: #8899bb; opacity: 1; }
         .form-control:focus { background: #0f3460; color: #fff; border-color: #229C8C; box-shadow: 0 0 0 0.2rem rgba(34,156,140,.25); }
         .btn-login { background: #229C8C; border: none; padding: 12px; font-weight: 600; letter-spacing: 2px; width: 100%; }
         .btn-login:hover { background: #1a7a6e; }

@@ -93,7 +93,7 @@
 		<?php include 'elements/footer.php' ?>
 	</div>
 
-	<?php include 'elements/jsscripts.php' ?>
 	<script src="js/lightbox-plus-jquery.js"></script>
+	<?php include 'elements/jsscripts.php' ?>
 </body>
 </html>
