@@ -111,8 +111,10 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.author)}" onchange="contentData.knjige.items[${i}].author=this.value">
                     </div>
                     <div class="col-md-3 mb-2">
-                        <label class="form-label">Slika (URL)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.knjige.items[${i}].image=this.value">
+                        <label class="form-label">Slika (URL ili upload)</label>
+                        <input type="text" class="form-control" id="book-img-${i}" value="${escHtml(item.image)}" onchange="contentData.knjige.items[${i}].image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadBookCover(${i}, this)">
+                        <small class="text-muted" id="upload-status-${i}"></small>
                     </div>
                     <div class="col-md-8 mb-2">
                         <label class="form-label">Opis</label>
@@ -152,6 +154,30 @@ requireLogin();
         if (j < 0 || j >= items.length) return;
         [items[i], items[j]] = [items[j], items[i]];
         renderBooks();
+    }
+
+    function uploadBookCover(i, input) {
+        if (!input.files[0]) return;
+        const status = document.getElementById('upload-status-' + i);
+        status.textContent = 'Uploadujem...';
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/bookcover/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData.knjige.items[i].image = data.path;
+                    document.getElementById('book-img-' + i).value = data.path;
+                    status.textContent = 'Uploadovano!';
+                    showToast('Cover uploadovan', 'success');
+                } else {
+                    status.textContent = data.message;
+                    showToast(data.message, 'danger');
+                }
+            })
+            .catch(() => { status.textContent = 'Greška'; });
     }
 
     function escHtml(str) {

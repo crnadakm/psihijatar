@@ -34,6 +34,7 @@ requireLogin();
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-team">Tim</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-cta">CTA</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-footer">Footer</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-highlights">Blog highlight</a></li>
         </ul>
 
         <div class="tab-content">
@@ -148,6 +149,16 @@ requireLogin();
                 </div>
             </div>
 
+            <!-- BLOG HIGHLIGHTS -->
+            <div class="tab-pane fade" id="sec-highlights">
+                <div class="card-section">
+                    <h5><i class="bi bi-newspaper"></i> Blog highlight (naslovna)</h5>
+                    <p class="text-muted">4 teksta sa slikama koji se prikazuju na naslovnoj stranici</p>
+                    <div id="highlight-items"></div>
+                    <button class="btn-add mt-2" onclick="addHighlight()"><i class="bi bi-plus-lg"></i> Dodaj highlight</button>
+                </div>
+            </div>
+
             <!-- FOOTER -->
             <div class="tab-pane fade" id="sec-footer">
                 <div class="card-section">
@@ -224,6 +235,7 @@ requireLogin();
         renderQuotes();
         renderTestimonials();
         renderTeam();
+        renderHighlights();
     }
 
     // ===== SLIDER =====
@@ -403,17 +415,71 @@ requireLogin();
         renderTeam();
     }
 
+    // ===== BLOG HIGHLIGHTS =====
+    function renderHighlights() {
+        const container = document.getElementById('highlight-items');
+        container.innerHTML = '';
+        (contentData.blog_highlights || []).forEach((item, i) => {
+            container.innerHTML += `
+            <div class="item-card">
+                <div class="item-header">
+                    <h6><i class="bi bi-newspaper"></i> ${escHtml(item.title) || 'Highlight ' + (i+1)}</h6>
+                    <div>
+                        <button class="btn btn-sm btn-outline-light" onclick="moveHighlight(${i},-1)" ${i===0?'disabled':''}><i class="bi bi-arrow-up"></i></button>
+                        <button class="btn btn-sm btn-outline-light" onclick="moveHighlight(${i},1)" ${i===(contentData.blog_highlights||[]).length-1?'disabled':''}><i class="bi bi-arrow-down"></i></button>
+                        <button class="btn btn-sm ${item.active !== false ? 'btn-success' : 'btn-secondary'}" onclick="toggleActive('blog_highlights',${i})">${item.active !== false ? 'Aktivan' : 'Neaktivan'}</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeItem('blog_highlights',${i})"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Naslov</label>
+                        <input type="text" class="form-control" value="${escHtml(item.title)}" onchange="contentData.blog_highlights[${i}].title=this.value">
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Link (PHP fajl)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.link)}" onchange="contentData.blog_highlights[${i}].link=this.value">
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Slika</label>
+                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.blog_highlights[${i}].image=this.value">
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Autor</label>
+                        <input type="text" class="form-control" value="${escHtml(item.author || '')}" onchange="contentData.blog_highlights[${i}].author=this.value">
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Datum</label>
+                        <input type="text" class="form-control" value="${escHtml(item.date || '')}" onchange="contentData.blog_highlights[${i}].date=this.value" placeholder="npr. Avgust '23">
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+    function addHighlight() {
+        contentData.blog_highlights = contentData.blog_highlights || [];
+        contentData.blog_highlights.push({ title: '', link: '', image: '', author: '', date: '', active: true });
+        renderHighlights();
+    }
+    function moveHighlight(i, dir) {
+        const items = contentData.blog_highlights;
+        const j = i + dir;
+        if (j < 0 || j >= items.length) return;
+        [items[i], items[j]] = [items[j], items[i]];
+        renderHighlights();
+    }
+
     // ===== HELPERS =====
     function toggleActive(section, index) {
         contentData[section][index].active = !contentData[section][index].active;
-        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam };
+        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam, blog_highlights: renderHighlights };
         renderMap[section]();
     }
 
     function removeItem(section, index) {
         if (!confirm('Obrisati stavku?')) return;
         contentData[section].splice(index, 1);
-        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam };
+        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam, blog_highlights: renderHighlights };
         renderMap[section]();
     }
 

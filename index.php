@@ -225,16 +225,10 @@
 				<div class="section-head text-center col-md-8 col-md-offset-2 space40">
 				</div>
 			</div>
-			<?= htmlBlogHighlight("dalizelimbitinormalan.php","Dragan Tešanović","images/bookcover/normalan-square.jpg", "Da li želim biti \"normalan\"?", "Avgust '23") ?>
-			<!-- <?= htmlBlogHighlight("dementofobija.php","Dragan Tešanović","images/bookcover/dementophobia-square.jpg", "A šta ću ako \"poludim\"?", "Februar '23") ?> -->
-			<!-- <?= htmlBlogHighlight("asertivnaprava.php","Dragan Tešanović","images/bookcover/img1.jpg", "Asertivna prava") ?> -->
-			<!-- <?= htmlBlogHighlight("anksiolitici.php","","images/bookcover/anksiolitik-square.jpg", '"Anksiolitik je car" ili "Car je go"?', "Oktobar '22") ?> -->
-			<!-- <?= htmlBlogHighlight("plavisat.php","","images/bookcover/plavi-sat-square.jpg", "Plavi sat", "Oktobar '22") ?> -->
-			<?= htmlBlogHighlight("simptommojprijatelj.php","Dragan Tešanović","images/bookcover/plant_square.jpg", "Simptom, moj prijatelj", "Januar '22") ?>
-			<!-- <?= htmlBlogHighlight("burnout.php","Dragan Tešanović","images/bookcover/img4.jpg", "„Burnout“ ili izgaranje", "Decembar '21") ?> -->
-			<?= htmlBlogHighlight("prastanje.php","Dragan Tešanović","images/bookcover/img3.jpg", "Praštanje", "Novembar '21") ?>
-			<!-- <?= htmlBlogHighlight("cetirisporazuma.php","Dragan Tešanović","images/bookcover/img2.jpg", "Četiri sporazuma", "Oktobar '21") ?> -->
-			<?= htmlBlogHighlight("dugeveze.php","","images/bookcover/veze-square.png", "U zamci duge veze", "Avgust '23") ?>
+			<?php foreach (getContent('blog_highlights') as $bh):
+				if (!($bh['active'] ?? true)) continue;
+				echo htmlBlogHighlight($bh['link'] ?? '', $bh['author'] ?? '', $bh['image'] ?? '', $bh['title'] ?? '', $bh['date'] ?? '');
+			endforeach; ?>
 			
 		</div>
 	</div>

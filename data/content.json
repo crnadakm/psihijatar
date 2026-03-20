@@ -199,52 +199,194 @@
             }
         ],
         "gallery": [
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_01.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_01-thumb.jpg", "title": "Ordinacija 1"},
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_05.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_05-thumb.jpg", "title": "Ordinacija 2"},
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_06.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_06-thumb.jpg", "title": "Ordinacija 3"},
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_08.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_08-thumb.jpg", "title": "Ordinacija 4"},
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_11.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_11-thumb.jpg", "title": "Ordinacija 5"},
-            {"image": "images/gallery/ordinacija/dobar_ordinacija_12.jpg", "thumb": "images/gallery/ordinacija/dobar_ordinacija_12-thumb.jpg", "title": "Ordinacija 6"}
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_01.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_01-thumb.jpg",
+                "title": "Ordinacija 1"
+            },
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_05.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_05-thumb.jpg",
+                "title": "Ordinacija 2"
+            },
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_06.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_06-thumb.jpg",
+                "title": "Ordinacija 3"
+            },
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_08.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_08-thumb.jpg",
+                "title": "Ordinacija 4"
+            },
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_11.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_11-thumb.jpg",
+                "title": "Ordinacija 5"
+            },
+            {
+                "image": "images/gallery/ordinacija/dobar_ordinacija_12.jpg",
+                "thumb": "images/gallery/ordinacija/dobar_ordinacija_12-thumb.jpg",
+                "title": "Ordinacija 6"
+            }
         ]
     },
     "znanja": {
         "page_title": "O NAŠIM ZNANJIMA",
         "subtitle": "ovdje možete doznati više",
         "services": [
-            {"title": "Mentalno zdravlje po SZO", "text": "Mentalno zdravlje je integralan i bitan sastavni dio zdravlja. U Statutu Svjetske zdravstvene organizacije stoji: „Zdravlje je stanje potpune fizičke, mentalne i socijalne dobrobiti, a ne samo odsutnost bolesti ili nesigurnosti\u201d. Važna implikacija ove definicije je da je mentalno zdravlje više od odsustva mentalnih poremećaja ili hendikepa.", "link": "mentalnozdravlje.php", "active": true},
-            {"title": "Šta je psihijatrija?", "text": "Najvažniji aspekt rada psihijatra je povjerljiv, obziran i detaljan razgovor s pacijentom a budući da su ljekari, psihijatri mogu naručiti ili obaviti čitav niz medicinskih, laboratorijskih i psiholoških testova koji, pomažu u stvaranju slike tjelesnog i psihičkog stanja pacijenta.", "link": "psihijatrija.php", "active": true},
-            {"title": "O psihoterapiji", "text": "Psihoterapija je skup metoda, procedura i tehnika kojima je cilj liječenje psihičkih tegoba razgovorom.Razgovor se vodi između terapeuta i jednog ili više sagovornika/klijenata. Namjena ovakvog razgovora je olakšavanje psihičkih tegoba, sagledavanje mogućih rješenja problema ili razvijanje ličnosti čime se poboljšava kvalitet života osobe.", "link": "psihoterapija.php", "active": true},
-            {"title": "Ko je ko u brizi o mentalnom zdravlju", "text": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog različitih pojmova koje možete čuti ili pročitati.", "link": "kojeko.php", "active": true},
-            {"title": "Grupna psihoterapija", "text": "Grupna terapija ima dugu, dokazanu istoriju kao veoma delotvoran i koristan oblik psihoterapije. Pomaže isto, a ponekad i više od individualne terapije, posebno kad su važni ciljevi lečenja socijalna podrška i učenje o interpersonalnim odnosima", "link": "grupna.php", "active": true},
-            {"title": "Sistemske konstelacije", "text": "Sistemske (porodične) konstelacije su pomoćna psihoterapijska metoda koja se oslanja na procesiranje negovornog iskustva u trenutku koji se događa.", "link": "konstelacije.php", "active": true},
-            {"title": "EMDR - psihoterapijska metoda", "text": "Metoda koristi prirodni proces pokretanja očiju (EM – eye movemant) kako bi se uspješno liječio stresni poremećaj poslije traumatskog doživljaja (PTSP).", "link": "emdr.php", "active": true},
-            {"title": "Sistemska porodična psihoterapija", "text": "Porodica kao sistem je skup povezanih dijelova (članovi porodice) koji su u međusobnoj interakciji. Svaki sistem ima svoja pravila koja određuju kako se dijelovi odnose jedan prema drugom i kako, sa svoje strane, utiču na sistem u celini.", "link": "sistemskaterapija.php", "active": true},
-            {"title": "Transakciona analiza", "text": "Transakciona analiza (TA) je teorija ličnosti i sistemska psihoterapija čiji je cilj lični razvoj i promjena. Može se koristiti u svakoj oblasti u kojoj postoji potreba za razmijevanjem pojedinaca, njihovih odnosa i komunikacije.", "link": "ta.php", "active": true},
-            {"title": "Porodični ciklusi", "text": "Život porodice se tokom vremena odvija kroz specifične faze razvoja koje se zovu životni ciklusi porodice. Svaka faza razvoja ima svoje zadatke i izazove koje porodica treba da riješi i zadovolji kako bi funkcionalno prešla u narednu fazu životnog ciklusa.", "link": "porodicniciklusi.php", "active": true},
-            {"title": "Psihološka terapija bola", "text": "Između bola i psihičkog stanja oboljelog postoji značajna uzročno-posljedična veza.  Iako dugotrajan hronični bol može dovesti do depresivnosti, isto tako jedna od manifestacija depresivnosti može biti upravo somatizacija, tj doživljaj bola (za koji ne postoji somatski uzročnik).", "link": "terapijabola.php", "active": true},
-            {"title": "Bračna/partnerska terapija", "text": "Bračna/partnerska terapija predstavlja psihološki tretman parova koji su u vezi ili braku. Osnovni cilj jeste pružiti pomoć parovima da unaprede svoj odnos, u smislu višeg stepena poverenja, intimnosti, zadovoljstva i bolje komunikacije.", "link": "partnerskaterapija.php", "active": true},
-            {"title": "Kognitivno-bihejvioralna terapija", "text": "Cilj kognitivno-bihejvioralne psihoterapije, kao psihoterapijskog pristupa vođenog naučnim istraživanjima, je da izmjenom disfunkcionalnih misli, sprečavanjem patološkog ponašanja ili učenjem novog, adaptibilnog ponašanja redukujemo patološke sadržaje i poboljšamo kvalitet života klijenta.", "link": "kbt.php", "active": true},
-            {"title": "Neurološki pregled", "text": "Kada se osoba nađe u zdravstvenom problemu pa je neophodan neurološki pregled i mišljenje, potrebno je pažljivo izabrati kome se ukazuje povjerenje. Neurološki problemi su zahtjevni pa je posvećenost i stručnost profesionalca posebno važna kako bi se dobila najbolja moguća dijagnoza i liječenje.", "link": "neuroloskipregled.php", "active": true}
+            {
+                "title": "Mentalno zdravlje po SZO",
+                "text": "Mentalno zdravlje je integralan i bitan sastavni dio zdravlja. U Statutu Svjetske zdravstvene organizacije stoji: „Zdravlje je stanje potpune fizičke, mentalne i socijalne dobrobiti, a ne samo odsutnost bolesti ili nesigurnosti”. Važna implikacija ove definicije je da je mentalno zdravlje više od odsustva mentalnih poremećaja ili hendikepa.",
+                "link": "mentalnozdravlje.php",
+                "active": true
+            },
+            {
+                "title": "Šta je psihijatrija?",
+                "text": "Najvažniji aspekt rada psihijatra je povjerljiv, obziran i detaljan razgovor s pacijentom a budući da su ljekari, psihijatri mogu naručiti ili obaviti čitav niz medicinskih, laboratorijskih i psiholoških testova koji, pomažu u stvaranju slike tjelesnog i psihičkog stanja pacijenta.",
+                "link": "psihijatrija.php",
+                "active": true
+            },
+            {
+                "title": "O psihoterapiji",
+                "text": "Psihoterapija je skup metoda, procedura i tehnika kojima je cilj liječenje psihičkih tegoba razgovorom.Razgovor se vodi između terapeuta i jednog ili više sagovornika/klijenata. Namjena ovakvog razgovora je olakšavanje psihičkih tegoba, sagledavanje mogućih rješenja problema ili razvijanje ličnosti čime se poboljšava kvalitet života osobe.",
+                "link": "psihoterapija.php",
+                "active": true
+            },
+            {
+                "title": "Ko je ko u brizi o mentalnom zdravlju",
+                "text": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog različitih pojmova koje možete čuti ili pročitati.",
+                "link": "kojeko.php",
+                "active": true
+            },
+            {
+                "title": "Grupna psihoterapija",
+                "text": "Grupna terapija ima dugu, dokazanu istoriju kao veoma delotvoran i koristan oblik psihoterapije. Pomaže isto, a ponekad i više od individualne terapije, posebno kad su važni ciljevi lečenja socijalna podrška i učenje o interpersonalnim odnosima",
+                "link": "grupna.php",
+                "active": true
+            },
+            {
+                "title": "Sistemske konstelacije",
+                "text": "Sistemske (porodične) konstelacije su pomoćna psihoterapijska metoda koja se oslanja na procesiranje negovornog iskustva u trenutku koji se događa.",
+                "link": "konstelacije.php",
+                "active": true
+            },
+            {
+                "title": "EMDR - psihoterapijska metoda",
+                "text": "Metoda koristi prirodni proces pokretanja očiju (EM – eye movemant) kako bi se uspješno liječio stresni poremećaj poslije traumatskog doživljaja (PTSP).",
+                "link": "emdr.php",
+                "active": true
+            },
+            {
+                "title": "Sistemska porodična psihoterapija",
+                "text": "Porodica kao sistem je skup povezanih dijelova (članovi porodice) koji su u međusobnoj interakciji. Svaki sistem ima svoja pravila koja određuju kako se dijelovi odnose jedan prema drugom i kako, sa svoje strane, utiču na sistem u celini.",
+                "link": "sistemskaterapija.php",
+                "active": true
+            },
+            {
+                "title": "Transakciona analiza",
+                "text": "Transakciona analiza (TA) je teorija ličnosti i sistemska psihoterapija čiji je cilj lični razvoj i promjena. Može se koristiti u svakoj oblasti u kojoj postoji potreba za razmijevanjem pojedinaca, njihovih odnosa i komunikacije.",
+                "link": "ta.php",
+                "active": true
+            },
+            {
+                "title": "Porodični ciklusi",
+                "text": "Život porodice se tokom vremena odvija kroz specifične faze razvoja koje se zovu životni ciklusi porodice. Svaka faza razvoja ima svoje zadatke i izazove koje porodica treba da riješi i zadovolji kako bi funkcionalno prešla u narednu fazu životnog ciklusa.",
+                "link": "porodicniciklusi.php",
+                "active": true
+            },
+            {
+                "title": "Psihološka terapija bola",
+                "text": "Između bola i psihičkog stanja oboljelog postoji značajna uzročno-posljedična veza.  Iako dugotrajan hronični bol može dovesti do depresivnosti, isto tako jedna od manifestacija depresivnosti može biti upravo somatizacija, tj doživljaj bola (za koji ne postoji somatski uzročnik).",
+                "link": "terapijabola.php",
+                "active": true
+            },
+            {
+                "title": "Bračna/partnerska terapija",
+                "text": "Bračna/partnerska terapija predstavlja psihološki tretman parova koji su u vezi ili braku. Osnovni cilj jeste pružiti pomoć parovima da unaprede svoj odnos, u smislu višeg stepena poverenja, intimnosti, zadovoljstva i bolje komunikacije.",
+                "link": "partnerskaterapija.php",
+                "active": true
+            },
+            {
+                "title": "Kognitivno-bihejvioralna terapija",
+                "text": "Cilj kognitivno-bihejvioralne psihoterapije, kao psihoterapijskog pristupa vođenog naučnim istraživanjima, je da izmjenom disfunkcionalnih misli, sprečavanjem patološkog ponašanja ili učenjem novog, adaptibilnog ponašanja redukujemo patološke sadržaje i poboljšamo kvalitet života klijenta.",
+                "link": "kbt.php",
+                "active": true
+            },
+            {
+                "title": "Neurološki pregled",
+                "text": "Kada se osoba nađe u zdravstvenom problemu pa je neophodan neurološki pregled i mišljenje, potrebno je pažljivo izabrati kome se ukazuje povjerenje. Neurološki problemi su zahtjevni pa je posvećenost i stručnost profesionalca posebno važna kako bi se dobila najbolja moguća dijagnoza i liječenje.",
+                "link": "neuroloskipregled.php",
+                "active": true
+            }
         ],
         "quotes_1": [
-            {"text": "Stvarna vrijednost u životu je vrijeme a ne novac. Vremena svako od nas ima u ograničenim zalihama.", "author": "Robert Harris"},
-            {"text": "Kada nešto zaista zaželiš, cijeli svemir stvara zavjeru da ti pomogne to postići.", "author": "Paulo Coelho"},
-            {"text": "Pojedinac se uvijek mora truditi da ga ne preplavi pleme. Ako to probaš, često ćeš biti usamljen i ponekad  preplašen ali nijedna cijena nije previsoka za zadovoljstvo da ostaneš svoj.", "author": "Rudyard Kipling"},
-            {"text": "Pust život je gori nego ništa, a ljudi se opet drže te pustoši, ne vjerujući kako ima išta drugo. Ništa ne bi izgubili kad bi pustili ono što imaju, a boje se da ne bi dobili, zato šute i čekaju.", "author": "M.Selimović"}
+            {
+                "text": "Stvarna vrijednost u životu je vrijeme a ne novac. Vremena svako od nas ima u ograničenim zalihama.",
+                "author": "Robert Harris"
+            },
+            {
+                "text": "Kada nešto zaista zaželiš, cijeli svemir stvara zavjeru da ti pomogne to postići.",
+                "author": "Paulo Coelho"
+            },
+            {
+                "text": "Pojedinac se uvijek mora truditi da ga ne preplavi pleme. Ako to probaš, često ćeš biti usamljen i ponekad  preplašen ali nijedna cijena nije previsoka za zadovoljstvo da ostaneš svoj.",
+                "author": "Rudyard Kipling"
+            },
+            {
+                "text": "Pust život je gori nego ništa, a ljudi se opet drže te pustoši, ne vjerujući kako ima išta drugo. Ništa ne bi izgubili kad bi pustili ono što imaju, a boje se da ne bi dobili, zato šute i čekaju.",
+                "author": "M.Selimović"
+            }
         ],
         "quotes_2": [
-            {"text": "Očekivati da te svijet tretira pravedno jer si dobra osoba podjednako je besmisleno kao i očekivati da te bik ne napadne jer si vegetarijanac.", "author": "Fritz Perls"},
-            {"text": "Toliko je bilo u životu stvari kojih smo se bojali. A nije trebalo. Trebalo je živeti.", "author": "Ivo Andrić"},
-            {"text": "Ono si što činiš a ne ono što kažeš da ćeš učiniti.", "author": "C. G. Jung"},
-            {"text": "Djeca razumiju ljudsko ponašanje mnogo bolje nego odrasli koji su studirali ljudsko ponašanje.", "author": "Eric Berne"}
+            {
+                "text": "Očekivati da te svijet tretira pravedno jer si dobra osoba podjednako je besmisleno kao i očekivati da te bik ne napadne jer si vegetarijanac.",
+                "author": "Fritz Perls"
+            },
+            {
+                "text": "Toliko je bilo u životu stvari kojih smo se bojali. A nije trebalo. Trebalo je živeti.",
+                "author": "Ivo Andrić"
+            },
+            {
+                "text": "Ono si što činiš a ne ono što kažeš da ćeš učiniti.",
+                "author": "C. G. Jung"
+            },
+            {
+                "text": "Djeca razumiju ljudsko ponašanje mnogo bolje nego odrasli koji su studirali ljudsko ponašanje.",
+                "author": "Eric Berne"
+            }
         ],
         "gallery": [
-            {"image": "images/team/03detalj.jpg", "thumb": "images/team/03detalj_thumb.jpg", "title": "Detalj"},
-            {"image": "images/team/08figurey.jpg", "thumb": "images/team/08figurey_thumb.jpg", "title": "Figure"},
-            {"image": "images/team/10grupaz.jpg", "thumb": "images/team/10grupaz_thumb.jpg", "title": "Grupa"},
-            {"image": "images/team/11mjestoklijent.jpg", "thumb": "images/team/11mjestoklijent_thumb.jpg", "title": "Mjesto klijent"},
-            {"image": "images/team/12zelenasoba.jpg", "thumb": "images/team/12zelenasoba_thumb.jpg", "title": "Zelena soba"},
-            {"image": "images/team/13polica.jpg", "thumb": "images/team/13polica_thumb.jpg", "title": "Polica"}
+            {
+                "image": "images/team/03detalj.jpg",
+                "thumb": "images/team/03detalj_thumb.jpg",
+                "title": "Detalj"
+            },
+            {
+                "image": "images/team/08figurey.jpg",
+                "thumb": "images/team/08figurey_thumb.jpg",
+                "title": "Figure"
+            },
+            {
+                "image": "images/team/10grupaz.jpg",
+                "thumb": "images/team/10grupaz_thumb.jpg",
+                "title": "Grupa"
+            },
+            {
+                "image": "images/team/11mjestoklijent.jpg",
+                "thumb": "images/team/11mjestoklijent_thumb.jpg",
+                "title": "Mjesto klijent"
+            },
+            {
+                "image": "images/team/12zelenasoba.jpg",
+                "thumb": "images/team/12zelenasoba_thumb.jpg",
+                "title": "Zelena soba"
+            },
+            {
+                "image": "images/team/13polica.jpg",
+                "thumb": "images/team/13polica_thumb.jpg",
+                "title": "Polica"
+            }
         ]
     },
     "citanka": {
@@ -252,19 +394,110 @@
         "subtitle": "Tekstovi pred vama mogu pomoći da učite jezik mentalnog zdravlja kako bi postao sastavni dio vašeg životnog znanja",
         "upcoming_text": "U pripremi: PsihoStomakika, Čemu rialiti?, Hoću li na izbore?",
         "items": [
-            {"title": "Asertivna prava", "text": "Svaka osoba ima mogućnost da ih koristi i zauzme se za sebe, njihova primjena je važna za očuvanje samopoštovanja i poštovanja drugih. Asertivna prava proizlaze iz samog postojanja čovjeka i nezavisna su od pola, roda, nacionalnosti, boje kože i religijskih uvjerenja.", "link": "asertivnaprava.php", "image": "images/gallery/1.jpg", "bg_color": "#229C8C", "active": true},
-            {"title": "Četiri sporazuma", "text": "Prvi sporazum glasi: koristiću svoje riječi tačno. Drugi sporazum glasi: prestajem događaje shvatati lično. Treći sporazum glasi: prestajem da pretpostavljam. Četvrti sporazum glasi: učiniću ono što mogu.", "link": "cetirisporazuma.php", "image": "images/gallery/8.jpg", "bg_color": "#2c3e50", "active": true},
-            {"title": "Praštanje", "text": "Praštanje je naš vlastiti intimni čin kojim se opraštamo od naših očekivanja od neke osobe, a ne opraštanje već učinjenih postupaka te osobe.", "link": "prastanje.php", "image": "images/gallery/6.jpg", "bg_color": "#8e44ad", "active": true},
-            {"title": "Burnout ili izgaranje", "text": "\"Burnout\" smanjuje produktivnost i troši energiju, gubi se zainteresovanost i motivaciju zbog kojih je uopšte započeta određena aktivnosti a osoba se postaje beznadna, cinična i ogorčena, sebe smatra nesposobnom udovoljiti konstantnim zahtjevima okoline i nastavlja do krajnjeg doživljaja da nema više ništa dati.", "link": "burnout.php", "image": "images/gallery/4.jpg", "bg_color": "#e67e22", "active": true},
-            {"title": "Simptom, moj prijatelj", "text": "Gradeći novu unutrašnju strukturu tokom postupnog, cjelovitog psihoterapijskog tretmana otvaramo mogućnost stvarnog liječenja simptoma koji tako postaju zastarjeli i nepotrebni…", "link": "simptommojprijatelj.php", "image": "images/gallery/2.jpg", "bg_color": "#27ae60", "active": true},
-            {"title": "Plavi sat", "text": "Plavi Sat može se dogoditi bilo kad i bilo gdje. To je trenutak kad si istinski živ u svijetu koji te okružuje. Može da bude trenutak ljubavi ili trenutak straha. Tek ćeš u sjećanju znati da li je bio jedno ili drugo.", "link": "plavisat.php", "image": "images/gallery/9.jpg", "bg_color": "#2980b9", "active": true},
-            {"title": "A šta ću ako \"poludim\"?", "text": "Strah od ludila ili psihičke bolesti poznat je i kao dementofobija (od grčkih riječi dementos, što znači \u201Eizgubiti razum\u201D i phobos, što znači \u201Estrah\u201D).", "link": "dementofobija.php", "image": "images/gallery/10.jpg", "bg_color": "#c0392b", "active": true},
-            {"title": "??? Depresija ???", "text": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Često se uspostavlja kao psihijatrijska dijagnoza, i tvrdi se da pogađa 280 miliona ljudi širom svijeta, iako je za vjerovati da ima daleko više osoba koje pate ali se nisu nikada obratile za pomoć ili nisu prepoznate kao depresivne.", "link": "depresija.php", "image": "images/gallery/3.jpg", "bg_color": "#34495e", "active": true},
-            {"title": "\"Anksiolitik je car\" ili \"Car Je go\"", "text": "Lijekovi za smirenje svojim djelovanjem na nervni sistem umanjuju doživljaj stresa, ublažavaju tjeskobu, zabrinutost, uznemirenost, napetost i nesanicu, a u višim dozama uspavljuju, ali da li je to uvijek tako?", "link": "anksiolitici.php", "image": "images/gallery/5.jpg", "bg_color": "#16a085", "active": true},
-            {"title": "Da li želim biti \"normalan\"?", "text": "Neki ljudi prožive cijeli život želeći da sebe dožive kao \"normalnu\" osobu i čini im se nedostižnom ta (prividna) sposobnost drugih ljudi da žive svoje živote bez napora...", "link": "dalizelimbitinormalan.php", "image": "images/gallery/7.jpg", "bg_color": "#d35400", "active": true},
-            {"title": "U zamci duge veze", "text": "Izraz \"relationship burnout\" (sagorijevanje u vezi) se odnosi na osobe u značajnom ljubavnom ili drugom  odnosu koje postepeno razvijaju doživljaj iscrpljenosti, dosade, bezvoljnosti i pesimizma prema onom drugom ili odnosu koji postoji između njih.", "link": "dugeveze.php", "image": "images/gallery/1.jpg", "bg_color": "#e74c3c", "active": true},
-            {"title": "Stres", "text": "Kao da su zaboravili da je priroda stresu, odnosno reakcijama u organizmu koje se tom prilikom odigravaju, dodijelila veoma važnu ulogu koja je neophodna za preživljavanje.", "link": "stres.php", "image": "images/gallery/8.jpg", "bg_color": "#f39c12", "active": true},
-            {"title": "DEBLJINA - psihoterapijski zadatak", "text": "Prejedanje i debljanje su rezultat riješenosti da preživimo!!!", "link": "debljina.php", "image": "images/gallery/2.jpg", "bg_color": "#1abc9c", "active": true}
+            {
+                "title": "Asertivna prava",
+                "text": "Svaka osoba ima mogućnost da ih koristi i zauzme se za sebe, njihova primjena je važna za očuvanje samopoštovanja i poštovanja drugih. Asertivna prava proizlaze iz samog postojanja čovjeka i nezavisna su od pola, roda, nacionalnosti, boje kože i religijskih uvjerenja.",
+                "link": "asertivnaprava.php",
+                "image": "images/gallery/1.jpg",
+                "bg_color": "#229C8C",
+                "active": true
+            },
+            {
+                "title": "Četiri sporazuma",
+                "text": "Prvi sporazum glasi: koristiću svoje riječi tačno. Drugi sporazum glasi: prestajem događaje shvatati lično. Treći sporazum glasi: prestajem da pretpostavljam. Četvrti sporazum glasi: učiniću ono što mogu.",
+                "link": "cetirisporazuma.php",
+                "image": "images/gallery/8.jpg",
+                "bg_color": "#2c3e50",
+                "active": true
+            },
+            {
+                "title": "Praštanje",
+                "text": "Praštanje je naš vlastiti intimni čin kojim se opraštamo od naših očekivanja od neke osobe, a ne opraštanje već učinjenih postupaka te osobe.",
+                "link": "prastanje.php",
+                "image": "images/gallery/6.jpg",
+                "bg_color": "#8e44ad",
+                "active": true
+            },
+            {
+                "title": "Burnout ili izgaranje",
+                "text": "\"Burnout\" smanjuje produktivnost i troši energiju, gubi se zainteresovanost i motivaciju zbog kojih je uopšte započeta određena aktivnosti a osoba se postaje beznadna, cinična i ogorčena, sebe smatra nesposobnom udovoljiti konstantnim zahtjevima okoline i nastavlja do krajnjeg doživljaja da nema više ništa dati.",
+                "link": "burnout.php",
+                "image": "images/gallery/4.jpg",
+                "bg_color": "#e67e22",
+                "active": true
+            },
+            {
+                "title": "Simptom, moj prijatelj",
+                "text": "Gradeći novu unutrašnju strukturu tokom postupnog, cjelovitog psihoterapijskog tretmana otvaramo mogućnost stvarnog liječenja simptoma koji tako postaju zastarjeli i nepotrebni…",
+                "link": "simptommojprijatelj.php",
+                "image": "images/gallery/2.jpg",
+                "bg_color": "#27ae60",
+                "active": true
+            },
+            {
+                "title": "Plavi sat",
+                "text": "Plavi Sat može se dogoditi bilo kad i bilo gdje. To je trenutak kad si istinski živ u svijetu koji te okružuje. Može da bude trenutak ljubavi ili trenutak straha. Tek ćeš u sjećanju znati da li je bio jedno ili drugo.",
+                "link": "plavisat.php",
+                "image": "images/gallery/9.jpg",
+                "bg_color": "#2980b9",
+                "active": true
+            },
+            {
+                "title": "A šta ću ako \"poludim\"?",
+                "text": "Strah od ludila ili psihičke bolesti poznat je i kao dementofobija (od grčkih riječi dementos, što znači „izgubiti razum” i phobos, što znači „strah”).",
+                "link": "dementofobija.php",
+                "image": "images/gallery/10.jpg",
+                "bg_color": "#c0392b",
+                "active": true
+            },
+            {
+                "title": "??? Depresija ???",
+                "text": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Često se uspostavlja kao psihijatrijska dijagnoza, i tvrdi se da pogađa 280 miliona ljudi širom svijeta, iako je za vjerovati da ima daleko više osoba koje pate ali se nisu nikada obratile za pomoć ili nisu prepoznate kao depresivne.",
+                "link": "depresija.php",
+                "image": "images/gallery/3.jpg",
+                "bg_color": "#34495e",
+                "active": true
+            },
+            {
+                "title": "\"Anksiolitik je car\" ili \"Car Je go\"",
+                "text": "Lijekovi za smirenje svojim djelovanjem na nervni sistem umanjuju doživljaj stresa, ublažavaju tjeskobu, zabrinutost, uznemirenost, napetost i nesanicu, a u višim dozama uspavljuju, ali da li je to uvijek tako?",
+                "link": "anksiolitici.php",
+                "image": "images/gallery/5.jpg",
+                "bg_color": "#16a085",
+                "active": true
+            },
+            {
+                "title": "Da li želim biti \"normalan\"?",
+                "text": "Neki ljudi prožive cijeli život želeći da sebe dožive kao \"normalnu\" osobu i čini im se nedostižnom ta (prividna) sposobnost drugih ljudi da žive svoje živote bez napora...",
+                "link": "dalizelimbitinormalan.php",
+                "image": "images/gallery/7.jpg",
+                "bg_color": "#d35400",
+                "active": true
+            },
+            {
+                "title": "U zamci duge veze",
+                "text": "Izraz \"relationship burnout\" (sagorijevanje u vezi) se odnosi na osobe u značajnom ljubavnom ili drugom  odnosu koje postepeno razvijaju doživljaj iscrpljenosti, dosade, bezvoljnosti i pesimizma prema onom drugom ili odnosu koji postoji između njih.",
+                "link": "dugeveze.php",
+                "image": "images/gallery/1.jpg",
+                "bg_color": "#e74c3c",
+                "active": true
+            },
+            {
+                "title": "Stres",
+                "text": "Kao da su zaboravili da je priroda stresu, odnosno reakcijama u organizmu koje se tom prilikom odigravaju, dodijelila veoma važnu ulogu koja je neophodna za preživljavanje.",
+                "link": "stres.php",
+                "image": "images/gallery/8.jpg",
+                "bg_color": "#f39c12",
+                "active": true
+            },
+            {
+                "title": "DEBLJINA - psihoterapijski zadatak",
+                "text": "Prejedanje i debljanje su rezultat riješenosti da preživimo!!!",
+                "link": "debljina.php",
+                "image": "images/gallery/2.jpg",
+                "bg_color": "#1abc9c",
+                "active": true
+            }
         ]
     },
     "slusanka": {
@@ -278,22 +511,593 @@
         "page_title": "Knjige",
         "subtitle": "Vrijedi pročitati, obogatiće vaše znanje i moguće dati bitne smjernice, bez obzira da li ćete ih potražiti u biblioteci, knjižari ili iskoristiti neki od linkova da dođete do njih.",
         "items": [
-            {"title": "Pisma mom sinu", "author": "Uroš Nikolić", "image": "https://api.publikpraktikum.com/media/pisma-mom-sinu.jpg", "text": "Ukratko, ja sam čovek, kao i ti. Iako ćeš ići sopstvenim stazama i kretati se kroz sopstveno vreme, obasjavaće te isto sunce koje je obasjavalo mene i kroz tvoj život smenjivaće se ista godišnja doba koja su se smenjivala kroz moj. Uvek ćemo biti različiti, a opet isti.", "link": "https://www.publikpraktikum.rs/proizvod/315/pisma-mom-sinu", "active": true},
-            {"title": "Primalni krik", "author": "Artur Džanov", "image": "https://novaknjiga.com/product-images/17045/310_1.jpg", "text": "Primalna terapija - izlječenje neuroze. Ova knjiga ne odnosi se samo na psihoterapiju, već i na stanje čovjeka uopšte. Ovdje nalazimo načina za otkrivanje neuroze i normalnog stanja.", "link": "https://novaknjiga.com/book_PRIMALNI_KRIK--18754.html", "active": true},
-            {"title": "Promeniti život - terapija novom odlukom", "author": "Meri Meklur Gulding, Robert L. Gulding", "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/promeniti_zivot.jpg", "text": "Klasična knjiga u kojoj su po prvi put kreatori terapije nove odluke (redecision therapy) izložili svoju teoriju i praksu. Ovaj pristup je kombinacija transakcione analize i geštalt terapije, a knjiga je prepuna prepisa terapijskih razgovora i praktičnih savjeta.", "link": "https://www.knjiga.ba/promeniti-zivot-terapija-novom-odjlukom-k7197.html", "active": true},
-            {"title": "Gledanje u sunce - Prevazilaženje užasa od smrti", "author": "Irvin Jalom", "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/160x/040ec09b1e35df139433887a97daa66f/slike/gledanje_u_sunce.jpg", "text": "Savremena psihoterapija, toliko posvećena kritičkom samoispitivanju i istrajna u iskopavanju najdubljih slojeva misli, udaljila se od ispitivanja našeg straha od smrti, najvažnijeg i sveprisutnog faktora koji je u osnovi velikog dijela našeg emocionalnog života.", "link": "https://www.knjiga.ba/gledjanje-u-sunce-prevazilazenje-uzasa-odj-smrti-k7169.html", "active": true},
-            {"title": "Nenasilna komunikacija", "author": "Maršal B. Rozenberg", "image": "https://www.delfi.rs/_img/artikli/2020/08/nenasilna_komunikacija_vv.jpg", "text": "Ako reč \"nasilno\" označava ponašanje kojim ćemo nekome naškoditi ili ga povrediti, često možemo svoj način komunikacije – osudu drugih ljudi, maltretiranje, izražavanje rasnih predrasuda, optužbe, pokazivanje prstom, diskriminaciju, priču bez slušanja, kritiku drugih ili sebe – nazvati \"nasilnim\".", "link": "https://www.delfi.rs/knjige/157145_nenasilna_komunikacija_knjiga_delfi_knjizare.html", "active": true},
-            {"title": "Ja sam ok - ti si ok", "author": "Dr. Thomas A. Harris", "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/ja_sam_ok.jpg", "text": "Transakcijska analiza pružila je nadu mnogim ljudima obeshrabrenim neodređenošću tradicionalnih vidova psihoterapije. Dala je odgovor onima koji bi se radije promijenili nego prilagodili.", "link": "https://www.knjiga.ba/ja-sam-ok-ti-si-ok-k2170.html", "active": true},
-            {"title": "Školovanje srca", "author": "Klod Stajner", "image": "https://www.delfi.rs/_img/artikli/knjige/64/v/delfi_skolovanje_srca_klod_stajner.jpg", "text": "Klod Stajner se godinama bavi psihologijom emocija i razvio je trening emocionalne pismenosti. Kao jedan od najbližih saradnika Erika Berna bitno je doprineo razvoju transakcione analize.", "link": "https://dereta.rs/p/7461/Skolovanje-srca", "active": true},
-            {"title": "KOJU IGRU IGRAŠ", "author": "Erik Bern", "image": "https://www.knjizare-vulkan.rs/files/thumbs/files/images/slike_proizvoda/thumbs_600/258592_600_600px.jpg", "text": "Knjiga koja je ubrzo po objavljivanju postala globalni hit. Štampana je u preko dvadeset pet miliona primeraka, na dvadeset jezika, ipak svaka nova generacija otkriva ovu knjigu i tako se održava njena stalna popularnost.", "link": "https://www.knjizare-vulkan.rs/psihologija/22219-koju-igru-igras", "active": true},
-            {"title": "Nikad više kozavisnik", "author": "Melodi Biti", "image": "https://bgonline.rs/wp-content/uploads/2019/09/nikada_vise_kozavisnik.jpg", "text": "Kozavisnost je koncept u kojem gubite sebe u ime pomaganja drugima, a mnogo je onih koji se bore sa samodestruktivnim ponašanjem voljenih osoba.", "link": "https://bgonline.rs/proizvod/nikada-vise-kozavisnik-melodi-biti/", "active": true},
-            {"title": "MISTERIJ ALZHEIMER", "author": "Marie Gendron", "image": "https://k6k6n6w8.rocketcdn.me/wp-content/uploads/2019/01/misterij_alzheimer.jpg", "text": "U ovoj knjizi, doktorica Marie Gendron jasno i glasno odgovara na sva pitanja koja izaziva termin Alzheimerova bolest. Donosi nam dragocjene savjete kako bismo mogli njegovati oboljelu osobu, poštivajući pritom njezino dostojanstvo.", "link": "https://www.vbz.hr/book/misterij-alzheimer/", "active": true},
-            {"title": "KAKO PREŽIVETI SVOJU PORODICU", "author": "Džon Kliz, Robin Skiner", "image": "https://www.makart.rs/__public/upload/2013/03/kako-preziveti-svoju-porodicu-4337v1.jpg", "text": "Čuveni Pajtonovac i njegov psihoterapeut u duhovitom dijalogu otkrivaju kako struktura porodica iz kojih smo potekli oblikuje naš život, i nude ohrabrenje i putokaz za ostvarivanje sreće.", "link": "https://www.makart.rs/knjige/knjiga-kako-preziveti-svoju-porodicu-dzon-klizrobin-skiner-4337", "active": true},
-            {"title": "Istine i laži o hrani", "author": "Anita Šupe", "image": "https://anitasupe.com/trgovina/wp-content/uploads/2018/09/knjiga-istine-i-lazi-o-hrani-600x600.jpg", "text": "Knjiga koja je u našim krajevima pokrenula prehrambenu revoluciju za povratak prirodnoj izvornoj prehrani.", "link": "https://anitasupe.com/proizvod/istine-i-lazi-o-hrani/", "active": true},
-            {"title": "Ključ tela", "author": "Džulija Enders", "image": "https://www.laguna.rs/_img/korice/2711/kljuc_tela-dzulija_enders_v.jpg", "text": "Ova knjiga pravi je fenomen! Otkako se pojavila na nemačkom tržištu zauzela je prvo mesto na svim top-listama. Džulija Enders s neverovatnom lakoćom i izuzetno duhovito opisuje najsloženije fiziološke procese.", "link": "https://www.laguna.rs/n2711_knjiga_kljuc_tela_laguna.html", "active": true},
-            {"title": "Moć sadašnjeg trenutka", "author": "Eckhart Tolle", "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/moc_sadasnjeg_trenutka_nk.jpg", "text": "Stanje prosvjetljenja moguće je dosegnuti ovdje i sad, moguće je živjeti bez patnje, tjeskobe, neuroza - podučava Eckhart Tolle čija učenja na tragu svih duhovnih tradicija jednostavno i jasno ukazuju da se put, istina i svjetlost kriju u našoj nutrini.", "link": "https://www.knjiga.ba/moc-sadjasnjeg-trenutka-k9973.html", "active": true},
-            {"title": "Četiri sporazuma", "author": "Miguel Ruis", "image": "https://www.delfi.rs/_img/artikli/2015/08/cetiri_sporazuma_knjiga_mudrosti_starih_tolteka_vv.jpg", "text": "", "link": "https://delfi.rs/knjige/1339_cetiri_sporazuma_knjiga_mudrosti_starih_tolteka_knjiga_delfi_knjizare.html", "active": true},
-            {"title": "Kako se dobro posvađati", "author": "Ljubica Uvodić-Vranić", "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1379600349i/18519315.jpg", "text": "", "link": "https://www.goodreads.com/book/show/18519315-kako-se-dobro-posva-ati", "active": true}
+            {
+                "title": "Pisma mom sinu",
+                "author": "Uroš Nikolić",
+                "image": "https://api.publikpraktikum.com/media/pisma-mom-sinu.jpg",
+                "text": "Ukratko, ja sam čovek, kao i ti. Iako ćeš ići sopstvenim stazama i kretati se kroz sopstveno vreme, obasjavaće te isto sunce koje je obasjavalo mene i kroz tvoj život smenjivaće se ista godišnja doba koja su se smenjivala kroz moj. Uvek ćemo biti različiti, a opet isti.",
+                "link": "https://www.publikpraktikum.rs/proizvod/315/pisma-mom-sinu",
+                "active": true
+            },
+            {
+                "title": "Primalni krik",
+                "author": "Artur Džanov",
+                "image": "https://novaknjiga.com/product-images/17045/310_1.jpg",
+                "text": "Primalna terapija - izlječenje neuroze. Ova knjiga ne odnosi se samo na psihoterapiju, već i na stanje čovjeka uopšte. Ovdje nalazimo načina za otkrivanje neuroze i normalnog stanja.",
+                "link": "https://novaknjiga.com/book_PRIMALNI_KRIK--18754.html",
+                "active": true
+            },
+            {
+                "title": "Promeniti život - terapija novom odlukom",
+                "author": "Meri Meklur Gulding, Robert L. Gulding",
+                "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/promeniti_zivot.jpg",
+                "text": "Klasična knjiga u kojoj su po prvi put kreatori terapije nove odluke (redecision therapy) izložili svoju teoriju i praksu. Ovaj pristup je kombinacija transakcione analize i geštalt terapije, a knjiga je prepuna prepisa terapijskih razgovora i praktičnih savjeta.",
+                "link": "https://www.knjiga.ba/promeniti-zivot-terapija-novom-odjlukom-k7197.html",
+                "active": true
+            },
+            {
+                "title": "Gledanje u sunce - Prevazilaženje užasa od smrti",
+                "author": "Irvin Jalom",
+                "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/160x/040ec09b1e35df139433887a97daa66f/slike/gledanje_u_sunce.jpg",
+                "text": "Savremena psihoterapija, toliko posvećena kritičkom samoispitivanju i istrajna u iskopavanju najdubljih slojeva misli, udaljila se od ispitivanja našeg straha od smrti, najvažnijeg i sveprisutnog faktora koji je u osnovi velikog dijela našeg emocionalnog života.",
+                "link": "https://www.knjiga.ba/gledjanje-u-sunce-prevazilazenje-uzasa-odj-smrti-k7169.html",
+                "active": true
+            },
+            {
+                "title": "Nenasilna komunikacija",
+                "author": "Maršal B. Rozenberg",
+                "image": "https://www.delfi.rs/_img/artikli/2020/08/nenasilna_komunikacija_vv.jpg",
+                "text": "Ako reč \"nasilno\" označava ponašanje kojim ćemo nekome naškoditi ili ga povrediti, često možemo svoj način komunikacije – osudu drugih ljudi, maltretiranje, izražavanje rasnih predrasuda, optužbe, pokazivanje prstom, diskriminaciju, priču bez slušanja, kritiku drugih ili sebe – nazvati \"nasilnim\".",
+                "link": "https://www.delfi.rs/knjige/157145_nenasilna_komunikacija_knjiga_delfi_knjizare.html",
+                "active": true
+            },
+            {
+                "title": "Ja sam ok - ti si ok",
+                "author": "Dr. Thomas A. Harris",
+                "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/ja_sam_ok.jpg",
+                "text": "Transakcijska analiza pružila je nadu mnogim ljudima obeshrabrenim neodređenošću tradicionalnih vidova psihoterapije. Dala je odgovor onima koji bi se radije promijenili nego prilagodili.",
+                "link": "https://www.knjiga.ba/ja-sam-ok-ti-si-ok-k2170.html",
+                "active": true
+            },
+            {
+                "title": "Školovanje srca",
+                "author": "Klod Stajner",
+                "image": "https://www.delfi.rs/_img/artikli/knjige/64/v/delfi_skolovanje_srca_klod_stajner.jpg",
+                "text": "Klod Stajner se godinama bavi psihologijom emocija i razvio je trening emocionalne pismenosti. Kao jedan od najbližih saradnika Erika Berna bitno je doprineo razvoju transakcione analize.",
+                "link": "https://dereta.rs/p/7461/Skolovanje-srca",
+                "active": true
+            },
+            {
+                "title": "KOJU IGRU IGRAŠ",
+                "author": "Erik Bern",
+                "image": "https://www.knjizare-vulkan.rs/files/thumbs/files/images/slike_proizvoda/thumbs_600/258592_600_600px.jpg",
+                "text": "Knjiga koja je ubrzo po objavljivanju postala globalni hit. Štampana je u preko dvadeset pet miliona primeraka, na dvadeset jezika, ipak svaka nova generacija otkriva ovu knjigu i tako se održava njena stalna popularnost.",
+                "link": "https://www.knjizare-vulkan.rs/psihologija/22219-koju-igru-igras",
+                "active": true
+            },
+            {
+                "title": "Nikad više kozavisnik",
+                "author": "Melodi Biti",
+                "image": "https://bgonline.rs/wp-content/uploads/2019/09/nikada_vise_kozavisnik.jpg",
+                "text": "Kozavisnost je koncept u kojem gubite sebe u ime pomaganja drugima, a mnogo je onih koji se bore sa samodestruktivnim ponašanjem voljenih osoba.",
+                "link": "https://bgonline.rs/proizvod/nikada-vise-kozavisnik-melodi-biti/",
+                "active": true
+            },
+            {
+                "title": "MISTERIJ ALZHEIMER",
+                "author": "Marie Gendron",
+                "image": "https://k6k6n6w8.rocketcdn.me/wp-content/uploads/2019/01/misterij_alzheimer.jpg",
+                "text": "U ovoj knjizi, doktorica Marie Gendron jasno i glasno odgovara na sva pitanja koja izaziva termin Alzheimerova bolest. Donosi nam dragocjene savjete kako bismo mogli njegovati oboljelu osobu, poštivajući pritom njezino dostojanstvo.",
+                "link": "https://www.vbz.hr/book/misterij-alzheimer/",
+                "active": true
+            },
+            {
+                "title": "KAKO PREŽIVETI SVOJU PORODICU",
+                "author": "Džon Kliz, Robin Skiner",
+                "image": "https://www.makart.rs/__public/upload/2013/03/kako-preziveti-svoju-porodicu-4337v1.jpg",
+                "text": "Čuveni Pajtonovac i njegov psihoterapeut u duhovitom dijalogu otkrivaju kako struktura porodica iz kojih smo potekli oblikuje naš život, i nude ohrabrenje i putokaz za ostvarivanje sreće.",
+                "link": "https://www.makart.rs/knjige/knjiga-kako-preziveti-svoju-porodicu-dzon-klizrobin-skiner-4337",
+                "active": true
+            },
+            {
+                "title": "Istine i laži o hrani",
+                "author": "Anita Šupe",
+                "image": "https://anitasupe.com/trgovina/wp-content/uploads/2018/09/knjiga-istine-i-lazi-o-hrani-600x600.jpg",
+                "text": "Knjiga koja je u našim krajevima pokrenula prehrambenu revoluciju za povratak prirodnoj izvornoj prehrani.",
+                "link": "https://anitasupe.com/proizvod/istine-i-lazi-o-hrani/",
+                "active": true
+            },
+            {
+                "title": "Ključ tela",
+                "author": "Džulija Enders",
+                "image": "https://www.laguna.rs/_img/korice/2711/kljuc_tela-dzulija_enders_v.jpg",
+                "text": "Ova knjiga pravi je fenomen! Otkako se pojavila na nemačkom tržištu zauzela je prvo mesto na svim top-listama. Džulija Enders s neverovatnom lakoćom i izuzetno duhovito opisuje najsloženije fiziološke procese.",
+                "link": "https://www.laguna.rs/n2711_knjiga_kljuc_tela_laguna.html",
+                "active": true
+            },
+            {
+                "title": "Moć sadašnjeg trenutka",
+                "author": "Eckhart Tolle",
+                "image": "https://www.knjiga.ba/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/slike/moc_sadasnjeg_trenutka_nk.jpg",
+                "text": "Stanje prosvjetljenja moguće je dosegnuti ovdje i sad, moguće je živjeti bez patnje, tjeskobe, neuroza - podučava Eckhart Tolle čija učenja na tragu svih duhovnih tradicija jednostavno i jasno ukazuju da se put, istina i svjetlost kriju u našoj nutrini.",
+                "link": "https://www.knjiga.ba/moc-sadjasnjeg-trenutka-k9973.html",
+                "active": true
+            },
+            {
+                "title": "Četiri sporazuma",
+                "author": "Miguel Ruis",
+                "image": "https://www.delfi.rs/_img/artikli/2015/08/cetiri_sporazuma_knjiga_mudrosti_starih_tolteka_vv.jpg",
+                "text": "",
+                "link": "https://delfi.rs/knjige/1339_cetiri_sporazuma_knjiga_mudrosti_starih_tolteka_knjiga_delfi_knjizare.html",
+                "active": true
+            },
+            {
+                "title": "Kako se dobro posvađati",
+                "author": "Ljubica Uvodić-Vranić",
+                "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1379600349i/18519315.jpg",
+                "text": "",
+                "link": "https://www.goodreads.com/book/show/18519315-kako-se-dobro-posva-ati",
+                "active": true
+            }
         ]
+    },
+    "blog_highlights": [
+        {
+            "title": "Da li želim biti \"normalan\"?",
+            "link": "dalizelimbitinormalan.php",
+            "image": "images/bookcover/normalan-square.jpg",
+            "author": "Dragan Tešanović",
+            "date": "Avgust '23",
+            "active": true
+        },
+        {
+            "title": "Simptom, moj prijatelj",
+            "link": "simptommojprijatelj.php",
+            "image": "images/bookcover/plant_square.jpg",
+            "author": "Dragan Tešanović",
+            "date": "Januar '22",
+            "active": true
+        },
+        {
+            "title": "Praštanje",
+            "link": "prastanje.php",
+            "image": "images/bookcover/img3.jpg",
+            "author": "Dragan Tešanović",
+            "date": "Novembar '21",
+            "active": true
+        },
+        {
+            "title": "U zamci duge veze",
+            "link": "dugeveze.php",
+            "image": "images/bookcover/veze-square.png",
+            "author": "",
+            "date": "Avgust '23",
+            "active": true
+        }
+    ],
+    "articles": {
+        "mentalnozdravlje": {
+            "page_title": "O mentalnom zdravlju",
+            "page_head_class": "page-head-health",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Mentalno zdravlje je integralan i bitan sastavni dio zdravlja. U Statutu Svjetske zdravstvene organizacije stoji: „Zdravlje je stanje potpune fizičke, mentalne i socijalne dobrobiti, a ne samo odsutnost bolesti ili nesigurnosti“. Važna implikacija ove definicije je da je mentalno zdravlje više od odsustva mentalnih poremećaja ili hendikepa.\nMentalno zdravlje je stanje blagostanja u kojem pojedinac ostvaruje svoje sposobnosti, može se nositi s normalnim životnim stresom, može raditi produktivno i može dati svoj doprinos svojoj zajednici.\nMentalno zdravlje je ključno za našu kolektivnu i individualnu sposobnost da razmišljamo, osjećamo, komuniciramo jedni s drugima, zarađujemo za život i uživamo u životu. Na temelju toga, promocija, zaštita i obnova mentalnog zdravlja može se smatrati vitalnom brigom pojedinaca, zajednica i društava širom svijeta."
+                },
+                {
+                    "id": "par1",
+                    "title": "Odrednice mentalnog zdravlja",
+                    "content": "Višestruki društveni, psihološki i biološki faktori određuju nivo mentalnog zdravlja osobe u svakom trenutku. Na primjer, nasilje i trajni društveno-ekonomski pritisci prepoznati su rizici za mentalno zdravlje.\nLoše mentalno zdravlje povezuje se s brzim socijalnim promjenama, stresnim uslovima rada, polnom diskriminacijom, seksualnim nasiljem, socijalnom isključenošću, nezdravim načinom života, fizičkim oboljenjima i kršenjem ljudskih prava.\nNeki psihički faktori ili/i faktori ličnosti čine ljude ranjivim na mentalne zdravstvene probleme, a biološki rizici uključuju genetsko naslijeđe."
+                },
+                {
+                    "id": "par2",
+                    "title": "Promocija i zaštita mentalnog zdravlja",
+                    "content": "Promocija mentalnog zdravlja uključuje akcije koje poboljšavaju psihološku dobrobit. To uključuje stvaranje okruženja koje poštuje i štiti temeljna građanska, politička, socioekonomska te kulturna prava i ključno je za mentalno zdravlje. Bez sigurnosti i slobode ostvarenja tih prava teško je održavati visok nivo mentalnog zdravlja.\nNacionalne politike mentalnog zdravlja trebale bi biti usmjerene i na mentalne poremećaje i na šira pitanja koja promovišu mentalno zdravlje. Promovišanje mentalnog zdravlja trebalo bi uključiti u vladine i nevladine politike i programe. Osim zdravstvenog sektora, nužno je uključiti sektore obrazovanja, rada, pravosuđa, saobraćaja, ekologije, stanovanja i socijalne zaštite.\nPosebni načini promocije mentalnog zdravlja uključuju:\n● intervencije u ranom djetinjstvu (npr. osiguravanje stabilnog okruženja osjetljivog na zdravstvene i prehrambene potrebe djece, uz zaštitu od prijetnji, priliku za rano obrazovanje i interakcije koje su emocionalno podržavajuće i razvojno stimulativne);\n● podrška djeci (programi za učenje životnih vještina, programi za razvoj djece i mladih);\n● društveno-ekonomsko osnaživanje žena (npr. poboljšanje pristupa obrazovanju i mikrokreditnim razvojnim podrškama);\n● socijalnu podršku starijoj populaciji (inicijative za uspostavljanje novih prijatelajstava, društveni i dnevni centri za starije);\n● programi namijenjeni ranjivim populacionim grupama i pojedincima, uključujući manjine, migrante i osobe pogođene sukobima i katastrofama (npr. psihosocijalne intervencije nakon katastrofa);\n● promotivne aktivnosti mentalnog zdravlja u školama (npr. programi koji uključuju podržavajuće ekološke promjene u školama);\n● intervencije mentalnog zdravlja u poslovnim sistemima (npr. programi prevencije stresa);\n● politike stanovanja (npr. poboljšanje stanovanja);\n● programi prevencije nasilja (npr. smanjenje dostupnosti alkohola i pristup oružju);\n● programe razvoja zajednice (npr. integrisani ruralni razvoj);\n● smanjenje siromaštva i socijalna zaštita siromašnih;\n● zakone i kampanje protiv diskriminacije;\n● promociju prava, mogućnosti i brige o pojedincima s mentalnim poremećajima."
+                },
+                {
+                    "id": "par3",
+                    "title": "Liječenje i zaštita osoba sa mentalnim poteškoćama",
+                    "content": "U kontekstu nacionalnih napora za razvoj i provođenje politike mentalnog zdravlja, važno je ne samo zaštititi i promovisati mentalno blagostanje svojih građana, nego i brinuti se za potrebe osoba s definisanim mentalnim poremećajima.\nZnanje o tome šta učiniti u pogledu eskalacije opterećenja mentalnim poremećajima znatno se poboljšalo u proteklim decenijama. Sve je veći broj dokaza koji pokazuju djelotvornost i isplativost ključnih intervencija za prioritetne mentalne poremećaje u zemljama na različitim nivoima razvoja. Primjeri ekonomsko prihvatljivih, izvedivih i pristupačnih intervencija uključuju:\n● liječenje depresije psihološkim liječenjem i, u umjerenim do teškim slučajevima, antidepresivima;\n● liječenje psihoze antipsihoticima i psihosocijalnom podrškom;\n● oporezivanje alkoholnih pića i ograničenje njihove dostupnosti i stavljanja na tržište.\n\nPostoji i niz drugih korisnih mjera za sprječavanje suicida, prevenciju i liječenje mentalnih poremećaja kod djece, prevenciju i liječenje demencije te liječenje poremećaja zavisnosti o psihoaktivnim supstancama. Akcioni program za poteškoće mentalnog zdravlja iznio je smjernice utemeljene na dokazima kako bi se omogućilo da se bolje upravljaj nizom prioritetnih aspekata mentalnog zdravlja."
+                },
+                {
+                    "id": "par4",
+                    "title": "WHO (Svjetska zdravstvena organizacija - SZO) - odgovor na potrebe",
+                    "content": "SZO podržava vlade u cilju jačanja i promocije mentalnog zdravlja. SZO je uvažio dokaze za promociju mentalnog zdravlja i radi s vladama na širenju tih informacija i uključivanju djelotvornih strategija u politike i planove.\nSvjetska zdravstvena skupština odobrila je 2013. godine „sveobuhvatni akcioni plan za mentalno zdravlje za razdoblje 2013. -2020.“. Plan je obaveza svih država članica SZO da poduzmu posebne mjere za poboljšanje mentalnog zdravlja i doprinesu ostvarenju niza globalnih ciljeva.\n\nOpšti cilj Akcionog plana je promocija mentalnog blagostanja, sprječavanje mentalnih poremećaja, briga, unapređenje oporavka, promociju ljudskih prava i smanjenje smrtnosti, morbiditeta i invaliditeta za osobe s mentalnim poremećajima.\n\nUsmjeren je na 4 ključna cilja:\n● jačanje djelotvornog vođenja i upravljanja u oblasti mentalnog zdravlja;\n● pružanje sveobuhvatnih, integrisanih i odgovornih usluga zaštite mentalnog zdravlja i socijalne zaštite u okviru zajednice;\n● provođenje strategije promovišanja i prevencije u oblasti mentalnog zdravlja; i\n● jačanje informacionih sistema, naučnih dokaza i istraživanja za mentalno zdravlje\n\nPoseban naglasak je u Akcionom planu na zaštiti i promociji ljudskih prava, jačanju i osnaživanju civilnog društva i središnjeg mjesta zajednice u brizi o mentalnom zdravlju.\nKako bi se postigli ovi ciljevi, Akcioni plan predlaže i zahtijeva jasne mjere za vlade, međunarodne partnere i WHO. Ministarstva zdravlja moraće preuzeti vodeću ulogu i sarađivati s njima te s međunarodnim i nacionalnim partnerima, uključujući civilno društvo, kako bi se proveo plan. Budući da ne postoji djelovanje koje odgovara svim zemljama, svaka će vlada morati da prilagodi Akcioni plan svojim specifičnim nacionalnim okolnostima."
+                }
+            ]
+        },
+        "psihijatrija": {
+            "page_title": "Šta je psihijatrija?",
+            "page_head_class": "page-head-psihijatrija",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Psihijatrija je medicinska grana usmjerena na prevenciju, dijagnostikovanje i liječenje mentalnih i emocionalnih poteškoća i poremećaja u ponašanju.\n\nPsihijatar je doktor medicine/ljekar sa specijalizacijom koja mu omogućava da se bavi mentalnim zdravljem i njegovim poremećajima. Psihijatri su kvalifikovani da procijene i mentalne i fizičke aspekte psihičkih poteškoća, uključujući i ponašanja koja podrazumijevaju ovisnost.\n\nPomoć psihijatra ljudi traže iz mnogih razloga. Poteškoće mogu biti funkcionalne i uzrokovati da se svakodnevni život doživljava iskrivljeno ili van „kontroleu201c. Kod drugih postoje dugotrajni osjećaji tuge, beznađa, tjeskobe ili se problemi pojavljuju iznenada, poput „napada“ panike, zastrašujućih vidnih halucinacija ili slušanja „glasova“, pomisli o samoubistvu..."
+                },
+                {
+                    "id": "par2",
+                    "title": "Dijagnostički pristup",
+                    "content": "Najvažniji aspekt rada psihijatra je povjerljiv, obziran i detaljan razgovor s pacijentom a budući da su ljekari, psihijatri mogu naručiti ili obaviti čitav niz medicinskih, laboratorijskih i psiholoških testova koji, pomažu u stvaranju slike tjelesnog i psihičkog stanja pacijenta.\nMedicinsko obrazovanje i kliničko osposobljavanje omogućuju razumijevanje kompleksnog odnosa emocionalnih stanja ili psihičkih poteškoća te tjelesnih bolesti s genetikom i porodičnom anamnezom. Integrisanjem medicinskih i psiholoških podataka, postavlja se radna dijagnoza i planira rad s pacijentima na liječenju.\nSpecifične dijagnoze temelje se na kriterijima i klasifikacijama MKB (međunarodna klasifikacija oboljenja) te, iako rjeđe, na kriterijumima DSM (američka klasifikacija oboljenja) koji sadrži opise, simptome i druge kriterije za dijagnostikovanje psihičkih poremećaja."
+                },
+                {
+                    "id": "par3",
+                    "title": "Koje tretmane koriste psihijatri?",
+                    "content": "Psihijatri koriste u liječenju širok spektar psihoterapijskih modaliteta, pouzdanu paletu farmakoterapijskih mogućnosti, predlažu raznovrsne psihosocijalne intervencije zavisno o potrebama svakog pacijenta.\nPsihoterapija, ponekad pojednostavljeno nazvana terapija razgovorom, podrazumijeva kompleksan i sadržajan odnos između terapeuta i pacijenta a može se koristiti za liječenje širokog spektra mentalnih poremećaja i emocionalnih poteškoća. Cilj psihoterapije je razumjeti i ublažiti onesposobljujuće ili uznemirujuće simptome kako bi osoba bolje funkcionisaala. Ovisno o zadatku, liječenje može trajati samo nekoliko susreta tokom deset ili petnaest dana ili može trajati tokom razdoblja od nekoliko godina. Psihoterapija se može obaviti pojedinačno, u paru, s porodicom ili u grupi.\n\nPostoje psihoterapije koje pomažu pacijentima da promijene način ponašanja ili razmišljanja, psihoterapije koje pomažu pacijentima da istražuju uticaj dosadašnjih odnosa i iskustava na sadašnje ponašanje ali i mnoge druge psihoterapijske metode prilagođene da pomognu u rješavanju problema.\nPsihijatri nakon obavljene temeljne procjene mogu propisati lijekove koji pomažu u liječenju mentalnih poteškoća na isti način kao i lijekove za liječenje visokog krvnog pritiska ili dijabetesa. Iako precizan mehanizam djelovanja psihijatrijskih lijekova nije u potpunosti razumljiv, oni mogu korisno korigovati biohemijsku signalizaciju i komunikaciju unutar mozga, što umanjuje simptome psihijatrijskih poremećaja. Pacijenti koji se dugotrajno liječe lijekovima povremeno će se sastajati sa svojim psihijatrom kako bi pratili pozitivno djelovanje lijeka i moguća neželjena dejstva.\nLijekovi koji se preporučuju u psihijatriji su podijeljeni u više grupa – anksiolitici, sedativi i hipnotici, antidepresivi, antipsihotici, stabilizatori raspoloženja, stimulansi a njihovim ispravnim i odmjerenim korištenjem se dobijaju važni pomaci u rješavanju poteškoća mentalnog zdravlja.\nPsihijatri često propisuju lijekove u kombinaciji sa psihoterapijom.\nPostoje i drugi psihijatrijski tretmani kao što je elektrokonvulzivna terapija (EKT), duboka moždana stimulacija (DBS), neurostimulacija vagusnog živca (VNS) i transskranijalna magnetna stimulacija (TMS) koje se koriste za liječenje nekih mentalnih poremećaja ali su u našem okruženju manje dostupne."
+                },
+                {
+                    "id": "par4",
+                    "title": "Psihijatrijska edukacija",
+                    "content": "Da bi postala psihijatar osoba mora završiti medicinski fakuletet i imati dozvolu za obavljanje medicinske djelatnosti sa položenim državnim ispitom a zatim završiti četiri godine psihijatrijske specijalizacije. Specijalistički staž tokom edukacije je djelimično u bolnici koja radi s pacijentima sa širokim spektrom medicinskih oboljenja a uglavnom u zdravstvenim ustanovama za zaštitu i liječenje mentalnog zdravlja gdje provodi najmanje tri dodatne godine učeći dijagnostikovanje i liječenje stanja i oboljenja povezanih sa mentalnim zdravljem, uključujući različite oblike psihoterapije i korištenje psihijatrijskih lijekova i drugih terapija.\nNakon završenog treninga, većina psihijatara polaže ispit pred komisijom koju određuje institucije javnog zdravlja. Neki psihijatri takođe završe dodatnu specijalističku obuku iz forenzičke (pravne) psihijatrije, psihijatrije zavisnosti, psihofarmakoterapije ili psihoterapije kao posebnu obuku iz psihijatrija za djecu i adolescente."
+                },
+                {
+                    "id": "par5",
+                    "title": "Gdje rade psihijatri?",
+                    "content": "Psihijatri rade u okruženjima samostalne prakse, opštim i psihijatrijskim bolnicama, univerzitetskim medicinskim centrima, pri sudovima i kazneno popravnim domovima, domovi za starije osobe, programima rehabilitacija, hitnim službama i na brojnim drugim mjestima.\nU RS i BiH postoji oko 350 psihijatara koji rade u kliničkim i bolničkim ustanovama, centrima za zaštitu mentalnog zdravlja ili ordinacijama van sistema javnog zdravstva, mnogi od njih rade i u više okruženja.\n\nIzvor Link"
+                }
+            ]
+        },
+        "psihoterapija": {
+            "page_title": "O PSIHOTERAPIJI",
+            "page_head_class": "page-head-o-psiho",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "par1",
+                    "title": "Kome je psihoterapija korisna?",
+                    "content": "Psihoterapija može biti korisna svakoj osobi koja smatra da joj je potrebna takva vrsta podrške ili osobi kojoj drugi preporuče takvu mogućnost jer znaju da već dugo pokušava da izađe na kraj sa nekim problemima a ne uspjeva ili su primijetili emocionalno doživljavanje/ponašanje koje odstupa od uobičajenog za osobu (ovo ne mora biti dovoljan razlog da se započene terapija ali može biti koristan podstrek da osoba to razmotri)."
+                },
+                {
+                    "id": "par2",
+                    "title": "Šta je psihoterapija?",
+                    "content": "Psihoterapija je skup metoda, procedura i tehnika kojima je cilj liječenje psihičkih tegoba razgovorom. Razgovor se vodi između terapeuta i jednog ili više sagovornika/klijenata. Namjena ovakvog razgovora je olakšavanje psihičkih tegoba, sagledavanje mogućih rješenja problema ili razvijanje ličnosti čime se poboljšava kvalitet života osobe.\n\nZnačajan broj onih koji zatraže psihoterapiju su zdrave, funkcionalne osobe koje ne očekuju liječenje nego stručnu podršku za lični rast i razvoj otkrivanjem novih potencijala i uvida o sebi i drugima. Psihoterapija može pomoći i kada osoba shvati da nešto u njenom životu nije kao što želi da jeste i nastoji da nešto bude drugačije ili kada je nezadovoljna svojim životom ili odnosima, ali nije sigurna zbog čega. Ipak najčešće su razlozi za početak terapije želja za olakšavanjem trenutnih funkcionalnih životnih poteškoća (poboljšanjem upravljanja stresom, povećanjem motivacije,...) ili potreba za liječenjem kompleksnih psihičkih problema (fobije, depresija, paničnost, nesanica...)."
+                },
+                {
+                    "id": "par3",
+                    "title": "Kako \"radi\" psihoterapija?",
+                    "content": "Dijelovi od kojih se sastoji psihoterapijski proces su mogućnost da se govori o sebi bez straha od osuđivanja, učenje da se prepoznaju, vrednuju i opišu vlastita osjećanja, sagledavanje životnih događaja iz drugačijih uglova, razmatranje manje oštrih načina na koje procjenjujemo sebe i svijet oko nas kao i empatičan i prihvatajući odnos terapeuta prema osobi.\n\nPromjene koje osoba čini kao rezultat procesa, vode ka spremnosti da poteškoće riješi samostalno i sličnu sposobnost zadrži u budućnosti.\n\nTerapeutski autoritet od koga se uči šta treba da se radi ili vještina terapeuta da postavlja pitanja koja osoba ne postavlja sama sebi nisu objašnjenje kako psihoterapija „radi“. Iako mnogi vjeruju da bi ključni način \"rada\" u psihoterapiji mogao da se objasni \"ventilacijom\" (osoba govori a neko je sluša, prihvata i ne osuđuje pa stoga dođe do olakšanja) ili \"placebo efektom\" (uvjerenje osobe da će psihoterapija pomoći a u stvari nema djelovanja) to takodje nije potpuno objašnjenje psihoterapije. Sve ovo pomaže i koristi se u psihoterapiji, ali nije osnova izliječenja\n\nZajedničko za različite psihoterapijske pravce koji koriste drugačije tehnike i filozofiju o tome šta ljudima pomaže jeste odnos (alijansa) koji se uspostavlja sa terapeutom.\nPrikladno uspostavljen psihoterapijski odnos je \"najljekovitiji\" faktor psihoterapije i ključ njenog uspjeha. Takav odnos nije odnos dvoje saradnika, ni dvoje drugara, ni odnos učitelja i učenika, tkdj. nije ni onakav kako izgleda uobičajeni odnos ljekara i pacijenta.\nOdnos je profesionalan i određen smjernicama (terapeut poštuje pravila struke i etička načela, osoba terapeutu plaća za uslugu), ali s vremenom postaje i blizak pa sa uspostavom povjerenja, često osoba bez straha od odbacivanja i osude govori i o stvarima koje nisu nikom rečene ili pokazuju osjećanja koja nisu ranije bila vidljiva drugima. Terapeut nastoji da upozna i razumije osobu te način na koji doživljava svijet bez obzira koliko je različit od njegovog sopstvenog, zatim kako osoba rješava probleme ili prilazi ljudima, uz povremeno postavljanje pitanja koja mogu biti teška ili sučeljavanje osobe sa njenim iskrivljenim uvjerenjima ali bez osude.\nSa psihoterapeutom osoba ne mora biti saglasna, biti ljuta ili prema njemu ispoljiti različite emocije bez bojazni da će ga one povrijediti. Terapeut događaje u profesionalnom odnosu ne shvata lično i sve što klijent ispolji terapeut koristi da bolje razumije i na najbolji način podrži traženje rješenja.\nPrijatelji, rođaci i kolege ne mogu biti osobi psihoterapeuti jer s njima postoje već izgrađeni lični odnosi te se terapijska alijansa na ovakav način ne može uspostaviti."
+                },
+                {
+                    "id": "par4",
+                    "title": "Koliko traje psihoterapija?",
+                    "content": "Terapija traje od nekoliko mjeseci do nekoliko godina što zavisi od brzine i tempa terapijskog rada, postavljenih ciljeva, težine problema, izvježbanosti u samoposmatranju i refleksivnosti, ličnom kapacitetu za uvid itd.\n\nTerapeutske tehnike se dosta razlikuju jedne od drugih (verbalni materijal, asocijacije, rad sa tijelom, umjetničko izražavanje, igranje uloga itd.) iako postoje i zajedničke stvari koje su nezavisne od modaliteta.\n\nBihejvioralna terapija je uglavnom usmjerena na konkretno ponašanje koje se nastoji promijeniti, ima jasno definisan uži cilj i obično traje kratko, 10-20 seansi, ponekad i samo nekoliko seansi.\n\nPsihoterapija u nekom od humanističkih modaliteta (transakciona analiza, geštalt, psihodrama) kojima se pobuđuju potencijali koje osoba posjeduje a nepotpuno koristi, traje od šest mjeseci do dvije godine, iako može trajati duže ako se terapeut i klijent usaglase oko toga.\n\n\"Dubinski\" pravci (psihoanaliza) traju najduže pošto imaju najšire postavljene ciljeve i usmjereni su na analize nesvjesnog materijala do koga se dolazi vrlo polako, te obično traju nekoliko godina."
+                }
+            ]
+        },
+        "kojeko": {
+            "page_title": "Ko je ko u brizi o mentalnom zdravlju",
+            "page_head_class": "page-head-health",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog različitih pojmova koje možete čuti ili pročitati.\n\nPsihijatar? Psiholog? Psihoterapeut? Vjerujemo da je smisleno da pojasnimo."
+                },
+                {
+                    "id": "par1",
+                    "title": "Psihijatar",
+                    "content": "je ljekar specijalista, dakle ima medicinsku diplomu, uspostavlja medicinsku dijagnozu, i za razliku od drugih profesionalaca koji se bave mentalnim zdravljem, može propisati psihijatrijske (psihotropne) lijekove a svakako i pomoći u razmijevanju drugih medicinskih stanja.\n\nUvodni razgovor/pregled obavlja u namjeri da prikupi medicinske i opšte podatke o pacijentu (anamneza) koji mu služe kao osnova za uspostavljanje dijagnoze (imenovanje poremećaja ili oboljenja), i u skladu sa kojima dalje predlaže određenu vrstu farmakoterapije (lijeka) i mjesta gdje će se liječenje provoditi (kućno liječenje, liječenje u dnevnoj bolnici, zadržavanje na bolničkom odjeljenju).\n\nMnogi psihijatri za sebe kažu da vjeruju više pravilnoj upotrebi lijekova nego drugačijim metodama liječenja i uz saradnju sa njima nerijetko je korisno posjetiti i psihoterapeuta da bi se proces ozdravljenja upotpunio uz terapijske razgovore. Kada je to moguće bilo bi dobro ako ovi različito usmjereni stručnjaci blisko sarađuju. Osim toga možete potražiti psihijatre koji su spremni i edukovani da se bave i psihoterapijom, pa je sam proces nešto jednostavniji za pacijenta/klijenta."
+                },
+                {
+                    "id": "par2",
+                    "title": "Neurolog",
+                    "content": "je ljekar specijalista koji se bavi strukturom, funkcijom i organskim bolestima nervnog sistema. Obučen je za otkrivanje i liječenje oboljenja ili funkcionalnih smetnji mozga, leđne moždine, čulnih organa, perifernih živaca i mišića."
+                },
+                {
+                    "id": "par3",
+                    "title": "Neuropsihijatar",
+                    "content": "koji je ljekar koji svoju specijalistiku obuku završio u vrijeme kada obuka za srodne specijalizacije psihijatrije i neurologije nije bila razdvojena u različite edukacije. U praksi se najčešće sreće da se neuropsihijatri, u skladu sa ličnim opredjeljenjem i potrebama ustanova u kojima rade, bave više psihijatrijom ili više neurologijom iako ima i onih koji zadržavaju oba smjera profesionalnog rada."
+                },
+                {
+                    "id": "par4",
+                    "title": "Psiholog",
+                    "content": "je profesionalac u oblasti mentalnog zdravlja koji je diplomirao na filozofskom fakultetu, odsjek za psihologiju. Psiholozi mogu biti zaposleni u različitim oblastima: vaspitno-pedagoškim ustanovama (školama i vrtićima), u zdravstvenim ustanovama, radnim organizacijama, u oblasti sporta, naučno-istraživačkoj oblasti itd.\n\nPsiholozi koji rade u zdravstvenom sektoru su stručni saradnici u timovima za zaštitu mentalnog zdravlja, ali i na mnogim drugim odjeljenjima (psihijatrija, pedijatrija, onkologija, palijativna njega, fizikalna rehabilitacija...). Bave se procjenom kognitivnog i afektivnog funkcionisanja ličnosti primjenom različitih psiholoških testova i tehnika (psihodijagnostika), te sprovode psihološke tretmane (podrška u procesu bolničkog i ambulantnog liječenja pacijenata, psihološko savjetovanje) aktivno učestvujući u timskom radu, te imaju ulogu u kreiranju preventivnih programa od važnosti za javno zdravlje.\n\nRazgovor kod psihologa zasniva se na strukturisano vođenom psihološkom intervjuu i primjeni različitih testova i skala za koje su psiholozi tokom školovanja obučeni. Psiholozi pišu nalaz i mišljenje, ali ne propisuju lijekove.\n\nNeki psiholozi su dodatna stručna znanja i vještine stekli kroz višegodišnju specijalizaciju iz medicinske/kliničke psihologije ili edukaciju iz različitih psihoterapijskih modaliteta što proširuje polje korisnog djelovanja u radu sa ljudima."
+                },
+                {
+                    "id": "par5",
+                    "title": "Socijalni radnik",
+                    "content": "je profesionalac koji pruža usluge socijalne zaštite u bolnicama ili drugim institucijama. Neki socijalni radnici takođe praktikuju psihoterapiju. Njihovo obrazovanje je donekle slično obrazovanju psihologa ali obično su prilagođeniji razumijevanju pojedinca u njegovom okruženju a nisu obučeni za psihološko testiranje."
+                },
+                {
+                    "id": "par6",
+                    "title": "Psihoterapeut",
+                    "content": "Ovo je zajednički izraz za stručnjake koji obavljaju aktivnosti čiji je osnovni cilj pružanje pomoći uglavnom razgovorom sa osobama koje imaju psihičke smetnje, koje prolaze kroz neku vrstu životne krize, imaju različite emocionalne poteškoće, probleme u komunikaciji ili su zainteresovani da pospješe lični rast i razvoj, saznaju nešto više o sebi i poboljšaju kvalitet svog života. Nisu svi psiholozi i psihijatri ujedno i psihoterapeuti već samo oni koji su završili određene obuke. U zavisnosti od akademske diplome, psihoterapeut može biti psihijatar, psiholog, socijalni radnik, andragog ili defektolog koji su pored svog osnovnog obrazovanja obavili višegodišnju specijalističku edukaciju za neki od psihoterapijskih modaliteta. Rad se obavlja sa pojedincima, parovima, grupama ili porodicama.\n\nU našoj zemlji ne postoji zvanično zanimanje (djelatnost) psihoterapeut, za razliku od zanimanja psiholog i psihijatar.\n\nPsiholozi, psihijatri, psihoterapeuti ne čitaju misli drugim ljudima, nisu čarobnjaci sa natprirodnim vještinama i ne koriste kugle za proricanje sudbine već u svom radu koriste provjerene naučne tehnike i metode kojima pomažu ljudima da razumiju, riješe, prevaziđu i kontrolišu svoje psihičke smetnje i unaprijede svoje psihološko funkcionisanje.\n\nU pripremi teksta korišten materijal sa više web adresa."
+                }
+            ]
+        },
+        "grupna": {
+            "page_title": "Grupna psihoterapija",
+            "page_head_class": "page-head-grupna",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "INFORMACIJE I SMERNICE ZA UČESTVOVANJE U GRUPNOJ TERAPIJI\n\nGrupna terapija ima dugu, dokazanu istoriju kao veoma delotvoran i koristan oblik psihoterapije. Pomaže isto, a ponekad i više od individualne terapije, posebno kad su važni ciljevi lečenja socijalna podrška i učenje o interpersonalnim odnosima. Mnoge osobe, koje učestvuju u grupnoj terapiji, imaju velike koristi od nje. Iako grupna terapija uglavnom pruža veliku podršku, ponekad može biti stresna."
+                },
+                {
+                    "id": "par1",
+                    "title": "NEKI CILJEVI GRUPNE PSIHOTERAPIJE",
+                    "content": "Mnogi pojednici kreću na terapiju jer se osećaju izolovano ili su nezadovoljni određenom životnom situacijom. Možda imaju teškoće da uspostave i održavaju prisne, uzajamno zadovoljavajuće i sadržajne odnose sa drugim ljudima. Često žele više da nauče o tome kako da se odnose prema drugima.\n\nGrupna terapija ovim osobama pruža priliku da:\n● Prime i pružaju podršku i fidbek\n● Poboljšaju interpersonalne odnose i komunikaciju\n● Eksperimentišu sa novim interpersonalnim ponašanjima\n● Iskreno i direktno govore o osećanjima\n● Steknu uvid u svoje misli, osećanja i ponašanja i razumeju ih posmatrajući obrasce odnosa i unutar i van grupe\n● Razumeju misli, osećanja i ponašanja drugih ljudi\n● Poboljšaju samopouzdanje, sliku o sebi i samopoštovanje\n● Ostvare ličnu pramenu unutar grupe, uz očekivanje da će naučena preneti i na spoljašnji život"
+                },
+                {
+                    "id": "par2",
+                    "title": "POVERLJIVOST",
+                    "content": "Svakom iskazu učesnika u psihoterapiji mora se prilaziti sa poštovanjem i poverljivošću. Ovo je suštinski deo etičkog i profesionalnog ponašanja.\n\na) Terapeuti\nGrupni terapeuti zaklinju se da neće prekršiti poverljivost, osim u jednom slučaju: kada postoji neposredna opasnost ozbiljne povrede člana grupe ili nekoga drugoga. Ako ste na uporednoj individualnoj terapiji, tražimo vašu dozvolu da u redovnim intervalima razgovaramo sa vašim terapeutom. Terapeuti su vaši saveznici i za terapiju je važno da međusobno razgovaraju.\n\nb) Članovi grupe\nPoverljivost se očekuje i od svih članova grupe. Da bi stvorili bezbedno okruženje za terapijski rad i razvili poverenje u grupi, članovi ne smeju da krše poverljivost. Većina osoba voli da terapija bude nešto samo njihovo i suzdržavaju se od razgovora o njoj sa drugim ljudima. Međutim, ako u razgovoru sa prijateljima ili porodicom u nekom trenutku poželite da pomenete svoju terapijsku grupu, treba da pričate samo o sopstvenom iskustvu, a ne o iskustvima drugih članova. Nikada ne pominjite imena članova ili bilo šta na osnovu čega bi mogli biti identifikovani."
+                },
+                {
+                    "id": "par3",
+                    "title": "ŠTA RADITE U GRUPI? KAKO TREBA DA SE PONAŠATE?",
+                    "content": "Nema propisanog plana rada za svaku seansu. Učesnici se podstiču da govore o bilo kom ličnom problemu ili problemu u odnosima, u vezi sa problemima i ciljevima zbog kojih su na terapiji. Učesnici se podstiču da pružaju podršku, postavljaju pitanja, razmišljaju o stvarima koje su rečene, ili o onima koje nisu, da dele asocijacije i misli. Akcenat se, pre svega, stavlja na istraživanje odnosa između članova, to jest, na „ovde-i sada“. Od članova će se često tražiti da dele utiske koje imaju jedni o drugima - misli, strahove i pozitivna osećanja. Što više radimo ovde-i-sada u grupi, to smo delotvorniji.\n\nSamootkrivanje je neophodno da bi članovi imali koristi od grupne terapije, ali oni sami biraju trenutak. Nikada ne vršimo pritisak na članove da se ispovedaju. Da bi se uspostavilo terapijska grupno okruženje, zahtevamo od članova da uvek pokušavaju da ostalima govore stvari na konstruktivan način. Korisna povratna informacija usredsređena je na ono šta se dešava ovde-isada, ne okrivljuje, relevantna je i povezuje članove koji je primaju sa onima koji je pružaju. Ovakva vrsta direktnog fidbeka i angažovanja je novina: u našoj kulturi pojedinci retko pričaju tako iskreno i direktno. Otuda se ovo u početku može činiti rizičnim, ali takođe može biti i veoma angažujuće i smislena. Direktno davanje saveta od strane članova grupe i terapeuta uglavnom nije korisno. Nisu korisni ni opšti razgovori o temama kao što su sport ili politika, osim ako postoji nešto u tekućem događaju što je posebno važno za nečije lične i interpersonalne probleme. Terapijska grupa nije mesto na kom se stiču prijatelji. Ona je socijalna laboratorija - mesto na kom osoba usvaja veštine za razvijanje smislenih i zadovoljavajućih odnosa. U stvari, terapijske grupe (za razliku od grupa podrške ili socijalnih grupa) ne podstiču kontakt sa ostalim članovima van grupe. Zašto? Zato što spoljašnji odnos sa drugim članom ili članovima glavnom ometa terapiju! Kako se terapija ometa? Da bismo ovo objasnili, prvo moramo da naglasimo da je vaš osnovni zadatak u terapijskoj grupi da u potpunosti istražite svoje odnose sa svakim pojedinačnim članom grupe. U početku, ovo može izgledati čudno ili vam se može činiti da nije u vezi sa razlozima zbog kojih ste krenuli na terapiju. Ipak, ovo ima smisla kada se uzme u obzir činjenica da je grupa socijalni mikrokosmos - to jest, problemi koje doživljavate u društvenom životu pojaviće se i u vašim odnosima unutar grupe. Prema tome, istražujući i razumevajući sve aspekte svojih odnosa sa drugim članovima, a zatim prenoseći to znanje na svoj spoljašnji život, vi započinjete proces razvijanja zadovoljavajućih odnosa. Međutim, ako razvijete bliske odnose sa drugim članom (ili članovima) van grupe, možda nećete biti voljni da podelite sva svoja osećanja o odnosima u grupi. Zašto? Zato što vam to prijateljstvo može toliko značiti da ćete oklevati da kažete bilo šta Što bi ga, na bilo koji način, moglo ugroziti. Šta se dešava u terapijskoj grupi kada su otvorenost i iskrenost kompromitovane? Terapija se zaustavlja! Dakle, najbolje je da članovi koji se susreću van grupe (slučajno ili namerno) podele sve relevantne informacije sa grupom. Bilo kakva tajnovitost u vezi sa odnosom usporava terapiju. Ponekad članovi razviju snažna osećanja prema drugim članovima. Podstičemo razgovor o ovim osećanjima, bilo da su pozitivna ili negativna - iritacija ili razočaranje. Od članova grupe očekuje se da govore o osećanjima, a ne da delaju u skladu s njima."
+                },
+                {
+                    "id": "par4",
+                    "title": "GRUPNI TERAPEUTI",
+                    "content": "Vaši grupni terapeuti neće „voditi program“. Njihova uloga je više uloga učesnika/moderatora, nego uloga instruktora. Terapija je najproduktivnija kada počiva na saradnji. Imajte na umu da su informacije koje daju drugi članovi isto toliko važne koliko i komentari terapeuta, a nekad i važnije. Terapeuti mogu da pruže zapažanja o grupnoj interakciji i ponašanju ili o tome šta određene osobe kažu ili rade u grupi. Takođe mogu i da komentarišu napredak ili prepreke unutar grupe. Kada želite nešto da kažete grupnom terapeutu, nadamo se da ćete to učiniti na seansi. Međutim, ukoliko postoji nešto hitno o čemu morate da razgovarate sa grupnim terapeutima van grupe, između seansi, to se može organizovati. Ali korisno je na sledećem sastanku izneti grupi o čemu ste razgovarali sa terapeutima. Treba podeliti čak i važan materijal sa individualne terapije ili terapije parova sa drugim terapeutom. Nadamo se da neće biti pitanja o kojima ne možete da govorite unutar grupe. U isto vreme, svesni smo da se poverenje razvija vremenom i da ćete neke stvari o sebi otkriti tek pošto se budete osećali dovoljno bezbedno u grupi."
+                },
+                {
+                    "id": "par5",
+                    "title": "POČETNA DUŽINA PROBNOG PERIODA ILI POSVEĆENOSTI",
+                    "content": "Grupna terapija uglavnom ne pokazuje odmah pozitivnu korist svojim učesnicima. Zbog ove činjenice učesnici ponekad požele da ranije napuste terapiju ako je postala suviše stresna za njih. Molimo vas da se uzdržite od preranih zaključaka o mogućoj korisnosti grupe i nastavite da dolazite ili razgovarate o stresu i svojim sumnjama u vezi sa grupnom terapijom. Molimo vas da ostanete posvećeni i učestvujete u terapijskoj grupi na najmanje dvanaest seansi. Do tada ćete imati jasniju sliku o potencijalnoj koristi grupe."
+                },
+                {
+                    "id": "par6",
+                    "title": "PRISUSTVO I GRUPNA KOHEZIJA",
+                    "content": "Grupa najefikasnije radi ako je kohezivna, pouzdana i predvidljiva. Redovno prisustvo je ključni deo, pa vas molimo da vam terapija bude prioritet u rasporedu. Grupna terapija najbolje napreduje kada svaki član ceni i poštuje posvećenost i rad svakog drugog člana. Redovno prisustvo i aktivno učešće na sastancima važan je način da pokažete ovo poštovanje. Slično tome, važan je i dolazak na vreme. Ako znate da ćete kasniti ili da nećete prisustvovati sastanku, molimo vas da pozovete grupne terapeute što je pre moguće kako bi na početku seanse o tome mogli da obaveste grupu. Ako za kašnjenje ili odsustvo znate nedelju ili više dana unapred, obavestite grupu na prethodnoj seansi. Takođe, molimo vas da grupu na vreme obavestite o svojim planovima za godišnji odmor. Grupni terapeuti će učiniti isto. Može biti trenutaka kada je grupa poslednje mesto na kojem želite da budete zbog neprijatnih osećanja. Ovi trenuci, u stvari, mogu da budu neobično produktivna prilika za psihoterapiju. Isto, možete očekivati da će se neke teškoće koje ste iskusili u životu pojaviti i u grupi. Nemojte da vas to obeshrabri. Ovo je, u stvari, odlična prilika jer znači da ste se vi i članovi grupe latili važnih pitanja koja vas se tiču.\nPrihvatanjem da učestvujete u grupnoj terapiji, odlučili ste da započnete proces davanja i primanja podrške, kao i rada na potrebnim promenama u svom ličnom i interpersonalnom životu. Radujemo se prilici da zajedno sa vama radimo u ovoj grupi.\n\nTekst preuzet iz knjige Teorija i praksa grupne psihoterapije Irvina Jaloma i Molina Lešča"
+                }
+            ]
+        },
+        "konstelacije": {
+            "page_title": "Sistemske konstelacije",
+            "page_head_class": "page-head-konst",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Sistemske (porodične) konstelacije su pomoćna psihoterapijska metoda koja se oslanja na procesiranje negovornog tjelesnog i emotivnog doživljaja u sadašnjem trenutku. Koriste se za olakšavanje razumijevanja kako se prenose povređujuća bolna iskustava u međugeneracijskom sistemu, kako nerazriješeni sukob i osjećanja utiču na naše zdravlje i stabilnost. Sistemske konstelacije predlažu moguća razrješenja i pomažu u liječenju simptoma psihičke neuravnoteženosti (neurotičnost, depresivnost, zavisnost, elementi psihotičnosti...) pružajući dodatni aspekt shvatanja različitih oblika manjkavo prilagođenog ponašanja, tegobnih osjećanja kao i mišljenja koja podržavaju patnju. Pored toga ukazuju na mogućnost drugačijeg sagledavanja i doživljavanja tjelesne bolesti, tjelesnog hendikepa, posljedica nasilja i ratnih zločina, neplodnosti, starateljstva/usvajanja djece, problema u partnerskim odnosima.\n\nMetoda je prepoznata i osmišljena po iskustvu doživljaja zajedničke zbirne svijesti porodičnih sistema. Zbirna svijest teži da u sistemu podržava zakonitosti. Prihvatanjem ovih zakonitosti u okviru sistema omogućava se održavanje uređenosti sistema. Odstupanja od dovoljno dobre uređenosti sistema se događaju na mnogo različitih načina - isključivanjem člana porodice (ili člana drugog sistema), zaboravljanjam onih koji su umrli mladi, izbjegavanjem pominjanja i sjećanja na vanbračnu djecu, djecu datu na usvojenje, prekinute trudnoće, otpisivanjem važnosti značajnih ranijih partnerskih veza ili istovremenih partnerskih veza kao i drugih dijelova stvarnosti o kojima se ne govori. Posljedice tog sklanjanja od stvarnosti mogu osjećati sami pojedinci ali i osobe iz mlađih generacija.\n\nSimptomi različitih kvaliteta (depresija, zavisnost, mentalne i fizičke bolesti, neplodnost, teškoće u zasnivanju dugotrajne intimne veze...) mogu postojati, a da nema svjesnosti osobe o tome zašto se tako osjeća. Porodični sistem je pored toga pod dubokim uticajem rata, migracija, kulturnih razlika pa je takve i slične faktore korisno uvažiti unutar istraživanja sistemske (porodične) konstelacije.\n\nPorodične (sistemske) konstelacije se izvode (i nude) u okvirima grupnog terapijskog susretanja. Radionice su sa 15–30 osoba/klijenata koje traju više dana. Obično sudionici grupe sjede uz ivice prostorije, tako da je u sredini slobodan prostor za rad.\n\nUčesnici se dobrovoljno javljaju za postavljanje svoje konstelacije, koje se mogu odnositi na njihove sadašnje porodice ili na porodice iz kojih potiču. Teme rada mogu biti povezane i uz poslovno okruženje kao i uz druge oblike društevnih grupa u kojima se klijent kreće. Terapeut (voditelj konstelacije) razgovara sa klijentom o tome ko pripada (ili je pripadao) porodičnom (ili drugom) sistemu, koji su značajni događaji, da li je neko rano umro, jesu li roditelji imali ranije partnere i djecu iz ranijih veza… a potom vodi razgovor ka odabiru ličnog pitanja na koje klijent očekuje odgovor. Klijent zatim izabere među sudionicima osobe koje će predstavljati stvarne članove njegove porodice kao i predstavnika za sebe (obično se za predstavnika biraju osobe istog pola kao i stvarni član porodice ali nije nužno). Koristeći prostor za rad klijent povede, usmjerava i postavi predstavnika na poziciju koju doživljava kao \"njegovo mjesto\". Razmještaj kojim se počinje konstelacija odražava, dakle, klijentov doživljaj mjesta i odnosa članova njegove porodice/sistema. Predstavnici članova sistema/porodice nakon što su postavljeni daju povratnu informaciju. Opisuju svoj doživljaj \"ovdje i sad\", u odnosu na druge predstavnike, osjećaju li se dobro ili loše na mjestu gdje jesu, da li im je toplo ili hladno, neugodno, tužno, fizički bolno…. Ako su povratne informacije ukazale da nedostaje još neko važan nova osoba se može zamoliti da stane kao predstavnik. U nastavku procesa terapeut korak po korak repozicionira predstavnike. Proces je aktivan, može uključivati promjene u grupisanju, poretku predstavnika, smjeru u kom su okrenuti, stavu ili međusobnoj udaljenosti. Predstavnici daju povratne informacije o promjenama koje doživljavaju sve dok ne se nađe rješenje u kojem uobičajena početna napetost nestaje. Nakon pronalaska dobrog (\"pravog\") mjesta za svakog pojedinog člana porodice terapeut može upitati klijenta da stane na mjesto \"njegova\" predstavnika. U zavisnosti od situacije mogu se koristiti afirmativne izjave, kratke rečenice kojima se potvrđuje novi položaj člana porodice ili terapijske geste raznih oblika (zagrljajaj, poklon, pozdrav). Moguće je da se pojave snažne emocije među predstavnicima u konstelaciji, posebno kod klijenta čija tema je postavljena. Terapeut ohrabruje klijenta da sebi dozvoli osjetiti i doživjeti svoje promijenjeno mjesto unutar porodičnog sistema. Tumačenja iza rada nisu uobičajena. Postavke su često otvorenog završetka i korisno je pustiti da se osoba navikne na novu mogućnost za šta je potrebno neko vrijeme. Radionice mogu biti usmjerene na pojedine teme npr. psihosomatske bolesti ili biti dio postojeće terapije, u kojem slučaju i klijent i terapeut prisustvuju radionici. Prvobitno se izvodi jedna terapijska seansa, koja se može ponoviti nakon određenog perioda.\n\nTehnika porodičnih konstelacija se može primijeniti i kao individualna terapija a tada zamjenski simboli npr. listovi obilježenog papira ili figure simbolizuju članove porodice. Preventivna upotreba porodičnih konstelacija korisna je osobama kad ulaze u novo razdoblje svog života (roditeljstvo, novi posao...) a terapijski principi iz ovog modela su koriste i unutar konteksta poslovnog savjetovanja organizacija (poslovnih sistema)."
+                }
+            ]
+        },
+        "emdr": {
+            "page_title": "EMDR",
+            "page_head_class": "page-head-emdr",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "par1",
+                    "title": "Šta je EMDR?",
+                    "content": "Um često može sebe izliječiti prirodno, kao i tijelo.\n\nFrancine Shapiro razvila je psihoterapijsku metodu EMDR 1987. god.\nMetoda koristi prirodni proces pokretanja očiju (EM – eye movemant) kako bi se uspješno liječio stresni poremećaj poslije traumatskog doživljaja (PTSP). Od tada, EMDR se koristi za efikasno liječenje različitih problema mentalnog zdravlja.\n\nSlova DR označavaju pojmove desenzitacija i reprocesiranje koji se mogu prevesti kao umanjenje osjetljivosti (podražljivosti) i ponovna obrada podataka."
+                },
+                {
+                    "id": "par2",
+                    "title": "Šta se događa kada osoba doživi traumu?",
+                    "content": "Većinu vremena rutinski obrađujemo nove podatke i iskustva bez da postoji svjesnost o tome.\nKada se desi neki zastrašujući događaj poput saobraćajne nesreće ili postoji neprestana izloženost nevolji kao što je zanemarivanje u djetinjstvu, proces suočavanja i obrade podataka može postati preopterećen. Zbog preopterećenosti uznemirujuća iskustva ostanu neprocesirana ili \"zaleđena\" u mozgu. „Zaleđena“ sjećanja i osjećanja su sačuvana u mozgu (dio koji se naziva limbički sistem) u „sirovom“ emocionalnom obliku prije nego u obliku koji se umije izraziti riječima.\nTraumatska sjećanja tako ostaju u izolovanoj mreži memorije koja je povezana sa emocijama i tjelesnim senzacijama, a koja je odvojena od dijela mozga gdje se koristimo jezikom (riječima) za čuvanje sjećanja. Traumatska sjećanja mogu biti stalno pobuđena kada osoba doživi događaje koje prepoznaje kao slične teškom iskustvu kroz koje je prošla.\n\nSlika događaja je često zaboravljena, ali bolna osjećanja kao što su anksioznost, panika, ljutnja ili očaj stalno se doživljavaju u sadašnjosti. Sposobnost da osoba živi u sadašnjosti i uči iz novih iskustava može biti značajno umanjena.\nEMDR pomaže stvoriti veze između memorijskih dijelova i mreža mozga, omogućavajući da mozak na prirodan način ponovo obradi traumatsko sjećanje i objedini podatke na nov način."
+                },
+                {
+                    "id": "par3",
+                    "title": "Kako izgleda EMDR seansa?",
+                    "content": "Nakon temeljne procjene, biće Vam postavljena pitanja o određenom uznemirujućem sjećanju.\nPokreti očiju biće stimulisani poretima terapeutove ruke preko vašeg vidnog polja. Ponekad se umjesto koristi šipka pokretnih svjetala ili slušalica. Pokreti traju kratko vrijeme, a zatim će biti zaustavljeni. Od vas biti zatraženo da izvjestite o iskustvima koje ste imali tokom svakog od tih setova pokreta očiju.\nIskustva tokom seanse mogu obuhvatiti promjene u mislima, slikama i osjećajima.\nObično se događa da sa ponovljenim setovima pokreta očiju, sjećanje se mijenja na takav način da se gubi njegov bolni intenzitet i postaje neutralno sjećanje na događaj u prošlosti.\nDruga povezana sjećanja mogu se takođe izliječiti u isto vrijeme. Ovo povezivanje srodnih sjećanja može dovesti do brzog poboljšanja u različitim aspektima vašeg življenja.\nEMDR može biti kratak usmjeren tretman ili dio dužeg psihoterapijskog programa.\nEMDR sesije mogu trajati 60 do 90 minuta."
+                },
+                {
+                    "id": "par4",
+                    "title": "Za šta se EMDR može koristiti?",
+                    "content": "Osim upotrebe za liječenje posttraumatskog stresnog poremećaja, EMDR se uspješno koristi za liječenje:\n● anksioznosti i paničnih napada\n● depresije\n● stresa\n● fobija\n● problema sa spavanjem\n● komplikovanog žalovanja\n● zavisnosti\n● boli, fantomske boli uda\n● samopoštovanja\n● straha od javnog nastupa"
+                },
+                {
+                    "id": "par5",
+                    "title": "Može li svako imati koristi od EMDR?",
+                    "content": "Proces je brz i uznemirujuća iskustva, ako se dogode, traju relativno kratko vrijeme. Ponekad nije odgovarajuće za svakoga iskusiti snažne osjećaje i uznemirujuće misli, koje se javljaju tokom sesije.\nali EMDR može ubrzati terapiju rješavanjem uticaja vaših prošlih trauma i omogućiti da živite potpuno u sadašnjosti."
+                },
+                {
+                    "id": "par6",
+                    "title": "Da li osoba zadrži kontrolu?",
+                    "content": "Tokom EMDR osoba zadržava kontrolu, potpuno budna i svjesna. Ovo nije oblik hipnoze i proces se može zaustaviti u bilo kojem trenutku. Tokom seanse, terapeut će podržati i olakšati vaše samoliiječenje. Reprocesiranje (prerada) se obično doživljava kao nešto spontano, a nove veze i spoznaje nastaju prirodno, iznutra i većina ljudi doživljava EMDR kao korisnu i osnažujuću terapiju."
+                },
+                {
+                    "id": "par7",
+                    "title": "Koji dokazi postoje da je EMDR uspješan tretman?",
+                    "content": "Broj onih kojim je ovaj inovativni klinički tretman uspješno pomogao je milionski. Pouzdanost EMDR je utvrđena istraživanjima u najmanje devetnaest kontrolisanih naučnih studija što je čini jednom o istraživanijih metoda koja se koristi u liječenju traume, (detaljnije na www.emdr-europe.org i www.emdr.org)"
+                }
+            ]
+        },
+        "sistemskaterapija": {
+            "page_title": "Sistemska porodična psihoterapija",
+            "page_head_class": "page-head-pst",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "PORODICA",
+                    "content": "Porodica obuhvata emocionalni sistem od najmanje tri generacije živih srodnika koji su međusobno povezani krvnim, zakonskim i istorijskim vezama. Za razliku od drugih sistema, porodični je jedinstven po tome što se u njega ulazi rođenjem, usvojenjem i brakom, a izlazi samo smrću (možda ni tada, s obzirom da uticaj um'rlih članova na ostale često ostaje prisutan). Pripadnost porodici je data, ona se ne bira, osim, u izvjesnoj meri, kada je brak u pitanju.\n\nPorodica ostaje „nevidljiva“ za nauku sve do sredine prošlog vijeka, kada postaje značajan predmet interesovanja mnogih društvenih, pa i prirodnih nauka. Krajem četrdesetih i početkom pedesetih godina prošlog vijeka nastaje porodična terapija. Ona unosi sasvim novu dimenziju u psihoterapijsku praksu, s obzirom da se okreće od pojedinca porodici i drugim sistemima.\n\nZa život svakog pojedinca porodica je presudna, pogotovo u prvim godinama života. Obrasci koji nastaju tada utiču na odabir prijatelja, partnera i zanimanja kroz čitav život i ponavljaju se kroz čitav život, čak i onda kada ih nismo svjesni."
+                },
+                {
+                    "id": "par2",
+                    "title": "KAKO SE RADI SISTEMSKA PORODIČNA TERAPIJA",
+                    "content": "Porodična psihoterapija je savremeni terapijski model koji obuhvata rad sa pojedincem, partnerima i/ili porodicom. Zavisno od problema, određuje se tempo održavanja seansi. Obično je to jednom nedjeljno ili jednom u dve nedjelje.\n\nOna se oslanja na sistemsku teorije porodice, po kojoj je sistem (porodica) shvaćen kao skup povezanih dijelova (članovi porodice) koji su u međusobnoj interakciji. Svaki sistem ima svoja pravila koja određuju kako se dijelovi odnose jedan prema drugom i kako, sa svoje strane, utiču na sistem u cjelini.\n\nSimptomatsko ponašanje, odnosno ponašanje člana porodice koji „nosi“ simptom (identifikovani pacijent, crna ovca, žrtveno jagnje) se posmatra u okviru porodice i interakcije sa ostalim članovima porodice i drugih sistema - šira porodica, škola, posao... Izbor osobe u sistemu koja će nositi simptom, zavisi od njene pozicije u porodici i odnosima unutar sistema. Polazi se od shvatanja da simptom pojedinca ima određenu funkciju u okviru porodice, koja može da bude protektivna za porodicu i da štiti njenu cjelovitost, ali narušava psihičko blagostanje onoga ko je nosilac simptoma. U praktičnom radu se pomjera akcenat sa pitanja „Zašto je problem nastao?“ na pronalaženje odgovora na pitanje kako je nastao, šta je ono što problem održava, usložnjava ili komplikuje.\n\nU početnim fazama rada, terapeut proučava funkcionisanje porodice, njenu strukturu, uloge, funkcije, pravila, komunikacije, kao i odnos porodice sa širim sistemom, fazu životnog ciklusa u kojoj se porodica nalazi, kritične životne događaje i načine na koje porodica rješava probleme i prilagođava se novonastalim promjenama. Na osnovu eksploracije porodičnog sistema terapeut pravi određene hipoteze putem kojih usmerava svoj dalji rad. Akcenat se stavlja na pronalaženje snaga i resursa porodice i pronalaženje izuzetaka od pravila. Porodice često dolaze sa uvjerenjem da su iscrpile sve svoje kapacitete u nošenju sa određenom problematikom i da se nalaze u slijepoj ulici. Uloga terapeuta, između ostalog, se sastoji i u tome da ukaže na izuzetke-one situacije u kojima su se članovi porodice pokazali kompetentnim i uspjeli da se izbore sa problemom. Fokus je na sadašnjem momentu (na „ovde i sada“) i povezivanju sa prošlošću radi preventiranja budućih problema.\n\nRad u okviru sistemskog pristupa često podrazumeva zadavanje zajedničkih i/ili pojedinačnih zadataka koji se strateški planiraju i prilagođavaju svakoj porodici posebno i sprovode se u dogovoru sa porodicom.\n\nNivoi promjene u terapijskom radu se dijele na promjene prvog i drugog reda.\n\nPromjena prvog reda uslovljava smanjenje i nestajanje simptoma kod klijenta (identifikivanog pacijenta), uz moguću pojavu simptoma kod nekog drugog člana porodice. Radi se o promjeni na nivou ponašanja porodice, ali i dalje nije došlo do uvida i promjene uvjerenja.\n\nPromjena drugog reda jeste ona u kojoj dolazi do nestanka simptoma kod klijenta, bez pojave simptoma u sistemu, jer je došlo do promjena u strukturi, disfunkcionalnim interakcijama i određenju realnosti, porodica je postala otvorena za dalje i moguće promjene."
+                },
+                {
+                    "id": "par3",
+                    "title": "GENOGRAM",
+                    "content": "Važna tehnika u porodičnoj terapiji, nezavisno od toga da li se radi sa pojedince, parom ili porodicom jeste genogram, putem koga analiziramo tok porodične istorije, faze razvoja porodice, obrasce odnosa koji se prenose sa koljena na koljeno, kao i događaje koji su prethodili porodičnoj krizi i traženju psihoterapijske pomoći. Njime se traga za odgovorima na pitanja kako događaji poput smrti, bolesti, separacije, preseljenja i slično utiču na obrasce ponašanja u porodici, kao i na unutarporodične odnose. Genogramom se bilježe podaci o članovima porodice za najmanje tri generacije.\n\nGenogram omogućava terapeutu i porodici da sagledaju bitne informacije i dobiju cjelovitu sliku. Genogram ima mnogo toga zajedničkog s tradicionalnim pristupima prikupljanju podataka o porodičnoj anamnezi, s tim što se podaci prikazuju grafički (kroz crtež) i omogućavaju stalne dopune i prilagođavanja pri svakom susretu sa porodicom, parom ili pojedincem. Genogram predstavlja bogat izvor hipoteza o tome kako trenutno porodično funkcionisanje i aktuelna problematika porodičnih odnosa ili člana mogu biti povezani sa porodičnim kontekstom i istorijom razvoja."
+                },
+                {
+                    "id": "par4",
+                    "title": "KADA SE RADI PORODIČNA TERAPIJA (INDIKACIJE ZA PORODIČNU TERAPIJU)",
+                    "content": "Indikacije za ovu vrstu terapije vrlo široke, a neke od njih bi bile:\n● postoji nosilac simptoma psihičkog poremećaja u užem smislu (identifikovani pacijent) - depresija, psihotični poremećaj, poremećaj ponašanja, psihosomatski poremećaj, bolest zavisnosti;\n● kada postoji potreba za razjašnjavanjem i rešavanjem strukturalnih odnosa i problema u porodici;\n● tamo gde je prisutan nedostatak bliskosti i intimnosti i u porodicama gde postoje teškoće u komunikaciji (najčešći sadržaj bračne/partnerske terapije).\n● u slučajevima gdje postoji razvojna kriza (adolescentska kriza, psihosomatska reagovanja, depresivna reagovanja odraslih, roditelja u periodu kada se mladi odvajaju od njih) i nerazvojna, voljna i nevoljna, kriza (teško obolio član porodice, umirući član, nasilničko ponašanje jednog od roditelja);\n● kada dolazi do razdvajanja i javljanja separacionih problema (razvod);\n\nNedostatak roditeljskih veština u svim uzrastima djece, takođe su poteškoće koje porodice dovode u terapijsku sobu. Sistemska porodična terapija je indikovana u situacijama traumatskih iskustava i okolnostima gubitaka i tugovanja. Oblici terapijskog rada su raznovrsni, pa se porodični terapeut može angažovati u radu sa individuom, sa partnerskim parom, bračnim parom, sibling sistemom (braća i sestre), užom i širom porodicom.\n\nTekst pripremila Miona Rodić"
+                }
+            ]
+        },
+        "ta": {
+            "page_title": "Transakciona analiza",
+            "page_head_class": "page-head-pst",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "Šta je „transakciona analiza“?",
+                    "content": "Transakciona analiza (TA) je teorija ličnosti i sistemska psihoterapija čiji je cilj lični razvoj i promjena. Osnivač ovog psihoterapijskog pravca je Erik Bern koji je 1958. godine objavio rad koji promoviše novi psihoterapijski metod koji naziva Transakciona analiza. TA se može koristiti u svakoj oblasti u kojoj postoji potreba za razmijevanjem pojedinaca, njihovih odnosa i komunikacije. TA sadrži elemenete psihoanaličkog, kognitivnog i humanističkog pristupa."
+                },
+                {
+                    "id": "par2",
+                    "title": "TA kao teorija ličnosti",
+                    "content": "Kao teorija ličnosti, TA nudi sliku o tome kako su ljudi psihološki strukturisani koristeći tročlani model, poznat kao model ego stanja. Taj model nam omogućava da razumijemo kako ljudi funkcionišu i kako izražavaju svoju ličnost kroz ponašanje. Ovaj model opisuje tri ego stanja: ego stanje Odrasli, ego stanje Roditelj i ego stanje Dijete. Ego stanje pretstavlja skup povezanih ponašanja, mišljenja i osjećanja. U ego stanju Odraslog smo onda kada koristimo sve resurse koji nam kao odrasloj osobi stoje na raspolaganju; tj kada se sada i ovdje osjećamo, ponašamo i mislimo tako da to predstavlja direktnu reakciju na događaje oko nas. Kada se ponašamo, razmišljamo i osjećamo tako da kopiramo roditelje ili roditeljske figure, kažemo da smo u ego stanju Roditelja. Kada se ponašamo, osjećamo i mislimo kao kada smo bili djeca, kaže se da smo u ego stanju Djeteta."
+                },
+                {
+                    "id": "par3",
+                    "title": "Teorija komunikacije",
+                    "content": "TA nas upoznaje i sa teorijom komunikacije koja može poslužiti kao osnova za analizu sistema i organizacija. Kada dvije osobe komuniciraju, obje mogu jedna drugoj da se obrate iz bilo kojeg od svoja tri ego stanja. Ova razmjena komunikacije se naziva transakcija. Transakcija se dešava kada vam ja ponudim neku vrstu komunikacije, a vi mi odgovorite. Početna komunikacija se naziva stimulus, a uzvratna odgovor. Komunikacija između ljudi uvijek se odvija u obliku niza transakcija. Kod analize transakcija koristimo model ego stanja i pomoću njega objašnjavamo šta se dešava u toku procesa komunikacije.\n\nIdeja da svako od nas može da bira način na koji će da uputi transakciju se naziva Transakcioni izbor i on je od pomoći kada neko želi da prekine poznate, neprijatne razmjene sa drugima.\n\nKada dvije osobe razmjenjuju transakcije, jedna od njih šalje signal da je drugu prepoznala, a druga osoba uzvraća prepoznavanje. Jedinica prepoznavanja u TA se naziva strouk. Ljudima su potrebi stroukovi za fizičko i psihičko blagostanje.\n\nKada ljudi razmjenjuju transakcije u grupama ili parovima, oni koriste vrijeme na razne specifične načine koji se mogu prikazati i analizirati. To se zove analiza strukturiranja vremena. Erik Bern je naveo 6 načina strukturiranja vreman: Povlačenja, Rituali, Razonode, Rad ili aktivnost, Igre i Intimnost ili bliskost."
+                },
+                {
+                    "id": "par4",
+                    "title": "Životni skript",
+                    "content": "TA nam takođe nudi teoriju razvoja djeteta. Koncept životnog skripta (scenarija) govori o tome kako naši sadašnji obrasci ponašanja vode porijeklo iz djetinjstva. Moguće je da nastavimo ponavljati strategije koje smo razvili u djetinjstvu i kada odrastemo, čak i kada one kod nas izazivaju osjećaj neuspjeha i patnje. Samim tim, TA nam pruža i teoriju psihopatologije.\n\nSvako do nas napiše za sebe svoju životnu priču još djetinjstvu. Ta priča ima početak, sredinu i kraj. Osnovni zaplet napišemo kada smo toliko mali da znamo tek nekoliko riječi. Kasnije u djetinjstvu dodajemo još detalja, ali većina toga se napiše do sedme godine. Priču popravljamo u toku adolescencije. Kao odrasle osobe, uglavnom više nismo svjesni životne priče koju smo za sebe napisali, iako je možda dosljedno živimo. Velika je vjerovatnoća da smo svoj život organizovali tako da idemo prema poslednjoj sceni koju smo odredili dok smo bili mali. U psihoterapijskoj primjeni se koncept životnog scenarija koristi kako bi razumjeli na koji način ljudi mogu sami sebi nesvjesno da prave probleme, i kako se treba postaviti da bismo te probleme riješili.\n\nKako bi pojačali svoj životni skript, ljudi česti igraju Igre. Skript je opšti obrazac koji se primenjuje na životne izbore i životni tok pojedinca, a igre su načini na koje osoba neka svoja skriptna uverenja izražava u komunikaciji s drugim ljudima. Kroz igre osoba konstruiše socijalnu stvarnost kako bi je uklopila u svoj skriptni referentni okvir. O Igri govorimo onda kada primećujemo da se neko sistematski ponaša prema drugim ljudima prema obrascu koji sadrži neočekivani obrt. U pitanju je dvofazni obrazac prema kojem nakon prve faze sledi nagli obrt i druga faza komunikacije. Psihološke igre se igraju nesvjesno, uvijek dovode do naglog obrta i rezultat je osjećanje zbunjenosti i neshvaćenosti. Igra je serija komplementarnih transakcija koje se približavaju vrlo određenom, predvidljivom ishodu. Ako ste se nakon interakcije sa drugom osobom, gdje ste se na kraju osjećali loše, pitali zašto vam se ovo „stalno“ dešava ili kao se ovo „opet“ desilo velika je šansa da ste igrali Igru."
+                },
+                {
+                    "id": "par5",
+                    "title": "TA u praktičnoj primjeni",
+                    "content": "U oblasti praktične primjene, TA nam nudi sistem psihoterapije koji može da se koristi u liječenju svih tipova psiholoških poremećaja, od svakodnevnih životnih problema do težih poremećaja. Može se primjenjivati u individualnoj, grupnoj, porodičnoj terapiji i terapiji parova.\n\nOsim u terapeutske svrhe, TA se takođe koristi u obrazovnim ustanovama, gdje pomaže nastavnicima i učenicima da ostvare jasnu komunikaciju i izbjegnu neproduktivne konfrontacije.\n\nTA se pokazala kao izuzetno moćna kod obuke o upravljanju i komunikacijama, kao i analizi organizacija."
+                },
+                {
+                    "id": "par6",
+                    "title": "Filozofske pretpostavke na kojima se TA temelji",
+                    "content": "Transakciona analiza se zasniva na određenim filozofskim pretpostavkama koje se odnose na ljude, život i ciljeve promjene. Tri osnove filozofske pretpostavke TA su:\n● Ljudi su OK. To znači da svi imamo vrijednost i dostojanstvo kao ljudi i da prihvatamo sebe takve kakvi smo. To je iskaz o biću, a ne o ponašanju. Prihvatamo nečije biće, iako možda ne prihvatamo njegovo ponašanje.\n● Svako ima sposobnost da misli. Svako može da odluči šta želi od života, ima odgovornost i prihvata posljedice svojih odluka.\n● Ljudi odlučuju o svojoj sudbini, a te odluke se mogu mijenjati. Kao djeca usvajamo strategije ponašanja koje su nam poslužile da dobijemo ono što želimo i te strategije nastavljamo da koristimo u odraslom dobu (čak i kada su posljedice tih strategije bolne po nas). Bitno je naglasiti da svaku odluku koju smo donijeli, kasnije možemo promjeniti. Ljudi se mogu promjeniti, a promjenu ostvarujemo ne samo uvidom u stare obrasce ponašanja, već i aktivnim odlučivanjem da te obrasce promjenimo."
+                },
+                {
+                    "id": "par7",
+                    "title": "Osnovni principi TA prakse",
+                    "content": "● Sklapanje ugovora. Na početku terapijskog procesa sklapaju se „administrativni“ i „terapijski ugovor“. Administrativni ugovor je sporazum između transakcionog analitičara, tj. terapeuta i klijenta o detaljima plaćanja, trajanju tretmana i ostalim administratitvnim stvarima važnim za njihov zajednički rad. Kod terapijskog ugovora, klijent jasno definiše koje promjene želi da ostvari, i definiše šta je on spreman da uradi da pomogne realizaciji tih promjena. Terapeut definiše šta je on spreman da radi sa klijentom kako bi se postigle željene promjene.\n● Otvorenost komunikacije. U toku terapijskog procesa i klijent i terapeut treba da imaju sve informacije o tome šta se dešava u njihovom zajedničkom radu. To proizilazi iz osnovne pretpostavke da su ljudi OK i da svako može da misli."
+                },
+                {
+                    "id": "par8",
+                    "title": "Ko ima koristi od terapije",
+                    "content": "Postoji jedna izreka u Transakcionoj analizi: „Ne moraš da se razboliš da bi ti bilo bolje.“ Ne morate da budete bespomoćni ili nesposobni da biste imali koristi od terapije. Možete biti i funkcionalna osoba koja će doći na terapiju zato što želi još više od života. Na terapiju može da krene svako ko ima ličnih problema, bilo da su u pitanju privremene teškoće u vezi ili na poslu, ili ozbiljniji mentalni poremećaji."
+                },
+                {
+                    "id": "par9",
+                    "title": "Ciljevi promjene u Transakcionoj analizi",
+                    "content": "TA smatra da su disfunkcionalna ponašanja rezultat samoogranikičavajućih odluka koje je osoba donijela rano u djetinjstvu kako bi preživjela. Skup tih odluka naziva se životni scenarij (skript) i on putem nesvjesnih svakodnevnih odluka određuje kakav će život osoba živjeti (kao gubitnik, kao pobjednik ili dosadno – bez većih razočarenja, ali i uspjeha).\n\nCilj transakcione analize je napustiti skript, te ponovno uspostaviti autonomiju ličnosti kako bi osoba mogla svjesno donositi ispravne odluke.\n\nErik Bern je smatrao da je autonomija ideal kome treba težiti i ona se ostvaruje uspostavljanjem tri sposobnosti: svjesnosti, spontanosti i intimnosti. Svjesnost je sposobnost da vidimo, čujemo, osjetimo, okusimo i omirišemo stvari kao čiste senzualne impresije (kao novorođena beba) bez tumačenja i filtriranja. Spontanost je sposobnost da odaberemo između niza mogućnosti za osjećanje, mišljenje i ponašanje i da reagujemo slobodno iz bilo kojeg od svoja tri ego stanja. Intimnost podrazumjeva otvoreno dijeljenje osjećanja i želja između vas i druge osobe. Proces postizanja autonomije može se predstaviti sledećom pjesmom:\n\nAutobiografija u pet kratkih koraka, Porša Nelson\n\nPoglavlje I\n\nIdem ulicom.\nNa pločniku je velika rupa.\nUpadam u nju.\nIzgubljena sam... bespomoćna.\nNisam ja kriva.\nTreba mi vječnost da nađem izlaz iz nje.\n\nPoglavlje II\n\nIdem ulicom.\nNa pločniku je velika rupa.\nPretvaram se da je ne vidim\nPonovo upadam u nju.\nNe mogu da vjerujem da sam opet na istom mjestu.\nAli, nisam je kriva.\nI dalje mi treba mnogo vremena da izađem iz nje.\n\nPoglavlje III\n\nIdem ulicom.\nNa pločniku je velika rupa.\nVidim je.\nAli opet upadam u nju...to je navika,\nOči su mi otvorene.\nZnam gdje sam.\nMoja greška.\nOdmah izlazim.\n\nPoglavlje IV\n\nIdem istom ulicom.\nNa pločniku je rupa.\nZaobilazim je.\n\nPoglavlje V\n\nIdem drugom ulicom.\n\nTekst pripremila Dragana Đurašinović\nLiteratura: In Stjuart, Ven Džoins „Savremena transakaciona analiza“ (2011), Psihopolis, Novi Sad"
+                }
+            ]
+        },
+        "porodicniciklusi": {
+            "page_title": "Porodični životni ciklusi",
+            "page_head_class": "page-head-ciklusi",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Život porodice se tokom vremena odvija kroz specifične faze razvoja koje se zovu životni ciklusi porodice. Svaka faza razvoja ima svoje zadatke i izazove koje porodica treba da riješi i zadovolji kako bi funkcionalno prešla u narednu fazu životnog ciklusa. Ti zadaci i izazovi se mogu nazvati i razvojne krize.\n\nDa bi se prešlo u narednu fazu, pred porodicu se stavlja zahtjev za promjenom, prilagođavanjem i mijenjanjem strukture i organizacije. Mijenjaju se odnosi, pravila, uloge, preispituju se granice i uvjerenja.\n\nKada porodica zna u kom se životnom ciklusu nalazi, to nudi mogućnost da se svjesno uhvati u koštac sa problemima koji se javljaju, adekvatnije i lakše prevaziđe izazove i krize, a samim tim i da kvalitetnije živi.\n\nFaze životnog ciklusa porodice su:\n1. Početna porodica\n2. Porodica sa sasvim malim djetetom\n3. Porodica sa predškolskim djetetom\n4. Porodica sa školskim djetetom\n5. Porodica sa adolescentom\n6. Porodica iz koje odlaze djeca\n7. Postroditeljska porodica\n8. Ostarjela porodica"
+                },
+                {
+                    "id": "par2",
+                    "title": "Početna porodica",
+                    "content": "Ovaj stadijum podrazumijeva period od početka zajedničkog života partnera do rođenja prvog djeteta. U ovom period partneri uče da funkcionišu kao diada (dvojnost). To podrazumijeva uspostavljanje granica prema roditeljskim porodicama (roditeljima, braći, sestrama). Uče da žive u zajedništvu kroz uspostavljanje njima svojstvenog stila komunikacije, pravila, granica, sistema vrijednosti. Ukoliko partneri ne uspiju da se prilagode na zajedništvo, to može dovesti do krize koja se može razriješiti razilaženjem i razvodom, ili nastoje da je prevaziđu rođenjem djeteta što privremeno razrješava probleme i prenosi ih u narednu fazu."
+                },
+                {
+                    "id": "par3",
+                    "title": "Porodica sa malim djetetom",
+                    "content": "Ovaj stadijum obuhvata trudnoću, rađanje prvog djeteta i period do predškolskog uzrasta djeteta (3-5 godina). Uspostavljanje roditeljskih uloga podrazumijeva raspodjelu osnovne brige, poslova, zaduženja, učešće u procesu vaspitanja. Potrebno je izbalansirati profesionalne potrebe, kao i potrebe za privatnošću, odmorom i zabavom. Često je neophodno redefinisati granice sa porodicama porijekla, koje su takođe dobile nove uloge (baka, deda), kao i održati partnersku relaciju i bliskost. Glavni cilj tretmana porodica u ovoj životnoj fazi je da se odraslima pomogne da postanu efikasni u svojoj novoj ulozi roditelja, uz istovremeno njegovanje partnerskog odnosa i postavljanje jasnih granica sa drugim članovima porodice."
+                },
+                {
+                    "id": "par4",
+                    "title": "Porodica sa predškolskim djetetom",
+                    "content": "Ovaj period traje od 3-5 godine djeteta do polaska u školu. Mogu se pojaviti problem vezani za roditeljstvo, ali i aktiviranje bračnih problema neriješenih u prethodnim stadijumima. Problemi se najčešće prikazuju kao \"problemi sa djetetom\", u vidu poteškoća sa uspostavljanjem navika spavanja, ishrane, itd. U terapijskom procesu je neophodno razlučiti razvojne poteškoće od simptoma, kao i roditeljsku od bračne disfunkcionalnosti."
+                },
+                {
+                    "id": "par5",
+                    "title": "Porodica sa školskim djetetom",
+                    "content": "Ova faza traje od polaska djeteta u školu do njegovog puberteta. S obzirom da dijete više odsustvuje iz kuće, roditelji imaju više vremena da se posvete profesionalnim obavezama i svom partnerskom odnosu. Dijete započinje proces socijalizacije, u njegov život ulaze školski drugovi, učitelji… Stiče radne navike, uključuje se u vanškolske aktivnosti. Roditelji i dijete su pred iskušenjem povratne informacije koju dobijaju od strane svih koji participiraju u školskom sistemu. Ona se direktno može tumačiti kao vrednovanje djeteta, pa roditelji preispituju svoj vaspitni uticaj i udio u izgradnji djetetove ličnosti. Poteškoće koje se mogu pojaviti kod djeteta u ovom periodu (problemi sa učenjem, ponašanjem, školska fobija) mogu biti maska neriješenih roditeljskih ili partnerskih konflikata iz prethodnih faza."
+                },
+                {
+                    "id": "par6",
+                    "title": "Porodica sa adolescentom",
+                    "content": "To je period kada dijete uđe u pubertet i traje do odlaska djeteta iz kuće. Porodica ulazi u novi proces reorganizacije. Roditelji ne mogu više da zadrže potpuni autoritet i od njih se traži fleksibilnost vezano za promjene. Ponekad je teško uspostaviti odgovarajući balans kontrole i slobode. Granice prema spoljašnjem svijetu moraju postati propustljivije.\n\nAdolescenti unose novine u porodicu, izazivaju njene vrijednosti, često testiraju granice autoriteta, traže promjenu, ali i podršku i sigurnost. Razvojno su rastrzani između težnje za odrastanjem i dečije potrebe za roditeljskom zaštitom i brigom. Emotivni naboj je ono što karakteriše porodične odnose. Adolescenti su izuzetno podložni razvoju simptoma i često su teškoće prolazne prirode i odražavaju borbu za prelaz u novo životno doba. Simptomi mogu da budu i znak drugih disfunkcija u porodici, kao što su problemi u braku roditelja. Centralni događaj u braku, u ovoj fazi, jeste kriza srednjeg životnog doba jednog ili oba roditelja, što rezultira preuređivanjem odnosa u braku ili čak razvodom."
+                },
+                {
+                    "id": "par7",
+                    "title": "Porodica iz koje odlaze djeca",
+                    "content": "Ovo je najduža faza u životnom ciklusu porodice i veoma složena po svojim brojnim zadacima. To je stadijum kada se djeca puštaju da odu iz roditeljske porodice. Odvajanje djece od roditelja je promjena koja je bolna i za jedne i za druge. Roditelji moraju da se izbore sa promjenom sopstvenog statusa i pripremaju se za pomjeranje na poziciju bake/dede. Suočavaju se i sa starošću i smrću svojih roditelja.\n\nU nekim porodicama se ova faza doživljava kao novi period za uživanje i zadovoljavanje potreba koje ranije nisu mogle biti ispunjene, kretanje u nove oblasti: putovanja, hobi, novi poslovi. Kod drugih, ovaj proces stvara osjećanje praznine i ogromnog gubitka, a ponekad i depresije."
+                },
+                {
+                    "id": "par8",
+                    "title": "Postroditeljska porodica",
+                    "content": "To je faza kada su sva djeca napustila roditeljski dom i partneri postaju okrenuti jedan drugom. Za ovaj stadijum je karakterističan \"sindrom praznog gnezda\". Bračni par, ostavši bez djece, doživljava veliku prazninu i gubitak smisla življenja. Posle mnogo godina u kojima je preokupacija uglavnom bila odgajanje djece, bračni par je ponovo sam i suočen sa značajnim bilansima (\"da li je to ono što smo od života htjeli i ono što smo postigli?\"). Situacija je posebno teška kada dođe do smrti jednog partnera na ovom stadijumu ili kada je u pitanju jednoroditeljska porodica."
+                },
+                {
+                    "id": "par9",
+                    "title": "Ostarela porodica",
+                    "content": "Ovo je faza koja sa sobom nosi neminovnosti, kao što su odlazak u penziju, ekonomsko pitanje egzistencije, bolest, smrt jednog partnera, što može da dovede stare ljude u zavisnu poziciju. Ko će ih njegovati i u kojim uslovima su nova pitanja za porodicu. Težak zadatak za u ovom periodu se odnosi i na suočavanje sa bliskim krajem."
+                },
+                {
+                    "id": "par10",
+                    "title": "",
+                    "content": "S obzirom na sve veću učestalost razvoda, on postaje dio životnog ciklusa porodice. Razvod govori o prekidanju partnerskog odnosa, ali ne i roditeljskog, stoga porodica sa djecom i nakon razvoda postoji. Zahtjev je za partnere da ne zanemare i ne zloupotrijebe djecu u procesu razdvajanja, već da roditeljstvo bude prioritetno u odnosu na njihovo lično nezadovoljstvo i emotivne teškoće sa kojima se suočavaju, jer tako i djeci pomažu da što bezbolnije prođu kroz ovu krizu.\n\nDakle, svaka faza, a posebno prelazak iz jedne faze životnog ciklusa u drugi, je potencijalno nosilac problema koji dovode do stresa i mogu izazvati pojavu simptoma.\n\nPri rješavanju navedenih poteškoća, emocionalne, relacione, razvojne ili socijalne prirode, porodični terapeut svojim znanjem i vještinama pomaže porodicama da potpunije, kvalitetnije i lakše odgovora na sve zahtjeve i izazove životnog ciklusa porodice."
+                }
+            ]
+        },
+        "terapijabola": {
+            "page_title": "Psihološka terapija bola",
+            "page_head_class": "page-head-bol",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Bol se definiše kao neprijatno senzorno i emotivno iskustvo povezano sa aktuelnim i potencijalnim oštećenjem tkiva. Akutni bol koji traje do 3 sedmice dovodi do privremenog prekidanja aktivnosti, a najčešće ga prate emocije zabrinutosti, blaže anksioznosti i povremeno straha. Subakutni bol traje od 3-12 sedmica i u tom slučaju dolazi do fokusiranja na fizičke simptome i intenzivnijih emocionalnih reakcija kao što su depresivni simptomi, anksioznost, frustriranost, bijes. Hronični bol traje duže od 3 mjeseca i vodi promjeni životnog stila, a često ga prate depresivnost, povlačenje, pasivne strategije za prevazilaženje i naglašavanje male kontrole nad bolom. Između bola i psihičkog stanja oboljelog postoji značajna uzročno-posljedična veza. Iako dugotrajan hronični bol može dovesti do depresivnosti, isto tako jedna od manifestacija depresivnosti može biti upravo somatizacija, tj doživljaj bola (za koji ne postoji somatski uzročnik). U svakom slučaju tretman bola podrazumjeva multidisciplinarni pristup koji uključuje sagledavanje fizičkih, psiholoških i socijalnih faktora.\n\nUloga psihologa u tretmanu bola uključuje dijagnostičke i terapijske postupke. Procjenjuje se ličnost oboljelog, stepen somatizacije, te prisustvo funkcionalnih i disfunkcionalnih emocionalnih reakcija na bol. Psihološki faktori kao što su individualno emocionalno stanje i značenje koje se pridaje bolu u mnogome utiču na njegov doživljaj. Sternbach je još 1966. godine utvrdio da se doživljaj bola pojačava sa porastom nivoa anksioznosti. Vezano za terapijske postupke najčešće se primjenjuju kognitivne i kognitivno-bihejvioralne intervencije primarno usmjerene na savladavanje bola. Da bi ove intervencije mogle da djeluju pacijenti se navode na redefinišu doživljaj bola u smislu da ga posmatraju kao problem koji se može savladati. Istovremeno moraju vjerovati da će naučiti vještine za njegovu uspješnu kontrolu čime zapravo redefinišu svoju ulogu u procesu doživljaja bola. Umjesto uloge pasivnog trpljenja, budi se aktivna i kompetentna uloga u redukciji bola. Ova promjena pojačava osjećanje sopstvene efikasnosti u kontroli koje može uticati na bol. Pacijenti se uče da registruju svoje misli, osjećanja i ponašanja kako bi otklonili maladaptivne reakcije. U ovom smislu uče da odbacuju negativne, automatske misli kojima se obeshrabruju i uvode u još lošija osjećanja, a uključuju one u kojima predviđaju uspješni ishod u redukciji bola. Kognitivne tehnike koje se koriste su: kognitivna restukturacija (drugačiji način gledanja), strategije za rješavanje problema (brainstorming), distrakcione tehnike (kratkoročni efekti-skretanje pažnje, sabiranje, brojanje) te tehnike relaksacije (progresivna mišićna relaksacija, tehnike imaginacije, vođena fantazija)."
+                }
+            ]
+        },
+        "partnerskaterapija": {
+            "page_title": "Bračna/partnerska terapija",
+            "page_head_class": "page-head-partnerskaterapija",
+            "sidebar_title": "",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "content": "Bračna/partnerska terapija predstavlja psihološki tretman parova koji su u vezi ili braku. Osnovni cilj jeste pružiti pomoć parovima da unaprede svoj odnos, u smislu višeg stepena poverenja, intimnosti, zadovoljstva i bolje komunikacije.\n\nNeki od najčešćih razloga nezadovoljstva u braku ili vezi su: svađe i konflikti (koji dovode do toga da se jedan ili oba partnera osećaju odbačenima i proizvode visok stepen frustracije jer se ne nalaze rešenja za date nesuglasice), odsustvo komunikacije, nedostatak bliskost i intimnosti, međusobno optuživanje, posesivnost (težnja da se partner kontroliše), prevara...\n\nVažno je istaći da je odgovornost za probleme uvek zajednička, čak i onda kada to tako ne izgleda na prvi pogled, tako da je veoma važno u terapijskom procesu da svaki partner prihvati sopstvenu odgovornost za narušen odnos (ovo je i preduslov za promenu).\n\nNa početku terapije se identifikuje problem i definiše zajednički cilj, koji je prihvatljiv i poželjan za obe strane i koji predstavlja osnovni generator motivacije za rešavanje problema.\n\nPartneri u vezi ili braku moraju da rade na ispunjavanju dve kategorije zadataka. Jednoj kategoriji pripadaju zadaci koji se tiču odnosa, kao što su: međusobne obaveze, briga (pažnja), komunikacija, konflikti/kompromisi, intimnost i bliskost. Drugoj kategoriji pripadaju spoljašnji zadaci odnosa i tiču se uspostavljanja i održavanja veza sa drugim pojedincima, prijateljima, članovima porodice, kolegama, itd... Ključ za dobar (funkcionalan) brak je uspostavljanje ravnoteže između „unutra“ i „spolja“.\n\nLjudska bića prirodno traže ljubav i povezanost sa drugima. Ljubav nas održava i predstavlja „sigurnu bazu“ iz koje istražujemo svet oko nas. Emocije predstavljaju značajan faktor u odnosu među partnerima. U okviru terapije parova, partnerima se pomaže da prepoznaju negativan komunikacijsko-emotivni ciklus, a nakon toga i da prepoznaju i izraze svoje potrebe i strahove u vezi, kako bi se ostvario veći stepen zadovoljstva i intimnosti u odnosu. Terapija, između ostalog, ima za cilj menjanje obrazaca komunikacije koji dovode do zaglavljivanja u vezi i koji su u formi kritikovanja praćenog međusobnim udaljavanjem partnera.\n\nPostoje faze u razvoju parova koje su izazovnije od drugih i u kojima se češće javljaju problemi u odnosu, a to su: početak zajedničkog života, prva godina braka, odlučivanje o mogućem proširenju porodice, izazovi sa zasnivanjem porodice, rođenje deteta, kao i prva godina nakon rođenja, smrt bliskih osoba i članova porodice, period donošenja važnih odluka (selidba, škola, zdravstvene odluke), parovi sa malom decom, parovi sa školskom decom, period adolescencije dece, faza u kojoj deca napuštaju roditeljski dom, odlazak u penziju, zdravstvene poteškoće partnera...\n\nBračna ili partnerska terapija može pomoći partnerima da donesu odluku da li će ostati zajedno ili će se razdvojiti, a može biti korisna i nakon što je donesena odluka o razdvajanju, posebno u procesu razvoda, koji je često ispunjen konfliktima i emocijama poput ljutnje, besa, razočarenja, što može imati značajne negativne posledice na decu.\n\nTerapeut nije u ulozi nekoga ko sudi, traži krivca ili slično, već je tu da inicira i održi saradnju, sasluša, razume i prihvati realnost svakog partnera, kao i da olakša i unapredi međusobnu komunikaciju i razumevanje, pomogne u definisanju ciljeva i strategija za njihovo postizanje.\n\nTekst je priredila Miona Rodić, psiholog, bračni i porodični terapeut"
+                }
+            ]
+        },
+        "kbt": {
+            "page_title": "Kognitivno bihejvioralna psihoterapija",
+            "page_head_class": "page-head-kbt",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "par1",
+                    "title": "Kognitivno bihejvioralna psihoterapija - ACT",
+                    "content": "Kognitivno-bihejvioralna psihoterapija predstavlja kombinaciju tehnika i metoda kognitivne i bihejvioralne terapije. Pod bihejvioralnom terapijom podrazumijevamo niz različitih postupaka koji imaju za cilj usvajanje poželjnih ili uklanjanje nepoželjnih oblika ponašanja. Sa druge strane, osnovna ideja kognitivne terapije je da su emocionalne reakcije i ponašanje ljudi pod uticajem kognicija (misli, vjerovanja i interpretacija o sebi, drugima ili o situaciji) - „Nije važno šta nam se događa već kako to procjenjujemo“.\n\nCilj kognitivno-bihejvioralne psihoterapije, kao psihoterapijskog pristupa vođenog naučnim istraživanjima, je da izmjenom disfunkcionalnih misli, sprječavanjem patološkog ponašanja ili učenjem novog, adaptibilnog ponašanja redukujemo patološke sadržaje i poboljšamo kvalitet života klijenta. KBT je najprije usmjeren na istraživanje, razumijevanje i objašnjavanje faktora koji u sadašnjosti utiču na stvaranje i održavanje psiholoških problema, jer se ljudi ponekad previše zadrže na sjećanjima iz prošlosti i zaborave da žive sad i ovdje. Pomoću ove terapije ljudi uče kako da se fokusiraju na sadašnji trenutak i žive punom svjesnošću, s obzirom na to da je, prema naučnim istraživanjima, prebacivanje pažnje na sadašnji trenutak uspješan pristup za širok raspon problema.\n\nRazvoj KBT-a je tekao kroz tri talasa:\n1. Bihejvioralne terapije zasnovane na klasičnom i operantnom uslovljavanju\n2. Kognitivne terapije zasnovane na mijenjanju kognicija i socijalnom učenju\n3. Terapije zasnovane na prihvatanju i punoj svjesnosti.\n\nU okviru trećeg talasa KBT-a izdvajamo terapiju prihvatanjem i posvećenošću (eng. Acceptance and Commitment Therapy - skraćeno ACT) koja predstavlja inovativnu terapiju ponašnja. ACT je terapija kreirana sa ciljem da pomogne pojedincima da smanje nepotrebnu patnju i da krenu naprijed sa građenjem onakvog života kakvog smatraju vrijednim življenja.\n\nPrema ACT modelu, problematična ponašanja svih ljudskih bića zasnovana su na istim procesima koji se odvijaju u pozadini tih ponašanja. Zbog ove pretpostavke, u terapiji prihvatanjem i posvećenošću, klijent i terapeut se nalaze na istom nivou u terapijskom odnosu, gdje terapeut klijentu zapravo pruža drugačiju perspektivu problema sa kojim se klijent suočava.\n\nModel na kojem je zasnovan ACT usmjeren je na šest primarnih oblasti:\n1. Prihvatanje\n2. Defuziranje\n3. Kontakt sa sadašnjim trenutkom\n4. Self kao kontekst\n5. Vrijednosti\n6. Posvećeno djelovanje\n\nNa početku ACT terapije klijent i terapeut zajedno istražuju koji su to faktori iz okoline koji utiču na ponašanje klijenta. Istraživanje se zatim usmjerava na otkrivanje načina na koji se neefikasno ponašanje pojačava ili osnažuje, a na koji način efikasno ponašanje slabi u životu klijenta, tako da život te osobe ne sadrži stvari koje on ili ona vrednuje. Iz perspektive ACT-a, postoji nekoliko potencijalnih procesa koji doprinose neefikasnom ponašanju ljudi, a koji su zajednički za sva ljudska bića. Dva najznačajnija procesa su izbjegavanje doživljaja i kognitivna fuzija. Izbjegavanje doživljaja se može opisati kao nevoljnost da se dožive sopstvene misli, osjećanja, sjećanja i ostali unutrašnji događaji. Kako bi izbjegli unutrašnje događaje ljudi koriste različite strategije, pomoću kojih će promijeniti učestalost ili doživljaj sopstvenih misli, emocija, sjećanja ili tjelesnih senzacija, a koje su za njih neugodne ili odmažuće. Upotreba ovih strategija kao rezultat donosi ponašanja (pretjerano spavanje, društvene mreže, alkoholizam, emocionalno prejedanje) u kojima je izbjegavanje ključni proces za razvoj i održavanje različitih psiholoških poremećaja. Sa druge strane, kognitivna fuzija odnosi se na strogo i kruto praćenje misli i pravila u svojoj glavi kod klijenata (npr. „Više ne mogu da podnesem ovu anskioznost“). Ljudi često vjeruju u sve misli koje su proizvod njihovog uma. Neke od tih misli jesu korisne, ali ima i onih koje nisu. Problem nastaje kada ljudi slijepo vjeruju u te odmažuće misli, koje nerijetko mogu biti rezultat negativnih ranijih iskustava u interpersonalnim odnosima. Umjesto toga, klijenti mogu tražiti načine da što efikasnije stupaju u interakciju sa neposredno doživljenim svijetom, umjesto onog verbalno konstruisanog u „umu“ osobe.\n\nU okviru ovog psihoterapijskog tretmana klijent i terapeut rade na povećanju psihološke fleksibilnosti, a time i na otvorenosti za doživljaj različitih unutrašnjih događaja, kako bi klijent mogao sam donositi odluke o tome šta želi napraviti sa unutrašnjim događajima koji su za njega neprijatni. Usmjerenost na unutrašnju kontrolu može da bude sama po sebi dio problema zbog kojeg se klijent javio na terapiju. Kroz ACT klijenti uče da zapravo smanjivanje kontrole nad unutrašnjim doživljajima dovodi do oslobađanja za ostvarivanje veće kontrole nad svojim životom. Na povećanju psihološke fleksibilnosti i poboljšanju života klijenta radi se pomoću šest ranije navedenih procesa - prihvatanje, defuziranje, kontakt sa sadašnjim trenutkom, self kao kontekst, vrijednosti, posvećeno djelovanje. Na ovaj način ljudi dobijaju više prostora za rad na stvarima koje su za njih bitne, čime se zapravo kreću ka životu koji je za njih vrijedan življenja."
+                },
+                {
+                    "id": "par2",
+                    "title": "Terapija usmjerena saosjećanjem - CFT",
+                    "content": "Terapija usmjerena saosjećanjem (engl. Compassion Focused Therapy, CFT) jeste terapija prema kojoj se pretpostavlja da je ljudima sa visokim nivoom stida i kriticizma teško dostupan sistem emocionalne regulacije koji stoji u osnovi ličnog doživljaja umirenja, sigurnosti i dobrobiti. Drugim riječima, prema ovoj terapiji, ljudi koji imaju izražen stid i samokritiku imaju velike poteškoće da osjete olakšanje i doživljaj umirenja i sigurnosti. Suprotno od ovog sistema, njihove reakcije na unutrašnji i spoljašnji svijet su pod uticajem sistema za emocionalno reagovanje na prijetnju. Zbog toga je u okviru ove terapije najveći fokus na razvijanju drugačijeg, emocionalno toplijeg odnosa prema svojim iskustvima, ispunjenog sigurnošću i umirenošću, preko saosjećanja prema drugima i saosjećanja sa sobom.\n\nOva terapija polazi iz evolucione funkcionalne analize, na osnovu koje možemo izdvojiti tri glavna emocionalna sistema regulacije: sistem usmjeren na prijetnje i samozaštitu, sistem usmjeren na pokretanje, traženje i postignuće i sistem usmjeren na zadovoljstvo, umirenje i pripadanje.\n\nPrvi sistem, odnosno sistem usmjeren na prijetnje i zaštitu je razvijen s ciljem da nas upozori i usmjeri nam pažnju na otkrivanje prijetnje i da pokrene reagovanje na nju. U okviru ovog sistema najviše se izdvajaju emocije ljutnje, anksioznosti i gađenja, a ponašanja koja su najčešća jesu borba, bijeg, pokoravanje i zaleđivanje.\n\nSistem usmjerena na resurse, potragu i postignuće odnosi se na sistem koji je zadužen za energiziranje i pokretanje ponašanja koja pomažu organizmu da primjeti i obrati pažnju na povoljne resurse, te da omogući doživljavanje zadovoljstva i pokrenutosti u pribavljanju tih resursa.\n\nTreći sistem je odgovaran za odmaranje, jer omogućava stanje mirovanja i spokoja kada pojedinac više nije fokusiran na prijetnju ili na potragu i konzumiranje resursa.\n\nTerapija usmjerena saosjećanjem započinje sa jednostavnim intervencijama koje su fokusirane na uvježbavanje stvaranja podržavajuće i pomažuće emocionalne teksture alternativnim mislima, novim pomažućim ponašanjima i izlaganju iskustvima s ciljem da se stvori topao glas, kao kada pričamo sa prijateljima, i da stvarno pokušamo da osjetimo njegov uticaj, odnosno s ciljem da klijent započne sa korištenjem sistema usmjerenog na afilijativnost, zadovoljstvo, umirenje i pripadanje. S obzirom na to da je prvi sistem povezan sa lučenjem adrenalina i kortizola (hormoni koji se luče u stresnim situacijama), a drugi sa lučenjem dopamina (hormon povezan sa situacijama u kojima osjećamo zadovoljstvo, „pozitivnu tremu“), neophodno je napraviti balans u organizmu pomoću sistema usmjerenog na afilijativnost, zadovoljstvo, umirenje i pripadanje, jer se aktiviranjem ovog sistema luči oksitocin („hormon sreće“), koji je povezan sa psihičkom i mentalnom dobrobiti osobe."
+                }
+            ]
+        },
+        "neuroloskipregled": {
+            "page_title": "Neurološki pregled",
+            "page_head_class": "page-head-neuroloskipregled",
+            "sidebar_title": "Naslovi",
+            "sections": [
+                {
+                    "id": "par1",
+                    "title": "Neurološki pregled - temeljna procjena stanja zdravlja našeg živčanog sistema",
+                    "content": "Neurološki pregled namijenjen je uspostavi dijagnoze stanja kao što su delirijum, Parkinsonova bolest, multipla skleroza (MS), spinalna mišićna atrofija ali i kod glavobolje, nesanice, zaboravnosti te mnogih drugih.\n\nNeurološki pregled - korak po korak obuhvata sledeće dijelove\n\nKognitivni pregled - procjena mentalnog statusa pacijenta, svjesnosti i orijentisanosti pacijenta na (1) osobu, (2) mjesto i (3) vrijeme. Neurolog će provjeriti da li osoba zna svoje ime, da li može da identifikuje datum i da li razumije zašto je na pregledu. Ako pacijent neadekvatno odgovara na takva pitanja i djeluje zbunjeno ili dezorijentisano, možete se nastaviti dalje sa ispitivanjem kroz upitnik koji treba da procijeni različite aspekte kognitivne funkcije, uključujući orijentaciju, pamćenje i jezik (moguće je da neurolog zatraži konsultaciju psihijatra ili psihologa)\n\nTestiranje motornih funkcija - odnosi se na procjenu pokreta, snage i tonusa mišića. Neurolog započne tako što će primijetiti da li osoba imate bilo kakve nevoljne pokrete koji bi mogli da signaliziraju neurološke bolesti, poput tikova ili tremora. Takođe će pogledati da li postoje bilo kakve promjene u veličini ili izgledu mišića, kao što je atrofija (skupljanje) ili kontrakcije (mišići izgledaju kao da su zamrznuti na mestu) a zatim provjeriti tonus mišića tako što će osobu zamoliti opusti tijelo, a zatim nježno pomjerati njene ruke i noge. Neka neurološka stanja utiču na tonus mišića.\n\nI poslednji dio motoričkog pregleda je mjera snage. U ovom dijelu pregleda osoba će uložiti punu snagu za svaki pokret koji ljekar traži da učini. Svaka grupa mišića, kao što su bicepsi i tricepsi ruku ili mišići stopala, biće ocijenjena na skali od nula do pet.\n\nSenzorno ispitivanje - neurolog će provjeriti osjećaj za oštar i lagan dodir, temperaturu, položaj i vibracije u sva četiri ekstremiteta, a možda i na drugim dijelovima tijela. Od osobe se zatraži da navede kada i gdje osjeća različite senzacije, a ponekad se može tražiti da uporedi osjećaj na desnoj i lijevoj strani tijela. Lokacija senzornih promena pomaže da se tačno utvrdi koji nervi ili koji dio kičme je zahvaćen neurološkom bolešću.\n\nRefleksi, hodanje i kordinacija pokreta - Postoji nekoliko refleksa koje će ljekar provjerava - refleksi odgovaraju određenim živcima koji izlaze iz kičmene moždine, a refleksne promjene mogu pomoći ljekaru da sazna da li imate bolest u određenim dijelovima mozga, kičmene moždine ili nerava.\n\nNeurolog će takođe provjeravati koordinaciju i hod osobe/pacijenta. Pregledom hoda se dobija uvid u, ravnotežu, vid, snagu mišića i osjećaj za prostor.\n\nKoordinacija je povezana sa mnogim vještinama, a nedostatak u koordinaciji (koji će kroz niz testova provjeriti neurolog) može ukazati na uzrok neuroloških problema.\n\nJezik - neurolog ispituje da li osoba tečno govori i kako razumije govor i ukoliko nešto nije u redu to može ukazati da postoji jezički deficit koji se može i ne mora razviti usljed moždanog udara, tumora na mozgu, traume glave ili usljed nekog drugog uzroka\n\nPregled kranijalnih živaca - ovaj pregled je takodje važan dio neurološke procjene, i bavi se funkcijom 12 parova kranijalnih živaca koji izlaze iz moždanog stabla."
+                },
+                {
+                    "id": "par2",
+                    "title": "Kako izabrati neurologa",
+                    "content": "Kada se osoba nađe u zdravstvenom problemu pa je neophodan neurološki pregled i mišljenje, potrebno je pažljivo izabrati kome se ukazuje povjerenje. Neurološki problemi su zahtjevni pa je posvećenost i stručnost profesionalca posebno važna kako bi se dobila najbolja moguća dijagnoza i liječenje.\n\nU pripremi korišten tekst \"Neurološki pregled - šta podrazumeva i kako izabrati\" od Srbijanke Stanković"
+                }
+            ]
+        }
     }
 }

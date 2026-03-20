@@ -56,6 +56,9 @@
 								Vaš pregledač ne podržava audio element.
 							</audio>
 							<?php endif; ?>
+							<?php if (!empty($audio['promo_text'])): ?>
+							<p style="font-style:italic;color:#229C8C;margin-top:8px;"><?= htmlspecialchars($audio['promo_text']) ?></p>
+							<?php endif; ?>
 							<div class="audio-meta">
 								<?php if (!empty($audio['duration'])): ?>
 								<span>Trajanje: <?= htmlspecialchars($audio['duration']) ?></span>

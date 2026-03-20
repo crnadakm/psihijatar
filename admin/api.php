@@ -128,6 +128,34 @@ switch ($action) {
         }
         break;
 
+    case 'upload_image':
+        $targetDir = $_POST['target_dir'] ?? 'images/uploads/';
+        $uploadDir = __DIR__ . '/../' . $targetDir;
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+        if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+            echo json_encode(['status' => 'error', 'message' => 'Greška pri uploadu fajla']);
+            break;
+        }
+        $file = $_FILES['image'];
+        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+        $allowed = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+        if (!in_array($ext, $allowed)) {
+            echo json_encode(['status' => 'error', 'message' => 'Dozvoljeni formati: ' . implode(', ', $allowed)]);
+            break;
+        }
+        if ($file['size'] > 5 * 1024 * 1024) {
+            echo json_encode(['status' => 'error', 'message' => 'Maksimalna veličina: 5MB']);
+            break;
+        }
+        $filename = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $file['name']);
+        $destPath = $uploadDir . $filename;
+        if (move_uploaded_file($file['tmp_name'], $destPath)) {
+            echo json_encode(['status' => 'ok', 'message' => 'Slika uploadovana', 'path' => $targetDir . $filename]);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Greška pri čuvanju fajla']);
+        }
+        break;
+
     case 'protect_data':
         file_put_contents($dataDir . '.htaccess', "Deny from all\n");
         echo json_encode(['status' => 'ok', 'message' => '.htaccess kreiran']);

@@ -126,6 +126,10 @@ requireLogin();
                         <label class="form-label">Slika/Cover</label>
                         <input type="text" class="form-control" value="${escHtml(item.cover_image)}" onchange="contentData.slusanka.items[${i}].cover_image=this.value">
                     </div>
+                    <div class="col-md-12 mb-2">
+                        <label class="form-label">Kratki promo tekst</label>
+                        <input type="text" class="form-control" value="${escHtml(item.promo_text || '')}" onchange="contentData.slusanka.items[${i}].promo_text=this.value" placeholder="Kratki promotivni tekst za ovaj audio">
+                    </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Trajanje</label>
                         <input type="text" class="form-control" value="${escHtml(item.duration)}" onchange="contentData.slusanka.items[${i}].duration=this.value" placeholder="npr. 15:30">
