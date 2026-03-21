@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('ADMIN_USER', 'admin');
+define('ADMIN_USER', 'dragi_tesanov1c');
 define('ADMIN_PASS_HASH', '$2y$10$YourHashHere'); // Change this after first login
 
 // Default password: dobar2024 - CHANGE THIS!
