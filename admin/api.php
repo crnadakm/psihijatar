@@ -188,6 +188,32 @@ switch ($action) {
         echo json_encode(['status' => 'ok', 'message' => 'Članak kreiran: ' . $key . '.php', 'key' => $key]);
         break;
 
+    case 'delete_article':
+        $key = $_POST['key'] ?? '';
+        $key = preg_replace('/[^a-z0-9]/', '', strtolower($key));
+        if (empty($key)) {
+            echo json_encode(['status' => 'error', 'message' => 'Ključ je obavezan']);
+            break;
+        }
+        // Remove from content.json
+        $content = json_decode(file_get_contents($dataDir . 'content.json'), true);
+        if (!isset($content['articles'][$key])) {
+            echo json_encode(['status' => 'error', 'message' => 'Članak ne postoji u bazi']);
+            break;
+        }
+        $backup = $dataDir . 'content_backup_' . date('Y-m-d_H-i-s') . '.json';
+        copy($dataDir . 'content.json', $backup);
+        unset($content['articles'][$key]);
+        file_put_contents($dataDir . 'content.json', json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        // Delete PHP file
+        $phpFile = __DIR__ . '/../' . $key . '.php';
+        $fileDeleted = false;
+        if (file_exists($phpFile)) {
+            $fileDeleted = unlink($phpFile);
+        }
+        echo json_encode(['status' => 'ok', 'message' => 'Članak obrisan: ' . $key . '.php', 'file_deleted' => $fileDeleted]);
+        break;
+
     case 'list_articles':
         $content = json_decode(file_get_contents($dataDir . 'content.json'), true);
         $articles = [];

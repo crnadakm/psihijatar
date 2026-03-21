@@ -51,6 +51,7 @@ requireLogin();
                         </div>
                         <div class="text-end mt-2">
                             <a id="art-preview-link" href="#" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-eye"></i> Pogledaj</a>
+                            <button class="btn btn-sm btn-outline-danger ms-2" onclick="deleteArticle()"><i class="bi bi-trash"></i> Obriši članak</button>
                         </div>
                     </div>
 
@@ -246,6 +247,30 @@ requireLogin();
         if (j < 0 || j >= sections.length) return;
         [sections[i], sections[j]] = [sections[j], sections[i]];
         renderSections();
+    }
+
+    function deleteArticle() {
+        if (!currentArticle) return;
+        const artTitle = contentData.articles[currentArticle]?.page_title || currentArticle;
+        if (!confirm('Obrisati članak "' + artTitle + '" (' + currentArticle + '.php)?\n\nOvo briše i PHP fajl i podatke iz baze.')) return;
+        const formData = new FormData();
+        formData.append('action', 'delete_article');
+        formData.append('key', currentArticle);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    showToast(data.message, 'success');
+                    delete contentData.articles[currentArticle];
+                    currentArticle = null;
+                    document.getElementById('article-editor').style.display = 'none';
+                    document.getElementById('no-article').style.display = 'block';
+                    renderArticleList();
+                } else {
+                    showToast(data.message, 'danger');
+                }
+            })
+            .catch(() => showToast('Greška pri brisanju', 'danger'));
     }
 
     function escHtml(str) {
