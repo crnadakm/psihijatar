@@ -189,8 +189,9 @@ requireLogin();
         contentData.knjige.page_title = document.getElementById('page-title').value;
         contentData.knjige.subtitle = document.getElementById('page-subtitle').value;
         const formData = new FormData();
-        formData.append('action', 'save_content');
-        formData.append('data', JSON.stringify(contentData));
+        formData.append('action', 'save_section');
+        formData.append('section', 'knjige');
+        formData.append('data', JSON.stringify(contentData.knjige));
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())
             .then(data => showToast(data.message, data.status === 'ok' ? 'success' : 'danger'))

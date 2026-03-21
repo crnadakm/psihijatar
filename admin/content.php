@@ -516,8 +516,9 @@ requireLogin();
     function saveAll() {
         collectData();
         const formData = new FormData();
-        formData.append('action', 'save_content');
-        formData.append('data', JSON.stringify(contentData));
+        formData.append('action', 'save_section');
+        formData.append('section', 'site,cta,footer');
+        formData.append('data', JSON.stringify({site: contentData.site, cta: contentData.cta, footer: contentData.footer}));
 
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())

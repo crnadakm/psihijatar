@@ -285,8 +285,9 @@ requireLogin();
             contentData.articles[currentArticle].sidebar_title = document.getElementById('art-sidebar-title').value;
         }
         const formData = new FormData();
-        formData.append('action', 'save_content');
-        formData.append('data', JSON.stringify(contentData));
+        formData.append('action', 'save_section');
+        formData.append('section', 'articles');
+        formData.append('data', JSON.stringify(contentData.articles));
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())
             .then(data => showToast(data.message, data.status === 'ok' ? 'success' : 'danger'))

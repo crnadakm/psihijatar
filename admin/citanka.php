@@ -190,8 +190,9 @@ requireLogin();
         contentData.citanka.subtitle = document.getElementById('page-subtitle').value;
         contentData.citanka.upcoming_text = document.getElementById('upcoming-text').value;
         const formData = new FormData();
-        formData.append('action', 'save_content');
-        formData.append('data', JSON.stringify(contentData));
+        formData.append('action', 'save_section');
+        formData.append('section', 'citanka');
+        formData.append('data', JSON.stringify(contentData.citanka));
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())
             .then(data => showToast(data.message, data.status === 'ok' ? 'success' : 'danger'))

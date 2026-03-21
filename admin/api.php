@@ -27,6 +27,33 @@ switch ($action) {
         echo json_encode(['status' => 'ok', 'message' => 'Sadržaj sačuvan']);
         break;
 
+    case 'save_section':
+        $section = $_POST['section'] ?? '';
+        $data = $_POST['data'] ?? '';
+        $sectionData = json_decode($data, true);
+        if (empty($section) || $sectionData === null) {
+            echo json_encode(['status' => 'error', 'message' => 'Sekcija i podaci su obavezni']);
+            break;
+        }
+        $content = json_decode(file_get_contents($dataDir . 'content.json'), true);
+        $backup = $dataDir . 'content_backup_' . date('Y-m-d_H-i-s') . '.json';
+        copy($dataDir . 'content.json', $backup);
+        // Support saving multiple sections at once (e.g. site, cta, footer)
+        $sections = explode(',', $section);
+        if (count($sections) > 1) {
+            foreach ($sections as $s) {
+                $s = trim($s);
+                if (isset($sectionData[$s])) {
+                    $content[$s] = $sectionData[$s];
+                }
+            }
+        } else {
+            $content[$section] = $sectionData;
+        }
+        file_put_contents($dataDir . 'content.json', json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        echo json_encode(['status' => 'ok', 'message' => 'Sadržaj sačuvan']);
+        break;
+
     case 'load_seo':
         echo file_get_contents($dataDir . 'seo.json');
         break;

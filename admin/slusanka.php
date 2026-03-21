@@ -209,8 +209,9 @@ requireLogin();
         contentData.slusanka.description = document.getElementById('page-desc').value;
         contentData.slusanka.placeholder_image = document.getElementById('placeholder-img').value;
         const formData = new FormData();
-        formData.append('action', 'save_content');
-        formData.append('data', JSON.stringify(contentData));
+        formData.append('action', 'save_section');
+        formData.append('section', 'slusanka');
+        formData.append('data', JSON.stringify(contentData.slusanka));
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())
             .then(data => showToast(data.message, data.status === 'ok' ? 'success' : 'danger'))
