@@ -109,8 +109,9 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.link)}" onchange="contentData.citanka.items[${i}].link=this.value">
                     </div>
                     <div class="col-md-3 mb-2">
-                        <label class="form-label">Slika</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.citanka.items[${i}].image=this.value">
+                        <label class="form-label">Slika (URL ili upload)</label>
+                        <input type="text" class="form-control" id="cit-img-${i}" value="${escHtml(item.image)}" onchange="contentData.citanka.items[${i}].image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadCitImg(${i},this)">
                     </div>
                     <div class="col-md-9 mb-2">
                         <label class="form-label">Opis</label>
@@ -145,6 +146,24 @@ requireLogin();
         if (!confirm('Obrisati tekst?')) return;
         contentData.citanka.items.splice(i, 1);
         renderItems();
+    }
+
+    function uploadCitImg(i, input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/uploads/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData.citanka.items[i].image = data.path;
+                    document.getElementById('cit-img-' + i).value = data.path;
+                    showToast('Slika uploadovana', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     function escHtml(str) {

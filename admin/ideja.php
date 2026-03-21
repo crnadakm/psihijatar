@@ -140,11 +140,13 @@ requireLogin();
                     </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Puna slika</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.ideja.gallery[${i}].image=this.value">
+                        <input type="text" class="form-control" id="ideja-gimg-${i}" value="${escHtml(item.image)}" onchange="contentData.ideja.gallery[${i}].image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadGalleryImg(${i},'image',this)">
                     </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Thumbnail</label>
-                        <input type="text" class="form-control" value="${escHtml(item.thumb)}" onchange="contentData.ideja.gallery[${i}].thumb=this.value">
+                        <input type="text" class="form-control" id="ideja-gthumb-${i}" value="${escHtml(item.thumb)}" onchange="contentData.ideja.gallery[${i}].thumb=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadGalleryImg(${i},'thumb',this)">
                     </div>
                     <div class="col-md-2 mb-2">
                         <label class="form-label">Naslov</label>
@@ -177,6 +179,24 @@ requireLogin();
         if (!confirm('Obrisati stavku?')) return;
         contentData.ideja[key].splice(i, 1);
         renderTimeline();
+    }
+
+    function uploadGalleryImg(i, field, input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/gallery/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData.ideja.gallery[i][field] = data.path;
+                    document.getElementById('ideja-g' + field + '-' + i).value = data.path;
+                    showToast('Slika uploadovana', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     function escHtml(str) {

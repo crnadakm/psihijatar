@@ -170,6 +170,7 @@ requireLogin();
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Podrazumjevani OG Image</label>
                             <input type="text" class="form-control" id="global-og-image">
+                            <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadGlobalOgImg(this)">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Podrazumjevani autor</label>
@@ -603,6 +604,22 @@ requireLogin();
         toast.className = 'toast show bg-' + type + ' text-white';
         body.textContent = msg;
         setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function uploadGlobalOgImg(input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_og_image');
+        formData.append('og_image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    document.getElementById('global-og-image').value = data.url;
+                    showToast('OG slika uploadovana', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     function uploadOgImage(input) {

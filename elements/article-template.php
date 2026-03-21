@@ -35,7 +35,7 @@ foreach ($sections as $sec) {
 
 	<?php include __DIR__ . '/header.php' ?>
 
-	<div class="<?= $pageHeadClass ?>">
+	<div class="page-head <?= $pageHeadClass ?>">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

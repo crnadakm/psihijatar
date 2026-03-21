@@ -58,6 +58,7 @@ requireLogin();
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Placeholder slika (kad nema audio)</label>
                             <input type="text" class="form-control" id="placeholder-img">
+                            <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadPlaceholder(this)">
                         </div>
                     </div>
                 </div>
@@ -123,8 +124,9 @@ requireLogin();
                         <textarea class="form-control" onchange="contentData.slusanka.items[${i}].description=this.value">${escHtml(item.description)}</textarea>
                     </div>
                     <div class="col-md-4 mb-2">
-                        <label class="form-label">Slika/Cover</label>
-                        <input type="text" class="form-control" value="${escHtml(item.cover_image)}" onchange="contentData.slusanka.items[${i}].cover_image=this.value">
+                        <label class="form-label">Slika/Cover (URL ili upload)</label>
+                        <input type="text" class="form-control" id="sl-cover-${i}" value="${escHtml(item.cover_image)}" onchange="contentData.slusanka.items[${i}].cover_image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadSlImg(${i},this)">
                     </div>
                     <div class="col-md-12 mb-2">
                         <label class="form-label">Kratki promo tekst</label>
@@ -159,6 +161,41 @@ requireLogin();
         if (!confirm('Obrisati audio?')) return;
         contentData.slusanka.items.splice(i, 1);
         renderAudio();
+    }
+
+    function uploadSlImg(i, input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/uploads/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData.slusanka.items[i].cover_image = data.path;
+                    document.getElementById('sl-cover-' + i).value = data.path;
+                    showToast('Cover uploadovan', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
+    }
+
+    function uploadPlaceholder(input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    document.getElementById('placeholder-img').value = data.path;
+                    showToast('Slika uploadovana', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     function escHtml(str) {

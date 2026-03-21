@@ -398,8 +398,9 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.name)}" onchange="contentData.team[${i}].name=this.value">
                     </div>
                     <div class="col-md-5 mb-2">
-                        <label class="form-label">Slika (putanja)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.team[${i}].image=this.value">
+                        <label class="form-label">Slika (putanja ili upload)</label>
+                        <input type="text" class="form-control" id="team-img-${i}" value="${escHtml(item.image)}" onchange="contentData.team[${i}].image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadImg('team',${i},this,'images/team/')">
                     </div>
                     <div class="col-md-12 mb-2">
                         <label class="form-label">Opis / biografija</label>
@@ -441,8 +442,9 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.link)}" onchange="contentData.blog_highlights[${i}].link=this.value">
                     </div>
                     <div class="col-md-4 mb-2">
-                        <label class="form-label">Slika</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image)}" onchange="contentData.blog_highlights[${i}].image=this.value">
+                        <label class="form-label">Slika (URL ili upload)</label>
+                        <input type="text" class="form-control" id="hl-img-${i}" value="${escHtml(item.image)}" onchange="contentData.blog_highlights[${i}].image=this.value">
+                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadImg('blog_highlights',${i},this,'images/uploads/')">
                     </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Autor</label>
@@ -531,6 +533,27 @@ requireLogin();
         toast.className = 'toast show bg-' + type + ' text-white';
         body.textContent = msg;
         setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function uploadImg(section, i, input, targetDir) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', targetDir);
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData[section][i].image = data.path;
+                    const prefix = section === 'team' ? 'team-img-' : 'hl-img-';
+                    document.getElementById(prefix + i).value = data.path;
+                    showToast('Slika uploadovana', 'success');
+                } else {
+                    showToast(data.message, 'danger');
+                }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     // Handle hash navigation
