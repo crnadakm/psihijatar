@@ -19,6 +19,7 @@ requireLogin();
         <div class="top-bar">
             <h5 class="mb-0"><i class="bi bi-file-earmark-text"></i> Članci</h5>
             <div>
+                <button class="btn btn-success btn-sm" onclick="showCreateModal()"><i class="bi bi-plus-lg"></i> Novi članak</button>
                 <button class="btn btn-primary btn-sm" onclick="saveAll()"><i class="bi bi-check-lg"></i> Sačuvaj sve</button>
             </div>
         </div>
@@ -72,6 +73,33 @@ requireLogin();
         </div>
     </div>
 
+    <!-- Modal za kreiranje novog članka -->
+    <div class="modal fade" id="createModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background:var(--darker);color:#ccc;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><i class="bi bi-plus-lg"></i> Novi članak</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Naslov članka</label>
+                        <input type="text" class="form-control" id="new-art-title" placeholder="npr. Anksioznost kod djece">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Naziv fajla (bez .php)</label>
+                        <input type="text" class="form-control" id="new-art-key" placeholder="npr. anksioznostkoddjece">
+                        <small class="text-muted">Samo mala slova bez razmaka. Kreira se fajl sa ovim imenom.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Otkaži</button>
+                    <button type="button" class="btn btn-success" onclick="createArticle()"><i class="bi bi-plus-lg"></i> Kreiraj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="toast-container">
         <div id="toast" class="toast" role="alert"><div class="toast-body" id="toast-body"></div></div>
     </div>
@@ -80,11 +108,52 @@ requireLogin();
     <script>
     let contentData = {};
     let currentArticle = null;
+    let createModalInstance = null;
 
     fetch('api.php?action=load_content', { credentials: 'same-origin' })
         .then(r => r.json())
         .then(data => { contentData = data; renderArticleList(); showToast('Podaci učitani', 'success'); })
         .catch(err => showToast('Greška: ' + err.message, 'danger'));
+
+    function showCreateModal() {
+        document.getElementById('new-art-title').value = '';
+        document.getElementById('new-art-key').value = '';
+        if (!createModalInstance) createModalInstance = new bootstrap.Modal(document.getElementById('createModal'));
+        createModalInstance.show();
+    }
+
+    function createArticle() {
+        const title = document.getElementById('new-art-title').value.trim();
+        const key = document.getElementById('new-art-key').value.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (!title || !key) { showToast('Unesite naslov i naziv fajla', 'warning'); return; }
+        const formData = new FormData();
+        formData.append('action', 'create_article');
+        formData.append('key', key);
+        formData.append('title', title);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    showToast(data.message, 'success');
+                    createModalInstance.hide();
+                    // Reload content to get the new article
+                    fetch('api.php?action=load_content', { credentials: 'same-origin' })
+                        .then(r => r.json())
+                        .then(d => { contentData = d; renderArticleList(); selectArticle(data.key); });
+                } else {
+                    showToast(data.message, 'danger');
+                }
+            })
+            .catch(() => showToast('Greška pri kreiranju', 'danger'));
+    }
+
+    // Auto-generate key from title
+    document.getElementById('new-art-title').addEventListener('input', function() {
+        const key = this.value.toLowerCase()
+            .replace(/č/g,'c').replace(/ć/g,'c').replace(/š/g,'s').replace(/ž/g,'z').replace(/đ/g,'dj')
+            .replace(/[^a-z0-9]/g, '');
+        document.getElementById('new-art-key').value = key;
+    });
 
     function renderArticleList() {
         const c = document.getElementById('article-list');
@@ -120,11 +189,13 @@ requireLogin();
         const sections = contentData.articles[currentArticle].sections || [];
         sections.forEach((sec, i) => {
             const isIntro = sec.id === 'intro' && !sec.title;
+            const isHtml = sec.html ? true : false;
             c.innerHTML += `
             <div class="item-card">
                 <div class="item-header">
                     <h6>${isIntro ? '<i class="bi bi-type"></i> Uvod' : '<i class="bi bi-hash"></i> ' + escHtml(sec.title)}</h6>
                     <div>
+                        <button class="btn btn-sm ${isHtml ? 'btn-info' : 'btn-outline-secondary'}" onclick="toggleHtml(${i})" title="HTML mode">&lt;/&gt;</button>
                         <button class="btn btn-sm btn-outline-light" onclick="moveSection(${i},-1)" ${i===0?'disabled':''}><i class="bi bi-arrow-up"></i></button>
                         <button class="btn btn-sm btn-outline-light" onclick="moveSection(${i},1)" ${i===sections.length-1?'disabled':''}><i class="bi bi-arrow-down"></i></button>
                         <button class="btn btn-sm btn-outline-danger" onclick="removeSection(${i})"><i class="bi bi-trash"></i></button>
@@ -140,13 +211,19 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(sec.title)}" onchange="contentData.articles['${currentArticle}'].sections[${i}].title=this.value" placeholder="Ostavi prazno za uvod">
                     </div>
                     <div class="col-md-12 mb-2">
-                        <label class="form-label">Tekst</label>
+                        <label class="form-label">Tekst ${isHtml ? '<span class="badge bg-info">HTML</span>' : ''}</label>
                         <textarea class="form-control" rows="8" style="font-size:13px;" onchange="contentData.articles['${currentArticle}'].sections[${i}].content=this.value">${escHtml(sec.content)}</textarea>
-                        <small class="text-muted">Koristite ● za listu stavki. Svaki red = novi paragraf.</small>
+                        <small class="text-muted">${isHtml ? 'HTML mod - tagovi se renderuju direktno.' : 'Koristite ● za listu stavki. Svaki red = novi paragraf.'}</small>
                     </div>
                 </div>
             </div>`;
         });
+    }
+
+    function toggleHtml(i) {
+        const sec = contentData.articles[currentArticle].sections[i];
+        sec.html = !sec.html;
+        renderSections();
     }
 
     function addSection() {

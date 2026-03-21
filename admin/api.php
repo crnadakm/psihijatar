@@ -156,6 +156,47 @@ switch ($action) {
         }
         break;
 
+    case 'create_article':
+        $key = $_POST['key'] ?? '';
+        $title = $_POST['title'] ?? '';
+        $key = preg_replace('/[^a-z0-9]/', '', strtolower($key));
+        if (empty($key) || empty($title)) {
+            echo json_encode(['status' => 'error', 'message' => 'Ključ i naslov su obavezni']);
+            break;
+        }
+        $phpFile = __DIR__ . '/../' . $key . '.php';
+        if (file_exists($phpFile)) {
+            echo json_encode(['status' => 'error', 'message' => 'Fajl ' . $key . '.php već postoji']);
+            break;
+        }
+        // Create PHP file
+        $phpContent = "<?php \$articleKey = '" . $key . "'; include 'elements/article-template.php'; ?>";
+        file_put_contents($phpFile, $phpContent);
+        // Add to content.json
+        $content = json_decode(file_get_contents($dataDir . 'content.json'), true);
+        $backup = $dataDir . 'content_backup_' . date('Y-m-d_H-i-s') . '.json';
+        copy($dataDir . 'content.json', $backup);
+        $content['articles'][$key] = [
+            'page_title' => $title,
+            'page_head_class' => 'page-head-health',
+            'sidebar_title' => 'Naslovi',
+            'sections' => [
+                ['id' => 'intro', 'title' => '', 'content' => '']
+            ]
+        ];
+        file_put_contents($dataDir . 'content.json', json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        echo json_encode(['status' => 'ok', 'message' => 'Članak kreiran: ' . $key . '.php', 'key' => $key]);
+        break;
+
+    case 'list_articles':
+        $content = json_decode(file_get_contents($dataDir . 'content.json'), true);
+        $articles = [];
+        foreach (($content['articles'] ?? []) as $key => $art) {
+            $articles[] = ['key' => $key, 'title' => $art['page_title'] ?? $key, 'file' => $key . '.php'];
+        }
+        echo json_encode($articles);
+        break;
+
     case 'protect_data':
         file_put_contents($dataDir . '.htaccess', "Deny from all\n");
         echo json_encode(['status' => 'ok', 'message' => '.htaccess kreiran']);

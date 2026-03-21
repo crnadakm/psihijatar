@@ -105,8 +105,11 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.title)}" onchange="contentData.citanka.items[${i}].title=this.value">
                     </div>
                     <div class="col-md-4 mb-2">
-                        <label class="form-label">Link (PHP fajl)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.link)}" onchange="contentData.citanka.items[${i}].link=this.value">
+                        <label class="form-label">Link (članak)</label>
+                        <select class="form-select" onchange="contentData.citanka.items[${i}].link=this.value">
+                            <option value="">-- Izaberi članak --</option>
+                            ${getArticleOptions(item.link)}
+                        </select>
                     </div>
                     <div class="col-md-3 mb-2">
                         <label class="form-label">Slika (URL ili upload)</label>
@@ -164,6 +167,17 @@ requireLogin();
                 } else { showToast(data.message, 'danger'); }
             })
             .catch(() => showToast('Greška pri uploadu', 'danger'));
+    }
+
+    function getArticleOptions(currentLink) {
+        let opts = '';
+        const articles = contentData.articles || {};
+        for (const [key, art] of Object.entries(articles)) {
+            const file = key + '.php';
+            const sel = (file === currentLink) ? 'selected' : '';
+            opts += '<option value="' + file + '" ' + sel + '>' + escHtml(art.page_title) + ' (' + file + ')</option>';
+        }
+        return opts;
     }
 
     function escHtml(str) {

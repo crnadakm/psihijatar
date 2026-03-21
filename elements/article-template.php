@@ -31,6 +31,8 @@ foreach ($sections as $sec) {
 	<style type="text/css">
 		h1,h2,h3,h4 { color: black; scroll-margin: 100px; }
 		p { color: black; font-size: 15px; }
+		.article-content ul, .article-content ol, .article-content li { margin: inherit; padding: inherit; list-style: unset; }
+		.shaded { background-color: lightgray; border-radius: 4px; padding: 4px 8px; }
 	</style>
 
 	<?php include __DIR__ . '/header.php' ?>
@@ -59,18 +61,26 @@ foreach ($sections as $sec) {
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 article-content">
 			<?php else: ?>
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-10 col-md-offset-1 article-content">
 			<?php endif; ?>
 
 				<?php if ($intro): ?>
+				<?php if (!empty($intro['html'])): ?>
+				<?= $intro['content'] ?>
+				<?php else: ?>
 				<p><?= nl2br(htmlspecialchars($intro['content'])) ?></p>
+				<?php endif; ?>
 				<?php endif; ?>
 
 				<?php foreach ($namedSections as $sec): ?>
 				<br><h3 id="<?= htmlspecialchars($sec['id']) ?>"><?= htmlspecialchars($sec['title']) ?></h3><br>
+				<?php if (!empty($sec['html'])): ?>
+				<?= $sec['content'] ?>
+				<?php else: ?>
 				<p><?= nl2br(htmlspecialchars($sec['content'])) ?></p>
+				<?php endif; ?>
 				<?php endforeach; ?>
 
 			</div>
