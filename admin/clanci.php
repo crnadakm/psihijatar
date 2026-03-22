@@ -41,12 +41,26 @@ requireLogin();
                                 <input type="text" class="form-control" id="art-page-title">
                             </div>
                             <div class="col-md-3 mb-2">
-                                <label class="form-label">CSS klasa headera</label>
-                                <input type="text" class="form-control" id="art-head-class">
-                            </div>
-                            <div class="col-md-3 mb-2">
                                 <label class="form-label">Naslov sidebara</label>
                                 <input type="text" class="form-control" id="art-sidebar-title" placeholder="npr. Naslovi">
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <label class="form-label">CSS klasa headera</label>
+                                <input type="text" class="form-control" id="art-head-class" placeholder="fallback ako nema slike">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 mb-2">
+                                <label class="form-label">Slika zaglavlja</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="art-head-image" placeholder="URL slike ili uploaduj desno">
+                                    <input type="file" class="form-control" accept="image/*" onchange="uploadHeadImage(this)" style="max-width:200px;">
+                                </div>
+                                <small class="text-muted">Slika koja se prikazuje u zaglavlju članka. Ako je prazno, koristi se CSS klasa.</small>
+                            </div>
+                            <div class="col-md-4 mb-2" id="head-image-preview-wrap" style="display:none;">
+                                <label class="form-label">Pregled</label>
+                                <img id="head-image-preview" src="" style="max-width:100%;max-height:80px;border-radius:4px;">
                             </div>
                         </div>
                         <div class="text-end mt-2">
@@ -179,6 +193,8 @@ requireLogin();
         document.getElementById('art-page-title').value = art.page_title || '';
         document.getElementById('art-head-class').value = art.page_head_class || '';
         document.getElementById('art-sidebar-title').value = art.sidebar_title || '';
+        document.getElementById('art-head-image').value = art.head_image || '';
+        updateHeadPreview(art.head_image || '');
         document.getElementById('art-preview-link').href = '../' + key + '.php';
         renderSections();
         renderArticleList();
@@ -273,6 +289,38 @@ requireLogin();
             .catch(() => showToast('Greška pri brisanju', 'danger'));
     }
 
+    function uploadHeadImage(input) {
+        if (!input.files[0] || !currentArticle) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/headers/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    document.getElementById('art-head-image').value = data.path;
+                    contentData.articles[currentArticle].head_image = data.path;
+                    updateHeadPreview(data.path);
+                    showToast('Slika uploadovana', 'success');
+                } else {
+                    showToast(data.message, 'danger');
+                }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
+    }
+
+    function updateHeadPreview(url) {
+        const wrap = document.getElementById('head-image-preview-wrap');
+        const img = document.getElementById('head-image-preview');
+        if (url) {
+            img.src = '../' + url;
+            wrap.style.display = 'block';
+        } else {
+            wrap.style.display = 'none';
+        }
+    }
+
     function escHtml(str) {
         if (!str) return '';
         return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -283,6 +331,7 @@ requireLogin();
             contentData.articles[currentArticle].page_title = document.getElementById('art-page-title').value;
             contentData.articles[currentArticle].page_head_class = document.getElementById('art-head-class').value;
             contentData.articles[currentArticle].sidebar_title = document.getElementById('art-sidebar-title').value;
+            contentData.articles[currentArticle].head_image = document.getElementById('art-head-image').value;
         }
         const formData = new FormData();
         formData.append('action', 'save_section');

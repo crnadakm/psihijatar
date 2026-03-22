@@ -8,6 +8,7 @@ if (!$article) { echo '<p>Članak nije pronađen.</p>'; return; }
 
 $pageTitle = htmlspecialchars($article['page_title'] ?? '');
 $pageHeadClass = htmlspecialchars($article['page_head_class'] ?? 'page-head-health');
+$headImage = $article['head_image'] ?? '';
 $sidebarTitle = $article['sidebar_title'] ?? '';
 $sections = $article['sections'] ?? [];
 
@@ -37,7 +38,7 @@ foreach ($sections as $sec) {
 
 	<?php include __DIR__ . '/header.php' ?>
 
-	<div class="page-head <?= $pageHeadClass ?>">
+	<div class="page-head <?= $pageHeadClass ?>"<?php if ($headImage): ?> style="background: url('<?= htmlspecialchars($headImage) ?>') center/cover no-repeat;"<?php endif; ?>>
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
