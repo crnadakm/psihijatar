@@ -29,9 +29,11 @@
 					if (!($item['active'] ?? true)) continue;
 					$bgColor = $item['bg_color'] ?? '#229C8C';
 				?>
-				<div class="portfolio-item dataoption<?= $i + 1 ?>">
+				<div class="portfolio-item dataoption<?= $i + 1 ?>" style="background-color: <?= htmlspecialchars($bgColor) ?>;">
 					<a href="<?= htmlspecialchars($item['link'] ?? '#') ?>">
-						<img class="img-responsive" src="<?= htmlspecialchars($item['image'] ?? '') ?>" alt="<?= htmlspecialchars($item['title'] ?? '') ?>">
+						<?php if (!empty($item['image'])): ?>
+						<img class="img-responsive" src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['title'] ?? '') ?>">
+						<?php endif; ?>
 						<div class="portfolio-item-overlay" style="background-color: <?= htmlspecialchars($bgColor) ?>;">
 							<div class="portfolio-item-overlay-inner">
 								<h3><?= htmlspecialchars($item['title'] ?? '') ?></h3>

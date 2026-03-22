@@ -2369,6 +2369,13 @@ footer .social-icons .fa {
 	padding: 0px;
 	position: relative;
 	overflow: hidden;
+	height: 380px;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .portfolio-2col .portfolio-item {
@@ -2427,7 +2434,6 @@ footer .social-icons .fa {
 .portfolio-item img {
 	transform: scale(1);
 	transition: .25s;
-	width: 100%;
 }
 
 .portfolio-item:hover img {
@@ -3866,6 +3872,9 @@ left: 0%;
 .portfolio-3col .portfolio-item ,
 .portfolio-4col .portfolio-item {
 	width: 100%;
+}
+.portfolio-item {
+	height: 300px;
 }
 .portfolio-item-overlay-inner p {
 	font-size: smaller;
