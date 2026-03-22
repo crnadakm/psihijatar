@@ -59,8 +59,8 @@ requireLogin();
                                 <small class="text-muted">Slika koja se prikazuje u zaglavlju članka. Ako je prazno, koristi se CSS klasa.</small>
                             </div>
                             <div class="col-md-4 mb-2" id="head-image-preview-wrap" style="display:none;">
-                                <label class="form-label">Pregled</label>
-                                <img id="head-image-preview" src="" style="max-width:100%;max-height:80px;border-radius:4px;">
+                                <label class="form-label">Pregled <small id="head-image-source" class="text-muted"></small></label>
+                                <img id="head-image-preview" src="" style="max-width:100%;max-height:80px;border-radius:4px;object-fit:cover;">
                             </div>
                         </div>
                         <div class="text-end mt-2">
@@ -161,6 +161,15 @@ requireLogin();
             })
             .catch(() => showToast('Greška pri kreiranju', 'danger'));
     }
+
+    // Update preview when CSS class or image URL changes
+    document.getElementById('art-head-class').addEventListener('change', function() {
+        updateHeadPreview(document.getElementById('art-head-image').value);
+    });
+    document.getElementById('art-head-image').addEventListener('change', function() {
+        if (currentArticle) contentData.articles[currentArticle].head_image = this.value;
+        updateHeadPreview(this.value);
+    });
 
     // Auto-generate key from title
     document.getElementById('new-art-title').addEventListener('input', function() {
@@ -310,14 +319,57 @@ requireLogin();
             .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
+    const cssClassImages = {
+        'page-head-health': 'images/shutterstock_2011327436.jpg',
+        'page-head-psihijatrija': 'images/vaves.jpg',
+        'page-head-o-psiho': 'images/shutterstock_1906731082.jpg',
+        'page-head-konst': 'images/konstelacije.jpg',
+        'page-head-emdr': 'images/shutterstock_2033568857.jpg',
+        'page-head-grupna': 'images/cicrles.jpg',
+        'page-head-asert': 'images/bookcover/heart1.jpg',
+        'page-head-depr': 'images/shutterstock_1819084715.jpg',
+        'page-head-plavi-sat': 'images/plavi-sat-bg.jpg',
+        'page-head-anksiolitik': 'images/anksiolitik.jpg',
+        'page-head-dementofobija': 'images/dementophobia.jpg',
+        'page-head-pst': 'images/shutterstock_2015673821.jpg',
+        'page-head-norm': 'images/normalan.jpg',
+        'page-head-bol': 'images/bol.jpg',
+        'page-head-veze': 'images/veze.png',
+        'page-head-partnerskaterapija': 'images/partnerskaterapija.png',
+        'page-head-stres': 'images/stres.png',
+        'page-head-debljina': 'images/debljina.jpg',
+        'page-head-ciklusi': 'images/ciklusi.png',
+        'page-head-four': 'images/bookcover/water.jpg',
+        'page-head-burn': 'images/bookcover/burnout.jpg',
+        'page-head-ppl': 'images/shutterstock_1929703829.jpg',
+        'page-head-know': 'images/shutterstock_1155338887.jpg',
+        'page-head-books': 'images/polica.jpg',
+        'page-head-contact': 'images/team/05.jpg',
+        'page-head-news': 'images/shutterstock_1501617461.jpg',
+        'page-head-simptom': 'images/plant.jpg',
+        'page-head-kbt': 'images/delfini.jpg',
+        'page-head-neuroloskipregled': 'images/neuroni.webp'
+    };
+
     function updateHeadPreview(url) {
         const wrap = document.getElementById('head-image-preview-wrap');
         const img = document.getElementById('head-image-preview');
+        const label = document.getElementById('head-image-source');
         if (url) {
             img.src = '../' + url;
             wrap.style.display = 'block';
+            if (label) label.textContent = 'Uploadovana slika';
         } else {
-            wrap.style.display = 'none';
+            // Try to show image from CSS class
+            const cssClass = document.getElementById('art-head-class').value;
+            const classImage = cssClassImages[cssClass];
+            if (classImage) {
+                img.src = '../' + classImage;
+                wrap.style.display = 'block';
+                if (label) label.textContent = 'Iz CSS klase: ' + cssClass;
+            } else {
+                wrap.style.display = 'none';
+            }
         }
     }
 
