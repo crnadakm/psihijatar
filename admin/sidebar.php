@@ -17,8 +17,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <a class="nav-link <?= $currentPage === 'clanci.php' ? 'active' : '' ?>" href="clanci.php"><i class="bi bi-file-earmark-text"></i> Članci</a>
         <a class="nav-link <?= $currentPage === 'seo.php' ? 'active' : '' ?>" href="seo.php"><i class="bi bi-search"></i> SEO Expert</a>
         <a class="nav-link <?= $currentPage === 'settings.php' ? 'active' : '' ?>" href="settings.php"><i class="bi bi-gear"></i> Postavke</a>
+        <a class="nav-link text-danger mt-3" href="logout.php" style="border-top:1px solid rgba(255,255,255,0.1);padding-top:15px;"><i class="bi bi-box-arrow-left"></i> Odjava</a>
     </nav>
-    <div class="mt-auto p-3" style="position:absolute;bottom:0;width:100%;">
-        <a href="logout.php" class="btn btn-outline-danger btn-sm w-100"><i class="bi bi-box-arrow-left"></i> Odjava</a>
-    </div>
 </div>
