@@ -50,6 +50,10 @@ requireLogin();
                         <div class="card-section" id="page-editor" style="display:none;">
                             <h5><i class="bi bi-pencil"></i> SEO za: <span id="editing-page" class="text-white"></span></h5>
 
+                            <!-- Auto OG info -->
+                            <div id="auto-og-info" class="mb-3 p-3" style="display:none;background:rgba(34,156,140,0.15);border:1px solid var(--primary);border-radius:8px;font-size:13px;color:#ccc;">
+                            </div>
+
                             <!-- Score -->
                             <div class="mb-3 p-3" style="background:var(--darkest);border-radius:8px;">
                                 <strong>SEO Score: </strong><span id="seo-score-badge" class="seo-score">0</span>
@@ -308,25 +312,79 @@ requireLogin();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     let seoData = {};
+    let contentData = {};
     let currentPage = null;
 
-    fetch('api.php?action=load_seo', { credentials: 'same-origin' })
-        .then(r => {
-            if (!r.ok) throw new Error('HTTP ' + r.status);
-            return r.json();
-        })
-        .then(data => {
-            seoData = data;
-            renderPageList();
-            populateGlobal();
-            populateSchema();
-            document.getElementById('robots-content').value = data.global?.robots_txt || '';
-            showToast('SEO podaci učitani', 'success');
-        })
-        .catch(err => {
-            console.error('Greška pri učitavanju:', err);
-            showToast('Greška pri učitavanju SEO podataka: ' + err.message, 'danger');
-        });
+    const cssClassImages = {
+        'page-head-health': 'images/shutterstock_2011327436.jpg',
+        'page-head-psihijatrija': 'images/vaves.jpg',
+        'page-head-o-psiho': 'images/shutterstock_1906731082.jpg',
+        'page-head-konst': 'images/konstelacije.jpg',
+        'page-head-emdr': 'images/shutterstock_2033568857.jpg',
+        'page-head-grupna': 'images/cicrles.jpg',
+        'page-head-asert': 'images/bookcover/heart1.jpg',
+        'page-head-depr': 'images/shutterstock_1819084715.jpg',
+        'page-head-plavi-sat': 'images/plavi-sat-bg.jpg',
+        'page-head-anksiolitik': 'images/anksiolitik.jpg',
+        'page-head-dementofobija': 'images/dementophobia.jpg',
+        'page-head-pst': 'images/shutterstock_2015673821.jpg',
+        'page-head-norm': 'images/normalan.jpg',
+        'page-head-bol': 'images/bol.jpg',
+        'page-head-veze': 'images/veze.png',
+        'page-head-partnerskaterapija': 'images/partnerskaterapija.png',
+        'page-head-stres': 'images/stres.png',
+        'page-head-debljina': 'images/debljina.jpg',
+        'page-head-ciklusi': 'images/ciklusi.png',
+        'page-head-four': 'images/bookcover/water.jpg',
+        'page-head-burn': 'images/bookcover/burnout.jpg',
+        'page-head-ppl': 'images/shutterstock_1929703829.jpg',
+        'page-head-know': 'images/shutterstock_1155338887.jpg',
+        'page-head-books': 'images/polica.jpg',
+        'page-head-contact': 'images/team/05.jpg',
+        'page-head-news': 'images/shutterstock_1501617461.jpg',
+        'page-head-simptom': 'images/plant.jpg',
+        'page-head-kbt': 'images/delfini.jpg',
+        'page-head-neuroloskipregled': 'images/neuroni.webp'
+    };
+
+    // Get auto OG data for an article page
+    function getArticleAuto(pageFile) {
+        const key = pageFile.replace('.php', '');
+        const art = (contentData.articles || {})[key];
+        if (!art) return null;
+        const baseUrl = seoData.global?.base_url || 'https://dobar.psihijatar.info';
+        let image = art.head_image || '';
+        if (!image && art.page_head_class && cssClassImages[art.page_head_class]) {
+            image = cssClassImages[art.page_head_class];
+        }
+        if (image && !image.startsWith('http')) image = baseUrl + '/' + image;
+        let desc = '';
+        if (art.sections) {
+            const intro = art.sections.find(s => s.id === 'intro' && s.content);
+            if (intro) {
+                const tmp = document.createElement('div');
+                tmp.innerHTML = intro.content;
+                desc = (tmp.textContent || tmp.innerText || '').substring(0, 200);
+            }
+        }
+        return { title: art.page_title || '', description: desc, image: image };
+    }
+
+    Promise.all([
+        fetch('api.php?action=load_seo', { credentials: 'same-origin' }).then(r => r.json()),
+        fetch('api.php?action=load_content', { credentials: 'same-origin' }).then(r => r.json())
+    ]).then(([seo, content]) => {
+        seoData = seo;
+        contentData = content;
+        renderPageList();
+        populateGlobal();
+        populateSchema();
+        document.getElementById('robots-content').value = seo.global?.robots_txt || '';
+        showToast('SEO podaci učitani', 'success');
+    }).catch(err => {
+        console.error('Greška pri učitavanju:', err);
+        showToast('Greška pri učitavanju SEO podataka: ' + err.message, 'danger');
+    });
 
     // ===== PAGE LIST =====
     function renderPageList() {
@@ -379,24 +437,51 @@ requireLogin();
         document.getElementById('no-page-selected').style.display = 'none';
         document.getElementById('editing-page').textContent = page;
 
+        const auto = getArticleAuto(page);
+
         document.getElementById('page-title').value = p.title || '';
+        document.getElementById('page-title').placeholder = auto ? auto.title : '';
         document.getElementById('page-description').value = p.meta_description || '';
+        document.getElementById('page-description').placeholder = auto ? auto.description : '';
         document.getElementById('page-keywords').value = p.meta_keywords || '';
         document.getElementById('page-og-title').value = p.og_title || '';
+        document.getElementById('page-og-title').placeholder = auto ? auto.title : '';
         document.getElementById('page-og-desc').value = p.og_description || '';
+        document.getElementById('page-og-desc').placeholder = auto ? auto.description : '';
         document.getElementById('page-og-image').value = p.og_image || '';
-        document.getElementById('page-og-type').value = p.og_type || 'website';
+        document.getElementById('page-og-image').placeholder = auto && auto.image ? auto.image : '';
+        document.getElementById('page-og-type').value = p.og_type || (auto ? 'article' : 'website');
         document.getElementById('page-robots').value = p.robots || 'index, follow';
         document.getElementById('page-canonical').value = p.canonical || '';
+
+        // Show auto-info banner
+        const autoInfo = document.getElementById('auto-og-info');
+        if (auto) {
+            let html = '<i class="bi bi-info-circle"></i> Ova stranica je članak — prazna polja se automatski popunjavaju iz podataka članka:';
+            html += '<ul class="mb-0 mt-1" style="font-size:12px;">';
+            if (auto.title) html += '<li><b>Naslov:</b> ' + escHtml(auto.title) + '</li>';
+            if (auto.description) html += '<li><b>Opis:</b> ' + escHtml(auto.description.substring(0, 80)) + '...</li>';
+            if (auto.image) html += '<li><b>Slika:</b> ' + escHtml(auto.image.split('/').pop()) + '</li>';
+            html += '</ul>';
+            autoInfo.innerHTML = html;
+            autoInfo.style.display = 'block';
+        } else {
+            autoInfo.style.display = 'none';
+        }
 
         countChars(document.getElementById('page-title'), 'title-count', 50, 60);
         countChars(document.getElementById('page-description'), 'desc-count', 120, 160);
         updatePreview();
         updatePageScore();
-        updateOgImagePreview(p.og_image || '');
+        updateOgImagePreview(p.og_image || (auto && auto.image ? auto.image : ''));
         document.getElementById('og-upload-status').textContent = '';
         document.getElementById('og-image-file').value = '';
         renderPageList();
+    }
+
+    function escHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
     function savePageSeo() {
@@ -418,11 +503,12 @@ requireLogin();
     }
 
     function updatePreview() {
-        const title = document.getElementById('page-title').value || 'Naslov stranice';
-        const desc = document.getElementById('page-description').value || 'Opis stranice...';
-        const ogTitle = document.getElementById('page-og-title').value || title;
-        const ogDesc = document.getElementById('page-og-desc').value || desc;
-        const ogImage = document.getElementById('page-og-image').value;
+        const auto = currentPage ? getArticleAuto(currentPage) : null;
+        const title = document.getElementById('page-title').value || (auto ? auto.title : '') || 'Naslov stranice';
+        const desc = document.getElementById('page-description').value || (auto ? auto.description : '') || 'Opis stranice...';
+        const ogTitle = document.getElementById('page-og-title').value || (auto ? auto.title : '') || title;
+        const ogDesc = document.getElementById('page-og-desc').value || (auto ? auto.description : '') || desc;
+        const ogImage = document.getElementById('page-og-image').value || (auto ? auto.image : '');
         const baseUrl = seoData.global?.base_url || 'https://dobar.psihijatar.info';
 
         document.getElementById('preview-g-title').textContent = title;
@@ -443,13 +529,14 @@ requireLogin();
 
     function updatePageScore() {
         if (!currentPage) return;
+        const auto = getArticleAuto(currentPage);
         const p = {
-            title: document.getElementById('page-title').value,
-            meta_description: document.getElementById('page-description').value,
+            title: document.getElementById('page-title').value || (auto ? auto.title : ''),
+            meta_description: document.getElementById('page-description').value || (auto ? auto.description : ''),
             meta_keywords: document.getElementById('page-keywords').value,
-            og_title: document.getElementById('page-og-title').value,
-            og_description: document.getElementById('page-og-desc').value,
-            og_image: document.getElementById('page-og-image').value
+            og_title: document.getElementById('page-og-title').value || (auto ? auto.title : ''),
+            og_description: document.getElementById('page-og-desc').value || (auto ? auto.description : ''),
+            og_image: document.getElementById('page-og-image').value || (auto ? auto.image : '')
         };
         const score = calcScore(p);
         const badge = document.getElementById('seo-score-badge');
