@@ -12,6 +12,68 @@ $headImage = $article['head_image'] ?? '';
 $sidebarTitle = $article['sidebar_title'] ?? '';
 $sections = $article['sections'] ?? [];
 
+// CSS class to image mapping for OG fallback
+$cssClassImages = [
+    'page-head-health' => 'images/shutterstock_2011327436.jpg',
+    'page-head-psihijatrija' => 'images/vaves.jpg',
+    'page-head-o-psiho' => 'images/shutterstock_1906731082.jpg',
+    'page-head-konst' => 'images/konstelacije.jpg',
+    'page-head-emdr' => 'images/shutterstock_2033568857.jpg',
+    'page-head-grupna' => 'images/cicrles.jpg',
+    'page-head-asert' => 'images/bookcover/heart1.jpg',
+    'page-head-depr' => 'images/shutterstock_1819084715.jpg',
+    'page-head-plavi-sat' => 'images/plavi-sat-bg.jpg',
+    'page-head-anksiolitik' => 'images/anksiolitik.jpg',
+    'page-head-dementofobija' => 'images/dementophobia.jpg',
+    'page-head-pst' => 'images/shutterstock_2015673821.jpg',
+    'page-head-norm' => 'images/normalan.jpg',
+    'page-head-bol' => 'images/bol.jpg',
+    'page-head-veze' => 'images/veze.png',
+    'page-head-partnerskaterapija' => 'images/partnerskaterapija.png',
+    'page-head-stres' => 'images/stres.png',
+    'page-head-debljina' => 'images/debljina.jpg',
+    'page-head-ciklusi' => 'images/ciklusi.png',
+    'page-head-four' => 'images/bookcover/water.jpg',
+    'page-head-burn' => 'images/bookcover/burnout.jpg',
+    'page-head-ppl' => 'images/shutterstock_1929703829.jpg',
+    'page-head-know' => 'images/shutterstock_1155338887.jpg',
+    'page-head-books' => 'images/polica.jpg',
+    'page-head-contact' => 'images/team/05.jpg',
+    'page-head-news' => 'images/shutterstock_1501617461.jpg',
+    'page-head-simptom' => 'images/plant.jpg',
+    'page-head-kbt' => 'images/delfini.jpg',
+    'page-head-neuroloskipregled' => 'images/neuroni.webp',
+];
+
+// Resolve OG image: head_image > CSS class image
+$ogImage = $headImage;
+if (empty($ogImage) && isset($cssClassImages[$article['page_head_class'] ?? ''])) {
+    $ogImage = $cssClassImages[$article['page_head_class']];
+}
+// Make absolute URL for OG
+$seoData = loadSeoData();
+$baseUrl = $seoData['global']['base_url'] ?? 'https://dobar.psihijatar.info';
+if ($ogImage && strpos($ogImage, 'http') !== 0) {
+    $ogImage = $baseUrl . '/' . $ogImage;
+}
+
+// Extract description from intro section
+$ogDesc = '';
+foreach ($sections as $sec) {
+    if ($sec['id'] === 'intro' && !empty($sec['content'])) {
+        $ogDesc = strip_tags($sec['content']);
+        $ogDesc = mb_substr($ogDesc, 0, 200);
+        break;
+    }
+}
+
+// Set OG override for head.php
+$articleOgOverride = [
+    'title' => $article['page_title'] ?? '',
+    'description' => $ogDesc,
+    'image' => $ogImage,
+];
+
 // Separate intro from titled sections
 $intro = null;
 $namedSections = [];

@@ -58,8 +58,30 @@ function getPageSeo($pageFile = null) {
  * Output SEO meta tags for current page
  */
 function renderSeoHead($pageFile = null) {
+    global $articleOgOverride;
     $seo = getPageSeo($pageFile);
     $global = loadSeoData()['global'] ?? [];
+    $baseUrl = $global['base_url'] ?? '';
+
+    // Apply article overrides as fallback (article data fills in blanks)
+    if (!empty($articleOgOverride)) {
+        if (empty($seo['title']) && !empty($articleOgOverride['title'])) {
+            $seo['title'] = $articleOgOverride['title'];
+        }
+        if (empty($seo['og_title']) && !empty($articleOgOverride['title'])) {
+            $seo['og_title'] = $articleOgOverride['title'];
+        }
+        if (empty($seo['og_description']) && !empty($articleOgOverride['description'])) {
+            $seo['og_description'] = $articleOgOverride['description'];
+        }
+        if (empty($seo['meta_description']) && !empty($articleOgOverride['description'])) {
+            $seo['meta_description'] = $articleOgOverride['description'];
+        }
+        if (empty($seo['og_image']) && !empty($articleOgOverride['image'])) {
+            $seo['og_image'] = $articleOgOverride['image'];
+        }
+    }
+
     $html = '';
 
     if ($seo['title']) {
@@ -88,7 +110,11 @@ function renderSeoHead($pageFile = null) {
     if ($seo['og_image']) {
         $html .= "\t<meta property=\"og:image\" content=\"" . htmlspecialchars($seo['og_image']) . "\">\n";
     }
-    $html .= "\t<meta property=\"og:type\" content=\"" . htmlspecialchars($seo['og_type']) . "\">\n";
+    $html .= "\t<meta property=\"og:type\" content=\"" . htmlspecialchars($seo['og_type'] ?: 'article') . "\">\n";
+    // og:url
+    if ($baseUrl) {
+        $html .= "\t<meta property=\"og:url\" content=\"" . htmlspecialchars($baseUrl . '/' . basename($_SERVER['SCRIPT_NAME'])) . "\">\n";
+    }
     if ($seo['site_name']) {
         $html .= "\t<meta property=\"og:site_name\" content=\"" . htmlspecialchars($seo['site_name']) . "\">\n";
     }
