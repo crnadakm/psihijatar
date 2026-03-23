@@ -45,7 +45,8 @@ function getPageSeo($pageFile = null) {
         'meta_keywords' => $page['meta_keywords'] ?? '',
         'og_title' => $page['og_title'] ?? $page['title'] ?? '',
         'og_description' => $page['og_description'] ?? $page['meta_description'] ?? '',
-        'og_image' => $page['og_image'] ?? $global['default_og_image'] ?? '',
+        'og_image' => (!empty($page['og_image']) ? $page['og_image'] : ''),
+        'og_image_default' => $global['default_og_image'] ?? '',
         'og_type' => $page['og_type'] ?? 'website',
         'robots' => $page['robots'] ?? 'index, follow',
         'canonical' => $page['canonical'] ?? '',
@@ -80,6 +81,11 @@ function renderSeoHead($pageFile = null) {
         if (empty($seo['og_image']) && !empty($articleOgOverride['image'])) {
             $seo['og_image'] = $articleOgOverride['image'];
         }
+    }
+
+    // If still no og_image, use global default
+    if (empty($seo['og_image']) && !empty($seo['og_image_default'])) {
+        $seo['og_image'] = $seo['og_image_default'];
     }
 
     $html = '';
