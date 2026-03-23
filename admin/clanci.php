@@ -238,12 +238,83 @@ requireLogin();
                     </div>
                     <div class="col-md-12 mb-2">
                         <label class="form-label">Tekst ${isHtml ? '<span class="badge bg-info">HTML</span>' : ''}</label>
-                        <textarea class="form-control" rows="8" style="font-size:13px;" onchange="contentData.articles['${currentArticle}'].sections[${i}].content=this.value">${escHtml(sec.content)}</textarea>
-                        <small class="text-muted">${isHtml ? 'HTML mod - tagovi se renderuju direktno.' : 'Koristite ● za listu stavki. Svaki red = novi paragraf.'}</small>
+                        <div class="editor-toolbar" style="background:var(--darkest);border:1px solid rgba(255,255,255,0.15);border-bottom:none;border-radius:4px 4px 0 0;padding:4px 6px;display:flex;gap:2px;flex-wrap:wrap;">
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'b')" title="Podebljano"><i class="bi bi-type-bold"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'i')" title="Kurziv"><i class="bi bi-type-italic"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'u')" title="Podvučeno"><i class="bi bi-type-underline"></i></button>
+                            <span style="border-left:1px solid rgba(255,255,255,0.2);margin:0 4px;"></span>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'h3')" title="Naslov H3"><b>H3</b></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'h4')" title="Naslov H4"><b>H4</b></button>
+                            <span style="border-left:1px solid rgba(255,255,255,0.2);margin:0 4px;"></span>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertList(${i},'ul')" title="Lista"><i class="bi bi-list-ul"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertList(${i},'ol')" title="Numerisana lista"><i class="bi bi-list-ol"></i></button>
+                            <span style="border-left:1px solid rgba(255,255,255,0.2);margin:0 4px;"></span>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertLink(${i})" title="Link"><i class="bi bi-link-45deg"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertBr(${i})" title="Novi red"><i class="bi bi-arrow-return-left"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-light py-0 px-1" onclick="insertTag(${i},'p')" title="Paragraf"><b>P</b></button>
+                        </div>
+                        <textarea class="form-control" id="sec-textarea-${i}" rows="8" style="font-size:13px;border-radius:0 0 4px 4px;" onchange="contentData.articles['${currentArticle}'].sections[${i}].content=this.value">${escHtml(sec.content)}</textarea>
+                        <small class="text-muted">${isHtml ? 'HTML mod - tagovi se renderuju direktno.' : 'Koristite toolbar ili ● za listu stavki. Svaki red = novi paragraf.'}</small>
                     </div>
                 </div>
             </div>`;
         });
+    }
+
+    function enableHtml(i) {
+        const sec = contentData.articles[currentArticle].sections[i];
+        if (!sec.html) { sec.html = true; renderSections(); }
+    }
+
+    function insertTag(i, tag) {
+        enableHtml(i);
+        const ta = document.getElementById('sec-textarea-' + i);
+        if (!ta) return;
+        const start = ta.selectionStart, end = ta.selectionEnd;
+        const selected = ta.value.substring(start, end) || 'tekst';
+        const replacement = '<' + tag + '>' + selected + '</' + tag + '>';
+        ta.value = ta.value.substring(0, start) + replacement + ta.value.substring(end);
+        contentData.articles[currentArticle].sections[i].content = ta.value;
+        ta.focus();
+        ta.selectionStart = ta.selectionEnd = start + replacement.length;
+    }
+
+    function insertList(i, type) {
+        enableHtml(i);
+        const ta = document.getElementById('sec-textarea-' + i);
+        if (!ta) return;
+        const start = ta.selectionStart, end = ta.selectionEnd;
+        const selected = ta.value.substring(start, end);
+        const items = selected ? selected.split('\n').filter(l => l.trim()) : ['stavka 1', 'stavka 2'];
+        const list = '<' + type + '>\n' + items.map(item => '  <li>' + item.trim() + '</li>').join('\n') + '\n</' + type + '>';
+        ta.value = ta.value.substring(0, start) + list + ta.value.substring(end);
+        contentData.articles[currentArticle].sections[i].content = ta.value;
+        ta.focus();
+    }
+
+    function insertLink(i) {
+        enableHtml(i);
+        const ta = document.getElementById('sec-textarea-' + i);
+        if (!ta) return;
+        const start = ta.selectionStart, end = ta.selectionEnd;
+        const selected = ta.value.substring(start, end) || 'tekst linka';
+        const url = prompt('Unesite URL:', 'https://');
+        if (!url) return;
+        const link = '<a href="' + url + '">' + selected + '</a>';
+        ta.value = ta.value.substring(0, start) + link + ta.value.substring(end);
+        contentData.articles[currentArticle].sections[i].content = ta.value;
+        ta.focus();
+    }
+
+    function insertBr(i) {
+        enableHtml(i);
+        const ta = document.getElementById('sec-textarea-' + i);
+        if (!ta) return;
+        const pos = ta.selectionStart;
+        ta.value = ta.value.substring(0, pos) + '<br>\n' + ta.value.substring(pos);
+        contentData.articles[currentArticle].sections[i].content = ta.value;
+        ta.focus();
+        ta.selectionStart = ta.selectionEnd = pos + 5;
     }
 
     function toggleHtml(i) {
