@@ -376,11 +376,37 @@ requireLogin();
     ]).then(([seo, content]) => {
         seoData = seo;
         contentData = content;
+        // Auto-sync: add articles missing from SEO
+        let added = 0;
+        if (contentData.articles) {
+            for (const [key, art] of Object.entries(contentData.articles)) {
+                const file = key + '.php';
+                if (!seoData.pages[file]) {
+                    seoData.pages[file] = {
+                        title: art.page_title || '',
+                        meta_description: '',
+                        meta_keywords: '',
+                        og_title: art.page_title || '',
+                        og_description: '',
+                        og_image: '',
+                        og_type: 'article',
+                        robots: 'index, follow',
+                        canonical: '',
+                        h1: ''
+                    };
+                    added++;
+                }
+            }
+        }
         renderPageList();
         populateGlobal();
         populateSchema();
         document.getElementById('robots-content').value = seo.global?.robots_txt || '';
-        showToast('SEO podaci učitani', 'success');
+        if (added > 0) {
+            showToast('SEO podaci učitani. Dodano ' + added + ' novih članaka - kliknite Sačuvaj da ih trajno dodate.', 'info');
+        } else {
+            showToast('SEO podaci učitani', 'success');
+        }
     }).catch(err => {
         console.error('Greška pri učitavanju:', err);
         showToast('Greška pri učitavanju SEO podataka: ' + err.message, 'danger');

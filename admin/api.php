@@ -212,6 +212,26 @@ switch ($action) {
             ]
         ];
         file_put_contents($dataDir . 'content.json', json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        // Add to seo.json
+        $seoFile = $dataDir . 'seo.json';
+        if (file_exists($seoFile)) {
+            $seo = json_decode(file_get_contents($seoFile), true);
+            if (!isset($seo['pages'][$key . '.php'])) {
+                $seo['pages'][$key . '.php'] = [
+                    'title' => $title,
+                    'meta_description' => '',
+                    'meta_keywords' => '',
+                    'og_title' => $title,
+                    'og_description' => '',
+                    'og_image' => '',
+                    'og_type' => 'article',
+                    'robots' => 'index, follow',
+                    'canonical' => '',
+                    'h1' => ''
+                ];
+                file_put_contents($seoFile, json_encode($seo, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+            }
+        }
         echo json_encode(['status' => 'ok', 'message' => 'Članak kreiran: ' . $key . '.php', 'key' => $key]);
         break;
 
@@ -237,6 +257,15 @@ switch ($action) {
         $fileDeleted = false;
         if (file_exists($phpFile)) {
             $fileDeleted = unlink($phpFile);
+        }
+        // Remove from seo.json
+        $seoFile = $dataDir . 'seo.json';
+        if (file_exists($seoFile)) {
+            $seo = json_decode(file_get_contents($seoFile), true);
+            if (isset($seo['pages'][$key . '.php'])) {
+                unset($seo['pages'][$key . '.php']);
+                file_put_contents($seoFile, json_encode($seo, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+            }
         }
         echo json_encode(['status' => 'ok', 'message' => 'Članak obrisan: ' . $key . '.php', 'file_deleted' => $fileDeleted]);
         break;
