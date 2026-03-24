@@ -227,7 +227,7 @@
 			</div>
 			<?php foreach (getContent('blog_highlights') as $bh):
 				if (!($bh['active'] ?? true)) continue;
-				echo htmlBlogHighlight($bh['link'] ?? '', $bh['author'] ?? '', $bh['image'] ?? '', $bh['title'] ?? '', $bh['date'] ?? '');
+				echo htmlBlogHighlight($bh['link'] ?? '', $bh['author'] ?? '', $bh['image'] ?? '', $bh['title'] ?? '', $bh['date'] ?? '', $bh['image_alt'] ?? $bh['title'] ?? '');
 			endforeach; ?>
 			
 		</div>

@@ -224,6 +224,7 @@ switch ($action) {
                     'og_title' => $title,
                     'og_description' => '',
                     'og_image' => '',
+                    'og_image_alt' => '',
                     'og_type' => 'article',
                     'robots' => 'index, follow',
                     'canonical' => '',

@@ -128,6 +128,10 @@ requireLogin();
                         <input type="text" class="form-control" id="sl-cover-${i}" value="${escHtml(item.cover_image)}" onchange="contentData.slusanka.items[${i}].cover_image=this.value">
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadSlImg(${i},this)">
                     </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Alt text slike (SEO)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.cover_image_alt || '')}" onchange="contentData.slusanka.items[${i}].cover_image_alt=this.value" placeholder="Opis slike za pretraživače">
+                    </div>
                     <div class="col-md-12 mb-2">
                         <label class="form-label">Kratki promo tekst</label>
                         <input type="text" class="form-control" value="${escHtml(item.promo_text || '')}" onchange="contentData.slusanka.items[${i}].promo_text=this.value" placeholder="Kratki promotivni tekst za ovaj audio">

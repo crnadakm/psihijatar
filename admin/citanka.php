@@ -116,6 +116,10 @@ requireLogin();
                         <input type="text" class="form-control" id="cit-img-${i}" value="${escHtml(item.image)}" onchange="contentData.citanka.items[${i}].image=this.value">
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadCitImg(${i},this)">
                     </div>
+                    <div class="col-md-3 mb-2">
+                        <label class="form-label">Alt text slike (SEO)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.image_alt || '')}" onchange="contentData.citanka.items[${i}].image_alt=this.value" placeholder="Opis slike za pretraživače">
+                    </div>
                     <div class="col-md-9 mb-2">
                         <label class="form-label">Opis</label>
                         <textarea class="form-control" onchange="contentData.citanka.items[${i}].text=this.value">${escHtml(item.text)}</textarea>

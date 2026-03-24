@@ -1,14 +1,14 @@
 
 
 <?php
- function htmlBlogHighlight(string $link = "", string $author = "", string $img = "", string $title = "", string $date = "" )
+ function htmlBlogHighlight(string $link = "", string $author = "", string $img = "", string $title = "", string $date = "", string $imgAlt = "" )
 {
 	$authorString = $author == "" ? "" : "<i class=\"icon-head\"></i> {$author}";
 	$html = "
 	<article class=\"blog-item col-md-3 col-sm-6 no-padding\">
 		<div class=\"blog-mason-item\">
 			<a href=\"{$link}\">
-			<img src=\"{$img}\" class=\"img-responsive img-hover\" alt=\"\">
+			<img src=\"{$img}\" class=\"img-responsive img-hover\" alt=\"{$imgAlt}\">
 			</a>
 			<div class=\"blog-mason-excerpt\">
 				<h2>

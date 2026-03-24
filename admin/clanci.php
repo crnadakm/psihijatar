@@ -58,6 +58,10 @@ requireLogin();
                                 </div>
                                 <small class="text-muted">Slika koja se prikazuje u zaglavlju članka. Ako je prazno, koristi se CSS klasa.</small>
                             </div>
+                            <div class="col-md-4 mb-2">
+                                <label class="form-label">Alt text slike (SEO)</label>
+                                <input type="text" class="form-control" id="art-head-image-alt" placeholder="Opis slike za pretraživače">
+                            </div>
                             <div class="col-md-4 mb-2" id="head-image-preview-wrap" style="display:none;">
                                 <label class="form-label">Pregled <small id="head-image-source" class="text-muted"></small></label>
                                 <img id="head-image-preview" src="" style="max-width:100%;max-height:80px;border-radius:4px;object-fit:cover;">
@@ -203,6 +207,7 @@ requireLogin();
         document.getElementById('art-head-class').value = art.page_head_class || '';
         document.getElementById('art-sidebar-title').value = art.sidebar_title || '';
         document.getElementById('art-head-image').value = art.head_image || '';
+        document.getElementById('art-head-image-alt').value = art.head_image_alt || '';
         updateHeadPreview(art.head_image || '');
         document.getElementById('art-preview-link').href = '../' + key + '.php';
         renderSections();
@@ -455,6 +460,7 @@ requireLogin();
             contentData.articles[currentArticle].page_head_class = document.getElementById('art-head-class').value;
             contentData.articles[currentArticle].sidebar_title = document.getElementById('art-sidebar-title').value;
             contentData.articles[currentArticle].head_image = document.getElementById('art-head-image').value;
+            contentData.articles[currentArticle].head_image_alt = document.getElementById('art-head-image-alt').value;
         }
         const formData = new FormData();
         formData.append('action', 'save_section');

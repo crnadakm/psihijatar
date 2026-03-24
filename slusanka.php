@@ -37,13 +37,13 @@
 				$activeAudio = array_filter($audioItems, fn($a) => $a['active'] ?? true);
 				if (empty($activeAudio)):
 				?>
-				<img src="<?= htmlspecialchars($slusankaData['placeholder_image'] ?? 'images/work.jpg') ?>" width="100%" style="max-width: 500px; margin-bottom: 50px;">
+				<img src="<?= htmlspecialchars($slusankaData['placeholder_image'] ?? 'images/work.jpg') ?>" alt="Slušanka - audio sadržaji" width="100%" style="max-width: 500px; margin-bottom: 50px;">
 				<?php else: ?>
 				<?php foreach ($activeAudio as $audio): ?>
 				<div class="audio-card text-left">
 					<div class="d-flex align-items-start" style="display:flex;">
 						<?php if (!empty($audio['cover_image'])): ?>
-						<img src="<?= htmlspecialchars($audio['cover_image']) ?>" class="audio-cover" alt="<?= htmlspecialchars($audio['title'] ?? '') ?>">
+						<img src="<?= htmlspecialchars($audio['cover_image']) ?>" class="audio-cover" alt="<?= htmlspecialchars($audio['cover_image_alt'] ?? $audio['title'] ?? '') ?>">
 						<?php endif; ?>
 						<div style="flex:1;">
 							<h4><?= htmlspecialchars($audio['title'] ?? '') ?></h4>

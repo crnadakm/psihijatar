@@ -116,6 +116,10 @@ requireLogin();
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadBookCover(${i}, this)">
                         <small class="text-muted" id="upload-status-${i}"></small>
                     </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Alt text slike (SEO)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.image_alt || '')}" onchange="contentData.knjige.items[${i}].image_alt=this.value" placeholder="Opis slike za pretraživače">
+                    </div>
                     <div class="col-md-8 mb-2">
                         <label class="form-label">Opis</label>
                         <textarea class="form-control" rows="3" onchange="contentData.knjige.items[${i}].text=this.value">${escHtml(item.text)}</textarea>

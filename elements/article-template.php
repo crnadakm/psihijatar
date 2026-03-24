@@ -100,7 +100,8 @@ foreach ($sections as $sec) {
 
 	<?php include __DIR__ . '/header.php' ?>
 
-	<div class="page-head <?= $pageHeadClass ?>"<?php if ($headImage): ?> style="background: url('<?= htmlspecialchars($headImage) ?>') center/cover no-repeat;"<?php endif; ?>>
+	<?php $headImageAlt = htmlspecialchars($article['head_image_alt'] ?? $pageTitle); ?>
+	<div class="page-head <?= $pageHeadClass ?>"<?php if ($headImage): ?> style="background: url('<?= htmlspecialchars($headImage) ?>') center/cover no-repeat;" role="img" aria-label="<?= $headImageAlt ?>"<?php endif; ?>>
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

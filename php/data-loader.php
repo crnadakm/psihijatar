@@ -46,6 +46,7 @@ function getPageSeo($pageFile = null) {
         'og_title' => $page['og_title'] ?? $page['title'] ?? '',
         'og_description' => $page['og_description'] ?? $page['meta_description'] ?? '',
         'og_image' => (!empty($page['og_image']) ? $page['og_image'] : ''),
+        'og_image_alt' => $page['og_image_alt'] ?? '',
         'og_image_default' => $global['default_og_image'] ?? '',
         'og_type' => $page['og_type'] ?? 'website',
         'robots' => $page['robots'] ?? 'index, follow',
@@ -115,6 +116,9 @@ function renderSeoHead($pageFile = null) {
     }
     if ($seo['og_image']) {
         $html .= "\t<meta property=\"og:image\" content=\"" . htmlspecialchars($seo['og_image']) . "\">\n";
+        if (!empty($seo['og_image_alt'])) {
+            $html .= "\t<meta property=\"og:image:alt\" content=\"" . htmlspecialchars($seo['og_image_alt']) . "\">\n";
+        }
     }
     $html .= "\t<meta property=\"og:type\" content=\"" . htmlspecialchars($seo['og_type'] ?: 'article') . "\">\n";
     // og:url

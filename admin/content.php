@@ -402,6 +402,10 @@ requireLogin();
                         <input type="text" class="form-control" id="team-img-${i}" value="${escHtml(item.image)}" onchange="contentData.team[${i}].image=this.value">
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadImg('team',${i},this,'images/team/')">
                     </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Alt text slike (SEO)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.image_alt || '')}" onchange="contentData.team[${i}].image_alt=this.value" placeholder="Opis fotografije za pretraživače">
+                    </div>
                     <div class="col-md-12 mb-2">
                         <label class="form-label">Opis / biografija</label>
                         <textarea class="form-control" style="min-height:100px" onchange="contentData.team[${i}].description=this.value">${escHtml(item.description)}</textarea>
@@ -445,6 +449,10 @@ requireLogin();
                         <label class="form-label">Slika (URL ili upload)</label>
                         <input type="text" class="form-control" id="hl-img-${i}" value="${escHtml(item.image)}" onchange="contentData.blog_highlights[${i}].image=this.value">
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadImg('blog_highlights',${i},this,'images/uploads/')">
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Alt text slike (SEO)</label>
+                        <input type="text" class="form-control" value="${escHtml(item.image_alt || '')}" onchange="contentData.blog_highlights[${i}].image_alt=this.value" placeholder="Opis slike za pretraživače">
                     </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Autor</label>

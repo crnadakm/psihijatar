@@ -112,6 +112,11 @@ requireLogin();
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label">OG Image Alt tekst</label>
+                                    <input type="text" class="form-control" id="page-og-image-alt" oninput="updatePageScore()" placeholder="Opis slike za pristupačnost i SEO">
+                                    <small class="text-muted">Alt tekst za OG sliku — poboljšava pristupačnost i SEO score</small>
+                                </div>
                             </div>
 
                             <h6 class="text-warning mt-3 mb-3"><i class="bi bi-robot"></i> Indeksiranje</h6>
@@ -389,6 +394,7 @@ requireLogin();
                         og_title: art.page_title || '',
                         og_description: '',
                         og_image: '',
+                        og_image_alt: '',
                         og_type: 'article',
                         robots: 'index, follow',
                         canonical: '',
@@ -437,12 +443,15 @@ requireLogin();
 
     function calcScore(p) {
         let score = 0;
-        if (p.title && p.title.length > 10) score += 20;
-        if (p.meta_description && p.meta_description.length > 50) score += 25;
-        if (p.og_title) score += 15;
-        if (p.og_description) score += 15;
-        if (p.og_image) score += 15;
-        if (p.meta_keywords) score += 10;
+        if (p.title && p.title.length > 10) score += 18;
+        if (p.meta_description && p.meta_description.length > 50) score += 22;
+        if (p.og_title) score += 12;
+        if (p.og_description) score += 13;
+        if (p.og_image) score += 13;
+        if (p.meta_keywords) score += 7;
+        if (p.canonical) score += 5;
+        if (p.og_image && p.og_image_alt) score += 5;
+        if (p.robots && p.robots !== 'noindex, nofollow') score += 5;
         return Math.min(score, 100);
     }
 
@@ -476,6 +485,7 @@ requireLogin();
         document.getElementById('page-og-desc').placeholder = auto ? auto.description : '';
         document.getElementById('page-og-image').value = p.og_image || '';
         document.getElementById('page-og-image').placeholder = auto && auto.image ? auto.image : '';
+        document.getElementById('page-og-image-alt').value = p.og_image_alt || '';
         document.getElementById('page-og-type').value = p.og_type || (auto ? 'article' : 'website');
         document.getElementById('page-robots').value = p.robots || 'index, follow';
         document.getElementById('page-canonical').value = p.canonical || '';
@@ -519,6 +529,7 @@ requireLogin();
             og_title: document.getElementById('page-og-title').value,
             og_description: document.getElementById('page-og-desc').value,
             og_image: document.getElementById('page-og-image').value,
+            og_image_alt: document.getElementById('page-og-image-alt').value,
             og_type: document.getElementById('page-og-type').value,
             robots: document.getElementById('page-robots').value,
             canonical: document.getElementById('page-canonical').value,
@@ -562,7 +573,10 @@ requireLogin();
             meta_keywords: document.getElementById('page-keywords').value,
             og_title: document.getElementById('page-og-title').value || (auto ? auto.title : ''),
             og_description: document.getElementById('page-og-desc').value || (auto ? auto.description : ''),
-            og_image: document.getElementById('page-og-image').value || (auto ? auto.image : '')
+            og_image: document.getElementById('page-og-image').value || (auto ? auto.image : ''),
+            og_image_alt: document.getElementById('page-og-image-alt').value,
+            canonical: document.getElementById('page-canonical').value,
+            robots: document.getElementById('page-robots').value
         };
         const score = calcScore(p);
         const badge = document.getElementById('seo-score-badge');
@@ -575,6 +589,8 @@ requireLogin();
         if (!p.og_title) tips.push('Dodajte OG title');
         if (!p.og_description) tips.push('Dodajte OG description');
         if (!p.og_image) tips.push('Dodajte OG image');
+        if (p.og_image && !p.og_image_alt) tips.push('Dodajte alt tekst za OG sliku');
+        if (!p.canonical) tips.push('Dodajte canonical URL');
         document.getElementById('seo-tips').textContent = tips.length ? tips.join(' | ') : 'Odlično!';
     }
 

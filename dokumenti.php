@@ -32,7 +32,7 @@
 				<div class="portfolio-item dataoption<?= $i + 1 ?>" style="background-color: <?= htmlspecialchars($bgColor) ?>;">
 					<a href="<?= htmlspecialchars($item['link'] ?? '#') ?>">
 						<?php if (!empty($item['image'])): ?>
-						<img class="img-responsive" src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['title'] ?? '') ?>">
+						<img class="img-responsive" src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['image_alt'] ?? $item['title'] ?? '') ?>">
 						<?php endif; ?>
 						<div class="portfolio-item-overlay" style="background-color: <?= htmlspecialchars($bgColor) ?>;">
 							<div class="portfolio-item-overlay-inner">

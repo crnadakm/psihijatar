@@ -2,7 +2,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="index.php"><img class=navbar-logo src="images/logo.png" width="35"></a><a class="navbar-brand" href="index.php" style="letter-spacing: 10px;">DOBAR </a><span class="navbar-condensed"></span>
+					<a href="index.php"><img class=navbar-logo src="images/logo.png" width="35" alt="DOBAR - ustanova za mentalno zdravlje"></a><a class="navbar-brand" href="index.php" style="letter-spacing: 10px;">DOBAR </a><span class="navbar-condensed"></span>
 				</div>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Menu</span>

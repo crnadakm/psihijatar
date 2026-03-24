@@ -34,7 +34,7 @@
 				?>
 				<article class="book item" id="blog<?= $i + 1 ?>">
 					<div class="media">
-						<img class="img-responsive" src="<?= htmlspecialchars($book['image'] ?? '') ?>" alt="<?= htmlspecialchars($book['title'] ?? '') ?>" width="250">
+						<img class="img-responsive" src="<?= htmlspecialchars($book['image'] ?? '') ?>" alt="<?= htmlspecialchars($book['image_alt'] ?? $book['title'] ?? '') ?>" width="250">
 					</div>
 					<div class="blog-excerpt">
 						<h4><?= htmlspecialchars($book['title'] ?? '') ?></h4>

@@ -228,8 +228,8 @@ requireLogin();
                         <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadGalleryImg(${i},'thumb',this)">
                     </div>
                     <div class="col-md-2 mb-2">
-                        <label class="form-label">Naslov</label>
-                        <input type="text" class="form-control" value="${escHtml(item.title)}" onchange="contentData.znanja.gallery[${i}].title=this.value">
+                        <label class="form-label">Naslov / Alt</label>
+                        <input type="text" class="form-control" value="${escHtml(item.title)}" onchange="contentData.znanja.gallery[${i}].title=this.value" placeholder="Koristi se i kao alt text">
                     </div>
                 </div>
             </div>`;
