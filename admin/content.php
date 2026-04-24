@@ -456,8 +456,12 @@ requireLogin();
                         <input type="text" class="form-control" value="${escHtml(item.title)}" onchange="contentData.blog_highlights[${i}].title=this.value">
                     </div>
                     <div class="col-md-4 mb-2">
-                        <label class="form-label">Link (PHP fajl)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.link)}" onchange="contentData.blog_highlights[${i}].link=this.value">
+                        <label class="form-label">Link (izaberi članak ili unesi custom URL)</label>
+                        <select class="form-select form-select-sm mb-1" onchange="if(this.value){contentData.blog_highlights[${i}].link=this.value;document.getElementById('hl-link-${i}').value=this.value;}">
+                            <option value="">-- Izaberi iz članaka --</option>
+                            ${getArticleOptions(item.link)}
+                        </select>
+                        <input type="text" class="form-control form-control-sm" id="hl-link-${i}" value="${escHtml(item.link)}" onchange="contentData.blog_highlights[${i}].link=this.value" placeholder="ili unesite custom URL">
                     </div>
                     <div class="col-md-4 mb-2">
                         <label class="form-label">Slika (URL ili upload)</label>
@@ -507,6 +511,17 @@ requireLogin();
         renderMap[section]();
     }
 
+    function getArticleOptions(currentLink) {
+        let opts = '';
+        const articles = contentData.articles || {};
+        for (const [key, art] of Object.entries(articles)) {
+            const file = key + '.php';
+            const sel = (file === currentLink) ? 'selected' : '';
+            opts += '<option value="' + file + '" ' + sel + '>' + escHtml(art.page_title) + ' (' + file + ')</option>';
+        }
+        return opts;
+    }
+
     function escHtml(str) {
         if (!str) return '';
         return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -537,10 +552,14 @@ requireLogin();
 
     function saveAll() {
         collectData();
+        const sections = ['site', 'cta', 'footer', 'slider', 'services', 'quotes', 'testimonials', 'team', 'blog_highlights'];
+        const payload = {};
+        sections.forEach(s => { if (contentData[s] !== undefined) payload[s] = contentData[s]; });
+
         const formData = new FormData();
         formData.append('action', 'save_section');
-        formData.append('section', 'site,cta,footer');
-        formData.append('data', JSON.stringify({site: contentData.site, cta: contentData.cta, footer: contentData.footer}));
+        formData.append('section', sections.join(','));
+        formData.append('data', JSON.stringify(payload));
 
         fetch('api.php', { method: 'POST', body: formData })
             .then(r => r.json())

@@ -67,6 +67,13 @@ requireLogin();
                                 <img id="head-image-preview" src="" style="max-width:100%;max-height:80px;border-radius:4px;object-fit:cover;">
                             </div>
                         </div>
+                        <div class="mt-3 p-2" style="background:var(--darkest);border-radius:6px;">
+                            <label class="form-label small mb-1"><i class="bi bi-link-45deg"></i> URL ovog članka (koristite za Blog highlight, Čitanka, itd.)</label>
+                            <div class="d-flex gap-2 align-items-center">
+                                <input type="text" class="form-control form-control-sm" id="art-url-field" readonly style="font-family:monospace;font-size:12px;">
+                                <button class="btn btn-sm btn-outline-info" onclick="copyArticleUrl()" title="Kopiraj"><i class="bi bi-clipboard"></i> Kopiraj</button>
+                            </div>
+                        </div>
                         <div class="text-end mt-2">
                             <a id="art-preview-link" href="#" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-eye"></i> Pogledaj</a>
                             <button class="btn btn-sm btn-outline-danger ms-2" onclick="deleteArticle()"><i class="bi bi-trash"></i> Obriši članak</button>
@@ -210,8 +217,20 @@ requireLogin();
         document.getElementById('art-head-image-alt').value = art.head_image_alt || '';
         updateHeadPreview(art.head_image || '');
         document.getElementById('art-preview-link').href = '../' + key + '.php';
+        document.getElementById('art-url-field').value = key + '.php';
         renderSections();
         renderArticleList();
+    }
+
+    function copyArticleUrl() {
+        const field = document.getElementById('art-url-field');
+        field.select();
+        navigator.clipboard.writeText(field.value).then(() => {
+            showToast('URL kopiran: ' + field.value, 'success');
+        }).catch(() => {
+            document.execCommand('copy');
+            showToast('URL kopiran', 'success');
+        });
     }
 
     function renderSections() {
