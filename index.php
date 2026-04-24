@@ -225,9 +225,13 @@
 				<div class="section-head text-center col-md-8 col-md-offset-2 space40">
 				</div>
 			</div>
-			<?php foreach (getContent('blog_highlights') as $bh):
+			<?php
+			$shownHighlights = 0;
+			foreach (getContent('blog_highlights') as $bh):
 				if (!($bh['active'] ?? true)) continue;
+				if ($shownHighlights >= 4) break;
 				echo htmlBlogHighlight($bh['link'] ?? '', $bh['author'] ?? '', $bh['image'] ?? '', $bh['title'] ?? '', $bh['date'] ?? '', $bh['image_alt'] ?? $bh['title'] ?? '');
+				$shownHighlights++;
 			endforeach; ?>
 			
 		</div>

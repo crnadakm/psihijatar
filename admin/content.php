@@ -153,7 +153,7 @@ requireLogin();
             <div class="tab-pane fade" id="sec-highlights">
                 <div class="card-section">
                     <h5><i class="bi bi-newspaper"></i> Blog highlight (naslovna)</h5>
-                    <p class="text-muted">4 teksta sa slikama koji se prikazuju na naslovnoj stranici</p>
+                    <p class="text-muted">Na naslovnoj se prikazuju <b>prva 4 aktivna</b> highlights (po redoslijedu). Možete dodati više, a pomoću strelica i toggle-a birate koja će biti vidljiva.</p>
                     <div id="highlight-items"></div>
                     <button class="btn-add mt-2" onclick="addHighlight()"><i class="bi bi-plus-lg"></i> Dodaj highlight</button>
                 </div>
@@ -424,14 +424,28 @@ requireLogin();
     function renderHighlights() {
         const container = document.getElementById('highlight-items');
         container.innerHTML = '';
-        (contentData.blog_highlights || []).forEach((item, i) => {
+        const all = contentData.blog_highlights || [];
+        // Figure out which of the first 4 active ones are "visible on homepage"
+        let shownCount = 0;
+        const visibleIdx = new Set();
+        all.forEach((item, i) => {
+            if (item.active !== false && shownCount < 4) {
+                visibleIdx.add(i);
+                shownCount++;
+            }
+        });
+        all.forEach((item, i) => {
+            const onHomepage = visibleIdx.has(i);
+            const badge = onHomepage
+                ? '<span class="badge bg-success ms-2"><i class="bi bi-eye"></i> Na naslovnoj</span>'
+                : (item.active !== false ? '<span class="badge bg-warning text-dark ms-2">Rezerva</span>' : '');
             container.innerHTML += `
-            <div class="item-card">
+            <div class="item-card" ${onHomepage ? 'style="border-left:4px solid #198754;"' : ''}>
                 <div class="item-header">
-                    <h6><i class="bi bi-newspaper"></i> ${escHtml(item.title) || 'Highlight ' + (i+1)}</h6>
+                    <h6><i class="bi bi-newspaper"></i> ${escHtml(item.title) || 'Highlight ' + (i+1)} ${badge}</h6>
                     <div>
                         <button class="btn btn-sm btn-outline-light" onclick="moveHighlight(${i},-1)" ${i===0?'disabled':''}><i class="bi bi-arrow-up"></i></button>
-                        <button class="btn btn-sm btn-outline-light" onclick="moveHighlight(${i},1)" ${i===(contentData.blog_highlights||[]).length-1?'disabled':''}><i class="bi bi-arrow-down"></i></button>
+                        <button class="btn btn-sm btn-outline-light" onclick="moveHighlight(${i},1)" ${i===all.length-1?'disabled':''}><i class="bi bi-arrow-down"></i></button>
                         <button class="btn btn-sm ${item.active !== false ? 'btn-success' : 'btn-secondary'}" onclick="toggleActive('blog_highlights',${i})">${item.active !== false ? 'Aktivan' : 'Neaktivan'}</button>
                         <button class="btn btn-sm btn-outline-danger" onclick="removeItem('blog_highlights',${i})"><i class="bi bi-trash"></i></button>
                     </div>
