@@ -1569,6 +1569,8 @@ input:focus, button:focus, .slick-slide {
 
 .blog-mason-item img {
 	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	transform: scale(1);
 	transition: .4s;
 	/*filter: grayscale(100%);
@@ -1577,6 +1579,8 @@ input:focus, button:focus, .slick-slide {
 
 .blog-mason-item:hover img {
 	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	transform: scale(1.1);
 	transition: .4s;
 	filter: grayscale(0%);
