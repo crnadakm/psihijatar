@@ -37,7 +37,7 @@ requireLogin();
             <div class="tab-pane fade show active" id="sec-services">
                 <div class="card-section">
                     <h5><i class="bi bi-grid"></i> Kartice znanja (članci)</h5>
-                    <p class="text-muted">Prvih 6 imaju fiksne pozicije u HTML-u. Svaka kartica vodi na članak.</p>
+                    <p class="text-muted">Koristite strelice da mijenjate redoslijed. Pozicije citata podešavate u tabu "Postavke".</p>
                     <div id="service-items"></div>
                     <button class="btn-add mt-2" onclick="addService()"><i class="bi bi-plus-lg"></i> Dodaj karticu/članak</button>
                 </div>
@@ -85,6 +85,22 @@ requireLogin();
                         </div>
                     </div>
                 </div>
+                <div class="card-section mt-3">
+                    <h5><i class="bi bi-arrows-expand"></i> Pozicije slidera sa citatima</h5>
+                    <p class="text-muted">Slider sa citatima se pojavljuje <b>poslije</b> kartice sa navedenim brojem. Npr. "3" znači slider se prikazuje poslije treće kartice. Stavite 0 da slider bude na vrhu.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Citati 1 — poslije kartice #</label>
+                            <input type="number" class="form-control" id="quotes-1-after" min="0" value="3">
+                            <small class="text-muted">Default: 3 (poslije treće kartice)</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Citati 2 — poslije kartice #</label>
+                            <input type="number" class="form-control" id="quotes-2-after" min="0" value="6">
+                            <small class="text-muted">Default: 6 (poslije šeste kartice)</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -110,6 +126,17 @@ requireLogin();
         const z = contentData.znanja || {};
         document.getElementById('page-title').value = z.page_title || '';
         document.getElementById('page-subtitle').value = z.subtitle || '';
+        document.getElementById('quotes-1-after').value = z.quotes_1_after ?? 3;
+        document.getElementById('quotes-2-after').value = z.quotes_2_after ?? 6;
+        // Re-render services when quote positions change to update markers
+        document.getElementById('quotes-1-after').addEventListener('input', function() {
+            contentData.znanja.quotes_1_after = parseInt(this.value) || 0;
+            renderServices();
+        });
+        document.getElementById('quotes-2-after').addEventListener('input', function() {
+            contentData.znanja.quotes_2_after = parseInt(this.value) || 0;
+            renderServices();
+        });
         renderServices();
         renderQuotes(1);
         renderQuotes(2);
@@ -119,13 +146,23 @@ requireLogin();
     function renderServices() {
         const c = document.getElementById('service-items');
         c.innerHTML = '';
-        (contentData.znanja?.services || []).forEach((item, i) => {
-            const badge = i < 6 ? '<span class="badge bg-warning text-dark">Fiksna pozicija ' + (i+1) + '</span>' : '<span class="badge bg-secondary">Dinamička</span>';
+        const services = contentData.znanja?.services || [];
+        const q1Pos = parseInt(contentData.znanja?.quotes_1_after ?? 3);
+        const q2Pos = parseInt(contentData.znanja?.quotes_2_after ?? 6);
+        const total = services.length;
+
+        services.forEach((item, i) => {
+            // Show quote slider marker BEFORE this card if break is at position i
+            if (q1Pos === i) c.innerHTML += quoteMarker(1);
+            if (q2Pos === i) c.innerHTML += quoteMarker(2);
+
             c.innerHTML += `
             <div class="item-card">
                 <div class="item-header">
-                    <h6>${escHtml(item.title) || 'Kartica ' + (i+1)} ${badge}</h6>
-                    <div>
+                    <h6>#${i+1} — ${escHtml(item.title) || 'Kartica ' + (i+1)}</h6>
+                    <div class="d-flex gap-1">
+                        <button class="btn btn-sm btn-outline-light" onclick="moveService(${i},-1)" ${i === 0 ? 'disabled' : ''} title="Pomjeri gore"><i class="bi bi-arrow-up"></i></button>
+                        <button class="btn btn-sm btn-outline-light" onclick="moveService(${i},1)" ${i === total - 1 ? 'disabled' : ''} title="Pomjeri dole"><i class="bi bi-arrow-down"></i></button>
                         <button class="btn btn-sm ${item.active ? 'btn-success' : 'btn-secondary'}" onclick="toggleService(${i})">${item.active ? 'Aktivan' : 'Neaktivan'}</button>
                         <button class="btn btn-sm btn-outline-danger" onclick="removeService(${i})"><i class="bi bi-trash"></i></button>
                     </div>
@@ -149,6 +186,22 @@ requireLogin();
                 </div>
             </div>`;
         });
+
+        // Show quote markers at end if positioned after last card
+        if (q1Pos >= total) c.innerHTML += quoteMarker(1);
+        if (q2Pos >= total) c.innerHTML += quoteMarker(2);
+    }
+
+    function quoteMarker(num) {
+        return `<div class="alert alert-info py-2 my-2" style="border-left:4px solid #0dcaf0;"><i class="bi bi-chat-quote"></i> <b>Slider sa citatima ${num}</b> se prikazuje ovdje</div>`;
+    }
+
+    function moveService(i, dir) {
+        const services = contentData.znanja.services;
+        const j = i + dir;
+        if (j < 0 || j >= services.length) return;
+        [services[i], services[j]] = [services[j], services[i]];
+        renderServices();
     }
 
     function addService() {
@@ -285,6 +338,8 @@ requireLogin();
     function saveAll() {
         contentData.znanja.page_title = document.getElementById('page-title').value;
         contentData.znanja.subtitle = document.getElementById('page-subtitle').value;
+        contentData.znanja.quotes_1_after = parseInt(document.getElementById('quotes-1-after').value) || 0;
+        contentData.znanja.quotes_2_after = parseInt(document.getElementById('quotes-2-after').value) || 0;
         const formData = new FormData();
         formData.append('action', 'save_section');
         formData.append('section', 'znanja');

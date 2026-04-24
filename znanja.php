@@ -29,104 +29,65 @@
 		</div>
 	</div>
 
-	<!-- SERVICES GROUP 1 (first 3) -->
-	<section class="services2">
-		<div class="container">
-			<div class="row">
-			<?php for ($i = 0; $i < 3 && $i < count($services); $i++): $s = $services[$i]; if (!($s['active'] ?? true)) continue; ?>
-				<div class="col-md-4 col-sm-6">
-					<div class="service-box2 service-paragraph2">
-						<div>
-							<h4 class="intro-title"><?= htmlspecialchars($s['title'] ?? '') ?></h4>
-							<p><?= htmlspecialchars($s['text'] ?? '') ?></p>
-						</div>
-					</div>
-					<a href="<?= htmlspecialchars($s['link'] ?? '#') ?>" class="btn btn-primary btn-lg">Pročitaj više</a>
-				</div>
-			<?php endfor; ?>
-			</div>
-		</div>
-	</section>
-<br><br>
+	<?php
+	// Configurable quote slider positions (after which card index to show)
+	$q1Pos = (int)($znanjaData['quotes_1_after'] ?? 3);
+	$q2Pos = (int)($znanjaData['quotes_2_after'] ?? 6);
+	$q1 = $znanjaData['quotes_1'] ?? [];
+	$q2 = $znanjaData['quotes_2'] ?? [];
+	$activeServices = array_values(array_filter($services, fn($s) => $s['active'] ?? true));
+	$total = count($activeServices);
 
-	<!-- QUOTES SECTION 1 -->
-	<?php $q1 = $znanjaData['quotes_1'] ?? []; if (!empty($q1)): ?>
-	<section class="testimonial-p testimonial-p6" id="testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="quote">
-						<?php foreach ($q1 as $q): ?>
-						<div class="testimonial">
-							<div class="quote text-center quote-text-center-ggc"><?= htmlspecialchars($q['text'] ?? '') ?></div>
-							<div class="author"><cite><b><?= htmlspecialchars($q['author'] ?? '') ?></b></cite></div>
-						</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<?php endif; ?>
+	// Build list of break points: [position => quote_data]
+	$breaks = [];
+	if (!empty($q1)) $breaks[$q1Pos][] = ['quotes' => $q1, 'class' => 'testimonial-p6'];
+	if (!empty($q2)) $breaks[$q2Pos][] = ['quotes' => $q2, 'class' => 'testimonial-p4'];
 
-	<!-- SERVICES GROUP 2 (items 4-6) -->
-	<section class="services2">
-		<div class="container">
-			<?php for ($i = 3; $i < 6 && $i < count($services); $i++): $s = $services[$i]; if (!($s['active'] ?? true)) continue; ?>
-				<div class="col-md-4 col-sm-6">
-					<div class="service-box2 service-paragraph2">
-						<div>
-							<h4 class="intro-title"><?= htmlspecialchars($s['title'] ?? '') ?></h4>
-							<p><?= htmlspecialchars($s['text'] ?? '') ?></p>
-						</div>
-					</div>
-					<a href="<?= htmlspecialchars($s['link'] ?? '#') ?>" class="btn btn-primary btn-lg">Pročitaj više</a>
-				</div>
-			<?php endfor; ?>
-			<div class="clear"></div>
-		</div>
-	</section>
-	<br>
+	// Render each group of cards between breaks, and insert quote sliders at break points
+	$renderCardGroup = function($group) {
+		if (empty($group)) return;
+		// Chunk by 3 to match original visual spacing between rows
+		foreach (array_chunk($group, 3) as $chunk) {
+			echo '<section class="services2"><div class="container"><div class="row">';
+			foreach ($chunk as $s) {
+				echo '<div class="col-md-4 col-sm-6"><div class="service-box2 service-paragraph2"><div>';
+				echo '<h4 class="intro-title">' . htmlspecialchars($s['title'] ?? '') . '</h4>';
+				echo '<p>' . htmlspecialchars($s['text'] ?? '') . '</p>';
+				echo '</div></div>';
+				echo '<a href="' . htmlspecialchars($s['link'] ?? '#') . '" class="btn btn-primary btn-lg">Pročitaj više</a></div>';
+			}
+			echo '<div class="clear"></div></div></div></section>';
+		}
+	};
 
-	<!-- QUOTES SECTION 2 -->
-	<?php $q2 = $znanjaData['quotes_2'] ?? []; if (!empty($q2)): ?>
-	<section class="testimonial-p testimonial-p4" id="testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="quote">
-						<?php foreach ($q2 as $q): ?>
-						<div class="testimonial">
-							<div class="quote text-center quote-text-center-ggc"><?= htmlspecialchars($q['text'] ?? '') ?></div>
-							<div class="author"><cite><b><?= htmlspecialchars($q['author'] ?? '') ?></b></cite></div>
-						</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<?php endif; ?>
+	$renderQuotes = function($quotesSet, $cls) {
+		echo '<section class="testimonial-p ' . $cls . '"><div class="container"><div class="row"><div class="col-md-12"><div class="quote">';
+		foreach ($quotesSet as $q) {
+			echo '<div class="testimonial">';
+			echo '<div class="quote text-center quote-text-center-ggc">' . htmlspecialchars($q['text'] ?? '') . '</div>';
+			echo '<div class="author"><cite><b>' . htmlspecialchars($q['author'] ?? '') . '</b></cite></div>';
+			echo '</div>';
+		}
+		echo '</div></div></div></div></section>';
+	};
 
-	<!-- SERVICES GROUP 3+ (remaining items, 3 per row) -->
-	<?php $remaining = array_slice($services, 6); $chunks = array_chunk($remaining, 3); ?>
-	<?php foreach ($chunks as $chunk): ?>
-	<section class="services2">
-		<div class="container">
-			<?php foreach ($chunk as $s): if (!($s['active'] ?? true)) continue; ?>
-				<div class="col-md-4 col-sm-6">
-					<div class="service-box2 service-paragraph2">
-						<div>
-							<h4 class="intro-title"><?= htmlspecialchars($s['title'] ?? '') ?></h4>
-							<p><?= htmlspecialchars($s['text'] ?? '') ?></p>
-						</div>
-					</div>
-					<a href="<?= htmlspecialchars($s['link'] ?? '#') ?>" class="btn btn-primary btn-lg">Pročitaj više</a>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</section>
-	<?php endforeach; ?>
+	// Walk through cards, emitting quote sliders at configured break positions.
+	// Between break points, all cards render in a single <section> — Bootstrap col-md-4 wraps to 3-per-row automatically.
+	$currentGroup = [];
+	for ($i = 0; $i <= $total; $i++) {
+		if (isset($breaks[$i])) {
+			$renderCardGroup($currentGroup);
+			$currentGroup = [];
+			foreach ($breaks[$i] as $b) {
+				$renderQuotes($b['quotes'], $b['class']);
+			}
+		}
+		if ($i < $total) {
+			$currentGroup[] = $activeServices[$i];
+		}
+	}
+	$renderCardGroup($currentGroup);
+	?>
 
 	<br><br>
 
