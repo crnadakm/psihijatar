@@ -1482,6 +1482,276 @@
                     "html": true
                 }
             ]
+        },
+        "sta-je-depresija": {
+            "page_title": "Šta je depresija i kako je prepoznati?",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Nije to samo 'loš dan' ili prolazna tuga — radi se o stanju koje zahvata cijelog čovjeka: tijelo, misli i osjećanja.</p><p>Procjenjuje se da depresijom pati oko 280 miliona ljudi širom svijeta, ali stvarni broj je vjerovatno mnogo veći jer mnogi nikada ne potraže pomoć ili ne budu prepoznati kao depresivni.</p><p>Dobra vijest: depresija je lječiva bolest.</p>"
+                },
+                {
+                    "id": "znakovi-i-simptomi-depresije-u-cemu-je-r",
+                    "title": "Znakovi i simptomi depresije — u čemu je razlika?",
+                    "html": true,
+                    "content": "<p>Znakovi depresije su ono što ljekar može objektivno izmjeriti i uočiti — promjene u govoru, kretanju, izgledu.</p><p>Simptomi depresije su ono što pacijent sam osjeća — umor, bezvoljnost, tuga, mučnina. Simptome ne može osjetiti niko drugi.</p>"
+                },
+                {
+                    "id": "kako-prepoznati-depresiju",
+                    "title": "Kako prepoznati depresiju?",
+                    "html": true,
+                    "content": "<p>Da bi se govorilo o depresiji, simptomi moraju biti prisutni većim dijelom dana, većinu dana, tokom najmanje dvije nedjelje. Najčešći simptomi depresije su:</p><ul><li>Stalno loše ili prazno raspoloženje</li><li>Gubitak interesovanja za aktivnosti koje su ranije prijale</li><li>Umor i nedostatak energije</li><li>Poteškoće sa koncentracijom i donošenjem odluka</li><li>Poremećaj spavanja — nesanica ili prekomjerno spavanje</li><li>Promjene apetita i tjelesne težine</li><li>Osjećaj bezvrijednosti ili prekomjerne krivice</li><li>Misli o smrti ili samoubistvu</li></ul>"
+                },
+                {
+                    "id": "kada-potraziti-pomoc-psihijatra-u-banjoj",
+                    "title": "Kada potražiti pomoć psihijatra u Banjoj Luci?",
+                    "html": true,
+                    "content": "<p>Ako prepoznajete nekoliko navedenih simptoma koji traju duže od dvije nedjelje i koji utiču na vaš svakodnevni život — vrijedi razgovarati sa psihijatrom. ZU DOBAR nudi specijalističke psihijatrijske preglede u Banjoj Luci. Traženje pomoći nije znak slabosti. Naprotiv.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"kojeko.php\">Ko je ko u brizi o mentalnom zdravlju</a></li><li><a href=\"depresija-muskarci.php\">Depresija kod muškaraca</a></li><li><a href=\"depresija-zene.php\">Depresija kod žena</a></li></ul>"
+                }
+            ]
+        },
+        "depresija-muskarci": {
+            "page_title": "Depresija kod muškaraca — zašto je često neprepoznata",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Depresija se kod muškaraca dijagnostikuje dvostruko rjeđe nego kod žena. Ali to ne znači da muškarci rjeđe obolijevaju — znači da rjeđe traže pomoć i da se rjeđe prepoznaju kao depresivni.</p><p>Razlog je jednostavan: muškarci su naučeni da ne pokazuju slabost. 'Drži se', 'ne kukaj', 'budi jak' — poruke koje mnogi nose od djetinjstva. Depresija se ne uklapa u tu sliku, pa je mnogi ni ne prepoznaju kod sebe, ili je svjesno ignorišu.</p>"
+                },
+                {
+                    "id": "kako-se-depresija-kod-muskaraca-drugacij",
+                    "title": "Kako se depresija kod muškaraca drugačije pokazuje?",
+                    "html": true,
+                    "content": "<p>Dok žene češće prijavljuju tugu i plakanje, muškarci depresiju često nose na drugačiji način:</p><ul><li>Razdražljivost i agresivnost — ljutnja umjesto tuge</li><li>Povlačenje — izolacija od porodice i prijatelja</li><li>Prekomjerni rad — 'utapanje' u posao kao bijeg</li><li>Rizično ponašanje — brza vožnja, kockanje, impulzivne odluke</li><li>Alkohol i supstance — kao način da se utopi osjećaj</li><li>Fizički simptomi — glavobolje, bolovi u leđima, probavne smetnje bez jasnog medicinskog uzroka</li><li>Seksualne poteškoće — gubitak libida</li></ul>"
+                },
+                {
+                    "id": "zasto-je-to-opasno",
+                    "title": "Zašto je to opasno?",
+                    "html": true,
+                    "content": "<p>Muškarci čine većinu osoba koje izvrše samoubistvo, uprkos tome što žene češće pokušavaju. Ova statistika direktno je povezana sa činjenicom da muškarci duže čekaju prije nego što potraže pomoć — ili je nikada ne potraže. Depresija koja se ne liječi ne nestaje sama od sebe. Ona se produbljuje.</p>"
+                },
+                {
+                    "id": "sta-uraditi",
+                    "title": "Šta uraditi?",
+                    "html": true,
+                    "content": "<p>Ako prepoznajete ove obrasce kod sebe ili kod nekoga bliskog — vrijedi razgovarati. ZU DOBAR u Banjoj Luci nudi diskretne i povjerljive psihijatrijske preglede. Traženje pomoći nije suprotno od snage. Ono jeste snaga.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"sta-je-depresija.php\">Šta je depresija i kako je prepoznati?</a></li><li><a href=\"depresija-zene.php\">Depresija kod žena</a></li></ul>"
+                }
+            ]
+        },
+        "depresija-zene": {
+            "page_title": "Depresija kod žena — specifičnosti koje se često previde",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Depresija se kod žena dijagnostikuje dvostruko češće nego kod muškaraca. Djelimično je to zato što žene lakše prepoznaju svoje emocije i češće traže pomoć — ali postoje i biološki i društveni razlozi zbog kojih su žene zaista ranjivije na ovaj poremećaj.</p>"
+                },
+                {
+                    "id": "zasto-su-zene-cesce-pogodene",
+                    "title": "Zašto su žene češće pogođene?",
+                    "html": true,
+                    "content": "<p>Hormonalne promjene igraju značajnu ulogu. Estrogen i progesteron direktno utiču na raspoloženje, a njihove promjene tokom života — menstrualni ciklus, trudnoća, postporođajni period, menopauza — mogu biti okidač za depresivne epizode.</p><p>Pored bioloških faktora, žene su u prosjeku izloženije određenim životnim stresovima: dvostruka uloga (posao i briga o porodici), veća učestalost traumatskih iskustava, te društveni pritisak vezan za izgled i ulogu 'savršene majke'.</p>"
+                },
+                {
+                    "id": "kako-se-depresija-kod-zena-najcesce-poka",
+                    "title": "Kako se depresija kod žena najčešće pokazuje?",
+                    "html": true,
+                    "content": "<ul><li>Stalna tuga, plakanje bez jasnog razloga</li><li>Tjeskoba i zabrinutost</li><li>Osjećaj krivice — naročito u vezi s djecom ili porodicom</li><li>Poteškoće sa spavanjem</li><li>Malodušnost i beznađe</li><li>Neodlučnost i poteškoće s koncentracijom</li><li>Promjene apetita i tjelesne težine</li></ul>"
+                },
+                {
+                    "id": "posebna-stanja-koja-zasluzuju-paznju",
+                    "title": "Posebna stanja koja zaslužuju pažnju",
+                    "html": true,
+                    "content": "<h4 style=\"margin-top:18px;margin-bottom:6px;\">Postporođajna depresija</h4><p>Nije isto što i 'baby blues' koji prolazi u prvih nekoliko dana. Postporođajna depresija može se javiti u prvih godinu dana nakon porođaja i zahtijeva stručnu pomoć. Simptomi uključuju duboku tugu, strah da neće biti dobra majka, pa čak i misli o šteti sebi ili djetetu.</p><h4 style=\"margin-top:18px;margin-bottom:6px;\">Predmenstrualna disforija (PMDD)</h4><p>Teži oblik PMS-a u kojem se u danima pred menstruaciju javljaju izraženi depresivni simptomi koji značajno narušavaju svakodnevno funkcionisanje.</p><h4 style=\"margin-top:18px;margin-bottom:6px;\">Depresija u menopauzi</h4><p>Često ostaje neprepoznata jer se simptomi pripisuju 'normalnim' hormonalnim promjenama.</p>"
+                },
+                {
+                    "id": "vazno-je-znati",
+                    "title": "Važno je znati",
+                    "html": true,
+                    "content": "<p>Mnoge žene godinama žive s depresijom a da je ne prepoznaju — ili smatraju da 'nemaju pravo' da budu loše. Imate pravo. I zaslužujete pomoć. ZU DOBAR u Banjoj Luci nudi diskretnu i stručnu podršku.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"depresija-muskarci.php\">Depresija kod muškaraca</a></li><li><a href=\"depresija-djeca-mladi.php\">Depresija kod djece i mladih</a></li></ul>"
+                }
+            ]
+        },
+        "depresija-djeca-mladi": {
+            "page_title": "Depresija kod djece i mladih — kako je prepoznati i šta uraditi",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Depresija nije bolest odraslih. Javlja se i kod djece i mladih, a prema podacima najmanje svaka deseta mlada osoba između 12 i 17 godina ima depresivne poteškoće.</p><p>Tokom prve godine pandemije COVID-19 stope depresije i anksioznosti među djecom i tinejdžerima su se udvostručile u poređenju sa periodom prije pandemije — što govori koliko su mladi osjetljivi na promjene u okruženju.</p>"
+                },
+                {
+                    "id": "zasto-je-tesko-prepoznati-depresiju-kod-",
+                    "title": "Zašto je teško prepoznati depresiju kod mladih?",
+                    "html": true,
+                    "content": "<p>Kod djece i adolescenata depresija često ne izgleda kao 'klasična tuga'. Mladi rijetko kažu 'osjećam se depresivno' — oni to pokazuju ponašanjem, a odrasli to često tumače kao inat, lijenost ili 'tešku tinejdžersku fazu'.</p>"
+                },
+                {
+                    "id": "na-sta-obratiti-paznju",
+                    "title": "Na šta obratiti pažnju?",
+                    "html": true,
+                    "content": "<h4 style=\"margin-top:18px;margin-bottom:6px;\">Kod djece (do 12 godina):</h4><ul><li>Česte fizičke tegobe bez medicinskog uzroka — stomačni bolovi, glavobolje</li><li>Odbijanje škole ili vrtića</li><li>Pretjerana vezanost za roditelja ili strah od odvajanja</li><li>Razdražljivost, plačljivost, ispadi bijesa</li><li>Gubitak interesa za igru i drugare</li></ul><h4 style=\"margin-top:18px;margin-bottom:6px;\">Kod adolescenata (12–18 godina):</h4><ul><li>Povlačenje od porodice i prijatelja</li><li>Pad ocjena i gubitak interesa za školu</li><li>Promjene u spavanju — prekomjerno spavanje ili nesanica</li><li>Razdražljivost, agresivnost ili apatija</li><li>Konzumiranje alkohola ili droga</li><li>Samopovređivanje</li><li>Izjave poput 'svejedno mi je', 'nema smisla', 'bolje bi bilo da me nema'</li></ul>"
+                },
+                {
+                    "id": "kada-hitno-reagovati",
+                    "title": "Kada hitno reagovati?",
+                    "html": true,
+                    "content": "<p>Svaka izjava ili naznaka da mlada osoba razmišlja o tome da se povrijedi ili da ne želi više živjeti — zahtijeva hitnu reakciju. Ne čekajte. Ne umanjujte. Ne kažnjavajte.</p>"
+                },
+                {
+                    "id": "sta-mogu-uraditi-roditelji",
+                    "title": "Šta mogu uraditi roditelji?",
+                    "html": true,
+                    "content": "<p>Najvažnija stvar je ostati prisutan i ne osuđivati. Mladi koji se osjećaju saslušano i prihvaćeno lakše prihvataju stručnu pomoć. Ako primjećujete promjene koje traju duže od dvije nedjelje — konsultujte psihijatra u Banjoj Luci što prije.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"sta-je-depresija.php\">Šta je depresija i kako je prepoznati?</a></li><li><a href=\"psihoterapija.php\">O psihoterapiji</a></li></ul>"
+                }
+            ]
+        },
+        "komplikacije-depresije": {
+            "page_title": "Komplikacije uz depresiju — kada bolest nije sama",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Depresija rijetko dolazi sama. Ona se često isprepliće s drugim zdravstvenim stanjima — psihičkim i fizičkim — i ta veza ide u oba smjera: depresija pogoršava druga stanja, a druga stanja pogoršavaju depresiju.</p>"
+                },
+                {
+                    "id": "depresija-i-anksioznost",
+                    "title": "Depresija i anksioznost",
+                    "html": true,
+                    "content": "<p>Ovo je najčešća kombinacija. Mnogi ljudi koji pate od depresije istovremeno imaju i anksioznost — stalnu zabrinutost, napetost, strah. Ova dva stanja zajedno čine svakodnevno funkcionisanje posebno teškim i zahtijevaju pažljiv pristup u liječenju.</p>"
+                },
+                {
+                    "id": "depresija-i-fizicko-zdravlje",
+                    "title": "Depresija i fizičko zdravlje",
+                    "html": true,
+                    "content": "<p>Veza između depresije i tijela je duboka i naučno dobro dokumentovana:</p><ul><li>Srčane bolesti — depresija povećava rizik, ali i srčana oboljenja povećavaju rizik od depresije</li><li>Gojaznost — depresija mijenja apetit i smanjuje motivaciju za kretanjem</li><li>Dijabetes — depresija otežava brigu o sebi i kontrolu bolesti</li><li>Hronični bolovi — depresija snižava prag bola i čini fizičke tegobe intenzivnijim</li></ul>"
+                },
+                {
+                    "id": "depresija-i-alkohol",
+                    "title": "Depresija i alkohol",
+                    "html": true,
+                    "content": "<p>Mnogi koji pate od depresije posežu za alkoholom kao 'lijekom' za loše raspoloženje. Kratkoročno — pruža privremeno olakšanje. Dugoročno — alkohol je depresant nervnog sistema koji stanje značajno pogoršava. Ova kombinacija može brzo prerasti u zavisnost.</p>"
+                },
+                {
+                    "id": "depresija-i-suicid",
+                    "title": "Depresija i suicid",
+                    "html": true,
+                    "content": "<p>Ovo je najozbiljnija komplikacija. Više od 90% osoba koje izvrše samoubistvo imalo je u trenutku smrti dijagnostikovanu psihijatrijsku bolest — najčešće iz grupe depresivnih poremećaja. Depresija iskrivljuje percepciju i čini da se problemi doživljavaju kao trajni i nerješivi. Upravo zato je rano liječenje tako važno.</p>"
+                },
+                {
+                    "id": "sta-to-znaci-u-praksi",
+                    "title": "Šta to znači u praksi?",
+                    "html": true,
+                    "content": "<p>Ako imate depresiju i neko drugo zdravstveno stanje — važno je da ljekar koji vas liječi ima cjelovitu sliku. Psihijatrijska ordinacija ZU DOBAR u Banjoj Luci nudi sveobuhvatan pristup liječenju. Liječenje jednog stanja bez drugog rijetko daje dobre rezultate.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"anksiolitici.php\">\"Anksiolitik je car\" ili \"Car Je go\"</a></li><li><a href=\"psihoterapija.php\">O psihoterapiji</a></li></ul>"
+                }
+            ]
+        },
+        "dijagnoza-depresije": {
+            "page_title": "Kako se dijagnostikuje depresija — šta možete očekivati",
+            "page_head_class": "page-head-depr",
+            "head_image": "",
+            "head_image_alt": "",
+            "sidebar_title": "U OVOM TEKSTU",
+            "sections": [
+                {
+                    "id": "intro",
+                    "title": "",
+                    "html": true,
+                    "content": "<p>Jedna od najčešćih prepreka traženju pomoći je strah od nepoznatog. Šta će se desiti kad dođem? Šta će psihijatar pitati? Hoće li me odmah 'staviti na lijekove'? Ovaj tekst je tu da odgovori na ta pitanja.</p>"
+                },
+                {
+                    "id": "nema-laboratorijskog-testa-za-depresiju",
+                    "title": "Nema laboratorijskog testa za depresiju",
+                    "html": true,
+                    "content": "<p>Za razliku od dijabetesa ili anemije, depresija se ne dijagnostikuje krvnom analizom ili snimkom. Dijagnoza se postavlja na osnovu razgovora — detaljnog, strukturiranog, ali i ljudskog. Psihijatar vas neće suditi. Njegova uloga je da razumije šta doživljavate.</p>"
+                },
+                {
+                    "id": "kako-izgleda-prvi-pregled",
+                    "title": "Kako izgleda prvi pregled?",
+                    "html": true,
+                    "content": "<p>Na prvom pregledu psihijatar će vas pitati:</p><ul><li>Kako se osjećate i koliko dugo traje to stanje</li><li>Kako spavate, jedete, kako funkcionišete na poslu i u odnosima</li><li>Da li ste ranije imali slične epizode</li><li>Da li uzimate neke lijekove ili imate neka fizička oboljenja</li><li>Da li ima slučajeva psihičkih bolesti u porodici</li><li>Da li imate misli o tome da se povrijedite</li></ul><p>Razgovor traje, u pravilu, između 45 minuta i sat vremena. Ne morate imati 'sve odgovore' — dovoljno je da pokušate opisati kako se osjećate.</p>"
+                },
+                {
+                    "id": "kako-se-postavlja-dijagnoza",
+                    "title": "Kako se postavlja dijagnoza?",
+                    "html": true,
+                    "content": "<p>Psihijatar koristi međunarodno prihvaćene dijagnostičke smjernice (ICD ili DSM) kao okvir, ali uvijek uzima u obzir cjelovitu sliku konkretne osobe. Depresija ne pogađa sve ljude na isti način, pa ni dijagnoza nije mehanički proces.</p>"
+                },
+                {
+                    "id": "sta-dolazi-nakon-dijagnoze",
+                    "title": "Šta dolazi nakon dijagnoze?",
+                    "html": true,
+                    "content": "<p>Liječenje depresije najčešće uključuje jednu ili kombinaciju sljedećih pristupa:</p><ul><li>Psihoterapija — razgovorni tretman koji pomaže osobi da razumije i promijeni obrasce mišljenja</li><li>Farmakoterapija — lijekovi koji koriguju neurohemijsku neravnotežu u mozgu</li><li>Kombinacija oboje — istraživanja pokazuju ovo kao najefikasnije u umjerenim i teškim oblicima</li></ul><p>Odluka o pristupu donosi se zajedno s pacijentom, uzimajući u obzir težinu simptoma, životnu situaciju i lične preferencije.</p>"
+                },
+                {
+                    "id": "jedna-vazna-napomena",
+                    "title": "Jedna važna napomena",
+                    "html": true,
+                    "content": "<p>Depresija se ne liječi 'snagom volje'. Traženje pomoći je prvi i najvažniji korak. A taj korak je hrabar, ne slab. Za zakazivanje pregleda u ZU DOBAR u Banjoj Luci — dostupni smo putem Vibera na +387 66 945 702.</p>"
+                },
+                {
+                    "id": "povezano",
+                    "title": "Možda vas zanima",
+                    "html": true,
+                    "content": "<p>Tekstovi koji vas mogu interesovati:</p><ul><li><a href=\"sta-je-depresija.php\">Šta je depresija i kako je prepoznati?</a></li><li><a href=\"kojeko.php\">Ko je ko u brizi o mentalnom zdravlju</a></li></ul>"
+                }
+            ]
         }
     }
 }
