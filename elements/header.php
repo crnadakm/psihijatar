@@ -29,9 +29,9 @@
 							<a>Blog</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="dokumenti.php">Čitanka</a></li>
-								<li><a href="slusanka.php">Slušanka</a></li>
+								<li><a href="kratki-tekstovi.php">Kratki tekstovi</a></li>
 							</ul>
-						</li>						
+						</li>
 						<li>
 							<a>Linkovi</a>
 							<ul class="dropdown-menu" role="menu">

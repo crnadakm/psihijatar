@@ -170,8 +170,21 @@
             "og_image": "",
             "og_type": "article",
             "canonical": "",
-            "robots": "index, follow",
+            "robots": "noindex, nofollow",
             "h1": "Slušanka"
+        },
+        "kratki-tekstovi.php": {
+            "title": "Kratki tekstovi - DOBAR",
+            "meta_description": "Kratki osvrti i izabrani odlomci o mentalnom zdravlju, psihoterapiji i psihijatrijskoj praksi.",
+            "meta_keywords": "kratki tekstovi, mentalno zdravlje, psihoterapija, blog",
+            "og_title": "DOBAR - Kratki tekstovi",
+            "og_description": "Kratki osvrti i izabrani odlomci o mentalnom zdravlju.",
+            "og_image": "",
+            "og_image_alt": "",
+            "og_type": "website",
+            "canonical": "",
+            "robots": "index, follow",
+            "h1": "Kratki tekstovi"
         },
         "kojeko.php": {
             "title": "Ko je ko - DOBAR",

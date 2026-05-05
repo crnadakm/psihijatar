@@ -507,6 +507,11 @@
         "placeholder_image": "images/work.jpg",
         "items": []
     },
+    "kratki": {
+        "page_title": "Kratki tekstovi",
+        "subtitle": "Pregled kratkih osvrta i izabranih odlomaka",
+        "items": []
+    },
     "knjige": {
         "page_title": "Knjige",
         "subtitle": "Vrijedi pročitati, obogatiće vaše znanje i moguće dati bitne smjernice, bez obzira da li ćete ih potražiti u biblioteci, knjižari ili iskoristiti neki od linkova da dođete do njih.",

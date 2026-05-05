@@ -12,7 +12,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <a class="nav-link <?= $currentPage === 'ideja.php' ? 'active' : '' ?>" href="ideja.php"><i class="bi bi-lightbulb"></i> Ideja</a>
         <a class="nav-link <?= $currentPage === 'znanja.php' ? 'active' : '' ?>" href="znanja.php"><i class="bi bi-book"></i> Znanja</a>
         <a class="nav-link <?= $currentPage === 'citanka.php' ? 'active' : '' ?>" href="citanka.php"><i class="bi bi-journal-text"></i> Čitanka</a>
-        <a class="nav-link <?= $currentPage === 'slusanka.php' ? 'active' : '' ?>" href="slusanka.php"><i class="bi bi-headphones"></i> Slušanka</a>
+        <a class="nav-link <?= $currentPage === 'kratki.php' ? 'active' : '' ?>" href="kratki.php"><i class="bi bi-card-text"></i> Kratki tekstovi</a>
         <a class="nav-link <?= $currentPage === 'knjige.php' ? 'active' : '' ?>" href="knjige.php"><i class="bi bi-journal-bookmark"></i> Knjige</a>
         <a class="nav-link <?= $currentPage === 'clanci.php' ? 'active' : '' ?>" href="clanci.php"><i class="bi bi-file-earmark-text"></i> Članci</a>
         <a class="nav-link <?= $currentPage === 'seo.php' ? 'active' : '' ?>" href="seo.php"><i class="bi bi-search"></i> SEO Expert</a>

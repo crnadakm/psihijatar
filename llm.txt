@@ -84,7 +84,7 @@ Diplomirani medicinar zdravstvene njege, master zdravstvene njege.
 - [Ljudi - naš tim](https://dobar.psihijatar.info/tim.php)
 - [Knjige](https://dobar.psihijatar.info/knjige.php)
 - [Čitanka](https://dobar.psihijatar.info/dokumenti.php)
-- [Slušanka](https://dobar.psihijatar.info/slusanka.php)
+- [Kratki tekstovi](https://dobar.psihijatar.info/kratki-tekstovi.php)
 - [Znanja](https://dobar.psihijatar.info/znanja.php)
 - [O ideji DOBAR](https://dobar.psihijatar.info/ideja.php)
 - [Kontakt](https://dobar.psihijatar.info/kontakt.php)
