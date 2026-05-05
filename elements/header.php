@@ -32,13 +32,7 @@
 								<li><a href="kratki-tekstovi.php">Kratki tekstovi</a></li>
 							</ul>
 						</li>
-						<li>
-							<a>Linkovi</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="knjige.php">Knjige</a></li>
-								<li><a href="video.php">Video materijali</a></li>
-							</ul>
-						</li>
+						<li><a href="knjige.php">Knjige</a></li>
 					</ul>
 				</div>
 			</div>

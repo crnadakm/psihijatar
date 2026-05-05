@@ -158,7 +158,7 @@
             "og_image": "",
             "og_type": "article",
             "canonical": "",
-            "robots": "index, follow",
+            "robots": "noindex, nofollow",
             "h1": "Video"
         },
         "slusanka.php": {
