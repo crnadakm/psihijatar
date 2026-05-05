@@ -510,7 +510,50 @@
     "kratki": {
         "page_title": "Kratki tekstovi",
         "subtitle": "Pregled kratkih osvrta i izabranih odlomaka",
-        "items": []
+        "items": [
+            {
+                "title": "Šta je depresija i kako je prepoznati?",
+                "excerpt": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Nije to samo „loš dan\" ili prolazna tuga — radi se o stanju koje zahvata cijelog čovjeka: tijelo, misli i osjećanja. Procjenjuje se da depresijom pati oko 280 miliona ljudi širom svijeta.",
+                "link": "sta-je-depresija.php",
+                "date": "Maj '26",
+                "active": true
+            },
+            {
+                "title": "Depresija kod muškaraca — zašto je često neprepoznata",
+                "excerpt": "Depresija se kod muškaraca dijagnostikuje dvostruko rjeđe nego kod žena. Ali to ne znači da je rjeđa — znači da se rjeđe prepoznaje. Muškarci su naučeni da ne pokazuju slabost, pa depresiju često nose drugačije: kroz razdražljivost, povlačenje, prekomjerni rad ili rizično ponašanje.",
+                "link": "depresija-muskarci.php",
+                "date": "Maj '26",
+                "active": true
+            },
+            {
+                "title": "Depresija kod žena — specifičnosti koje se često previde",
+                "excerpt": "Depresija se kod žena dijagnostikuje dvostruko češće nego kod muškaraca. Hormonalne promjene tokom menstrualnog ciklusa, trudnoće, postporođajnog perioda i menopauze direktno utiču na raspoloženje. Saznajte šta su postporođajna depresija i PMDD.",
+                "link": "depresija-zene.php",
+                "date": "Maj '26",
+                "active": true
+            },
+            {
+                "title": "Depresija kod djece i mladih — kako je prepoznati",
+                "excerpt": "Depresija nije bolest odraslih. Najmanje 5% adolescenata pati od ovog poremećaja, a tokom pandemije COVID-19 stope su se udvostručile. Kod djece i adolescenata depresija često ne izgleda kao klasična tuga — javlja se kroz razdražljivost, fizičke tegobe i povlačenje.",
+                "link": "depresija-djeca-mladi.php",
+                "date": "Maj '26",
+                "active": true
+            },
+            {
+                "title": "Komplikacije uz depresiju — kada bolest nije sama",
+                "excerpt": "Depresija rijetko dolazi sama. Često se isprepliće sa anksioznošću, srčanim oboljenjima, gojaznošću, dijabetesom i hroničnim bolovima. Kombinacija sa alkoholom je naročito opasna, a najozbiljnija komplikacija je suicid — više od 90% osoba koje izvrše samoubistvo imale su psihičku bolest.",
+                "link": "komplikacije-depresije.php",
+                "date": "Maj '26",
+                "active": true
+            },
+            {
+                "title": "Kako se dijagnostikuje depresija — šta možete očekivati",
+                "excerpt": "Jedna od najčešćih prepreka traženju pomoći je strah od nepoznatog. Šta će se desiti kad dođem kod psihijatra? Za razliku od dijabetesa, depresija se ne dijagnostikuje krvnom analizom — postavlja se na osnovu razgovora i procjene simptoma. Prvi pregled traje 45 minuta do sat vremena.",
+                "link": "dijagnoza-depresije.php",
+                "date": "Maj '26",
+                "active": true
+            }
+        ]
     },
     "knjige": {
         "page_title": "Knjige",
