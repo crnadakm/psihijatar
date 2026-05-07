@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta property="og:title" content="DOBAR - AKTIVNOSTI">
-<meta property="og:image" content="https://dobar.psihijatar.info/images/shutterstock_1501617461.jpg">
+<html lang="sr">
 <?php include 'elements/head.php' ?>
 <?php include 'php/accordion.php' ?>
 <link rel="stylesheet" href="css/lightbox.css">

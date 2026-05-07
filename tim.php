@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 	$worker = $_GET['ime'] ?? '';
 
@@ -34,19 +32,18 @@
 	}
 
 	$workerData = getWorkerData($worker);
+
+	// Pass worker-specific OG data to head.php via $articleOgOverride
+	if (!empty($workerData['name'])) {
+		$articleOgOverride = [
+			'title' => 'Naš tim: ' . $workerData['name'] . ' | ZU DOBAR',
+			'description' => $workerData['description'],
+			'image' => 'https://dobar.psihijatar.info/' . $workerData['image'],
+		];
+	}
 	?>
-
-	<!DOCTYPE html>
-	<html lang="en">
-
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="<?php echo $workerData['name'] || "DOBAR - O nama"; ?>">
-		<meta property="og:image" content="<?php echo $workerData['image'] || "https://dobar.psihijatar.info/images/shutterstock_1929703829.jpg"; ?>">
-		<meta property="og:description" content="<?php echo $workerData['description'] || "Koncept ili ideja koja se nalazi iza akronima D.O.B.A.R. ili samo riječi DOBAR pojašnjava način na koji bismo da pristupimo našem zadatku. U htijenju smo da poštujemo Dostojanstvo svakog ko nam se obrati, pristupimo Odgovorno onom što nas očekuje, da se Brižno odnosimo prema svakoj osobi, nastupajući Angažovano u širem okviru brige o mentalnom zdravlju zajednice i Rado obavljajući naš izbor."; ?>">
-	</head>
-<meta property="og:type" content="article" />
+<!DOCTYPE html>
+<html lang="sr">
 <?php include 'elements/head.php' ?>
 <link rel="stylesheet" href="css/lightbox.css">
 

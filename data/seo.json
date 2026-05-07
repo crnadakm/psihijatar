@@ -30,16 +30,17 @@
     },
     "pages": {
         "index.php": {
-            "title": "D.O.B.A.R. - zdravstvena ustanova",
-            "meta_description": "Specijalistička psihijatrijska ambulanta 'DOBAR - Dr Dragan Tešanović' je mjesto gdje se briga o liječenju pojedinaca može provoditi u mirnim i zaštićenim okolnostima.",
-            "meta_keywords": "dobar, psihijatar, dobro, psihijatrijska, banjaluka, psihijatar banja luka, dobar psihijatar, depresija",
-            "og_title": "DOBAR - zdravstvena ustanova",
-            "og_description": "",
+            "title": "Psihijatar Banja Luka - Dr Dragan Tešanović | DOBAR",
+            "meta_description": "Specijalistička psihijatrijska ordinacija u Banjoj Luci - psihijatrijski pregledi, psihoterapija, EMDR. Dr Dragan Tešanović i tim stručnjaka.",
+            "meta_keywords": "psihijatar banja luka, psihoterapija banja luka, dobar psihijatar, dr dragan tešanović, psihijatrijska ordinacija, EMDR, mentalno zdravlje",
+            "og_title": "Psihijatar Banja Luka - Dr Dragan Tešanović | DOBAR",
+            "og_description": "Specijalistička psihijatrijska ordinacija u Banjoj Luci - psihijatrijski pregledi, psihoterapija, EMDR.",
             "og_image": "https://dobar.psihijatar.info/images/logosqare.png",
+            "og_image_alt": "DOBAR - ustanova za mentalno zdravlje",
             "og_type": "website",
-            "canonical": "",
+            "canonical": "https://dobar.psihijatar.info/",
             "robots": "index, follow",
-            "h1": ""
+            "h1": "DOBAR - Psihijatrijska ambulanta Dr Dragan Tešanović, Banja Luka"
         },
         "psihijatrija.php": {
             "title": "Psihijatrija - DOBAR",

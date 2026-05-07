@@ -1,42 +1,32 @@
 <?php include 'php/blog-highlight.php' ?>
 <!DOCTYPE html>
-<html lang="en">
-	<title>D.O.B.A.R. - zdravstvena ustanova</title>
-	<meta property="og:title" content="DOBAR - zdravstvena ustanova">
-	<meta property="og:image" content="https://dobar.psihijatar.info/images/logosqare.png">
-	<meta name="description" content="Specijalistička psihijatrijska ambulanta 'DOBAR - Dr Dragan Tešanović' je mjesto gdje se briga o liječenju pojedinaca može provoditi u mirnim i zaštićenim okolnostima. U stalnoj smo saradnji sa profesionalcima za mentalno zdravlje različitih profila i iz različitih okruženja kao i medicinskim radnicima drugih profesionalnih usmjerenja.">
-
+<html lang="sr">
 	<?php include 'elements/head.php' ?>
 
 <body id="page-top">
 
-<!-- Messenger Chat plugin Code -->
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">DOBAR - Psihijatrijska ambulanta Dr Dragan Tešanović, Banja Luka</h1>
+
+<!-- Messenger Chat plugin Code (deferred for performance) -->
     <div id="fb-root"></div>
-
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "101526269003156");
-      chatbox.setAttribute("attribution", "biz_inbox");
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v12.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/sr_RS/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-   	</script>	
+      window.addEventListener('load', function() {
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "101526269003156");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        window.fbAsyncInit = function() {
+          FB.init({ xfbml: true, version: 'v12.0' });
+        };
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/sr_RS/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      });
+    </script>
 <style type="text/css">
 	h2{
 		/*display: inline;*/

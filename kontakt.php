@@ -1,38 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta property="og:title" content="DOBAR - Kontakt">
-<meta property="og:image" content="https://dobar.psihijatar.info/images/team/05.jpg">
+<html lang="sr">
 	<?php include 'elements/head.php' ?>
 <body id="page-top" class="subpage">
 
 <div class="body">
-<!-- Messenger Chat plugin Code -->
+<!-- Messenger Chat plugin Code (deferred for performance) -->
     <div id="fb-root"></div>
-
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "101526269003156");
-      chatbox.setAttribute("attribution", "biz_inbox");
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v12.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/sr_RS/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-   	</script>
+      window.addEventListener('load', function() {
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "101526269003156");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        window.fbAsyncInit = function() { FB.init({ xfbml: true, version: 'v12.0' }); };
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/sr_RS/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      });
+    </script>
 	<style type="text/css">
 		h1,h3,h4{
 			color: black;
