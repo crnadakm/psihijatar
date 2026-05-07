@@ -71,6 +71,10 @@ requireLogin();
                             <label class="form-label">Facebook stranica</label>
                             <input type="text" class="form-control" id="site-facebook">
                         </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Instagram stranica</label>
+                            <input type="text" class="form-control" id="site-instagram">
+                        </div>
                         <div class="col-md-12 mb-3">
                             <label class="form-label">Copyright tekst</label>
                             <input type="text" class="form-control" id="site-copyright">
@@ -220,6 +224,7 @@ requireLogin();
         document.getElementById('site-whatsapp').value = d.site?.whatsapp || '';
         document.getElementById('site-viber').value = d.site?.viber || '';
         document.getElementById('site-facebook').value = d.site?.facebook || '';
+        document.getElementById('site-instagram').value = d.site?.instagram || '';
         document.getElementById('site-copyright').value = d.site?.copyright || '';
         // CTA
         document.getElementById('cta-heading').value = d.cta?.heading || '';
@@ -536,6 +541,7 @@ requireLogin();
             whatsapp: document.getElementById('site-whatsapp').value,
             viber: document.getElementById('site-viber').value,
             facebook: document.getElementById('site-facebook').value,
+            instagram: document.getElementById('site-instagram').value,
             copyright: document.getElementById('site-copyright').value
         };
         contentData.cta = {

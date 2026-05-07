@@ -11,6 +11,7 @@
 						<li><a href="https://api.whatsapp.com/send?phone=<?= htmlspecialchars($siteData['whatsapp'] ?? '+38766945702') ?>"><i class="fa fa-whatsapp"><img height="28" src="images/whatsapp.png" alt="WhatsApp kontakt"></i></a></li>
 						<li><a href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>"><img height="28" src="images/viber.png" alt="Viber kontakt"></a></li>
 						<li class="facebook"><a target="_blank" href="<?= htmlspecialchars($siteData['facebook'] ?? 'https://www.facebook.com/dobarpsihijatar') ?>"><img height="28" src="images/fb.png" alt="Facebook stranica"></a></li>
+						<li class="instagram"><a target="_blank" href="<?= htmlspecialchars($siteData['instagram'] ?? 'https://www.instagram.com/dobar.zdravstvena.ustanova/') ?>"><img height="28" src="images/ig.svg" alt="Instagram stranica"></a></li>
 					</ul>
 					<ul class="footer-links space40">
 						<li><a href="index.php">Naslovna</a></li>

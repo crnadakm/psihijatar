@@ -566,12 +566,12 @@
 				<br>
 				<div class="container-fluid no-padding">
 					<div class="shots">
-						<div><a href="images/team/03detalj.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/03detalj_thumb.jpg" class="img-responsive" alt="" /></a></div>
-						<div><a href="images/team/08figurey.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/08figurey_thumb.jpg" class="img-responsive" alt="" /></a></div>
-						<div><a href="images/team/10grupaz.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/10grupaz_thumb.jpg" class="img-responsive" alt="" /></a></div>
-						<div><a href="images/team/11mjestoklijent.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/11mjestoklijent_thumb.jpg" class="img-responsive" alt="" /></a></div>
-						<div><a href="images/team/12zelenasoba.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/12zelenasoba_thumb.jpg" class="img-responsive" alt="" /></a></div>
-						<div><a href="images/team/13polica.jpg" data-lightbox="image-set" data-title="Naslov slike"><img src="images/team/13polica_thumb.jpg" class="img-responsive" alt="" /></a></div>
+						<div><a href="images/team/03detalj.jpg" data-lightbox="image-set" data-title="Detalj iz ordinacije"><img src="images/team/03detalj_thumb.jpg" class="img-responsive" alt="Detalj iz ordinacije DOBAR" /></a></div>
+						<div><a href="images/team/08figurey.jpg" data-lightbox="image-set" data-title="Figure za sistemske konstelacije"><img src="images/team/08figurey_thumb.jpg" class="img-responsive" alt="Figure za sistemske konstelacije" /></a></div>
+						<div><a href="images/team/10grupaz.jpg" data-lightbox="image-set" data-title="Grupna terapija"><img src="images/team/10grupaz_thumb.jpg" class="img-responsive" alt="Prostor za grupnu terapiju" /></a></div>
+						<div><a href="images/team/11mjestoklijent.jpg" data-lightbox="image-set" data-title="Mjesto klijenta"><img src="images/team/11mjestoklijent_thumb.jpg" class="img-responsive" alt="Mjesto za klijenta u terapijskoj sobi" /></a></div>
+						<div><a href="images/team/12zelenasoba.jpg" data-lightbox="image-set" data-title="Zelena soba"><img src="images/team/12zelenasoba_thumb.jpg" class="img-responsive" alt="Zelena soba u ordinaciji DOBAR" /></a></div>
+						<div><a href="images/team/13polica.jpg" data-lightbox="image-set" data-title="Polica sa knjigama"><img src="images/team/13polica_thumb.jpg" class="img-responsive" alt="Polica sa stručnom literaturom" /></a></div>
 
 					</div>
 				</div>

@@ -63,8 +63,10 @@
 						<ul class="list-inline social-icons icon-circle">
 							<!--li><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
 							<li><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li-->
-							<li><a href="https://api.whatsapp.com/send?phone=+38766945702"><i class="fa fa-whatsapp"><img height="40" src="images/whatsapp.png"></i></a></li>
-							<li><a href="viber://chat?number=38766945702"><img height="40" src="images/viber.png"></i></a></li>				
+							<li><a href="https://api.whatsapp.com/send?phone=+38766945702"><i class="fa fa-whatsapp"><img height="40" src="images/whatsapp.png" alt="WhatsApp kontakt"></i></a></li>
+							<li><a href="viber://chat?number=38766945702"><img height="40" src="images/viber.png" alt="Viber kontakt"></i></a></li>
+							<li><a target="_blank" href="https://www.facebook.com/dobarpsihijatar"><img height="40" src="images/fb.png" alt="Facebook stranica"></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/dobar.zdravstvena.ustanova/"><img height="40" src="images/ig.svg" alt="Instagram stranica"></a></li>
 						</ul>
 						<br>
 						<br>
@@ -142,7 +144,7 @@
 		<br>
 		<br>
 		<div class="container">
-			<img src="images/Ulaz.jpg" width="100%">
+			<img src="images/Ulaz.jpg" alt="Ulaz u ordinaciju DOBAR - Vojvode Pere Krece 2, Banja Luka" width="100%">
 		</div>
 	</div>
 
