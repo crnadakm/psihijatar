@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /data/
 Disallow: /php/
 
-Sitemap: https://dobar.psihijatar.info/sitemap.xml
+Sitemap: https://dobar.psihijatar.info/sitemap-2026.xml
