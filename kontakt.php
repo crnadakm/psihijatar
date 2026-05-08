@@ -77,17 +77,56 @@
 							<li><i class="icon-call"></i><abbr title="Phone"><a href="tel:+38766945702" style="color:inherit;text-decoration:none;"><?= htmlspecialchars($siteData['phone'] ?? '+387 66 945-702') ?></a></abbr></li>
 							<small>*Broj je samo za viber poruke</small>
 						</ul>
-						<br>
+						<?php
+						$tz = new DateTimeZone('Europe/Sarajevo');
+						$now = new DateTime('now', $tz);
+						$dow = (int)$now->format('w'); // 0=Sun..6=Sat
+						$mins = (int)$now->format('H') * 60 + (int)$now->format('i');
+						$schedule = [1=>[540,1020], 2=>[540,1020], 3=>[660,1140], 4=>[540,1020], 5=>[540,1020]];
+						$dayNames = ['nedjelju','ponedjeljak','utorak','srijedu','četvrtak','petak','subotu'];
+						$isOpen = false; $statusText = '';
+						if (isset($schedule[$dow]) && $mins >= $schedule[$dow][0] && $mins < $schedule[$dow][1]) {
+							$isOpen = true;
+							$closesAt = sprintf('%d:%02d', floor($schedule[$dow][1]/60), $schedule[$dow][1]%60);
+							$statusText = 'Otvoreno · zatvara u ' . $closesAt;
+						} else {
+							for ($i = 0; $i <= 7; $i++) {
+								$d = ($dow + $i) % 7;
+								if (!isset($schedule[$d])) continue;
+								if ($i === 0 && $mins >= $schedule[$d][1]) continue; // today already closed
+								$opens = sprintf('%d:%02d', floor($schedule[$d][0]/60), $schedule[$d][0]%60);
+								if ($i === 0) $statusText = 'Zatvoreno · otvara danas u ' . $opens;
+								else if ($i === 1) $statusText = 'Zatvoreno · otvara sutra u ' . $opens;
+								else $statusText = 'Zatvoreno · otvara u ' . $dayNames[$d] . ' u ' . $opens;
+								break;
+							}
+						}
+						?>
+						<style>
+							.hours-block { font-size: 14px; margin-top: 10px; }
+							.hours-status { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; background: #f5f5f5; margin-bottom: 8px; font-size: 13px; }
+							.hours-status .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+							.hours-status.open .dot { background: #28a745; }
+							.hours-status.closed .dot { background: #dc3545; }
+							.hours-status.open { color: #155724; }
+							.hours-status.closed { color: #555; }
+							.hours-list { list-style: none; padding: 0; margin: 0; }
+							.hours-list li { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed #e5e5e5; }
+							.hours-list li:last-child { border-bottom: 0; }
+							.hours-list .muted { color: #999; }
+						</style>
 						<h3 class="intro-title">Radno vrijeme</h3>
-						<ul class="list">
-							<li>Ponedjeljak: <span>9–17h</span></li>
-							<li>Utorak: <span>9–17h</span></li>
-							<li>Srijeda: <span>11–19h</span></li>
-							<li>Četvrtak: <span>9–17h</span></li>
-							<li>Petak: <span>9–17h</span></li>
-							<li>Subota: <span style="color:#999;">zatvoreno</span></li>
-							<li>Nedjelja: <span style="color:#999;">zatvoreno</span></li>
-						</ul>
+						<div class="hours-block">
+							<div class="hours-status <?= $isOpen ? 'open' : 'closed' ?>">
+								<span class="dot"></span>
+								<span><?= htmlspecialchars($statusText) ?></span>
+							</div>
+							<ul class="hours-list">
+								<li><span>Pon, Uto, Čet, Pet</span><span>9–17h</span></li>
+								<li><span>Srijeda</span><span>11–19h</span></li>
+								<li><span>Vikend</span><span class="muted">zatvoreno</span></li>
+							</ul>
+						</div>
 						
 					</div>
 				</aside>
