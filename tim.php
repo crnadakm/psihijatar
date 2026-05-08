@@ -106,7 +106,7 @@
 					<div id="dragan" class="col-sm-12 col-md-12 team-box team-box-p text-center">
 					
 							<figure class="col-sm-6 col-md-6">
-								<img class="img-responsive" src="images/team/dragan.jpg" alt="Dragan Tešanović - specijalista psihijatrije">
+								<img class="img-responsive" src="images/team/dragan.jpg" alt="Dragan Tešanović - specijalista psihijatrije" width="1000" height="812" loading="lazy" decoding="async">
 							</figure>
 							<div class="col-sm-6 col-md-6">
 								<h4 class="intro-title">Dragan Tešanović</h4><br>
@@ -123,7 +123,7 @@
 							<!-- Team Staff 2 -->
 							<div id="zeljka" class="team-box text-center team-coworker">
 								<figure>
-									<img class="img-responsive" src="images/team/zeljka.jpg" alt="Željka Štrbac - specijalista psihijatrije">
+									<img class="img-responsive" src="images/team/zeljka.jpg" alt="Željka Štrbac - specijalista psihijatrije" width="1600" height="1066" loading="lazy" decoding="async">
 								</figure>
 								<div>
 									<h4 class="intro-title">Željka Štrbac</h4>
@@ -136,7 +136,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="tatjana" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/tatjana.jpg" alt="Tatjana Maglov - specijalista psihijatrije">
+								<img class="img-responsive" src="images/team/tatjana.jpg" alt="Tatjana Maglov - specijalista psihijatrije" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Tatjana Maglov</h4>
@@ -148,7 +148,7 @@
 					<!-- <div class="col-sm-4 col-md-4">
 						<div class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/daliborka.jpg" alt="">
+								<img class="img-responsive" src="images/team/daliborka.jpg" alt="" width="1152" height="1420" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Daliborka Tadić</h4>
@@ -162,7 +162,7 @@
 					<!--div class="col-sm-4 col-md-4">
 					<div class="team-box text-center team-coworker">
 						<figure>
-							<img class="img-responsive" src="images/team/ivana.jpg" alt="">
+							<img class="img-responsive" src="images/team/ivana.jpg" alt="" width="1152" height="1420" loading="lazy" decoding="async">
 						</figure>
 						<div>
 							<h4 class="intro-title">Ivana Stanišljević</h4>
@@ -177,7 +177,7 @@
 					
 					<div class="team-box text-center team-coworker">
 						<figure>
-							<img class="img-responsive" src="images/team/02drDijana.jpg" alt="">
+							<img class="img-responsive" src="images/team/02drDijana.jpg" alt="" width="1152" height="1420" loading="lazy" decoding="async">
 						</figure>
 						<div>
 							<h4 class="intro-title">Diana Zorić</h4>
@@ -195,7 +195,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="macura" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/macura.jpg" alt="">
+								<img class="img-responsive" src="images/team/macura.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Dragan Macura</h4>
@@ -207,7 +207,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="andrej" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/andrej.jpg" alt="">
+								<img class="img-responsive" src="images/team/andrej.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Andrej Blagojević</h4>
@@ -221,7 +221,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="maric" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/maric.jpg" alt="Tatjana Marić - pedagog i psihoterapeut">
+								<img class="img-responsive" src="images/team/maric.jpg" alt="Tatjana Marić - pedagog i psihoterapeut" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Tatjana Marić</h4>
@@ -232,7 +232,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="andrea" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/andrea.jpg" alt="Andrea Dursun - porodični sistemski psihoterapeut">
+								<img class="img-responsive" src="images/team/andrea.jpg" alt="Andrea Dursun - porodični sistemski psihoterapeut" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Andrea Dursun</h4>
@@ -247,7 +247,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="suncica" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/suncica.jpg" alt="Sunčica Jugović - master psiholog">
+								<img class="img-responsive" src="images/team/suncica.jpg" alt="Sunčica Jugović - master psiholog" width="1600" height="1133" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Sunčica Jugović</h4>
@@ -258,7 +258,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div id="sasa" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/sasa.jpg" alt="Saša Stanivuković - medicinar zdravstvene njege">
+								<img class="img-responsive" src="images/team/sasa.jpg" alt="Saša Stanivuković - medicinar zdravstvene njege" width="1600" height="1067" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Saša Stanivuković</h4>
@@ -274,7 +274,7 @@
 					<div class="col-sm-4 col-md-4">
 						<div id="gabi" class="team-box text-center team-coworker">
 							<figure>
-								<img class="img-responsive" src="images/team/gabriela.jpg" alt="">
+								<img class="img-responsive" src="images/team/gabriela.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async">
 							</figure>
 							<div>
 								<h4 class="intro-title">Gabrijela Janković</h4>

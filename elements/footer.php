@@ -8,10 +8,10 @@
 					<a class="navbar-brand" href="index.php"><span class="smalltext"> DR </span> DRAGAN TEŠANOVIĆ <span class="smalltext"> PSIHIJATAR</span></a>
 					<ul class="list-inline social-icons icon-circle space20">
 						<h4 class="intro-title"><?= htmlspecialchars($footerData['booking_title'] ?? 'Linkovi za rezervaciju termina') ?></h4>
-						<li><a href="https://wa.me/<?= htmlspecialchars(ltrim($siteData['whatsapp'] ?? '+38766945702', '+')) ?>"><i class="fa fa-whatsapp"><img height="28" src="images/whatsapp.png" alt="WhatsApp kontakt"></i></a></li>
-						<li><a href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>"><img height="28" src="images/viber.png" alt="Viber kontakt"></a></li>
-						<li class="facebook"><a target="_blank" href="<?= htmlspecialchars($siteData['facebook'] ?? 'https://www.facebook.com/dobarpsihijatar') ?>"><img height="28" src="images/fb.png" alt="Facebook stranica"></a></li>
-						<li class="instagram"><a target="_blank" href="<?= htmlspecialchars($siteData['instagram'] ?? 'https://www.instagram.com/dobar.zdravstvena.ustanova/') ?>"><img height="28" src="images/ig.svg" alt="Instagram stranica"></a></li>
+						<li><a href="https://wa.me/<?= htmlspecialchars(ltrim($siteData['whatsapp'] ?? '+38766945702', '+')) ?>"><i class="fa fa-whatsapp"><img height="28" src="images/whatsapp.png" alt="WhatsApp kontakt" width="28" loading="lazy" decoding="async"></i></a></li>
+						<li><a href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>"><img height="28" src="images/viber.png" alt="Viber kontakt" width="28" loading="lazy" decoding="async"></a></li>
+						<li class="facebook"><a target="_blank" href="<?= htmlspecialchars($siteData['facebook'] ?? 'https://www.facebook.com/dobarpsihijatar') ?>"><img height="28" src="images/fb.png" alt="Facebook stranica" width="28" loading="lazy" decoding="async"></a></li>
+						<li class="instagram"><a target="_blank" href="<?= htmlspecialchars($siteData['instagram'] ?? 'https://www.instagram.com/dobar.zdravstvena.ustanova/') ?>"><img height="28" src="images/ig.svg" alt="Instagram stranica" width="28" loading="lazy" decoding="async"></a></li>
 					</ul>
 					<ul class="footer-links space40">
 						<li><a href="index.php">Naslovna</a></li>

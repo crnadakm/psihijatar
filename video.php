@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="col-md-10 col-md-offset-1 text-center">
 				
-				<img src="images/work.jpg" alt="Video sadržaji u pripremi" width="100%" style="max-width: 500px; margin-bottom: 50px;">
+				<img src="images/work.jpg" alt="Video sadržaji u pripremi" width="560" height="292" style="width:100%;max-width:500px;height:auto;margin-bottom:50px;" loading="lazy" decoding="async">
 				<br>
 			</div>
 		</div>

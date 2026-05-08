@@ -249,7 +249,7 @@
 	<nav class="nd-nav">
 		<div class="nd-container">
 			<a href="#" class="nd-nav-brand">
-				<img src="images/logo.png" alt="DOBAR logo">
+				<img src="images/logo.png" alt="DOBAR logo" width="346" height="407" decoding="async">
 				DOBAR
 			</a>
 			<ul class="nd-nav-links">
@@ -302,7 +302,7 @@
 
 				<div class="nd-hero-visual">
 					<div class="nd-hero-visual-card">
-						<img src="images/team/12zelenasoba.jpg" alt="Ordinacija DOBAR Banja Luka" loading="lazy">
+						<img src="images/team/12zelenasoba.jpg" alt="Ordinacija DOBAR Banja Luka" loading="lazy" width="1303" height="1955" decoding="async">
 						<div class="nd-hero-visual-card-title">Naša ordinacija u Banjoj Luci</div>
 						<div class="nd-hero-visual-card-meta">Mirno i diskretno okruženje</div>
 					</div>
@@ -360,7 +360,7 @@
 		<div class="nd-container">
 			<div class="nd-about-grid">
 				<div class="nd-about-image">
-					<img src="images/team/11mjestoklijent.jpg" alt="Mjesto za klijenta - DOBAR Banja Luka" loading="lazy">
+					<img src="images/team/11mjestoklijent.jpg" alt="Mjesto za klijenta - DOBAR Banja Luka" loading="lazy" width="1382" height="2073" decoding="async">
 					<div class="nd-about-image-badge">
 						<strong>2021</strong>
 						<span>Otvorena ordinacija</span>
@@ -418,7 +418,7 @@
 			<div class="nd-team-grid">
 				<div class="nd-team-card">
 					<div class="nd-team-image">
-						<img src="images/team/dragan.jpg" alt="Dr Dragan Tešanović - psihijatar Banja Luka" loading="lazy">
+						<img src="images/team/dragan.jpg" alt="Dr Dragan Tešanović - psihijatar Banja Luka" loading="lazy" width="1000" height="812" decoding="async">
 						<div class="nd-team-overlay"></div>
 					</div>
 					<div class="nd-team-info">
@@ -429,7 +429,7 @@
 				</div>
 				<div class="nd-team-card">
 					<div class="nd-team-image">
-						<img src="images/team/zeljka.jpg" alt="Dr Željka Štrbac - psihijatar" loading="lazy">
+						<img src="images/team/zeljka.jpg" alt="Dr Željka Štrbac - psihijatar" loading="lazy" width="1600" height="1066" decoding="async">
 						<div class="nd-team-overlay"></div>
 					</div>
 					<div class="nd-team-info">
@@ -440,7 +440,7 @@
 				</div>
 				<div class="nd-team-card">
 					<div class="nd-team-image">
-						<img src="images/team/tatjana.jpg" alt="Dr Tatjana Maglov - psihijatar" loading="lazy">
+						<img src="images/team/tatjana.jpg" alt="Dr Tatjana Maglov - psihijatar" loading="lazy" width="1600" height="1067" decoding="async">
 						<div class="nd-team-overlay"></div>
 					</div>
 					<div class="nd-team-info">

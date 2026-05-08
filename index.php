@@ -89,7 +89,7 @@
 						<div class="container ">
 							<div class="row">
 								<div class="col-md-8 col-md-offset-2 text-center">
-									<img src="images/dobar.png" alt="DOBAR - Dostojanstvo, Odgovornost, Brižnost, Angažovanost, Rado" width="350" style="width:310px; margin: 0 auto;">
+									<img src="images/dobar.png" alt="DOBAR - Dostojanstvo, Odgovornost, Brižnost, Angažovanost, Rado" width="350" style="width:310px; margin: 0 auto;" height="285" decoding="async">
 									<!--
 									<h3 class="text-special">
 									<span class="title-effect">D</span>ostojanstveno<br>
@@ -244,7 +244,7 @@
 								XVI radionica SK (sistemskih konstelacija) sa voditeljem Draganom Tešanovićem
 							</div>
 							<div class="author">
-								<img class="img-responsive" src="images/team/08figurey.jpg" alt="Radionica sistemskih konstelacija - figure">
+								<img class="img-responsive" src="images/team/08figurey.jpg" alt="Radionica sistemskih konstelacija - figure" width="2073" height="1382" loading="lazy" decoding="async">
 								<a href="aktivnosti.php" class="btn btn-primary" style="margin-bottom: 20px;">Pročitaj više</a>
 							</div>
 						</div>
@@ -255,7 +255,7 @@
 								Usluge koje ćemo početi da pružamo u skorije vrijeme. 
 							</div>
 							<div class="author">
-								<img class="img-responsive" src="images/team/11mjestoklijent.jpg" alt="Mjesto za klijenta u terapijskoj sobi DOBAR">
+								<img class="img-responsive" src="images/team/11mjestoklijent.jpg" alt="Mjesto za klijenta u terapijskoj sobi DOBAR" width="1382" height="2073" loading="lazy" decoding="async">
 								<a href="aktivnosti.php" class="btn btn-primary" style="margin-bottom: 20px;">Pročitaj više</a>
 							</div>
 						</div>

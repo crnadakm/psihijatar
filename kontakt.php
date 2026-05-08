@@ -63,10 +63,10 @@
 						<section class="contact-block">
 							<h2 class="contact-block-title">Online zakazivanje</h2>
 							<ul class="list-inline social-icons icon-circle contact-social">
-								<li><a href="https://wa.me/38766945702" aria-label="WhatsApp"><img height="40" src="images/whatsapp.png" alt="WhatsApp kontakt"></a></li>
-								<li><a href="viber://chat?number=38766945702" aria-label="Viber"><img height="40" src="images/viber.png" alt="Viber kontakt"></a></li>
-								<li><a target="_blank" href="https://www.facebook.com/dobarpsihijatar" aria-label="Facebook"><img height="40" src="images/fb.png" alt="Facebook stranica"></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/dobar.zdravstvena.ustanova/" aria-label="Instagram"><img height="40" src="images/ig.svg" alt="Instagram stranica"></a></li>
+								<li><a href="https://wa.me/38766945702" aria-label="WhatsApp"><img height="40" src="images/whatsapp.png" alt="WhatsApp kontakt" width="40" loading="lazy" decoding="async"></a></li>
+								<li><a href="viber://chat?number=38766945702" aria-label="Viber"><img height="40" src="images/viber.png" alt="Viber kontakt" width="40" loading="lazy" decoding="async"></a></li>
+								<li><a target="_blank" href="https://www.facebook.com/dobarpsihijatar" aria-label="Facebook"><img height="40" src="images/fb.png" alt="Facebook stranica" width="40" loading="lazy" decoding="async"></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/dobar.zdravstvena.ustanova/" aria-label="Instagram"><img height="40" src="images/ig.svg" alt="Instagram stranica" width="40" loading="lazy" decoding="async"></a></li>
 							</ul>
 						</section>
 
@@ -209,7 +209,7 @@
 		<br>
 		<br>
 		<div class="container">
-			<img src="images/Ulaz.jpg" alt="Ulaz u ordinaciju DOBAR - Vojvode Pere Krece 2, Banja Luka" width="100%">
+			<img src="images/Ulaz.jpg" alt="Ulaz u ordinaciju DOBAR - Vojvode Pere Krece 2, Banja Luka" width="1140" height="614" style="width:100%;height:auto;" loading="lazy" decoding="async">
 		</div>
 	</div>
 
