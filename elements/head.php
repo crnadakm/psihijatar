@@ -6,6 +6,12 @@
 
 	<meta name="author" content="Dragan Tešanović">
 
+	<!-- Preconnect to third-party origins used on every page (FB Pixel, GA) -->
+	<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+	<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.google-analytics.com">
+	<link rel="dns-prefetch" href="https://www.facebook.com">
+
 	<!-- SEO TAGS FROM ADMIN PANEL -->
 <?php echo renderSeoHead(); ?>
 
