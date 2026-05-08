@@ -3,5 +3,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /data/
 Disallow: /php/
+Disallow: /naslovna-novi-dizajn.php
 
 Sitemap: https://dobar.psihijatar.info/sitemap-2026.xml

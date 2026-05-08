@@ -53,6 +53,19 @@
         }
     },
     "pages": {
+        "naslovna-novi-dizajn.php": {
+            "title": "DEMO Naslovna Novi Dizajn",
+            "meta_description": "Demo stranica - ne indeksirati.",
+            "meta_keywords": "",
+            "og_title": "",
+            "og_description": "",
+            "og_image": "",
+            "og_image_alt": "",
+            "og_type": "website",
+            "canonical": "",
+            "robots": "noindex, nofollow",
+            "h1": "Demo"
+        },
         "index.php": {
             "title": "Psihijatar Banja Luka - Dr Dragan Tešanović | DOBAR",
             "meta_description": "Specijalistička psihijatrijska ordinacija u Banjoj Luci - psihijatrijski pregledi, psihoterapija, EMDR. Dr Dragan Tešanović i tim stručnjaka.",
