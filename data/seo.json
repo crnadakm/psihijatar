@@ -10,12 +10,13 @@
         "robots_txt": "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /data/\nDisallow: /php/\nSitemap: https://dobar.psihijatar.info/sitemap.xml",
         "schema_org": {
             "type": "MedicalBusiness",
-            "name": "D.O.B.A.R. - zdravstvena ustanova",
-            "description": "Specijalistička psihijatrijska ambulanta u Banjoj Luci - psihijatrijski pregledi, psihoterapija, EMDR i sistemske konstelacije.",
+            "name": "ZU Dobar dr Dragan Tešanović Banjaluka",
+            "alternate_name": "DOBAR - zdravstvena ustanova",
+            "description": "Specijalistička psihijatrijska ambulanta u Banjoj Luci - psihijatrijski pregledi i konsultacije, individualni psihoterapijski susreti, grupni psihijatrijski rad, EMDR i sistemske konstelacije.",
             "url": "https://dobar.psihijatar.info",
             "telephone": "+38766945702",
             "address": {
-                "street": "Ulica Vojvode Pere Krece 2",
+                "street": "Vojvode Pere Krece 2",
                 "city": "Banja Luka",
                 "postal": "78000",
                 "country": "BA"
@@ -27,8 +28,14 @@
             "opening_hours": [
                 {
                     "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
                     "opens": "09:00",
+                    "closes": "17:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Wednesday",
+                    "opens": "11:00",
                     "closes": "19:00"
                 }
             ],
@@ -37,7 +44,12 @@
             "founder": {
                 "name": "Dr Dragan Tešanović",
                 "jobTitle": "Specijalista psihijatrije"
-            }
+            },
+            "services": [
+                "Psihijatrijski pregledi i konsultacije",
+                "Individualni psihoterapijski susreti",
+                "Grupni psihijatrijski rad"
+            ]
         }
     },
     "pages": {
@@ -95,10 +107,10 @@
         },
         "kontakt.php": {
             "title": "Kontakt - Psihijatar Banja Luka | DOBAR",
-            "meta_description": "Zakazivanje psihijatrijskog pregleda u Banjoj Luci - Vojvode Pere Krece 2. Telefon: +387 66 945 702. WhatsApp, Viber i email kontakt.",
-            "meta_keywords": "kontakt psihijatar banja luka, zakazivanje psihijatra, dobar kontakt, dr tešanović kontakt",
+            "meta_description": "Zakazivanje psihijatrijskog pregleda u Banjoj Luci - Vojvode Pere Krece 2. Telefon: 066 945-702. WhatsApp, Viber i email kontakt.",
+            "meta_keywords": "kontakt psihijatar banja luka, zakazivanje psihijatra, dobar kontakt, dr tešanović kontakt, vojvode pere krece",
             "og_title": "Kontakt - Psihijatar Banja Luka | DOBAR",
-            "og_description": "Zakazivanje psihijatrijskog pregleda u Banjoj Luci. Vojvode Pere Krece 2. Telefon: +387 66 945 702.",
+            "og_description": "Zakazivanje psihijatrijskog pregleda u Banjoj Luci. Vojvode Pere Krece 2. Telefon: 066 945-702.",
             "og_image": "https://dobar.psihijatar.info/images/team/05.jpg",
             "og_image_alt": "Kontakt DOBAR - Psihijatar Banja Luka",
             "og_type": "website",

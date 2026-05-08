@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sr">
 	<?php include 'elements/head.php' ?>
+	<?php $siteData = getContent('site'); ?>
 <body id="page-top" class="subpage">
 
 <div class="body">
@@ -72,11 +73,20 @@
 						<br>
 						<h2 class="intro-title">Kako do nas</h2>
 						<ul class="list">
-							<li><i class="icon-home"></i>Ulica Vojvode Pere Krece 2 <br><span class="pl-20">Banja Luka, 78 000</span></li>
-							<li><i class="icon-call"></i><abbr title="Phone">+387 66 945 702</abbr> </li>
+							<li><i class="icon-home"></i><?= htmlspecialchars($siteData['address'] ?? 'Vojvode Pere Krece 2, Banja Luka 78000') ?></li>
+							<li><i class="icon-call"></i><abbr title="Phone"><a href="tel:+38766945702" style="color:inherit;text-decoration:none;"><?= htmlspecialchars($siteData['phone'] ?? '+387 66 945-702') ?></a></abbr></li>
 							<small>*Broj je samo za viber poruke</small>
-							<!--li><i class="icon-phone"></i><abbr title="Mobile">M:</abbr> (123) 456-7890</li>
-							<li><i class="icon-mail"></i><a href="mailto:info@drdobar.com">teatrorapija@gmail.com</a></li-->
+						</ul>
+						<br>
+						<h3 class="intro-title">Radno vrijeme</h3>
+						<ul class="list">
+							<li>Ponedjeljak: <span>9–17h</span></li>
+							<li>Utorak: <span>9–17h</span></li>
+							<li>Srijeda: <span>11–19h</span></li>
+							<li>Četvrtak: <span>9–17h</span></li>
+							<li>Petak: <span>9–17h</span></li>
+							<li>Subota: <span style="color:#999;">zatvoreno</span></li>
+							<li>Nedjelja: <span style="color:#999;">zatvoreno</span></li>
 						</ul>
 						
 					</div>
