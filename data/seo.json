@@ -11,7 +11,7 @@
         "schema_org": {
             "type": "MedicalBusiness",
             "name": "D.O.B.A.R. - zdravstvena ustanova",
-            "description": "Specijalistička psihijatrijska ambulanta",
+            "description": "Specijalistička psihijatrijska ambulanta u Banjoj Luci - psihijatrijski pregledi, psihoterapija, EMDR i sistemske konstelacije.",
             "url": "https://dobar.psihijatar.info",
             "telephone": "+38766945702",
             "address": {
@@ -24,8 +24,20 @@
                 "latitude": "44.759745",
                 "longitude": "17.181853"
             },
-            "opening_hours": "",
-            "price_range": ""
+            "opening_hours": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "19:00"
+                }
+            ],
+            "price_range": "$$",
+            "medical_specialty": "Psychiatric",
+            "founder": {
+                "name": "Dr Dragan Tešanović",
+                "jobTitle": "Specijalista psihijatrije"
+            }
         }
     },
     "pages": {
@@ -95,16 +107,17 @@
             "h1": "Kontakt"
         },
         "tim.php": {
-            "title": "Naš tim: Psihijatri i psihoterapeuti | ZU DOBAR",
-            "meta_description": "Upoznajte tim Z.U. DOBAR - psihijatri / psihoterapeuti, psiholozi, medicinsko osoblje sa dugogodišnjim iskustvom u mentalnom zdravlju u Banja Luci.\n",
-            "meta_keywords": "",
-            "og_title": "Naš tim: Psihijatri i psihoterapeuti | ZU DOBAR",
-            "og_description": "Upoznajte tim Z.U. DOBAR - psihijatri / psihoterapeuti, psiholozi, medicinsko osoblje sa dugogodišnjim iskustvom u mentalnom zdravlju u Banja Luci.\n",
+            "title": "Tim - Dr Tešanović i psihoterapeuti | Psihijatar Banja Luka",
+            "meta_description": "Upoznajte naš tim - Dr Dragan Tešanović (specijalista psihijatrije), Dr Tatjana Maglov, Dr Željka Štrbac, psihoterapeuti i medicinsko osoblje DOBAR Banja Luka.",
+            "meta_keywords": "dr dragan tešanović, psihijatar banja luka, dr tatjana maglov, dr željka štrbac, psihoterapeut banja luka, tim dobar",
+            "og_title": "Tim - Dr Tešanović i psihoterapeuti | Psihijatar Banja Luka",
+            "og_description": "Upoznajte tim DOBAR - psihijatri, psihoterapeuti i medicinsko osoblje sa dugogodišnjim iskustvom u Banjoj Luci.",
             "og_image": "https://www.dobar.psihijatar.info/images/team/dragan.jpg",
-            "og_type": "article",
+            "og_image_alt": "Tim DOBAR - Dr Dragan Tešanović i psihoterapeuti Banja Luka",
+            "og_type": "website",
             "robots": "index, follow",
             "canonical": "https://dobar.psihijatar.info/tim.php",
-            "h1": "Ljudi"
+            "h1": "Ljudi koji podržavaju koncept DOBAR"
         },
         "ideja.php": {
             "title": "Ideja DOBAR - akronim mentalnog zdravlja | Psihijatar Banja Luka",
@@ -120,16 +133,17 @@
             "h1": "Ideja"
         },
         "aktivnosti.php": {
-            "title": "Psihijatar i psihoterapija Banja Luka | ZU.DOBAR",
-            "meta_description": "Psihijatrijski pregledi, individualna psihoterapija, EMDR, grupna terapija i online susreti u DOBAR Banja Luka. Zakazivanje na WhatsApp ili Viber.",
-            "meta_keywords": "",
-            "og_title": "Psihijatar i psihoterapija Banja Luka | ZU.DOBAR",
-            "og_description": "Psihijatrijski pregledi, psihoterapija, grupni rad i online terapija u Z.U. DOBAR Banja Luka. ",
+            "title": "Psihijatrijski pregled i psihoterapija | Psihijatar Banja Luka",
+            "meta_description": "Psihijatrijski pregled, individualna i grupna psihoterapija, EMDR, sistemske konstelacije i online konsultacije u Banjoj Luci. Zakazivanje na Viber i WhatsApp.",
+            "meta_keywords": "psihijatrijski pregled banja luka, psihoterapija banja luka, EMDR banja luka, online psihijatar, individualna psihoterapija, grupna psihoterapija",
+            "og_title": "Psihijatrijski pregled i psihoterapija | Psihijatar Banja Luka",
+            "og_description": "Psihijatrijski pregled, psihoterapija, EMDR i online konsultacije u Banjoj Luci. Zakazivanje na Viber/WhatsApp.",
             "og_image": "https://www.dobar.psihijatar.info/images/team/12zelenasoba.jpg",
-            "og_type": "article",
+            "og_image_alt": "DOBAR ordinacija - psihijatrijski pregledi i psihoterapija Banja Luka",
+            "og_type": "website",
             "robots": "index, follow",
             "canonical": "https://dobar.psihijatar.info/aktivnosti.php",
-            "h1": "Aktivnosti"
+            "h1": "Aktivnosti i usluge - psihijatar Banja Luka"
         },
         "dokumenti.php": {
             "title": "Čitanka - tekstovi o mentalnom zdravlju | DOBAR Banja Luka",
@@ -197,43 +211,43 @@
             "h1": "Kratki tekstovi"
         },
         "kojeko.php": {
-            "title": "Ko je ko u brizi o mentalnom zdravlju",
-            "meta_description": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog...",
-            "meta_keywords": "",
-            "og_title": "Ko je ko u brizi o mentalnom zdravlju",
-            "og_description": "Ako razmišljate o tome da se sretnete sa nekim ko bi mogao pomoći u unapređenju i očuvanju vašeg mentalnog zdravlja moguće je da ste zbunjeni zbog...",
+            "title": "Razlika psiholog, psihijatar, psihoterapeut | DOBAR Banja Luka",
+            "meta_description": "Koja je razlika između psihologa, psihijatra i psihoterapeuta? Ko liječi šta, kome se obratiti i kada potražiti pomoć - vodič psihijatra iz Banje Luke.",
+            "meta_keywords": "razlika psiholog psihijatar, psiholog vs psihijatar, psihoterapeut psiholog razlika, kome se obratiti za mentalno zdravlje",
+            "og_title": "Razlika psiholog, psihijatar, psihoterapeut | DOBAR Banja Luka",
+            "og_description": "Koja je razlika između psihologa, psihijatra i psihoterapeuta? Ko liječi šta i kome se obratiti za pomoć.",
             "og_image": "",
+            "og_image_alt": "Razlika psiholog psihijatar psihoterapeut - vodič",
             "og_type": "article",
             "canonical": "https://dobar.psihijatar.info/kojeko.php",
             "robots": "index, follow",
-            "h1": "Ko je ko u brizi o mentalnom zdravlju",
-            "og_image_alt": "Ko je ko u brizi o mentalnom zdravlju"
+            "h1": "Ko je ko u brizi o mentalnom zdravlju"
         },
         "depresija.php": {
-            "title": "??? Depresija ??? | Psihijatar Banja Luka",
-            "meta_description": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Često se uspostavlja kao psihijatrijska dijagnoza, i tvrdi se da pogađa...",
-            "meta_keywords": "",
-            "og_title": "??? Depresija ??? | Psihijatar Banja Luka",
-            "og_description": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Često se uspostavlja kao psihijatrijska dijagnoza, i tvrdi se da pogađa...",
+            "title": "Depresija - simptomi, dijagnoza i liječenje | Psihijatar Banja Luka",
+            "meta_description": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Saznajte o simptomima, dijagnozi i liječenju depresije u Banjoj Luci.",
+            "meta_keywords": "depresija banja luka, simptomi depresije, liječenje depresije, depresija dijagnoza, antidepresivi",
+            "og_title": "Depresija - simptomi, dijagnoza i liječenje | Psihijatar Banja Luka",
+            "og_description": "Depresija je klinička bolest u kojoj neprijatne emocije traju nedjeljama ili duže. Simptomi, dijagnoza i liječenje.",
             "og_image": "",
+            "og_image_alt": "Depresija - simptomi i liječenje",
             "og_type": "article",
             "canonical": "https://dobar.psihijatar.info/depresija.php",
             "robots": "index, follow",
-            "h1": "??? Depresija ???",
-            "og_image_alt": "??? Depresija ???"
+            "h1": "Depresija"
         },
         "anksiolitici.php": {
-            "title": "\"Anksiolitik je car\" ili \"Car Je go\" | Psihijatar Banja Luka",
-            "meta_description": "Benzodiazepini, Z-lijekovi i biljni preparati za anksioznost — sta trebas znati o rizicima, zavisnosti i pravilnoj primjeni. ",
-            "meta_keywords": "",
-            "og_title": "\"Anksiolitik je car\" ili \"Car Je go\" | Psihijatar Banja Luka",
-            "og_description": "Benzodiazepini, Z-lijekovi i biljni preparati za anksioznost — sta trebas znati o rizicima, zavisnosti i pravilnoj primjeni. ",
+            "title": "Anksiolitici i anksioznost - vodič | Psihijatar Banja Luka",
+            "meta_description": "Anksiolitici za anksioznost - benzodiazepini, Z-lijekovi i biljni preparati. Šta trebate znati o rizicima, zavisnosti i pravilnoj primjeni.",
+            "meta_keywords": "anksiolitici, anksioznost lijekovi, benzodiazepini, biljni anksiolitici, lijek za smirenje, anksioznost banja luka",
+            "og_title": "Anksiolitici i anksioznost - vodič | Psihijatar Banja Luka",
+            "og_description": "Anksiolitici za anksioznost - benzodiazepini, Z-lijekovi i biljni preparati. Rizici, zavisnost i pravilna primjena.",
             "og_image": "https://dobar.psihijatar.info/images/anksiolitik.jpg",
+            "og_image_alt": "Anksiolitici i anksioznost - vodič psihijatra",
             "og_type": "article",
             "robots": "index, follow",
             "canonical": "https://dobar.psihijatar.info/anksiolitici.php",
-            "h1": "\"Anksiolitik je car\" ili \"Car Je go\"",
-            "og_image_alt": "\"Anksiolitik je car\" ili \"Car Je go\""
+            "h1": "Anksiolitik je car ili Car je go"
         },
         "burnout.php": {
             "title": "Burnout - sindrom izgaranja na poslu | Psihijatar Banja Luka",

@@ -51,6 +51,7 @@ function getPageSeo($pageFile = null) {
         'og_type' => $page['og_type'] ?? 'website',
         'robots' => $page['robots'] ?? 'index, follow',
         'canonical' => $page['canonical'] ?? '',
+        'h1' => $page['h1'] ?? '',
         'site_name' => $global['site_name'] ?? '',
         'base_url' => $global['base_url'] ?? '',
     ];
@@ -129,20 +130,21 @@ function renderSeoHead($pageFile = null) {
         $html .= "\t<meta property=\"og:site_name\" content=\"" . htmlspecialchars($seo['site_name']) . "\">\n";
     }
 
-    // Schema.org JSON-LD (only on index)
+    // Schema.org JSON-LD — render on ALL pages for local SEO signals
     $pageFile = $pageFile ?: basename($_SERVER['SCRIPT_NAME']);
-    if ($pageFile === 'index.php' && !empty($global['schema_org'])) {
+    if (!empty($global['schema_org'])) {
         $s = $global['schema_org'];
-        $schema = [
+        $orgSchema = [
             '@context' => 'https://schema.org',
             '@type' => $s['type'] ?? 'MedicalBusiness',
             'name' => $s['name'] ?? '',
             'description' => $s['description'] ?? '',
             'url' => $s['url'] ?? '',
             'telephone' => $s['telephone'] ?? '',
+            'image' => $global['default_og_image'] ?? '',
         ];
         if (!empty($s['address'])) {
-            $schema['address'] = [
+            $orgSchema['address'] = [
                 '@type' => 'PostalAddress',
                 'streetAddress' => $s['address']['street'] ?? '',
                 'addressLocality' => $s['address']['city'] ?? '',
@@ -151,16 +153,70 @@ function renderSeoHead($pageFile = null) {
             ];
         }
         if (!empty($s['geo']['latitude']) && !empty($s['geo']['longitude'])) {
-            $schema['geo'] = [
+            $orgSchema['geo'] = [
                 '@type' => 'GeoCoordinates',
                 'latitude' => $s['geo']['latitude'],
                 'longitude' => $s['geo']['longitude'],
             ];
         }
-        if (!empty($s['opening_hours'])) $schema['openingHours'] = $s['opening_hours'];
-        if (!empty($s['price_range'])) $schema['priceRange'] = $s['price_range'];
+        if (!empty($s['opening_hours'])) $orgSchema['openingHoursSpecification'] = $s['opening_hours'];
+        if (!empty($s['price_range'])) $orgSchema['priceRange'] = $s['price_range'];
+        if (!empty($s['medical_specialty'])) $orgSchema['medicalSpecialty'] = $s['medical_specialty'];
+        if (!empty($s['founder'])) {
+            $orgSchema['founder'] = [
+                '@type' => 'Person',
+                'name' => $s['founder']['name'] ?? '',
+                'jobTitle' => $s['founder']['jobTitle'] ?? '',
+            ];
+        }
+        // Social profiles via sameAs
+        $sameAs = [];
+        $siteData = loadContentData()['site'] ?? [];
+        foreach (['facebook', 'instagram', 'youtube', 'linkedin'] as $sn) {
+            if (!empty($siteData[$sn])) $sameAs[] = $siteData[$sn];
+        }
+        if ($sameAs) $orgSchema['sameAs'] = $sameAs;
 
-        $html .= "\t<script type=\"application/ld+json\">" . json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "</script>\n";
+        $html .= "\t<script type=\"application/ld+json\">" . json_encode($orgSchema, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "</script>\n";
+
+        // Article schema for article pages
+        if (!empty($articleOgOverride) && ($seo['og_type'] ?? '') === 'article') {
+            $articleSchema = [
+                '@context' => 'https://schema.org',
+                '@type' => 'Article',
+                'headline' => $articleOgOverride['title'] ?? $seo['title'] ?? '',
+                'description' => $articleOgOverride['description'] ?? $seo['meta_description'] ?? '',
+                'image' => $seo['og_image'] ?: ($global['default_og_image'] ?? ''),
+                'author' => [
+                    '@type' => 'Person',
+                    'name' => $global['default_author'] ?? 'Dragan Tešanović',
+                ],
+                'publisher' => [
+                    '@type' => 'Organization',
+                    'name' => $s['name'] ?? '',
+                    'logo' => [
+                        '@type' => 'ImageObject',
+                        'url' => $global['default_og_image'] ?? '',
+                    ],
+                ],
+                'mainEntityOfPage' => $seo['canonical'] ?: ($baseUrl . '/' . $pageFile),
+            ];
+            $html .= "\t<script type=\"application/ld+json\">" . json_encode($articleSchema, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "</script>\n";
+        }
+
+        // BreadcrumbList for non-home pages
+        if ($pageFile !== 'index.php' && $baseUrl) {
+            $crumbs = [
+                ['@type' => 'ListItem', 'position' => 1, 'name' => 'Početna', 'item' => $baseUrl . '/'],
+                ['@type' => 'ListItem', 'position' => 2, 'name' => $seo['h1'] ?? $seo['title'] ?? $pageFile, 'item' => $seo['canonical'] ?: ($baseUrl . '/' . $pageFile)],
+            ];
+            $bcSchema = [
+                '@context' => 'https://schema.org',
+                '@type' => 'BreadcrumbList',
+                'itemListElement' => $crumbs,
+            ];
+            $html .= "\t<script type=\"application/ld+json\">" . json_encode($bcSchema, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "</script>\n";
+        }
     }
 
     return $html;
