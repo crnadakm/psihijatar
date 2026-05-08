@@ -59,24 +59,25 @@
 
 				<!-- CONTACT INFO -->
 				<aside class="col-md-3 col-sm-4">
-					<div class="sidebar">
-						<h3 class="intro-title">Online zakazivanje</h3>
-						<ul class="list-inline social-icons icon-circle">
-							<!--li><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-							<li><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li-->
-							<li><a href="https://api.whatsapp.com/send?phone=+38766945702"><i class="fa fa-whatsapp"><img height="40" src="images/whatsapp.png" alt="WhatsApp kontakt"></i></a></li>
-							<li><a href="viber://chat?number=38766945702"><img height="40" src="images/viber.png" alt="Viber kontakt"></i></a></li>
-							<li><a target="_blank" href="https://www.facebook.com/dobarpsihijatar"><img height="40" src="images/fb.png" alt="Facebook stranica"></a></li>
-							<li><a target="_blank" href="https://www.instagram.com/dobar.zdravstvena.ustanova/"><img height="40" src="images/ig.svg" alt="Instagram stranica"></a></li>
-						</ul>
-						<br>
-						<br>
-						<h2 class="intro-title">Kako do nas</h2>
-						<ul class="list">
-							<li><i class="icon-home"></i><?= htmlspecialchars($siteData['address'] ?? 'Vojvode Pere Krece 2, Banja Luka 78000') ?></li>
-							<li><i class="icon-call"></i><abbr title="Phone"><a href="tel:+38766945702" style="color:inherit;text-decoration:none;"><?= htmlspecialchars($siteData['phone'] ?? '+387 66 945-702') ?></a></abbr></li>
-							<small>*Broj je samo za viber poruke</small>
-						</ul>
+					<div class="sidebar contact-sidebar">
+						<section class="contact-block">
+							<h2 class="contact-block-title">Online zakazivanje</h2>
+							<ul class="list-inline social-icons icon-circle contact-social">
+								<li><a href="https://api.whatsapp.com/send?phone=+38766945702" aria-label="WhatsApp"><img height="40" src="images/whatsapp.png" alt="WhatsApp kontakt"></a></li>
+								<li><a href="viber://chat?number=38766945702" aria-label="Viber"><img height="40" src="images/viber.png" alt="Viber kontakt"></a></li>
+								<li><a target="_blank" href="https://www.facebook.com/dobarpsihijatar" aria-label="Facebook"><img height="40" src="images/fb.png" alt="Facebook stranica"></a></li>
+								<li><a target="_blank" href="https://www.instagram.com/dobar.zdravstvena.ustanova/" aria-label="Instagram"><img height="40" src="images/ig.svg" alt="Instagram stranica"></a></li>
+							</ul>
+						</section>
+
+						<section class="contact-block">
+							<h2 class="contact-block-title">Kako do nas</h2>
+							<ul class="contact-info">
+								<li><i class="icon-home"></i><span><?= htmlspecialchars($siteData['address'] ?? 'Vojvode Pere Krece 2, Banja Luka 78000') ?></span></li>
+								<li><i class="icon-call"></i><a href="tel:+38766945702" class="phone-link"><?= htmlspecialchars($siteData['phone'] ?? '+387 66 945-702') ?></a></li>
+							</ul>
+							<p class="contact-note">*broj je samo za Viber poruke</p>
+						</section>
 						<?php
 						$tz = new DateTimeZone('Europe/Sarajevo');
 						$now = new DateTime('now', $tz);
@@ -102,21 +103,8 @@
 							}
 						}
 						?>
-						<style>
-							.hours-block { font-size: 14px; margin-top: 10px; }
-							.hours-status { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; background: #f5f5f5; margin-bottom: 8px; font-size: 13px; }
-							.hours-status .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-							.hours-status.open .dot { background: #28a745; }
-							.hours-status.closed .dot { background: #dc3545; }
-							.hours-status.open { color: #155724; }
-							.hours-status.closed { color: #555; }
-							.hours-list { list-style: none; padding: 0; margin: 0; }
-							.hours-list li { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed #e5e5e5; }
-							.hours-list li:last-child { border-bottom: 0; }
-							.hours-list .muted { color: #999; }
-						</style>
-						<h3 class="intro-title">Radno vrijeme</h3>
-						<div class="hours-block">
+						<section class="contact-block">
+							<h2 class="contact-block-title">Radno vrijeme</h2>
 							<div class="hours-status <?= $isOpen ? 'open' : 'closed' ?>">
 								<span class="dot"></span>
 								<span><?= htmlspecialchars($statusText) ?></span>
@@ -126,10 +114,38 @@
 								<li><span>Srijeda</span><span>11–19h</span></li>
 								<li><span>Vikend</span><span class="muted">zatvoreno</span></li>
 							</ul>
-						</div>
-						
+						</section>
 					</div>
 				</aside>
+
+				<style>
+					.contact-sidebar { font-size: 14px; }
+					.contact-sidebar .contact-block { padding: 16px 0; border-bottom: 1px solid #eee; }
+					.contact-sidebar .contact-block:last-child { border-bottom: 0; }
+					.contact-sidebar .contact-block-title { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px 0; color: #333; }
+					.contact-sidebar .contact-social { padding: 0; margin: 0; }
+					.contact-sidebar .contact-social li { padding: 0 6px 0 0; }
+					.contact-sidebar .contact-info { list-style: none; padding: 0; margin: 0; }
+					.contact-sidebar .contact-info li { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; line-height: 1.4; }
+					.contact-sidebar .contact-info li i { color: #229C8C; font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+					.contact-sidebar .phone-link { color: inherit; text-decoration: none; font-weight: 600; }
+					.contact-sidebar .phone-link:hover { color: #229C8C; }
+					.contact-sidebar .contact-note { font-size: 12px; color: #999; font-style: italic; margin: 6px 0 0 26px; }
+					.contact-sidebar .hours-status { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; background: #f5f5f5; margin-bottom: 10px; font-size: 13px; }
+					.contact-sidebar .hours-status .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+					.contact-sidebar .hours-status.open .dot { background: #28a745; }
+					.contact-sidebar .hours-status.closed .dot { background: #dc3545; }
+					.contact-sidebar .hours-status.open { color: #155724; }
+					.contact-sidebar .hours-status.closed { color: #555; }
+					.contact-sidebar .hours-list { list-style: none; padding: 0; margin: 0; }
+					.contact-sidebar .hours-list li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dashed #e5e5e5; }
+					.contact-sidebar .hours-list li:last-child { border-bottom: 0; }
+					.contact-sidebar .hours-list .muted { color: #999; }
+					@media (max-width: 767px) {
+						.contact-sidebar .contact-block-title { font-size: 14px; }
+						.contact-sidebar .contact-block { padding: 14px 0; }
+					}
+				</style>
 
 				<!-- CONTACT FORM -->
 				<div class="col-md-8 col-md-push-1 col-sm-8">
