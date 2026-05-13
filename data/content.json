@@ -390,6 +390,158 @@
             }
         ]
     },
+    "aktivnosti": {
+        "page_title": "Aktivnosti",
+        "intro_title": "Dostupne usluge:",
+        "categories": [
+            {
+                "id": "psihijatrijski-pregledi",
+                "title": "Psihijatrijski pregledi i konsultacije",
+                "subtitle": "",
+                "active": true,
+                "items": [
+                    {
+                        "title": "Prvi psihijatrijski susreti",
+                        "description": "Razgovor je ljekara sa novim pacijentom. Podrazumijeva razgovor o opštim životnim podacima i psihičkim tegobama, opšti pregled pacijenta ako je nužan, uvid u psihički status; postavljanje indikacija za dalji psihijatrijski tretman i predlaganje potrebne terapije; propisivanje terapije; određivanje drugih oblika liječenja i podrške. Trajanje od 45 - 60 minuta.",
+                        "active": true
+                    },
+                    {
+                        "title": "Redovni kontrolni psihijatrijski pregled",
+                        "description": "Susret je tokom trajanja podrške i liječenja u kojem pacijent i ljekar sagledavaju promjene koje se dešavaju i prilagođen je napretku osobe u procesu liječenja. Podrazumijeva reviziju farmakoterapijskog pristupa i kratke psihoterapijske intervencije. Trajanje je od 15 – 30 minuta.",
+                        "active": true
+                    },
+                    {
+                        "title": "Vanredni kontrolni psihijatrijski pregled pacijenta",
+                        "description": "Susret je van dogovorenog trajanja podrške i liječenja a dešava se nakon duže od četiri mjeseca od prethodnog susreta. Pacijent i ljekar sagledavaju razloge ponovljenog javljanja i prave novi plan liječenja. Podrazumijeva reviziju farmakoterapijskog pristupa i kratke psihoterapijske intervencije. Trajanje je od 30 – 45 minuta.",
+                        "active": true
+                    },
+                    {
+                        "title": "Psihijatrijsko vanbolničko liječenje",
+                        "description": "Je nastavak liječenja pacijenta u ambulantnim uslovima nakon dostignute stabilizacije psihičkog stanja kroz bolničko liječenje. Prvi susret je trajanja od 30 - 45 minuta a kasniji su kao i drugi kontrolni pregledi pacijenta.",
+                        "active": true
+                    }
+                ]
+            },
+            {
+                "id": "psihoterapijski-susreti",
+                "title": "Psihoterapijski susreti",
+                "subtitle": "Dobrovoljni i povjerljivi razgovori između terapijskog klijenta i terapeuta.",
+                "active": true,
+                "items": [
+                    {
+                        "title": "Razlozi susreta",
+                        "description": "Osnova terapijskog procesa je odnos temeljen na razumijevanju i podršci koji se razvija u ovim razgovorima, dok su razlozi zbog kojih klijent traži susret različiti. Osoba može htjeti da unaprijedi lično funkcionisanje istraživanjem, razumijevanjem i mijenjanjem razmišljanja, ponašanja i osjećanja kojima nije zadovoljna; takođe, osoba koja je razvila psihičke poteškoće može htjeti da postigne umanjenje psihičke patnje i bola sagledavanjem i pokretanjem unutrašnjih snaga za izliječenje.",
+                        "active": true
+                    },
+                    {
+                        "title": "Uspostava terapijskog odnosa",
+                        "description": "Tokom susreta klijent govori po svom izboru o sadržajima koje hoće da istraži i/ili rješava; terapeut sluša, tumači, podržava, usmjerava, podučava i time nudi doprinos klijentovom ličnom napretku. Efikasnost terapijskom procesu daje spremnost klijenta da postepeno sagledava uzroke svojih poteškoća u funkcionisanju i učini odgovarajuće promjene kojima će unaprijediti ukupni kvalitet vlastitog života; terapeut podržava proces bez predrasuda i osuđivanja onog što klijent prezentuje sa posvećenom prisutnošću u uspostavljanju odnosa.",
+                        "active": true
+                    },
+                    {
+                        "title": "Dužina procesa",
+                        "description": "O smjeru, intenzitetu i brzini procesa koji se dešava odlučuju zajedno; dužina trajanja terapijskog procesa je od nekoliko nedjelja do nekoliko godina.",
+                        "active": true
+                    },
+                    {
+                        "title": "Uvodni psihoterapijski susret/razgovor",
+                        "description": "Zakazuje se u najskorijem terminu koji odgovara i klijentu i terapeutu putem mejla, viber ili sms porukom. Terapijski susret počinje nakon 15 minuta razgovora o uslovima i očekivanjima od saradnje; ukoliko se obje strane slože da su uslovi i očekivanja prihvatljivi, prelazi se na prvi uvodni psihoterapijski razgovor; ukoliko nema slaganja o daljem toku saradnje, razgovor se završava i za taj dio nije planirana finansijska nadoknada. Intervju-razgovor traje 60 minuta i podrazumijeva opšte upoznavanje i sagledavanje razloga zbog kojih ga je klijent zatražio; nakon ovog razgovora moguće je da terapeut predloži dalji način rada i sklapa se prvi ugovor o vrsti i trajanju saradnje, ali češće se dogodi da prijedlog trajanja terapijske saradnje bude učinjen nakon nekoliko redovnih susreta.",
+                        "active": true
+                    },
+                    {
+                        "title": "Redovni individualni terapijski susret",
+                        "description": "Razgovor traje 50 minuta i zakazuje se u sklopu ugovorenog aktivnog terapijskog procesa. Podrazumijeva se da je termin zakazan ili potvrđen na kraju prethodnog terapijskog susreta bilo koje vrste.",
+                        "active": true
+                    },
+                    {
+                        "title": "Vanredni individualni terapijski susret",
+                        "description": "Razgovor traje 50 minuta; ovdje spadaju svi susreti za koje termini nisu dogovoreni na kraju prethodnog a zatraženi su od klijenta (dodatni susreti između termina, povremeni susreti sa korisnicima koji nisu u ugovorenom terapijskom procesu, susreti nakon nenajavljenog propuštanja termina od strane korisnika i dr.). Zakazuje se u prvom najskorijem terminu koji odgovara i klijentu i terapeutu.",
+                        "active": true
+                    },
+                    {
+                        "title": "Revizioni individualni psihoterapijski susret",
+                        "description": "Preporučeno je da klijenti koji su u stalnom grupnom terapijskom procesu na razmacima od 8-10 nedjelja zakažu individualne susrete sa terapeutom (zakazuje se isključivo na kraju susreta grupe), dok su i za klijente u individualnom kao i u grupnom procesu kao obavezni sastavni dio rada preporučena prisustva na najmanje 2 radionice sistemskih konstelacija tokom godine.",
+                        "active": true
+                    },
+                    {
+                        "title": "Online terapijski susreti za pojedince",
+                        "description": "Terapijski sastanak u kojem se koristi elektronska komunikacija (Skype, Viber, WhatsApp, Zoom). Podrazumijeva sličan dijapazon usluga koje su već pomenute, osim što se klijent i terapeut ne nalaze u istoj sobi.",
+                        "active": true
+                    },
+                    {
+                        "title": "Individualni terapijski susret uz primjenu EMDR metode",
+                        "description": "Susret traje 55-70 minuta i zakazuju se u sklopu već postojećeg kontinuiranog terapijskog procesa – planira se kao izdvojeni usmjereni dio čije je trajanje od nekoliko susreta do nekoliko desetina susreta; pripremni sastanci za ovu metodu su trajanja i uz naknadu kao za individualni psihoterapijski susret.",
+                        "active": true
+                    }
+                ]
+            },
+            {
+                "id": "grupni-psihijatrijski-rad",
+                "title": "Grupni psihijatrijski rad",
+                "subtitle": "Terapijski susret u grupi je istovremeni povjerljiv razgovor više terapijskih klijenata sa terapeutom i međusobno.",
+                "active": true,
+                "items": [
+                    {
+                        "title": "Povjerljivost u radu",
+                        "description": "Svi učesnici razgovora (klijenti i terapeuti) su obavezni na tajnost svih ličnih i životnih podataka koje su saznali o drugim osobama. Učesnicima grupe se ne preporučuje da van susreta u okviru uobičajenog termina međusobno razgovaraju o temama sa grupe, kao ni o drugim temama koje nisu spremni podijeliti sa ostalima u grupi; o temama sa grupnih susreta se takođe ne govori sa ranijim članovima grupe, naročito ukoliko su u pitanju teme obrađivane nakon što je neko prestao dolaziti na susrete.",
+                        "active": true
+                    },
+                    {
+                        "title": "Stručno usmjeravanje",
+                        "description": "Stručno vođen grupni rad u okruženju povjerenja je sadržajan i intenzivan; svako proživljavanje, spoznaja, osjećanje tokom takvog razgovora nosi mogućnosti za lični razvoj. Osim unutrašnjeg procesa koji nastaje kao rezultat razgovora između klijenata i terapeuta, dobija se mogućnost sagledavanja reakcija članova grupe; drugi reaguju na podatke koje doznaju o životnim istorijama drugih, ali i na trenutne stavove i doživljaje o kojima se govori, a ponajviše na proces lične promjene koji klijent bira.",
+                        "active": true
+                    },
+                    {
+                        "title": "Zaštita procesa",
+                        "description": "Bliski lični odnosi van grupe (poslovni, finansijski, partnerski, seksualni) se ne preporučuju, jer uglavnom negativno utiču na dinamiku grupe — kao posljedica ovakvih odnosa očekuje se da jedan od učesnika u takvim odnosima napusti ili promijeni grupu. Terapeut zadržava pravo i obavezu da o pitanjima za koje mu je potrebna pomoć u radu konsultuje terapeute supervizore (štiteći lične podatke klijenta). U slučaju da klijent najavi ili učini ugrožavanje sigurnosti sebe ili drugih, terapeut je dužan da o tome obavijesti policiju.",
+                        "active": true
+                    },
+                    {
+                        "title": "Susreti terapijske razvojne grupe",
+                        "description": "Od 4 do 11 klijenata. Događa se u stalnom sedmičnom terminu koji je unaprijed dogovoren. Trajanje 85 minuta kada je manje od pet klijenata prisutno na terminu grupe, a 105 minuta kada je pet ili više klijenata.",
+                        "active": true
+                    },
+                    {
+                        "title": "Radionice grupe za sistemske konstelacije",
+                        "description": "Grupe od 12 do 16 klijenata (najviše 25). Zakazuju se kao dio ličnog razvojnog rada u razmacima od 10 do 14 sedmica; radionice su dvodnevne u ukupnom trajanju od 12 do 14 radnih sati; preporučuju se barem dva učešća na nivou kalendarske godine, a prihvatljivo je i češće prisustvo klijenta na radionicama.",
+                        "active": true
+                    },
+                    {
+                        "title": "Sistemska porodična i bračna terapija",
+                        "description": "Mogući su različiti oblici tretmana: sistemski rad sa pojedincem, rad sa parom, rad sa bazičnom ali i proširenom porodicom. Prvi susret traje 90 minuta a sastanci tokom tretmana 60 minuta i obično se zakazuje na razmacima od dvije nedjelje ili više nedjelja u zavisnosti od teme koja se u procesu obrađuje.",
+                        "active": true
+                    }
+                ]
+            }
+        ],
+        "upcoming_title": "U pripremi:",
+        "upcoming_categories": [
+            {
+                "title": "Psihijatrijski pregledi i konsultacije",
+                "active": true,
+                "items": [
+                    {
+                        "title": "Konzilijarna revizija psihofarmakoloških protokola",
+                        "description": "Sastanak pacijenata na dugotrajnom liječenju sa najmanje troje ljekara specijalista psihijatrijske i kliničko-farmakološke struke, zarad usklađivanja toka liječenja sa najsavremenijim preporukama za liječenje a u skladu sa psihičkim simptomima i stanjem osobe. Trajanje je 30 – 45 minuta.",
+                        "active": true
+                    },
+                    {
+                        "title": "Tretman ovisnosti o internetu - psihijatrijski pregled i timski terapijski pristup",
+                        "description": "",
+                        "active": true
+                    }
+                ]
+            }
+        ],
+        "gallery": [
+            { "image": "images/team/03detalj.jpg", "thumb": "images/team/03detalj_thumb.jpg", "title": "Detalj iz ordinacije", "alt": "Detalj iz ordinacije DOBAR", "active": true },
+            { "image": "images/team/08figurey.jpg", "thumb": "images/team/08figurey_thumb.jpg", "title": "Figure za sistemske konstelacije", "alt": "Figure za sistemske konstelacije", "active": true },
+            { "image": "images/team/10grupaz.jpg", "thumb": "images/team/10grupaz_thumb.jpg", "title": "Grupna terapija", "alt": "Prostor za grupnu terapiju", "active": true },
+            { "image": "images/team/11mjestoklijent.jpg", "thumb": "images/team/11mjestoklijent_thumb.jpg", "title": "Mjesto klijenta", "alt": "Mjesto za klijenta u terapijskoj sobi", "active": true },
+            { "image": "images/team/12zelenasoba.jpg", "thumb": "images/team/12zelenasoba_thumb.jpg", "title": "Zelena soba", "alt": "Zelena soba u ordinaciji DOBAR", "active": true },
+            { "image": "images/team/13polica.jpg", "thumb": "images/team/13polica_thumb.jpg", "title": "Polica sa knjigama", "alt": "Polica sa stručnom literaturom", "active": true }
+        ]
+    },
     "citanka": {
         "page_title": "Čitanka",
         "subtitle": "Tekstovi pred vama mogu pomoći da učite jezik mentalnog zdravlja kako bi postao sastavni dio vašeg životnog znanja",
