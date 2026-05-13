@@ -120,6 +120,42 @@
 					</div>
 					<?php endif; ?>
 
+					<?php
+					$faqItems = array_values(array_filter($ak['faq'] ?? [], fn($f) => $f['active'] ?? true));
+					if (!empty($faqItems)): ?>
+					<section class="ak-faq" id="faq" style="margin-top:48px;">
+						<div class="ak-category-head">
+							<h2>Često postavljena pitanja</h2>
+						</div>
+						<?php foreach ($faqItems as $fIdx => $faq):
+							$faqId = 'faq-' . $fIdx;
+						?>
+						<div class="ak-item">
+							<a class="ak-item-toggle" href="#<?= $faqId ?>" data-target="<?= $faqId ?>" aria-expanded="false">
+								<?= htmlspecialchars($faq['question'] ?? '') ?>
+							</a>
+							<div class="ak-collapse" id="<?= $faqId ?>">
+								<div class="ak-item-body"><?= nl2br(htmlspecialchars($faq['answer'] ?? '')) ?></div>
+							</div>
+						</div>
+						<?php endforeach; ?>
+
+						<script type="application/ld+json">
+						<?php
+						echo json_encode([
+							'@context' => 'https://schema.org',
+							'@type' => 'FAQPage',
+							'mainEntity' => array_map(fn($f) => [
+								'@type' => 'Question',
+								'name' => $f['question'] ?? '',
+								'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['answer'] ?? ''],
+							], $faqItems),
+						], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+						?>
+						</script>
+					</section>
+					<?php endif; ?>
+
 				</div>
 			</div>
 		</div>

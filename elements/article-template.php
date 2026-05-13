@@ -147,6 +147,31 @@ foreach ($sections as $sec) {
 				<?php endif; ?>
 				<?php endforeach; ?>
 
+				<?php
+				$faqItems = array_values(array_filter($article['faq'] ?? [], fn($f) => $f['active'] ?? true));
+				if (!empty($faqItems)): ?>
+				<br><h3 id="faq">Često postavljena pitanja</h3><br>
+				<dl class="article-faq">
+					<?php foreach ($faqItems as $faq): ?>
+					<dt style="font-weight:600;margin-top:14px;"><?= htmlspecialchars($faq['question'] ?? '') ?></dt>
+					<dd style="margin:6px 0 0;padding-left:0;"><?= nl2br(htmlspecialchars($faq['answer'] ?? '')) ?></dd>
+					<?php endforeach; ?>
+				</dl>
+				<script type="application/ld+json">
+				<?php
+				echo json_encode([
+					'@context' => 'https://schema.org',
+					'@type' => 'FAQPage',
+					'mainEntity' => array_map(fn($f) => [
+						'@type' => 'Question',
+						'name' => $f['question'] ?? '',
+						'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['answer'] ?? ''],
+					], $faqItems),
+				], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+				?>
+				</script>
+				<?php endif; ?>
+
 			</div>
 		</div>
 	</div>

@@ -6,3 +6,4 @@ Disallow: /php/
 Disallow: /naslovna-novi-dizajn.php
 
 Sitemap: https://dobar.psihijatar.info/sitemap-2026.xml
+Sitemap: https://dobar.psihijatar.info/sitemap-images.xml
