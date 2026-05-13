@@ -112,6 +112,46 @@ switch ($action) {
         echo json_encode(['status' => 'ok', 'message' => 'Lozinka promijenjena']);
         break;
 
+    case 'list_backups':
+        // List all backup files with metadata
+        $files = glob($dataDir . '*_backup_*.json');
+        $result = [];
+        foreach ($files as $f) {
+            $stats = stat($f);
+            $name = basename($f);
+            $type = strpos($name, 'content_backup') !== false ? 'content' : (strpos($name, 'seo_backup') !== false ? 'seo' : 'other');
+            $articleCount = null;
+            if ($type === 'content') {
+                $bjson = json_decode(file_get_contents($f), true);
+                $articleCount = is_array($bjson) && isset($bjson['articles']) ? count($bjson['articles']) : null;
+            }
+            $result[] = [
+                'name' => $name,
+                'type' => $type,
+                'size' => $stats['size'],
+                'mtime' => date('Y-m-d H:i:s', $stats['mtime']),
+                'article_count' => $articleCount,
+            ];
+        }
+        usort($result, fn($a, $b) => strcmp($b['name'], $a['name']));
+        echo json_encode(['status' => 'ok', 'backups' => $result]);
+        break;
+
+    case 'read_backup':
+        $name = $_GET['name'] ?? $_POST['name'] ?? '';
+        // Whitelist filename pattern
+        if (!preg_match('/^(content|seo)_backup_[\d_\-]+\.json$/', $name)) {
+            echo json_encode(['status' => 'error', 'message' => 'Invalid backup name']);
+            break;
+        }
+        $f = $dataDir . $name;
+        if (!file_exists($f)) {
+            echo json_encode(['status' => 'error', 'message' => 'Backup not found']);
+            break;
+        }
+        echo file_get_contents($f);
+        break;
+
     case 'cleanup_backups':
         $files = glob($dataDir . '*_backup_*.json');
         // Keep last 5 backups of each type
