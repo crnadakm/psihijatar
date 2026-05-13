@@ -26,3 +26,7 @@ jobs:
             **/.git*
             **/.git*/**
             data/*_backup_*.json
+            data/content.json
+            data/seo.json
+            internal/**
+            dobar-backup-*/**
