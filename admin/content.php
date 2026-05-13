@@ -31,7 +31,7 @@ requireLogin();
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-services">Usluge</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-quotes">Citati</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-testimonials">Iskustva</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-team">Tim</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" data-bs-toggle="pill" href="#sec-team">Tim →</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-cta">CTA</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-footer">Footer</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-highlights">Blog highlight</a></li>
@@ -119,12 +119,12 @@ requireLogin();
                 </div>
             </div>
 
-            <!-- TEAM -->
+            <!-- TEAM moved to standalone panel /admin/ljudi.php -->
             <div class="tab-pane fade" id="sec-team">
-                <div class="card-section" id="team">
-                    <h5><i class="bi bi-people"></i> Članovi tima</h5>
-                    <div id="team-items"></div>
-                    <button class="btn-add mt-2" onclick="addTeamMember()"><i class="bi bi-plus-lg"></i> Dodaj člana</button>
+                <div class="card-section">
+                    <h5><i class="bi bi-people-fill"></i> Tim — premešten u zaseban panel</h5>
+                    <p class="text-muted">Upravljanje članovima tima sad ima vlastiti panel sa preview-om fotografija.</p>
+                    <a href="ljudi.php" class="btn btn-primary"><i class="bi bi-arrow-right"></i> Otvori panel "Ljudi"</a>
                 </div>
             </div>
 
