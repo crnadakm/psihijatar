@@ -31,7 +31,6 @@ requireLogin();
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-services">Usluge</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-quotes">Citati</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-testimonials">Iskustva</a></li>
-            <li class="nav-item"><a class="nav-link text-muted" data-bs-toggle="pill" href="#sec-team">Tim →</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-cta">CTA</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-footer">Footer</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#sec-highlights">Blog highlight</a></li>
@@ -119,14 +118,7 @@ requireLogin();
                 </div>
             </div>
 
-            <!-- TEAM moved to standalone panel /admin/ljudi.php -->
-            <div class="tab-pane fade" id="sec-team">
-                <div class="card-section">
-                    <h5><i class="bi bi-people-fill"></i> Tim — premešten u zaseban panel</h5>
-                    <p class="text-muted">Upravljanje članovima tima sad ima vlastiti panel sa preview-om fotografija.</p>
-                    <a href="ljudi.php" class="btn btn-primary"><i class="bi bi-arrow-right"></i> Otvori panel "Ljudi"</a>
-                </div>
-            </div>
+            <!-- Team management moved to /admin/ljudi.php standalone panel -->
 
             <!-- CTA -->
             <div class="tab-pane fade" id="sec-cta">
@@ -239,7 +231,6 @@ requireLogin();
         renderServices();
         renderQuotes();
         renderTestimonials();
-        renderTeam();
         renderHighlights();
     }
 
@@ -375,55 +366,7 @@ requireLogin();
         renderTestimonials();
     }
 
-    // ===== TEAM =====
-    function renderTeam() {
-        const container = document.getElementById('team-items');
-        container.innerHTML = '';
-        (contentData.team || []).forEach((item, i) => {
-            container.innerHTML += `
-            <div class="item-card">
-                <div class="item-header">
-                    <h6>${escHtml(item.name) || 'Član ' + (i+1)}</h6>
-                    <div>
-                        <select class="form-select form-select-sm d-inline-block" style="width:auto;background:var(--darkest);color:#ccc;" onchange="contentData.team[${i}].role=this.value">
-                            <option value="lead" ${item.role==='lead'?'selected':''}>Glavni</option>
-                            <option value="member" ${item.role==='member'?'selected':''}>Član</option>
-                        </select>
-                        <button class="btn btn-sm ${item.active ? 'btn-success' : 'btn-secondary'}" onclick="toggleActive('team',${i})">${item.active ? 'Aktivan' : 'Neaktivan'}</button>
-                        <button class="btn btn-sm btn-outline-danger" onclick="removeItem('team',${i})"><i class="bi bi-trash"></i></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 mb-2">
-                        <label class="form-label">ID (slug)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.id)}" onchange="contentData.team[${i}].id=this.value">
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <label class="form-label">Ime i prezime</label>
-                        <input type="text" class="form-control" value="${escHtml(item.name)}" onchange="contentData.team[${i}].name=this.value">
-                    </div>
-                    <div class="col-md-5 mb-2">
-                        <label class="form-label">Slika (putanja ili upload)</label>
-                        <input type="text" class="form-control" id="team-img-${i}" value="${escHtml(item.image)}" onchange="contentData.team[${i}].image=this.value">
-                        <input type="file" class="form-control mt-1" accept="image/*" onchange="uploadImg('team',${i},this,'images/team/')">
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <label class="form-label">Alt text slike (SEO)</label>
-                        <input type="text" class="form-control" value="${escHtml(item.image_alt || '')}" onchange="contentData.team[${i}].image_alt=this.value" placeholder="Opis fotografije za pretraživače">
-                    </div>
-                    <div class="col-md-12 mb-2">
-                        <label class="form-label">Opis / biografija</label>
-                        <textarea class="form-control" style="min-height:100px" onchange="contentData.team[${i}].description=this.value">${escHtml(item.description)}</textarea>
-                    </div>
-                </div>
-            </div>`;
-        });
-    }
-    function addTeamMember() {
-        contentData.team = contentData.team || [];
-        contentData.team.push({ id: '', name: '', image: 'images/team/', description: '', role: 'member', active: true });
-        renderTeam();
-    }
+    // Team management migrated to admin/ljudi.php — renderTeam/addTeamMember removed.
 
     // ===== BLOG HIGHLIGHTS =====
     function renderHighlights() {
@@ -505,14 +448,14 @@ requireLogin();
     // ===== HELPERS =====
     function toggleActive(section, index) {
         contentData[section][index].active = !contentData[section][index].active;
-        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam, blog_highlights: renderHighlights };
+        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, blog_highlights: renderHighlights };
         renderMap[section]();
     }
 
     function removeItem(section, index) {
         if (!confirm('Obrisati stavku?')) return;
         contentData[section].splice(index, 1);
-        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, team: renderTeam, blog_highlights: renderHighlights };
+        const renderMap = { slider: renderSliders, services: renderServices, quotes: renderQuotes, testimonials: renderTestimonials, blog_highlights: renderHighlights };
         renderMap[section]();
     }
 
