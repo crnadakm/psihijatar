@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/lightbox.css">
 <style>
 	/* Standardizovan accordion stil scoped pod .ak-page */
-	.ak-page h1 { color: #000; }
+	.ak-page .blog-standard h1 { color: #000; }
 	.ak-page .ak-category { margin-bottom: 48px; }
 	.ak-page .ak-category-head { margin: 32px 0 8px; padding-bottom: 12px; border-bottom: 2px solid #229C8C; }
 	.ak-page .ak-category-head h2 { font-size: 24px; color: #229C8C; margin: 0; font-weight: 700; }
