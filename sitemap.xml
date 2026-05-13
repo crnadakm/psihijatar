@@ -267,4 +267,18 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Recovered articles (added 2026-05-13) -->
+  <url>
+    <loc>https://dobar.psihijatar.info/odlazakuroditeljskupenziju.php</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dobar.psihijatar.info/ruminacijailioverthinking.php</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
