@@ -39,19 +39,23 @@
 	<div class="body">
 		<?php include 'elements/header.php' ?>
 
+		<?php
+			$ak = getContent('aktivnosti');
+			$pageHeadClass = htmlspecialchars($ak['page_head_class'] ?? 'page-head-news');
+			$headImage = $ak['head_image'] ?? '';
+			$headImageAlt = htmlspecialchars($ak['head_image_alt'] ?? ($ak['page_title'] ?? 'Aktivnosti'));
+		?>
 		<!-- PAGE HEAD -->
-		<div class="page-head page-head-news">
+		<div class="page-head <?= $pageHeadClass ?>"<?php if ($headImage): ?> style="background: url('<?= htmlspecialchars($headImage) ?>') center/cover no-repeat;" role="img" aria-label="<?= $headImageAlt ?>"<?php endif; ?>>
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h1><?= htmlspecialchars(getContent('aktivnosti')['page_title'] ?? 'Aktivnosti') ?></h1>
+						<h1><?= htmlspecialchars($ak['page_title'] ?? 'Aktivnosti') ?></h1>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<?php $ak = getContent('aktivnosti'); ?>
 
 		<div class="blog-standard">
 			<div class="container">

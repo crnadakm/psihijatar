@@ -86,6 +86,62 @@ requireLogin();
                         </div>
                     </div>
                 </div>
+
+                <div class="card-section mt-3">
+                    <h5><i class="bi bi-image"></i> Hero slika (gornji banner)</h5>
+                    <p class="text-muted">Iste opcije kao kod članaka. Možeš izabrati postojeću CSS pozadinu ILI uploadovati svoju sliku (custom override). Preporuka za upload: 1920x600px ili veći.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">CSS klasa pozadine (default ako nije uploadovana custom slika)</label>
+                            <select class="form-select" id="page-head-class">
+                                <option value="page-head-news">News (default — shutterstock_1501617461)</option>
+                                <option value="page-head-health">Health (zdravstvo)</option>
+                                <option value="page-head-psihijatrija">Psihijatrija</option>
+                                <option value="page-head-o-psiho">O psihoterapiji</option>
+                                <option value="page-head-konst">Konstelacije</option>
+                                <option value="page-head-emdr">EMDR</option>
+                                <option value="page-head-grupna">Grupna terapija</option>
+                                <option value="page-head-depr">Depresija</option>
+                                <option value="page-head-stres">Stres</option>
+                                <option value="page-head-burn">Burnout</option>
+                                <option value="page-head-bol">Bol</option>
+                                <option value="page-head-veze">Veze</option>
+                                <option value="page-head-ppl">Ljudi (tim)</option>
+                                <option value="page-head-know">Znanja</option>
+                                <option value="page-head-books">Knjige</option>
+                                <option value="page-head-contact">Kontakt</option>
+                                <option value="page-head-four">Voda / 4</option>
+                                <option value="page-head-asert">Asertivna prava (srce)</option>
+                                <option value="page-head-anksiolitik">Anksiolitik</option>
+                                <option value="page-head-dementofobija">Dementofobija</option>
+                                <option value="page-head-simptom">Simptom</option>
+                                <option value="page-head-kbt">KBT</option>
+                                <option value="page-head-plavi-sat">Plavi sat</option>
+                                <option value="page-head-norm">Normalan</option>
+                                <option value="page-head-debljina">Debljina</option>
+                                <option value="page-head-ciklusi">Ciklusi</option>
+                                <option value="page-head-partnerskaterapija">Partnerska terapija</option>
+                                <option value="page-head-neuroloskipregled">Neurološki pregled</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Alt tekst hero slike (SEO/pristupačnost)</label>
+                            <input type="text" class="form-control" id="head-image-alt" placeholder="npr. Aktivnosti i usluge ZU DOBAR Banja Luka">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Custom hero slika (override — koristi se ako je uploadovana)</label>
+                            <div class="d-flex gap-2 align-items-start">
+                                <div class="flex-grow-1">
+                                    <input type="text" class="form-control mb-2" id="head-image" placeholder="images/uploads/... ili uploadujte ispod">
+                                    <input type="file" class="form-control" accept="image/*" onchange="uploadHeadImg(this)">
+                                </div>
+                                <div id="head-image-preview" style="width:200px;height:80px;background:var(--darkest);border-radius:6px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                                    <small class="text-muted">Preview</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -119,9 +175,42 @@ requireLogin();
         document.getElementById('page-title').value = a.page_title || 'Aktivnosti';
         document.getElementById('intro-title').value = a.intro_title || '';
         document.getElementById('upcoming-title').value = a.upcoming_title || '';
+        document.getElementById('page-head-class').value = a.page_head_class || 'page-head-news';
+        document.getElementById('head-image').value = a.head_image || '';
+        document.getElementById('head-image-alt').value = a.head_image_alt || '';
+        updateHeadImagePreview(a.head_image || '');
+        document.getElementById('head-image').addEventListener('input', function() { updateHeadImagePreview(this.value); });
         renderCategories();
         renderUpcoming();
         renderGallery();
+    }
+
+    function updateHeadImagePreview(url) {
+        const box = document.getElementById('head-image-preview');
+        if (url) {
+            box.innerHTML = '<img src="../' + url.replace(/^\//, '') + '" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.innerHTML=\'<small class=text-muted>Slika nije dostupna</small>\'">';
+        } else {
+            box.innerHTML = '<small class="text-muted">Bez slike — koristi se CSS klasa</small>';
+        }
+    }
+
+    function uploadHeadImg(input) {
+        if (!input.files[0]) return;
+        const formData = new FormData();
+        formData.append('action', 'upload_image');
+        formData.append('target_dir', 'images/headers/');
+        formData.append('image', input.files[0]);
+        fetch('api.php', { method: 'POST', body: formData })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    contentData.aktivnosti.head_image = data.path;
+                    document.getElementById('head-image').value = data.path;
+                    updateHeadImagePreview(data.path);
+                    showToast('Hero slika uploadovana', 'success');
+                } else { showToast(data.message, 'danger'); }
+            })
+            .catch(() => showToast('Greška pri uploadu', 'danger'));
     }
 
     function slugify(s) {
@@ -387,6 +476,9 @@ requireLogin();
         contentData.aktivnosti.page_title = document.getElementById('page-title').value;
         contentData.aktivnosti.intro_title = document.getElementById('intro-title').value;
         contentData.aktivnosti.upcoming_title = document.getElementById('upcoming-title').value;
+        contentData.aktivnosti.page_head_class = document.getElementById('page-head-class').value;
+        contentData.aktivnosti.head_image = document.getElementById('head-image').value;
+        contentData.aktivnosti.head_image_alt = document.getElementById('head-image-alt').value;
         const formData = new FormData();
         formData.append('action', 'save_section');
         formData.append('section', 'aktivnosti');
