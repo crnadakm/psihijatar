@@ -68,7 +68,7 @@
 		.nd-hero-eyebrow i { color: var(--nd-accent); }
 		.nd-hero h1 { color: #fff; font-size: 52px; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
 		.nd-hero h1 span { color: var(--nd-accent); }
-		.nd-hero-sub { font-size: 18px; line-height: 1.6; opacity: 0.95; margin-bottom: 32px; max-width: 520px; }
+		.nd-hero-sub { font-size: 18px; line-height: 1.6; color: #fff !important; opacity: 0.95; margin-bottom: 32px; max-width: 520px; }
 		.nd-hero-trust { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: var(--nd-radius); backdrop-filter: blur(8px); }
 		.nd-trust-item { display: flex; flex-direction: column; }
 		.nd-trust-value { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
@@ -169,7 +169,7 @@
 		.nd-cta-banner::after { content: ''; position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(34,156,140,0.25), transparent 60%); }
 		.nd-cta-banner-inner { position: relative; text-align: center; max-width: 700px; margin: 0 auto; }
 		.nd-cta-banner h2 { color: #fff; font-size: 36px; margin-bottom: 16px; }
-		.nd-cta-banner p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
+		.nd-cta-banner p { font-size: 17px; color: #fff !important; opacity: 0.92; margin-bottom: 32px; }
 		.nd-cta-banner-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 		/* CONTACT MAP */
@@ -211,7 +211,11 @@
 			.nd-nav-toggle { display: block; }
 			.nd-nav-cta { padding: 8px 14px; font-size: 13px; }
 			.nd-hero h1 { font-size: 32px; }
-			.nd-hero-trust { flex-direction: column; gap: 12px; }
+			.nd-hero-trust { flex-direction: row; gap: 10px; padding: 12px; }
+			.nd-hero-trust .nd-trust-item { flex: 1; }
+			.nd-trust-value { font-size: 16px; }
+			.nd-trust-value .nd-stars { display: none; }
+			.nd-trust-label { font-size: 10px; }
 			.nd-hero-cta-row { flex-direction: column; }
 			.nd-hero-cta-row .nd-btn { width: 100%; justify-content: center; }
 			.nd-services-grid { grid-template-columns: 1fr; }
@@ -253,11 +257,15 @@
 			.nd-quotes-grid { grid-template-columns: 1fr; }
 			.nd-blog-grid { grid-template-columns: 1fr 1fr; }
 			.nd-iskustva-grid { grid-template-columns: 1fr; }
+			.nd-hero-visual-card img { max-height: 360px; object-fit: cover; }
 		}
 		@media (max-width: 640px) {
 			.nd-blog-grid { grid-template-columns: 1fr; }
 			.nd-nav .nd-container { flex-wrap: wrap; }
 			.nd-nav-links.open { display: flex; flex-direction: column; width: 100%; gap: 10px; margin-top: 14px; }
+			.nd-wa-text { display: none; }
+			.nd-hero-visual-card { padding: 16px; }
+			.nd-hero-visual-card img { max-height: 240px; object-fit: cover; }
 		}
 	</style>
 </head>
@@ -278,7 +286,7 @@
 				<span><i class="fa fa-clock-o"></i> Pon-Pet 9-17h, Sri 11-19h</span>
 			</div>
 			<a href="https://wa.me/38766945702" class="nd-topbar-cta">
-				<i class="fa fa-whatsapp"></i> WhatsApp
+				<i class="fa fa-whatsapp"></i> <span class="nd-wa-text">WhatsApp</span>
 			</a>
 		</div>
 	</div>
