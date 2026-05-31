@@ -52,7 +52,7 @@
 		.nd-nav { background: #fff; padding: 16px 0; box-shadow: var(--nd-shadow-sm); position: sticky; top: 0; z-index: 100; }
 		.nd-nav .nd-container { display: flex; align-items: center; justify-content: space-between; }
 		.nd-nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; letter-spacing: 6px; color: var(--nd-dark); }
-		.nd-nav-brand img { height: 36px; }
+		.nd-nav-brand img { height: 36px; width: auto; }
 		.nd-nav-links { display: flex; gap: 28px; list-style: none; padding: 0; margin: 0; }
 		.nd-nav-links a { color: var(--nd-text); font-weight: 500; font-size: 15px; }
 		.nd-nav-cta { background: var(--nd-primary); color: #fff !important; padding: 10px 22px; border-radius: 100px; font-weight: 600; font-size: 14px; }
@@ -86,7 +86,7 @@
 		/* HERO IMAGE STACK */
 		.nd-hero-visual { position: relative; }
 		.nd-hero-visual-card { background: rgba(255,255,255,0.12); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--nd-radius-lg); padding: 32px; box-shadow: var(--nd-shadow-lg); }
-		.nd-hero-visual-card img { width: 100%; border-radius: var(--nd-radius); display: block; }
+		.nd-hero-visual-card img { width: 100%; height: auto; border-radius: var(--nd-radius); display: block; }
 		.nd-hero-visual-card-title { color: #fff; font-weight: 700; font-size: 18px; margin-top: 20px; }
 		.nd-hero-visual-card-meta { color: rgba(255,255,255,0.85); font-size: 13px; margin-top: 4px; }
 		.nd-hero-visual-floater { position: absolute; bottom: 20px; left: -28px; background: #fff; padding: 16px 20px; border-radius: var(--nd-radius); box-shadow: var(--nd-shadow-lg); display: flex; align-items: center; gap: 12px; }
@@ -119,7 +119,7 @@
 		.nd-about { background: #fff; }
 		.nd-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 		.nd-about-image { position: relative; }
-		.nd-about-image img { width: 100%; border-radius: var(--nd-radius-lg); display: block; box-shadow: var(--nd-shadow-md); }
+		.nd-about-image img { width: 100%; height: auto; border-radius: var(--nd-radius-lg); display: block; box-shadow: var(--nd-shadow-md); }
 		.nd-about-image-badge { position: absolute; bottom: -30px; right: -30px; background: var(--nd-primary); color: #fff; padding: 28px; border-radius: var(--nd-radius); box-shadow: var(--nd-shadow-lg); text-align: center; min-width: 130px; }
 		.nd-about-image-badge strong { display: block; font-size: 38px; line-height: 1; font-weight: 800; }
 		.nd-about-image-badge span { font-size: 13px; opacity: 0.9; }
