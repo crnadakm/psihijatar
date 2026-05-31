@@ -501,7 +501,9 @@ requireLogin();
 
     function saveAll() {
         collectData();
-        const sections = ['site', 'cta', 'footer', 'slider', 'services', 'quotes', 'testimonials', 'team', 'blog_highlights'];
+        // 'team' se NE snima ovdje — uređuje se isključivo u admin/ljudi.php.
+        // content.php nema editor tima, pa bi slao zastarjeli snimak i pregazio izmjene iz Ljudi panela.
+        const sections = ['site', 'cta', 'footer', 'slider', 'services', 'quotes', 'testimonials', 'blog_highlights'];
         const payload = {};
         sections.forEach(s => { if (contentData[s] !== undefined) payload[s] = contentData[s]; });
 
