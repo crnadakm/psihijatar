@@ -89,7 +89,7 @@
 		.nd-hero-visual-card img { width: 100%; height: auto; border-radius: var(--nd-radius); display: block; }
 		.nd-hero-visual-card-title { color: #fff; font-weight: 700; font-size: 18px; margin-top: 20px; }
 		.nd-hero-visual-card-meta { color: rgba(255,255,255,0.85); font-size: 13px; margin-top: 4px; }
-		.nd-hero-visual-floater { position: absolute; bottom: 20px; left: -28px; background: #fff; padding: 16px 20px; border-radius: var(--nd-radius); box-shadow: var(--nd-shadow-lg); display: flex; align-items: center; gap: 12px; }
+		.nd-hero-visual-floater { display: none; } /* uklonjen plutajući badge — preklapao tekst/dugmad u heru */
 		.nd-hero-visual-floater-icon { width: 44px; height: 44px; background: var(--nd-primary-light); color: var(--nd-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 		.nd-hero-visual-floater-text strong { display: block; color: var(--nd-dark); font-size: 14px; }
 		.nd-hero-visual-floater-text small { color: var(--nd-text-muted); font-size: 12px; }
