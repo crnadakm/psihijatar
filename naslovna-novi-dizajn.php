@@ -212,6 +212,10 @@
 		@media (max-width: 640px) {
 			.nd-topbar-info { font-size: 12px; gap: 12px; }
 			.nd-topbar-info span { display: none; }
+			.nd-tb-email { display: none; }
+			.nd-topbar .nd-container { flex-wrap: nowrap; gap: 8px; }
+			.nd-topbar-info { gap: 8px; flex-wrap: nowrap; }
+			.nd-topbar-actions { gap: 6px; }
 			.nd-topbar-info a { display: inline-flex; }
 			.nd-nav-links { display: none; }
 			.nd-nav-toggle { display: block; }
@@ -287,7 +291,6 @@
 		<div class="nd-container">
 			<div class="nd-topbar-info">
 				<a href="tel:+38766945702"><i class="fa fa-phone"></i> +387 66 945-702</a>
-				<a href="mailto:dobar@psihijatar.info"><i class="fa fa-envelope"></i> dobar@psihijatar.info</a>
 				<span><i class="fa fa-map-marker"></i> Vojvode Pere Krece 2, Banja Luka</span>
 				<span><i class="fa fa-clock-o"></i> Pon-Pet 9-17h, Sri 11-19h</span>
 			</div>
