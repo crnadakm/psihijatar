@@ -47,6 +47,10 @@
 		.nd-topbar-info i { color: var(--nd-accent); font-size: 12px; }
 		.nd-topbar-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--nd-primary); color: #fff !important; padding: 6px 16px; border-radius: 100px; font-weight: 600; font-size: 13px; }
 		.nd-topbar-cta:hover { background: var(--nd-primary-dark); }
+		.nd-topbar-actions { display: inline-flex; gap: 8px; }
+		.nd-topbar-cta-viber { background: #665CAC; }
+		.nd-topbar-cta-viber:hover { background: #574d99; }
+		.nd-viber-ico { vertical-align: middle; }
 
 		/* SIMPLIFIED NAV */
 		.nd-nav { background: #fff; padding: 16px 0; box-shadow: var(--nd-shadow-sm); position: sticky; top: 0; z-index: 100; }
@@ -171,6 +175,8 @@
 		.nd-cta-banner h2 { color: #fff; font-size: 36px; margin-bottom: 16px; }
 		.nd-cta-banner p { font-size: 17px; color: #fff !important; opacity: 0.92; margin-bottom: 32px; }
 		.nd-cta-banner-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+		.nd-msg-choice { display: none; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+		.nd-msg-choice.open { display: flex; }
 
 		/* CONTACT MAP */
 		.nd-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
@@ -285,9 +291,10 @@
 				<span><i class="fa fa-map-marker"></i> Vojvode Pere Krece 2, Banja Luka</span>
 				<span><i class="fa fa-clock-o"></i> Pon-Pet 9-17h, Sri 11-19h</span>
 			</div>
-			<a href="https://wa.me/38766945702" class="nd-topbar-cta">
-				<i class="fa fa-whatsapp"></i> <span class="nd-wa-text">WhatsApp</span>
-			</a>
+			<div class="nd-topbar-actions">
+				<a href="https://wa.me/38766945702" class="nd-topbar-cta"><i class="fa fa-whatsapp"></i> <span class="nd-wa-text">WhatsApp</span></a>
+				<a href="viber://chat?number=38766945702" class="nd-topbar-cta nd-topbar-cta-viber"><img src="images/viber.png" alt="Viber" width="14" height="14" class="nd-viber-ico"> <span class="nd-wa-text">Viber</span></a>
+			</div>
 		</div>
 	</div>
 
@@ -476,20 +483,42 @@
 	</section>
 
 	<!-- CTA BANNER -->
-	<section class="nd-cta-banner">
+	<section class="nd-cta-banner" id="nd-cta-box" style="display:none">
 		<div class="nd-container">
 			<div class="nd-cta-banner-inner">
 				<h2>Niste sigurni da li je psihoterapija za vas?</h2>
-				<p>Prvi razgovor je prilika da bez obaveze procijenite šta vam najbolje odgovara. Dostupni smo putem telefona, Vibera i WhatsApp-a.</p>
+				<p>Trenutno smo dostupni — javite se porukom ili pozivom i bez obaveze procijenite šta vam najbolje odgovara.</p>
 				<div class="nd-cta-banner-actions">
-					<a href="https://wa.me/38766945702" class="nd-btn nd-btn-accent"><i class="fa fa-whatsapp"></i> Pošalji WhatsApp poruku</a>
+					<button type="button" class="nd-btn nd-btn-accent" onclick="document.getElementById('nd-msg-choice').classList.toggle('open')"><i class="fa fa-comments"></i> Pošalji poruku</button>
 					<a href="tel:+38766945702" class="nd-btn nd-btn-ghost"><i class="fa fa-phone"></i> Pozovi sada</a>
+				</div>
+				<div id="nd-msg-choice" class="nd-msg-choice">
+					<a href="https://wa.me/38766945702" class="nd-btn nd-btn-accent"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+					<a href="viber://chat?number=38766945702" class="nd-btn nd-btn-accent"><img src="images/viber.png" alt="Viber" width="16" height="16" class="nd-viber-ico"> Viber</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<?php include 'elements/footer.php' ?>
+
+	<script>
+	/* CTA box ("Niste sigurni...") — prikaži samo u radno vrijeme (Banja Luka).
+	   Pon, Uto, Čet, Pet: 9–17h · Sri: 11–19h · vikend zatvoreno. */
+	(function () {
+		var box = document.getElementById('nd-cta-box');
+		if (!box) return;
+		var bl;
+		try { bl = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Belgrade' })); }
+		catch (e) { bl = new Date(); }
+		var day = bl.getDay();              // 0=ned ... 6=sub
+		var h = bl.getHours() + bl.getMinutes() / 60;
+		var open = false;
+		if (day === 1 || day === 2 || day === 4 || day === 5) open = (h >= 9 && h < 17);
+		else if (day === 3) open = (h >= 11 && h < 19);
+		if (open) box.style.display = '';
+	})();
+	</script>
 
 </body>
 </html>
