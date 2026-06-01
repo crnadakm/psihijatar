@@ -268,7 +268,7 @@
 		.nd-parallax .nd-container { position: relative; z-index: 1; max-width: 760px; }
 		.nd-parallax-eyebrow { display: inline-block; color: var(--nd-accent); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
 		.nd-parallax h2 { color: #fff; font-size: 34px; line-height: 1.3; margin-bottom: 16px; }
-		.nd-parallax p { font-size: 18px; opacity: 0.94; margin: 0 auto 28px; max-width: 620px; }
+		.nd-parallax p { color: #fff; font-size: 18px; opacity: 0.94; margin: 0 auto 28px; max-width: 620px; }
 		.nd-parallax--quote h2 { font-style: italic; font-weight: 700; }
 		.nd-parallax-cite { display: block; margin-top: 20px; color: var(--nd-accent); font-weight: 600; font-size: 15px; font-style: normal; }
 		.nd-parallax-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
