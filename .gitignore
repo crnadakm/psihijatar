@@ -8,3 +8,15 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Internal notes (Claude session notes)
+internal/
+
+# Interno uputstvo za vlasnika (dijeli se ručno, ne ide u repo)
+admin/UPUTSTVO.md
+
+# Claude Code project memory — lokalno, ne commitovati
+CLAUDE.md
+
+# Skrinšotovi za internu komunikaciju — ne commitovati
+skrisotovi/

@@ -262,12 +262,29 @@
 		/* ISKUSTVA (koristi .nd-review stilove) */
 		.nd-iskustva-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
+		/* PARALLAX FOTO-TRAKE (fiksna pozadina između sekcija — kao na originalu) */
+		.nd-parallax { position: relative; padding: 120px 0; background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; color: #fff; text-align: center; }
+		.nd-parallax::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,60,50,0.82), rgba(18,40,36,0.72)); }
+		.nd-parallax .nd-container { position: relative; z-index: 1; max-width: 760px; }
+		.nd-parallax-eyebrow { display: inline-block; color: var(--nd-accent); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+		.nd-parallax h2 { color: #fff; font-size: 34px; line-height: 1.3; margin-bottom: 16px; }
+		.nd-parallax p { font-size: 18px; opacity: 0.94; margin: 0 auto 28px; max-width: 620px; }
+		.nd-parallax--quote h2 { font-style: italic; font-weight: 700; }
+		.nd-parallax-cite { display: block; margin-top: 20px; color: var(--nd-accent); font-weight: 600; font-size: 15px; font-style: normal; }
+		.nd-parallax-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+		.nd-parallax--a { background-image: url(pics/img5.jpg); }
+		.nd-parallax--b { background-image: url(images/background.jpg); }
+
 		/* RESPONSIVE V2 */
 		@media (max-width: 991px) {
 			.nd-quotes-grid { grid-template-columns: 1fr; }
 			.nd-blog-grid { grid-template-columns: 1fr 1fr; }
 			.nd-iskustva-grid { grid-template-columns: 1fr; }
 			.nd-hero-visual-card img { max-height: 360px; object-fit: cover; }
+			/* fiksna pozadina pravi probleme na iOS/Android — vrati na normalan scroll */
+			.nd-parallax { background-attachment: scroll; padding: 84px 0; }
+			.nd-parallax h2 { font-size: 27px; }
+			.nd-parallax p { font-size: 16px; }
 		}
 		@media (max-width: 640px) {
 			.nd-blog-grid { grid-template-columns: 1fr; }
@@ -414,6 +431,18 @@
 		</div>
 	</section>
 
+	<!-- PARALLAX TRAKA A -->
+	<section class="nd-parallax nd-parallax--a">
+		<div class="nd-container">
+			<span class="nd-parallax-eyebrow">Naš pristup</span>
+			<h2>Siguran prostor u kojem se vaše dostojanstvo poštuje</h2>
+			<p>Vjerujemo da je iskren i povjerljiv razgovor temelj svake promjene. Bez osude, vlastitim tempom, uz podršku tima koji vam je posvećen.</p>
+			<div class="nd-parallax-actions">
+				<a href="ideja.php" class="nd-btn nd-btn-ghost"><i class="fa fa-leaf"></i> Više o nama</a>
+			</div>
+		</div>
+	</section>
+
 	<!-- CITATI -->
 	<section class="nd-section nd-quotes">
 		<div class="nd-container">
@@ -481,6 +510,19 @@
 				<div class="nd-review"><p>"Odlazak na prvi susret je bio teška odluka. Tražio sam samo tablete, ali doktor rješenje nije vidio u tome — bio je preda mnom dug proces. Trajalo je četiri godine, a rezultat je da ponovo živim. Živim sa strahovima koje prepoznajem i prihvatam, ali ŽIVIM."</p><div class="nd-review-author"><div class="nd-review-avatar">P</div><div class="nd-review-author-info"><strong>P.</strong><small>Radnik, 53 god.</small></div></div></div>
 				<div class="nd-review"><p>"Naučila sam da sve što se dešava u meni zavisi isključivo od mene. Ja sam ta koja odlučuje kako će se osjećati. Kada sam to shvatila, osjetila sam slobodu i zagrlila život. Neopisivo je lijepo naći sreću u sebi."</p><div class="nd-review-author"><div class="nd-review-avatar">S</div><div class="nd-review-author-info"><strong>S.</strong><small>Administrativni referent, 48 god.</small></div></div></div>
 				<div class="nd-review"><p>"Teret samo jednom postane pretežak. Prijateljica mi je preporučila psihoterapeuta koji mi je pomogao da otresem prašinu, podignem glavu i sa mirom nastavim. Od tad je život ljepši — kad boli plačem i nije me sramota, kad volim grlim, kad sam srećna pjevam."</p><div class="nd-review-author"><div class="nd-review-avatar">D</div><div class="nd-review-author-info"><strong>D.</strong><small>HR menadžer, 50 god.</small></div></div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PARALLAX TRAKA B -->
+	<section class="nd-parallax nd-parallax--b">
+		<div class="nd-container">
+			<span class="nd-parallax-eyebrow">Prvi korak</span>
+			<h2>Spremni ste da razgovarate? Tu smo.</h2>
+			<p>Zakažite pregled ili nas jednostavno nazovite — bez obaveze, vašim tempom.</p>
+			<div class="nd-parallax-actions">
+				<a href="kontakt.php" class="nd-btn nd-btn-primary"><i class="fa fa-calendar-check-o"></i> Zakaži pregled</a>
+				<a href="tel:+38766945702" class="nd-btn nd-btn-ghost"><i class="fa fa-phone"></i> 066 945-702</a>
 			</div>
 		</div>
 	</section>
