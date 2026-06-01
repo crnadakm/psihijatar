@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <?php include 'elements/head.php' ?>
 <link rel="stylesheet" href="css/lightbox.css">
 
@@ -15,7 +15,7 @@
 		.ppl-one {
 			padding-top: 150px;
 		}
-		.text-center h3 {
+		.text-center h1 {
 			font-size: 36px;
 		}
 		@media only screen and (min-width: 250px) and (max-width: 767px) {
@@ -23,7 +23,7 @@
 				font-size: 19px;
 				line-height: 144px;
 			}
-			.text-center h3 {
+			.text-center h1 {
 				font-size: 24px;
 			}
 		}
@@ -39,7 +39,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h3><?= htmlspecialchars($idejaData['page_title'] ?? 'Otkud DOBAR dolazi i kud je naumio?') ?></h3>
+						<h1><?= htmlspecialchars($idejaData['page_title'] ?? 'Otkud DOBAR dolazi i kud je naumio?') ?></h1>
 					</div>
 				</div>
 			</div>

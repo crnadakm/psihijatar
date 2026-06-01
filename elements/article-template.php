@@ -86,7 +86,7 @@ foreach ($sections as $sec) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 	<?php include __DIR__ . '/head.php' ?>
 <body id="page-top" class="subpage">
 

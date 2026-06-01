@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 	<?php include 'elements/head.php' ?>
 <body id="page-top" class="subpage">
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 	<?php include 'elements/head.php' ?>
 	<link rel="stylesheet" href="css/lightbox.css">
 <body id="page-top" class="subpage">

@@ -104,6 +104,12 @@ function renderSeoHead($pageFile = null) {
     if ($seo['robots'] && $seo['robots'] !== 'index, follow') {
         $html .= "\t<meta name=\"robots\" content=\"" . htmlspecialchars($seo['robots']) . "\">\n";
     }
+    // Canonical: ako nije postavljen u seo.json, generiši self-referential URL.
+    // Tako nijedan novi članak (koji vlasnik napravi a zaboravi popuniti polje) ne ostane bez canonicala.
+    if (empty($seo['canonical']) && $baseUrl) {
+        $cf = $pageFile ?: basename($_SERVER['SCRIPT_NAME']);
+        $seo['canonical'] = ($cf === 'index.php') ? $baseUrl . '/' : $baseUrl . '/' . $cf;
+    }
     if ($seo['canonical']) {
         $html .= "\t<link rel=\"canonical\" href=\"" . htmlspecialchars($seo['canonical']) . "\">\n";
     }
