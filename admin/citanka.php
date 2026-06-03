@@ -11,6 +11,12 @@ requireLogin();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="admin-style.css" rel="stylesheet">
+    <style>
+        .drag-handle { cursor: grab; padding: 2px 6px; color: #aaa; }
+        .drag-handle:active { cursor: grabbing; }
+        .item-card.dragging { opacity: .45; }
+        .item-card.drag-over { border-top: 3px solid #229C8C; }
+    </style>
 </head>
 <body>
     <?php include 'sidebar.php'; ?>
@@ -33,7 +39,7 @@ requireLogin();
             <div class="tab-pane fade show active" id="sec-items">
                 <div class="card-section">
                     <h5><i class="bi bi-collection"></i> Tekstovi čitanke</h5>
-                    <p class="text-muted">Svaki tekst ima naslov, opis, sliku, link i pozadinsku boju overlay-a</p>
+                    <p class="text-muted">Svaki tekst ima naslov, opis, sliku, link i pozadinsku boju overlay-a. Prevucite karticu za hvatalo (<i class="bi bi-grip-vertical"></i>) da promijenite redoslijed, ili koristite strelice gore/dole.</p>
                     <div id="citanka-items"></div>
                     <button class="btn-add mt-2" onclick="addItem()"><i class="bi bi-plus-lg"></i> Dodaj tekst</button>
                 </div>
@@ -89,12 +95,16 @@ requireLogin();
     function renderItems() {
         const c = document.getElementById('citanka-items');
         c.innerHTML = '';
-        (contentData.citanka?.items || []).forEach((item, i) => {
+        const items = contentData.citanka?.items || [];
+        const total = items.length;
+        items.forEach((item, i) => {
             c.innerHTML += `
-            <div class="item-card">
+            <div class="item-card" data-index="${i}">
                 <div class="item-header">
-                    <h6>${escHtml(item.title) || 'Tekst ' + (i+1)}</h6>
-                    <div>
+                    <h6><span class="drag-handle" title="Prevuci za promjenu redoslijeda"><i class="bi bi-grip-vertical"></i></span> #${i+1} — ${escHtml(item.title) || 'Tekst ' + (i+1)}</h6>
+                    <div class="d-flex gap-1">
+                        <button class="btn btn-sm btn-outline-light" onclick="moveItem(${i},-1)" ${i === 0 ? 'disabled' : ''} title="Pomjeri gore"><i class="bi bi-arrow-up"></i></button>
+                        <button class="btn btn-sm btn-outline-light" onclick="moveItem(${i},1)" ${i === total - 1 ? 'disabled' : ''} title="Pomjeri dole"><i class="bi bi-arrow-down"></i></button>
                         <button class="btn btn-sm ${item.active ? 'btn-success' : 'btn-secondary'}" onclick="toggleItem(${i})">${item.active ? 'Aktivan' : 'Neaktivan'}</button>
                         <button class="btn btn-sm btn-outline-danger" onclick="removeItem(${i})"><i class="bi bi-trash"></i></button>
                     </div>
@@ -135,6 +145,61 @@ requireLogin();
                 </div>
             </div>`;
         });
+        setupDnD();
+    }
+
+    function moveItem(i, dir) {
+        const items = contentData.citanka.items;
+        const j = i + dir;
+        if (j < 0 || j >= items.length) return;
+        [items[i], items[j]] = [items[j], items[i]];
+        renderItems();
+    }
+
+    let dragSrcIndex = null;
+
+    function setupDnD() {
+        const container = document.getElementById('citanka-items');
+        container.querySelectorAll('.item-card').forEach(card => {
+            const handle = card.querySelector('.drag-handle');
+            // Drag se pokreće samo s hvatala (da ne smeta editovanju polja)
+            handle.addEventListener('mousedown', () => card.setAttribute('draggable', 'true'));
+            handle.addEventListener('mouseup', () => card.setAttribute('draggable', 'false'));
+
+            card.addEventListener('dragstart', e => {
+                dragSrcIndex = parseInt(card.dataset.index);
+                card.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+            });
+            card.addEventListener('dragend', () => {
+                card.classList.remove('dragging');
+                card.setAttribute('draggable', 'false');
+                container.querySelectorAll('.item-card').forEach(c => c.classList.remove('drag-over'));
+            });
+            card.addEventListener('dragover', e => {
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+            });
+            card.addEventListener('dragenter', () => {
+                if (parseInt(card.dataset.index) !== dragSrcIndex) card.classList.add('drag-over');
+            });
+            card.addEventListener('dragleave', () => card.classList.remove('drag-over'));
+            card.addEventListener('drop', e => {
+                e.preventDefault();
+                const targetIndex = parseInt(card.dataset.index);
+                reorderItem(dragSrcIndex, targetIndex);
+            });
+        });
+    }
+
+    function reorderItem(from, to) {
+        if (from === null || isNaN(from) || isNaN(to) || from === to) return;
+        const items = contentData.citanka.items;
+        const [moved] = items.splice(from, 1);
+        const insertAt = from < to ? to - 1 : to;
+        items.splice(insertAt, 0, moved);
+        dragSrcIndex = null;
+        renderItems();
     }
 
     function addItem() {
