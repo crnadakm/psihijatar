@@ -67,7 +67,6 @@
 		var toggle = document.getElementById('dobarFabToggle');
 		var modal = document.getElementById('dobarModal');
 		if (!toggle || !modal) return;
-		var card = modal.querySelector('.dobar-modal-card');
 
 		function open() {
 			modal.hidden = false;
@@ -88,12 +87,11 @@
 
 		toggle.addEventListener('click', open);
 
-		// Klik na pozadinu ili dugme za zatvaranje
-		modal.addEventListener('click', function (e) {
-			if (e.target.hasAttribute('data-dobar-close')) { close(); }
-		});
-		// Klik unutar kartice ne zatvara
-		if (card) { card.addEventListener('click', function (e) { e.stopPropagation(); }); }
+		// Zatvaranje: dugme ✕ i klik na zamućenu pozadinu
+		var closers = modal.querySelectorAll('[data-dobar-close]');
+		for (var c = 0; c < closers.length; c++) {
+			closers[c].addEventListener('click', function () { close(); });
+		}
 
 		// Klik na opciju (Viber/WhatsApp) zatvara modal
 		var choices = modal.querySelectorAll('.dobar-choice');
