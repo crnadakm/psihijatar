@@ -28,53 +28,82 @@
 		</div>
 	</footer>
 
-	<!-- Floating dugme „Zakažite termin" — otvara izbor Viber / WhatsApp -->
-	<div class="dobar-fab" id="dobarFab">
-		<div class="dobar-fab-options" id="dobarFabOptions" hidden>
-			<a class="dobar-fab-opt dobar-fab-viber" href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>" aria-label="Zakažite termin preko Vibera">
-				<img height="22" width="22" src="images/viber.png" alt="" decoding="async"><span>Viber</span>
-			</a>
-			<a class="dobar-fab-opt dobar-fab-wa" href="https://wa.me/<?= htmlspecialchars(ltrim($siteData['whatsapp'] ?? '+38766945702', '+')) ?>" aria-label="Zakažite termin preko WhatsAppa">
-				<img height="22" width="22" src="images/whatsapp.png" alt="" decoding="async"><span>WhatsApp</span>
-			</a>
-		</div>
-		<button type="button" class="dobar-fab-toggle" id="dobarFabToggle" aria-expanded="false" aria-controls="dobarFabOptions" aria-label="Zakažite termin — izaberite Viber ili WhatsApp">
-			<span class="dobar-fab-icon dobar-fab-icon-open" aria-hidden="true">📅</span>
-			<span class="dobar-fab-icon dobar-fab-icon-close" aria-hidden="true">✕</span>
+	<!-- Floating dugme „Zakažite termin" — otvara modal sa izborom Viber / WhatsApp -->
+	<div class="dobar-fab">
+		<button type="button" class="dobar-fab-toggle" id="dobarFabToggle" aria-haspopup="dialog" aria-controls="dobarModal" aria-label="Zakažite termin — izaberite Viber ili WhatsApp">
+			<span class="dobar-fab-icon" aria-hidden="true">
+				<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM7 9h10v2H7V9zm0 4h7v2H7v-2z"/></svg>
+			</span>
 			<span class="dobar-fab-label">Zakažite termin</span>
 		</button>
 	</div>
+
+	<!-- Modal: izbor kanala za zakazivanje -->
+	<div class="dobar-modal" id="dobarModal" role="dialog" aria-modal="true" aria-labelledby="dobarModalTitle" hidden>
+		<div class="dobar-modal-backdrop" data-dobar-close></div>
+		<div class="dobar-modal-card" role="document">
+			<button type="button" class="dobar-modal-close" data-dobar-close aria-label="Zatvori">&times;</button>
+			<div class="dobar-modal-badge" aria-hidden="true">
+				<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM7 9h10v2H7V9zm0 4h7v2H7v-2z"/></svg>
+			</div>
+			<h3 class="dobar-modal-title" id="dobarModalTitle">Zakažite termin</h3>
+			<p class="dobar-modal-sub">Izaberite kako želite da nam se javite — odgovaramo brzo.</p>
+			<div class="dobar-modal-actions">
+				<a class="dobar-choice dobar-choice-viber" href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>" aria-label="Zakažite termin ili pregled preko Vibera">
+					<span class="dobar-choice-ico"><img height="26" width="26" src="images/viber.png" alt="" decoding="async"></span>
+					<span class="dobar-choice-txt"><b>Viber</b><small>Pozovite ili pošaljite poruku</small></span>
+					<span class="dobar-choice-arrow" aria-hidden="true">&rsaquo;</span>
+				</a>
+				<a class="dobar-choice dobar-choice-wa" href="https://wa.me/<?= htmlspecialchars(ltrim($siteData['whatsapp'] ?? '+38766945702', '+')) ?>" aria-label="Zakažite termin ili pregled preko WhatsAppa">
+					<span class="dobar-choice-ico"><img height="26" width="26" src="images/whatsapp.png" alt="" decoding="async"></span>
+					<span class="dobar-choice-txt"><b>WhatsApp</b><small>Pošaljite poruku</small></span>
+					<span class="dobar-choice-arrow" aria-hidden="true">&rsaquo;</span>
+				</a>
+			</div>
+		</div>
+	</div>
 	<script>
 	(function () {
-		var fab = document.getElementById('dobarFab');
 		var toggle = document.getElementById('dobarFabToggle');
-		var options = document.getElementById('dobarFabOptions');
-		if (!fab || !toggle || !options) return;
+		var modal = document.getElementById('dobarModal');
+		if (!toggle || !modal) return;
+		var card = modal.querySelector('.dobar-modal-card');
 
 		function open() {
-			fab.classList.add('is-open');
-			options.hidden = false;
+			modal.hidden = false;
+			// sljedeći frame -> okidamo CSS tranzicije
+			requestAnimationFrame(function () { modal.classList.add('is-open'); });
+			document.body.style.overflow = 'hidden';
 			toggle.setAttribute('aria-expanded', 'true');
 		}
 		function close() {
-			fab.classList.remove('is-open');
+			modal.classList.remove('is-open');
+			document.body.style.overflow = '';
 			toggle.setAttribute('aria-expanded', 'false');
-			options.hidden = true;
+			// sačekaj kraj animacije pa sakrij
+			window.setTimeout(function () {
+				if (!modal.classList.contains('is-open')) { modal.hidden = true; }
+			}, 320);
 		}
 
-		toggle.addEventListener('click', function (e) {
-			e.stopPropagation();
-			if (fab.classList.contains('is-open')) { close(); } else { open(); }
-		});
+		toggle.addEventListener('click', open);
 
-		// Klik van dugmeta zatvara izbor
-		document.addEventListener('click', function (e) {
-			if (fab.classList.contains('is-open') && !fab.contains(e.target)) { close(); }
+		// Klik na pozadinu ili dugme za zatvaranje
+		modal.addEventListener('click', function (e) {
+			if (e.target.hasAttribute('data-dobar-close')) { close(); }
 		});
+		// Klik unutar kartice ne zatvara
+		if (card) { card.addEventListener('click', function (e) { e.stopPropagation(); }); }
+
+		// Klik na opciju (Viber/WhatsApp) zatvara modal
+		var choices = modal.querySelectorAll('.dobar-choice');
+		for (var i = 0; i < choices.length; i++) {
+			choices[i].addEventListener('click', function () { close(); });
+		}
 
 		// Escape zatvara
 		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Escape') { close(); }
+			if (e.key === 'Escape' && !modal.hidden) { close(); }
 		});
 	})();
 	</script>
