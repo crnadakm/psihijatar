@@ -45,7 +45,19 @@
 <div class="body">
 	<!-- HEADER -->
 	<?php include 'elements/header.php' ?>
-	
+
+	<!-- CTA „Zakažite razgovor" (vrh sadržaja, vidljivo bez skrolovanja) -->
+	<?php $ctaSite = getContent('site'); ?>
+	<div class="container">
+		<div class="dobar-cta">
+			<a href="viber://chat?number=<?= htmlspecialchars($ctaSite['viber'] ?? '38766945702') ?>" class="dobar-cta-btn dobar-cta-viber" aria-label="Zakažite psihijatrijski pregled ili razgovor preko Vibera">
+				Zakažite razgovor
+			</a>
+			<a href="https://wa.me/<?= htmlspecialchars(ltrim($ctaSite['whatsapp'] ?? '+38766945702', '+')) ?>" class="dobar-cta-btn dobar-cta-wa" aria-label="Zakažite psihijatrijski pregled ili razgovor preko WhatsAppa">
+				WhatsApp
+			</a>
+		</div>
+	</div>
 
 	<!-- INTRO -->
 	<div class="intro intro-style6">
@@ -350,6 +362,16 @@
 	
 	<!-- FOOTER -->
 	<?php include 'elements/footer.php' ?>
+</div>
+
+<!-- Sticky CTA „Zakažite razgovor" — prikazuje se samo na mobilnom (CSS) -->
+<div class="dobar-cta dobar-cta-sticky">
+	<a href="viber://chat?number=<?= htmlspecialchars($ctaSite['viber'] ?? '38766945702') ?>" class="dobar-cta-btn dobar-cta-viber" aria-label="Zakažite psihijatrijski pregled ili razgovor preko Vibera">
+		Zakažite razgovor
+	</a>
+	<a href="https://wa.me/<?= htmlspecialchars(ltrim($ctaSite['whatsapp'] ?? '+38766945702', '+')) ?>" class="dobar-cta-btn dobar-cta-wa" aria-label="Zakažite psihijatrijski pregled ili razgovor preko WhatsAppa">
+		WhatsApp
+	</a>
 </div>
 
 <!-- JAVASCRIPT =============================-->

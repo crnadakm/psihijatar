@@ -4047,3 +4047,70 @@ left: 0%;
 }
 
 }
+
+/* ===== CTA „Zakažite razgovor" (Viber / WhatsApp) ===== */
+.dobar-cta {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 24px 0;
+}
+
+.dobar-cta-btn {
+	display: inline-block;
+	padding: 14px 28px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+}
+
+/* Glavno dugme — Viber */
+.dobar-cta-viber {
+	background: #7360f2;
+	color: #ffffff;
+}
+.dobar-cta-viber:hover,
+.dobar-cta-viber:focus {
+	color: #ffffff;
+	opacity: .92;
+	text-decoration: none;
+}
+
+/* Sporedno dugme — WhatsApp */
+.dobar-cta-wa {
+	background: #25d366;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 12px 20px;
+}
+.dobar-cta-wa:hover,
+.dobar-cta-wa:focus {
+	color: #ffffff;
+	opacity: .92;
+	text-decoration: none;
+}
+
+/* Sticky verzija — skrivena na desktopu, prikazuje se samo na mobilnom */
+.dobar-cta-sticky {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.dobar-cta-sticky {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		background: #ffffff;
+		box-shadow: 0 -2px 10px rgba(0,0,0,0.12);
+		margin: 0;
+		padding: 10px 16px;
+		justify-content: center;
+	}
+}
