@@ -27,3 +27,54 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Floating dugme „Zakažite termin" — otvara izbor Viber / WhatsApp -->
+	<div class="dobar-fab" id="dobarFab">
+		<div class="dobar-fab-options" id="dobarFabOptions" hidden>
+			<a class="dobar-fab-opt dobar-fab-viber" href="viber://chat?number=<?= htmlspecialchars($siteData['viber'] ?? '38766945702') ?>" aria-label="Zakažite termin preko Vibera">
+				<img height="22" width="22" src="images/viber.png" alt="" decoding="async"><span>Viber</span>
+			</a>
+			<a class="dobar-fab-opt dobar-fab-wa" href="https://wa.me/<?= htmlspecialchars(ltrim($siteData['whatsapp'] ?? '+38766945702', '+')) ?>" aria-label="Zakažite termin preko WhatsAppa">
+				<img height="22" width="22" src="images/whatsapp.png" alt="" decoding="async"><span>WhatsApp</span>
+			</a>
+		</div>
+		<button type="button" class="dobar-fab-toggle" id="dobarFabToggle" aria-expanded="false" aria-controls="dobarFabOptions" aria-label="Zakažite termin — izaberite Viber ili WhatsApp">
+			<span class="dobar-fab-icon dobar-fab-icon-open" aria-hidden="true">📅</span>
+			<span class="dobar-fab-icon dobar-fab-icon-close" aria-hidden="true">✕</span>
+			<span class="dobar-fab-label">Zakažite termin</span>
+		</button>
+	</div>
+	<script>
+	(function () {
+		var fab = document.getElementById('dobarFab');
+		var toggle = document.getElementById('dobarFabToggle');
+		var options = document.getElementById('dobarFabOptions');
+		if (!fab || !toggle || !options) return;
+
+		function open() {
+			fab.classList.add('is-open');
+			options.hidden = false;
+			toggle.setAttribute('aria-expanded', 'true');
+		}
+		function close() {
+			fab.classList.remove('is-open');
+			toggle.setAttribute('aria-expanded', 'false');
+			options.hidden = true;
+		}
+
+		toggle.addEventListener('click', function (e) {
+			e.stopPropagation();
+			if (fab.classList.contains('is-open')) { close(); } else { open(); }
+		});
+
+		// Klik van dugmeta zatvara izbor
+		document.addEventListener('click', function (e) {
+			if (fab.classList.contains('is-open') && !fab.contains(e.target)) { close(); }
+		});
+
+		// Escape zatvara
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') { close(); }
+		});
+	})();
+	</script>

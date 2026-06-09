@@ -4047,3 +4047,114 @@ left: 0%;
 }
 
 }
+
+/* ===== Floating dugme „Zakažite termin" (Viber / WhatsApp izbor) ===== */
+.dobar-fab {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	z-index: 998;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+/* Glavni (toggle) dugmić */
+.dobar-fab-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	border: 0;
+	cursor: pointer;
+	background: #229C8C;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1;
+	padding: 14px 22px;
+	border-radius: 50px;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+	transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.dobar-fab-toggle:hover,
+.dobar-fab-toggle:focus {
+	background: #1c8377;
+	color: #ffffff;
+	outline: none;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+}
+.dobar-fab-toggle:active {
+	transform: translateY(1px);
+}
+.dobar-fab-icon {
+	font-size: 20px;
+	line-height: 1;
+}
+.dobar-fab .dobar-fab-icon-close {
+	display: none;
+}
+.dobar-fab.is-open .dobar-fab-icon-open {
+	display: none;
+}
+.dobar-fab.is-open .dobar-fab-icon-close {
+	display: inline;
+}
+
+/* Spisak opcija (Viber / WhatsApp) */
+.dobar-fab-options {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	opacity: 0;
+	transform: translateY(8px);
+	pointer-events: none;
+	transition: opacity .18s ease, transform .18s ease;
+}
+.dobar-fab.is-open .dobar-fab-options {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+.dobar-fab-options[hidden] {
+	display: none;
+}
+
+.dobar-fab-opt {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 11px 18px;
+	border-radius: 50px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+}
+.dobar-fab-opt:hover,
+.dobar-fab-opt:focus {
+	color: #ffffff;
+	text-decoration: none;
+	opacity: .92;
+}
+.dobar-fab-opt img {
+	display: block;
+}
+.dobar-fab-viber {
+	background: #7360f2;
+}
+.dobar-fab-wa {
+	background: #25d366;
+}
+
+@media (max-width: 768px) {
+	.dobar-fab {
+		left: 14px;
+		bottom: 14px;
+	}
+	.dobar-fab-toggle {
+		font-size: 15px;
+		padding: 13px 18px;
+	}
+}
